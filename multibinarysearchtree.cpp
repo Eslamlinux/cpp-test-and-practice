@@ -66,7 +66,17 @@ class BST{
     };
     bool Search(int id){
         Node* result = Search(root,id);
+        cout << boolalpha;
         return result == NULL? false : true;
+    }
+    void SearchName(int id){
+        if(!Search(id)){
+            cout << id << " not found it\n" << boolalpha;
+        }
+        else{
+            cout << "Id:" << root->Fdata << "\nName: " << root->Sdata << "\n" ;
+        }
+
     }
 };
 int main()
@@ -84,6 +94,7 @@ b1.insert(20,"sagda");
 b1.insert(50,"selia");
 
 b1.preorder(b1.root);
-cout << b1.Search(11);
+cout << b1.Search(100) << endl;
+b1.SearchName(12);
     return 0;
 }
