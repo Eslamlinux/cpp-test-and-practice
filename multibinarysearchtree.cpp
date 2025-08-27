@@ -98,6 +98,29 @@ class BST{
     //     Node* result = SearchByName(root,name);
     //     cout << "name is: " << result->Sdata << "Id: " <<  result->Fdata;
     // }
+    
+    Node* miniId(Node* r){
+        if(r == NULL){
+            return NULL;
+        }
+        else if(r->left == NULL){
+            return r;
+        }
+        else{
+            return miniId(r->left);
+        }
+    }
+    Node* maximumId(Node* r){
+        if(r == NULL){
+            return NULL;
+        }
+        else if(r->right == NULL){
+            return r;
+        }
+        else{
+            return maximumId(r->right);
+        }
+    }
 };
 int main()
 {
@@ -115,7 +138,14 @@ b1.insert(50,"selia");
 
 b1.preorder(b1.root);
 cout << b1.Search(100) << endl;
+cout << " *******search******** \n";
 b1.SearchName(12);
 // b1.SearchByName("selia");
+cout << " *******mini******** \n";
+Node* topr = b1.miniId(b1.root);
+cout << topr->Fdata <<endl;
+cout << " *******max******** \n";
+Node* toprmax = b1.maximumId(b1.root);
+cout << toprmax->Fdata << endl;
     return 0;
 }
