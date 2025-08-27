@@ -78,6 +78,26 @@ class BST{
         }
 
     }
+    //need more work on it
+    // Node* SearchByName(Node* r ,string name){
+    //     if(r == NULL){
+    //         return NULL;
+    //     }
+    //     else if(r->Sdata == name){
+    //         return r;
+    //     }
+    //     else if(name < r->Sdata){
+    //         return SearchByName(r->left,name);
+    //     }
+    //     else{
+    //         return SearchByName(r->right,name);
+    //     }
+    //     return r;
+    // }
+    // void SearchByName(string name){
+    //     Node* result = SearchByName(root,name);
+    //     cout << "name is: " << result->Sdata << "Id: " <<  result->Fdata;
+    // }
 };
 int main()
 {
@@ -96,5 +116,6 @@ b1.insert(50,"selia");
 b1.preorder(b1.root);
 cout << b1.Search(100) << endl;
 b1.SearchName(12);
+// b1.SearchByName("selia");
     return 0;
 }
