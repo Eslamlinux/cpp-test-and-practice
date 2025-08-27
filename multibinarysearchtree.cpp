@@ -1,5 +1,5 @@
 /******************************************************************************
-multi data binary search tree
+binarysearchtree.cpp
 *******************************************************************************/
 #include <iostream>
 using namespace std;
@@ -50,6 +50,24 @@ class BST{
             preorder(r->right);
         }
     }
+    Node* Search(Node* r,int id){
+        if(r == NULL){
+            return NULL;
+        }
+        else if(id == r->Fdata){
+            return r;
+        }
+        else if(id < r->Fdata){
+            return Search(r->left,id);
+        }
+        else{
+            return Search(r->right,id);
+        }
+    };
+    bool Search(int id){
+        Node* result = Search(root,id);
+        return result == NULL? false : true;
+    }
 };
 int main()
 {
@@ -66,6 +84,6 @@ b1.insert(20,"sagda");
 b1.insert(50,"selia");
 
 b1.preorder(b1.root);
-
+cout << b1.Search(11);
     return 0;
 }
