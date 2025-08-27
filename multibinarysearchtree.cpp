@@ -1,0 +1,71 @@
+/******************************************************************************
+multi data binary search tree
+*******************************************************************************/
+#include <iostream>
+using namespace std;
+
+
+class Node{
+    public:
+    int Fdata;
+    string Sdata;
+    Node* right;
+    Node* left;
+    Node(int Fvalue,string Svalue){
+        Fdata = Fvalue;
+        Sdata = Svalue;
+        right = left = NULL;
+    }
+};
+
+class BST{
+    public:
+    Node* root;
+    BST(){
+        root = NULL;
+    }
+    Node* insert(Node* r,int Fvalue, string Svalue){
+        if(r == NULL){
+            Node* newnode = new Node(Fvalue,Svalue);
+            r = newnode;
+        }
+        else if(Fvalue < r->Fdata){
+            r->left = insert(r->left ,Fvalue,Svalue);
+        }
+        else{
+            r->right = insert(r->right,Fvalue,Svalue);
+        }
+        return r;
+    }
+    void insert(int Fvalue,string Svalue){
+        root = insert(root,Fvalue,Svalue);
+    }
+    void preorder(Node* r){
+        if(r == NULL){
+            return;
+        }
+        else{
+            cout << r->Fdata << " " << r->Sdata << endl;
+            preorder(r->left);
+            preorder(r->right);
+        }
+    }
+};
+int main()
+{
+
+BST b1;
+b1.insert(45,"eslam");
+b1.insert(15,"hassan");
+b1.insert(47,"mohamed");
+b1.insert(90,"aya");
+b1.insert(10,"najah");
+b1.insert(55,"khalid");
+b1.insert(12,"ahmed");
+b1.insert(20,"sagda");
+b1.insert(50,"selia");
+
+b1.preorder(b1.root);
+
+    return 0;
+}
