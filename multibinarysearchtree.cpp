@@ -11,11 +11,12 @@ class Node{
     string Sdata;
     Node* right;
     Node* left;
-    Node(int Fvalue,string Svalue){
-        Fdata = Fvalue;
-        Sdata = Svalue;
-        right = left = NULL;
-    }
+    Node(int Fvalue,string Svalue):Fdata(Fvalue),Sdata(Svalue),right(nullptr),left(nullptr){}
+    // {
+    //     Fdata = Fvalue;
+    //     Sdata = Svalue;
+    //     right = left = nullptr;
+    // }
 };
 
 class BST{
@@ -153,7 +154,6 @@ class BST{
                 r->Fdata = mini->Fdata;
                 r->Sdata = mini->Sdata;
                 r->right = Delete(r->right,mini->Fdata);
-                // r->right = Delete(r->right,mini->Sdata);
             }
         }
         return r;
@@ -173,10 +173,13 @@ b1.insert(12,"ahmed");
 b1.insert(20,"sagda");
 b1.insert(50,"selia");
 
+// b1.Delete(b1.root,90);
+
+
 b1.preorder(b1.root);
 cout << b1.Search(100) << endl;
 cout << " *******search******** \n";
-b1.SearchName(12);
+b1.SearchName(50);
 // b1.SearchByName("selia");
 cout << " *******mini******** \n";
 Node* topr = b1.miniId(b1.root);
