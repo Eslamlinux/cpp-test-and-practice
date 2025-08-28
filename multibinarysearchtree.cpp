@@ -121,6 +121,38 @@ class BST{
             return maximumId(r->right);
         }
     }
+    
+    Node* Delete(Node* r,int Fvalue){
+        if(r == NULL){
+            return NULL;
+        }
+        else if(Fvalue < r->Fdata){
+            r->left = Delete(r->left,Fvalue);
+        }
+        else if(Fvalue > r->Fdata){
+            r->right = Delete(r->right,Fvalue);
+        }
+        else{
+            if(r->left == NULL && r->right == NULL){
+                r = NULL;
+            }
+            else if(r->left !=NULL && r->right == NULL){
+                r->Fdata = r->left->Fdata;
+                r->Sdata = r->left->Sdata;
+                delete r->left;
+                r->left = NULL;
+            }
+            else if(r->right != NULL && r->left == NULL){
+                r->Fdata = r->right->Fdata;
+                r->Sdata = r->right->Sdata;
+                delete r->right;
+                r->right = NULL;
+            }
+            else{
+                Node* mini = miniId(Node* r);
+            }
+        }
+    }
 };
 int main()
 {
