@@ -123,31 +123,32 @@ class BST{
         }
     }
     
-    Node* Delete(Node* r,int Fvalue){
+    Node* Delete(Node* r,int id){
         if(r == NULL){
             return NULL;
         }
-        else if(Fvalue < r->Fdata){
-            r->left = Delete(r->left,Fvalue);
+        else if(id < r->Fdata){
+            r->left = Delete(r->left,id);
         }
-        else if(Fvalue > r->Fdata){
-            r->right = Delete(r->right,Fvalue);
+        else if(id > r->Fdata){
+            r->right = Delete(r->right,id);
         }
         else{
             if(r->left == NULL && r->right == NULL){
+                delete r;
                 r = NULL;
             }
             else if(r->left !=NULL && r->right == NULL){
-                r->Fdata = r->left->Fdata;
-                r->Sdata = r->left->Sdata;
-                delete r->left;
-                r->left = NULL;
+                Node* temp;
+                temp = r->left;
+                delete r;
+                return temp;
             }
             else if(r->right != NULL && r->left == NULL){
-                r->Fdata = r->right->Fdata;
-                r->Sdata = r->right->Sdata;
-                delete r->right;
-                r->right = NULL;
+                Node* temp;
+                temp = r->right;
+                delete r;
+                return temp;
             }
             else{
                 Node* mini = miniId(r->right);
@@ -158,27 +159,31 @@ class BST{
         }
         return r;
     }
+    void Delete(int id) {
+        root = Delete(root, id);
+    }
 };
 int main()
 {
 
 BST b1;
-// b1.insert(45,"eslam");
-// b1.insert(15,"hassan");
-// b1.insert(47,"mohamed");
+b1.insert(45,"eslam");
+b1.insert(15,"hassan");
+b1.insert(47,"mohamed");
 b1.insert(90,"aya");
-// b1.insert(10,"najah");
-// b1.insert(55,"khalid");
-// b1.insert(12,"ahmed");
-// b1.insert(20,"sagda");
-// b1.insert(50,"selia");
+b1.insert(10,"najah");
+b1.insert(55,"khalid");
+b1.insert(12,"ahmed");
+b1.insert(20,"sagda");
+b1.insert(50,"selia");
 
-b1.Delete(b1.root,90);
+b1.Delete(90);// problen with delete func
 
+cout << " *******pre order out******** \n";
 
 b1.preorder(b1.root);
-cout << b1.Search(100) << endl;
-cout << " *******search******** \n";
+
+cout << " *******search by id******** \n";
 b1.SearchName(50);
 // b1.SearchByName("selia");
 cout << " *******mini******** \n";
