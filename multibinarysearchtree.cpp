@@ -177,11 +177,11 @@ b1.insert(12,"ahmed");
 b1.insert(20,"sagda");
 b1.insert(50,"selia");
 
-b1.Delete(90);// problen with delete func
+b1.Delete(45);// using delete func
 
 cout << " *******pre order out******** \n";
 
-b1.preorder(b1.root);
+b1.preorder(b1.root);// using preorder func
 
 cout << " *******search by id******** \n";
 b1.SearchName(50);
