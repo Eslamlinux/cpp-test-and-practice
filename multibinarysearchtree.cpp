@@ -149,7 +149,12 @@ class BST{
                 r->right = NULL;
             }
             else{
-                Node* mini = miniId(Node* r);
+                Node* mini = miniId(r->right);
+                r->Fdata = mini->Fdata;
+                r->Sdata = mini->Sdata;
+                delete mini;
+                mini = NULL;
+                
             }
         }
     }
