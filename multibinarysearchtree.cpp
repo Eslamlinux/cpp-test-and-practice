@@ -11,12 +11,12 @@ class Node{
     string Sdata;
     Node* right;
     Node* left;
-    Node(int Fvalue,string Svalue):Fdata(Fvalue),Sdata(Svalue),right(nullptr),left(nullptr){}
-    // {
-    //     Fdata = Fvalue;
-    //     Sdata = Svalue;
-    //     right = left = nullptr;
-    // }
+    Node(int Fvalue,string Svalue)
+    {
+        Fdata = Fvalue;
+        Sdata = Svalue;
+        right = left = NULL;
+    }
 };
 
 class BST{
@@ -163,17 +163,17 @@ int main()
 {
 
 BST b1;
-b1.insert(45,"eslam");
-b1.insert(15,"hassan");
-b1.insert(47,"mohamed");
+// b1.insert(45,"eslam");
+// b1.insert(15,"hassan");
+// b1.insert(47,"mohamed");
 b1.insert(90,"aya");
-b1.insert(10,"najah");
-b1.insert(55,"khalid");
-b1.insert(12,"ahmed");
-b1.insert(20,"sagda");
-b1.insert(50,"selia");
+// b1.insert(10,"najah");
+// b1.insert(55,"khalid");
+// b1.insert(12,"ahmed");
+// b1.insert(20,"sagda");
+// b1.insert(50,"selia");
 
-// b1.Delete(b1.root,90);
+b1.Delete(b1.root,90);
 
 
 b1.preorder(b1.root);
