@@ -82,14 +82,14 @@ class BST{
     
     // SearchByName func it search in all tree 
     Node* SearchByName(Node* r ,string name){
-    Node* foundit = SearchByName(r->left,name);
         if(r == NULL){
             return NULL;
         }
         else if(r->Sdata == name){
             return r;
         }
-        else if(foundit != NULL){
+    Node* foundit = SearchByName(r->left,name);
+        if(foundit != NULL){
             return foundit;
         }
         else{
@@ -183,6 +183,8 @@ b1.insert(55,"khalid");
 b1.insert(12,"ahmed");
 b1.insert(20,"sagda");
 b1.insert(50,"selia");
+
+cout << " *******search by name only******** \n";
 
 b1.SearchByName("sagda");
 
