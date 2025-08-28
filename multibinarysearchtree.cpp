@@ -82,13 +82,13 @@ class BST{
     
     // SearchByName func it search in all tree 
     Node* SearchByName(Node* r ,string name){
+    Node* foundit = SearchByName(r->left,name);
         if(r == NULL){
             return NULL;
         }
         else if(r->Sdata == name){
             return r;
         }
-    Node* foundit = SearchByName(r->left,name);
         else if(foundit != NULL){
             return foundit;
         }
@@ -183,6 +183,8 @@ b1.insert(55,"khalid");
 b1.insert(12,"ahmed");
 b1.insert(20,"sagda");
 b1.insert(50,"selia");
+
+b1.SearchByName("sagda");
 
 b1.Delete(45);// using delete func
 
