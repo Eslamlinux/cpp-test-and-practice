@@ -186,11 +186,13 @@ b1.insert(50,"selia");
 
 cout << " *******search by name only******** \n";
 
-b1.SearchByName("sagda");
+b1.SearchByName("eslam");
 
 b1.Delete(45);// using delete func
 
-cout << " *******pre order out******** \n";
+b1.SearchByName("eslam");
+
+cout << " *******pre order output******** \n";
 
 b1.preorder(b1.root);// using preorder func
 
