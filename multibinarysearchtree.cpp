@@ -152,11 +152,11 @@ class BST{
                 Node* mini = miniId(r->right);
                 r->Fdata = mini->Fdata;
                 r->Sdata = mini->Sdata;
-                delete mini;
-                mini = NULL;
-                
+                r->right = Delete(r->right,mini->Fdata);
+                // r->right = Delete(r->right,mini->Sdata);
             }
         }
+        return r;
     }
 };
 int main()
