@@ -79,26 +79,33 @@ class BST{
         }
 
     }
-    //need more work on it
-    // Node* SearchByName(Node* r ,string name){
-    //     if(r == NULL){
-    //         return NULL;
-    //     }
-    //     else if(r->Sdata == name){
-    //         return r;
-    //     }
-    //     else if(name < r->Sdata){
-    //         return SearchByName(r->left,name);
-    //     }
-    //     else{
-    //         return SearchByName(r->right,name);
-    //     }
-    //     return r;
-    // }
-    // void SearchByName(string name){
-    //     Node* result = SearchByName(root,name);
-    //     cout << "name is: " << result->Sdata << "Id: " <<  result->Fdata;
-    // }
+    
+    // SearchByName func it search in all tree 
+    Node* SearchByName(Node* r ,string name){
+        if(r == NULL){
+            return NULL;
+        }
+        else if(r->Sdata == name){
+            return r;
+        }
+    Node* foundit = SearchByName(r->left,name);
+        else if(foundit != NULL){
+            return foundit;
+        }
+        else{
+            return SearchByName(r->right,name);
+        }
+        return r;
+    }
+    void SearchByName(string name) {
+        Node* result = SearchByName(root, name);
+        if (result == NULL) {
+            cout << "Name: " << name << " not found." << endl;
+        } 
+        else {
+            cout << "Name is: " << result->Sdata << ", Id: " << result->Fdata << endl;
+        }
+}
     
     Node* miniId(Node* r){
         if(r == NULL){
