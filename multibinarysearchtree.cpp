@@ -186,19 +186,18 @@ b1.insert(50,"selia");
 
 cout << " *******search by name only******** \n";
 
-b1.SearchByName("eslam");
+b1.SearchByName("eslam");// using search by name befor delete
 
 b1.Delete(45);// using delete func
 
-b1.SearchByName("eslam");
+b1.SearchByName("eslam"); // using search by name after delete
 
 cout << " *******pre order output******** \n";
 
 b1.preorder(b1.root);// using preorder func
 
 cout << " *******search by id******** \n";
-b1.SearchName(50);
-// b1.SearchByName("selia");
+b1.SearchName(50);// using search by id number
 cout << " *******mini******** \n";
 Node* topr = b1.miniId(b1.root);
 cout << topr->Fdata <<endl;
