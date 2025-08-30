@@ -4,7 +4,6 @@ multi binary search tree
 #include <iostream>
 using namespace std;
 
-
 class Node{
     public:
     int Fdata;
