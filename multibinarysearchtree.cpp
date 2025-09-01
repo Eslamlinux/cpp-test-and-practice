@@ -50,6 +50,26 @@ class BST{
             preorder(r->right);
         }
     }
+    void inorder(Node *r){
+        if(r == NULL){
+            return;
+        }
+        else{
+            inorder(r->left);
+            cout << r->Fdata << " " << r->Sdata << endl;
+            inorder(r->right);
+        }
+    }
+    void postorder(Node* r){
+        if(r == NULL){
+            return;
+        }
+        else{
+            postorder(r->left);
+            postorder(r->right);
+            cout << r->Fdata << " " << r->Sdata << endl;
+        }
+    }
     Node* Search(Node* r,int id){
         if(r == NULL){
             return NULL;
@@ -105,16 +125,6 @@ class BST{
             cout << "Name is: " << result->Sdata << ", Id: " << result->Fdata << endl;
         }
 }
-
-    // // count func it count in all tree 
-    // Node* count(Node* r ){
-    //     int counter = 0;
-    //     if(r == NULL){
-    //         return NULL;
-    //     }
-    //     else if(r->Fdata <){
-    //         return r;
-    // }
 
 
     Node* miniId(Node* r){
@@ -205,7 +215,10 @@ b1.SearchByName("eslam"); // using search by name after delete
 cout << " *******pre order output******** \n";
 
 b1.preorder(b1.root);// using preorder func
-
+cout << " *******in order output******** \n";
+b1.inorder(b1.root);
+cout << " *******post order output******** \n";
+b1.postorder(b1.root);
 cout << " *******search by id******** \n";
 b1.SearchName(50);// using search by id number
 cout << " *******mini******** \n";
