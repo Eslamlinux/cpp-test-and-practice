@@ -105,7 +105,18 @@ class BST{
             cout << "Name is: " << result->Sdata << ", Id: " << result->Fdata << endl;
         }
 }
-    
+
+    // // count func it count in all tree 
+    // Node* count(Node* r ){
+    //     int counter = 0;
+    //     if(r == NULL){
+    //         return NULL;
+    //     }
+    //     else if(r->Fdata <){
+    //         return r;
+    // }
+
+
     Node* miniId(Node* r){
         if(r == NULL){
             return NULL;
