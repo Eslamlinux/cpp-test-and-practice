@@ -1,6 +1,7 @@
 using namespac std;
 #include <iostream>
 
+
 int main(){
 int Fun(bool b, int val)
 {
