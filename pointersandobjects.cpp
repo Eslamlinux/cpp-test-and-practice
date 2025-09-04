@@ -31,6 +31,6 @@ prntptr(ptr);
 prntptr(change_It(ptr,"aya khalid",31));
 prntptr(ptr);
 prntptr(emp);
-
+delete ptr,emp;
     return 0;
 }
