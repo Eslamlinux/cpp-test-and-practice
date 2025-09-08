@@ -7,20 +7,8 @@ class tclass{
     string name;
     bool isempty(tclass *tocheck);
     tclass* todelete(tclass* todelete);
-    void prntptr(tclass *entry){
-        if(isempty(entry)){
-            return;
-        }
-    cout << entry->name << "\t";
-    cout << entry->age << "\n";
-    }
-    tclass* change_It(tclass* entry,string to_change_name = "unkown\n",int to_change_age =0){
-        tclass* newclass = new tclass;
-        newclass = entry;
-        newclass->name = to_change_name;
-        newclass->age = to_change_age;
-        return newclass;
-    }
+    void prntptr(tclass *entry);
+    tclass* change_It(tclass* entry,string to_change_name = "unkown",int to_change_age =0);
 };
 tclass *ptr = new tclass;
 tclass *emp = new tclass;
@@ -43,3 +31,18 @@ cout << boolalpha << a.isempty(ptr);
 bool tclass::isempty(tclass *tocheck){
  return tocheck == NULL ? true:false;
 }
+tclass* tclass::change_It(tclass* entry,string to_change_name,int to_change_age ){
+    tclass* newclass = new tclass;
+    newclass = entry;
+    newclass->name = to_change_name;
+    newclass->age = to_change_age;
+    return newclass;
+    }
+
+void tclass::prntptr(tclass *entry){
+    if(isempty(entry)){
+    return;
+    }
+    cout << entry->name << "\t";
+    cout << entry->age << "\n";
+    }
