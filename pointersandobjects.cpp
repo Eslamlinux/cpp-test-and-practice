@@ -26,15 +26,15 @@ tclass *ptr = new tclass;
 tclass *emp = new tclass;
 int main(){
 
-ptr->name = "eslam khalid";
+ptr->name = "eslam l";
 ptr->age = 33;
-emp->name = "hassan khalid";
+emp->name = "hassan l";
 emp->age = 28;
 
 tclass a;
 
 a.prntptr(ptr);
-a.prntptr(a.change_It(ptr,"aya khalid",31));
+a.prntptr(a.change_It(ptr,"aya l",31));
 a.prntptr(ptr);
 cout << boolalpha << a.isempty(ptr);
     return 0;
