@@ -58,7 +58,19 @@ void postorder(Node* r){
 }
 };
 int main(){
+  bss bstring;
+    bstring.insert("eslam");
+    bstring.insert("khalid");
+    bstring.insert("hassan");
+    bstring.insert("amer");
+    
+    bstring.insert("amer");
 
+    bstring.preorder(bstring.root);
+    cout << endl;
+    bstring.inorder(bstring.root);
+    cout << endl;
+    bstring.postorder(bstring.root);
   
     return 0;
 }
