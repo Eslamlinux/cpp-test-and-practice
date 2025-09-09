@@ -40,3 +40,16 @@ vector<int> climb(int n)
     }
     return result;
 }
+
+int main()
+{
+  int n = 10; // 1, 3, 6, 13
+  vector<int> result = climb(n);
+  cout << "The sequence is: ";
+  for (int i = 0; i < result.size(); i++)
+  {
+    cout << result[i] << " ";
+  }
+  cout << endl;
+  return 0;
+}
