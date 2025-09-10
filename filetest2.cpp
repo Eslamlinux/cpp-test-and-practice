@@ -2,16 +2,15 @@
 #include <fstream>
 void Creat_Txt_File(std::string entry)
 {
-    std::ofstream myfile("filetest2.bin");
-
-    std::fstream fileline("filetest2.bin");
-
+    std::ofstream myfile("filetest2.txt");
     myfile << entry << "\n";
-    
-        std::string toread;
-        while(getline(fileline ,toread)){
-            std::cout << toread;
-        }
+    myfile.close();
+    std::fstream fileline("filetest2.txt");
+    std::string toread;
+    while(getline(fileline ,toread)){
+    std::cout << toread;
+    }
+    fileline.close();
 }
 int main()
 {
