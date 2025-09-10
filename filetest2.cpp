@@ -13,7 +13,7 @@ void Creat_Txt_File(std::string entry)
 
     if(fileline.is_open()){
     while(getline(fileline ,toread)){
-    std::cout << toread;
+    std::cout << toread << std::endl;
     }
     fileline.close();
         system("clear");
