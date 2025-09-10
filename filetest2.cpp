@@ -8,19 +8,17 @@ void Creat_Txt_File(std::string entry)
 
     myfile << entry << "\n";
     
-    std::string Print_Txt_File()
-    {
         std::string toread;
         while(getline(fileline ,toread)){
-            cout << toread;
+            std::cout << toread;
         }
-    }
-
+}
 int main()
 {
+Creat_Txt_File("eslam");
 
-  
-}
+
+
 
 
 
