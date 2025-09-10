@@ -6,12 +6,18 @@ void Creat_Txt_File(std::string entry)
 
     std::fstream addto("filetest2.bin");
 
-    addto << "hello world\n";
-  
-}
+    addto << entry << "\n";
+    
+    std::string Print_Txt_File()
+    {
+        while(getline(entry ,))
+    }
 
 int main()
 {
+
+  
+}
 
 
 
