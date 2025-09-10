@@ -1,6 +1,6 @@
 #include <iostream>
-#include <ifstream>
-void Creat_Txt_File(string entry)
+#include <fstream>
+void Creat_Txt_File(std::string entry)
 {
   
 }
