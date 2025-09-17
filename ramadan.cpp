@@ -48,6 +48,10 @@ for(int i =0; i < sTiH.size(); i++){
 
 int main() {
 
+    vector<string> startTimes = {"04:45"};
+    vector<string> endTimes = {"18:15"};
+    float totalFastingTime = calculateTotalFastingTime(startTimes, endTimes);
+    cout << totalFastingTime << " hours" << endl;
 
     return 0;
 }
