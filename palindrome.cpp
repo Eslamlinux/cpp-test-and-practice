@@ -9,6 +9,14 @@ bool isPalindrom (const string& str)
   vector<string> tlower;
 transform(str.begin(), str.end(), back_inserter(tlower), ::tolower);
 
+      for(int i = 0 ; i < tlower.size() ; i++) {
+    if(tlower[i] == tlower[i-1]){
+      if(i == tlower.size() - 1){
+        return true;
+      }
+      continue;
+    }
+  }
 
 int main() {
 
