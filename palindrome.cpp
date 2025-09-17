@@ -38,6 +38,7 @@ transform(str.begin(), str.end(), back_inserter(tlower), ::tolower);
     return false;
     }
 int main() {
-
+    string str = "Asa";
+    cout << isPalindrom(str) << endl;
     return 0;
 }
