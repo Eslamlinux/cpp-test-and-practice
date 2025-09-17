@@ -11,11 +11,18 @@ float resault;
 vector<string> sTiH(startTimes);
 vector<string> eTiH(endTimes);
 
+for(int i =0; i < sTiH.size(); i++){
+  for(int j =0; j < sTiH.at(i).length(); j++){
+    if(sTiH.at(i).at(j) == ':'){
+        sTiH.at(i).at(j) = '.';
+    }
+  }
+}
+
 
 
 
 int main() {
-
 
 
     return 0;
