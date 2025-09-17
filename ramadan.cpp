@@ -26,7 +26,23 @@ for(int i =0; i < eTiH.size(); i++){
   }
 }
 
+vector<float> startTimesInHours;
+vector<float> endTimesInHours;
+for(int i =0; i < sTiH.size(); i++){
+    startTimesInHours.push_back(stof(sTiH.at(i)));
+    endTimesInHours.push_back(stof(eTiH.at(i)));
+}
 
+for(int i =0; i < sTiH.size(); i++){     
+    if(startTimesInHours.at(i) < endTimesInHours.at(i)){
+        resault += endTimesInHours.at(i) - startTimesInHours.at(i);
+        }
+    else {
+        resault += startTimesInHours.at(i) - endTimesInHours.at(i); 
+    }
+}
+    return resault;
+}
 
 
 
