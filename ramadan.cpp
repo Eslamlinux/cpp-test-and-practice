@@ -18,6 +18,14 @@ for(int i =0; i < sTiH.size(); i++){
     }
   }
 }
+for(int i =0; i < eTiH.size(); i++){
+  for(int j =0; j < eTiH.at(i).length(); j++){
+    if(eTiH.at(i).at(j) == ':'){
+        eTiH.at(i).at(j) = '.';
+    }
+  }
+}
+
 
 
 
