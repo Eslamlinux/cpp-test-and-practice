@@ -26,7 +26,16 @@ transform(str.begin(), str.end(), back_inserter(tlower), ::tolower);
     }
   }
     
-
+    if(str.size() < 2){return true;}
+  for(int i = 0 ; i < str.length() ; i++) {
+  if(tlower[i] == tlower[i-2]){
+    if(i == str.length() - 1){
+      return true;
+    }
+    continue;
+  }
+}
+    return false;
     }
 int main() {
 
