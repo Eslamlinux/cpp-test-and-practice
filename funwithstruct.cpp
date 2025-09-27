@@ -1,5 +1,6 @@
 #include <iostream>
 
+int Size ;
 struct benuts{
     private:
     int b_price;
@@ -28,26 +29,24 @@ void printdata(benuts b_object){
 }
 
 void print_arr_data(benuts b_object[]){
-    int Size = sizeof(b_object[0]);
-    std::cout << Size;
-    // for(int i =0; i < Size ;i++){
-    //     std::cout <<"the " << b_object[i].name << " price is: ";
-    //     std::cout << b_object[i].get_b(0);
-    //     std::cout << "\ntotal is: ";
-    //     std::cout << b_object[i].get_b(1);
-    //     std::cout <<std::endl;
-    // }
+    for(int i =0; i < Size ;i++){
+        std::cout <<"the " << b_object[i].name << " price is: ";
+        std::cout << b_object[i].get_b(0);
+        std::cout << "\ntotal is: ";
+        std::cout << b_object[i].get_b(1);
+        std::cout <<std::endl;
+    }
 }
 
 int main(){
-
+Size =5;
 
 benuts wheat;
 wheat.set_b("wheat", 30,350.5);
 printdata(wheat);
 
 std::cout << std::endl;
-benuts all_b[5];
+benuts all_b[Size];
 all_b[0].set_b("wheat",30.3,50.5);
 all_b[1].set_b("benaut",35.3,100.5);
 all_b[2].set_b("ric",31.3,500.5);
