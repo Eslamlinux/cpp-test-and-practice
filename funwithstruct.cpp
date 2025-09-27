@@ -5,7 +5,9 @@ struct benuts{
     int b_price;
     float b_total;
     public:
-    void set_b(float price, float total){
+    std::string name = "unkown";
+    void set_b(std::string item_name ,float price, float total){
+        name = item_name;
         b_price = price;
         b_total = total;
     }
@@ -19,7 +21,7 @@ struct benuts{
 
 
 void printdata(benuts b_object){
-    std::cout << "price is: ";
+    std::cout <<"the " << b_object.name << " price is: ";
     std::cout << b_object.get_b(0);
     std::cout << "\ntotal is: ";
     std::cout << b_object.get_b(1);
@@ -32,6 +34,8 @@ benuts wheat;
 wheat.set_b(30,350.5);
 printdata(wheat);
 
+benuts all_b[10];
+all_b[0].set_b()
 
     return 0;
 }
