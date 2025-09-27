@@ -27,15 +27,30 @@ void printdata(benuts b_object){
     std::cout << b_object.get_b(1);
 }
 
+void print_arr_data(benuts b_object[]){
+    for(int i =0; i < 3;i++){
+        std::cout <<"the " << b_object[i].name << " price is: ";
+        std::cout << b_object[i].get_b(0);
+        std::cout << "\ntotal is: ";
+        std::cout << b_object[i].get_b(1);
+        std::cout <<std::endl;
+    }
+}
+
 int main(){
 
 
 benuts wheat;
-wheat.set_b(30,350.5);
+wheat.set_b("wheat", 30,350.5);
 printdata(wheat);
 
-benuts all_b[10];
-all_b[0].set_b()
+std::cout << std::endl;
+benuts all_b[3];
+all_b[0].set_b("wheat",30.3,50.5);
+all_b[1].set_b("benaut",35.3,100.5);
+all_b[2].set_b("ric",31.3,500.5);
+
+print_arr_data(all_b);
 
     return 0;
 }
