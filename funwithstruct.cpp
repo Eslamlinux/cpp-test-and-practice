@@ -17,11 +17,21 @@ struct benuts{
 
 };
 
+
+void printdata(benuts b_object){
+    std::cout << "price is: ";
+    std::cout << b_object.get_b(0);
+    std::cout << "\ntotal is: ";
+    std::cout << b_object.get_b(1);
+}
+
 int main(){
 
 
 benuts wheat;
 wheat.set_b(30,350.5);
-std::cout<< wheat.get_b(false);
+printdata(wheat);
+
+
     return 0;
 }
