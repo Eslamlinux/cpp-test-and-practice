@@ -59,5 +59,11 @@ int main()
     std::cout<< "after tie\t" <<  x << std::endl;
     std::cout<< "after tie\t" <<  z << std::endl;
     std::cout<< "after tie\t" <<  y << std::endl;
+
+
+    auto [r,t,u] = ta;
+    std::cout<< r << " " << t << " " << u << std::endl;
+
+    
     return 0;
 }
