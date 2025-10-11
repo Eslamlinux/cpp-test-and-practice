@@ -24,8 +24,13 @@ int main()
     std::string f = std::get<0>(customer("Eslam",34,213));
     int i = std::get<1>(customer("Eslam",34,213));
     int s = std::get<2>(customer("Eslam",34,213));
-
     std::cout << f << " " << i << " " << s << "\n";
+
+
+    std::cout << std::get<std::string>(customer("mohamed",24,214)) << " ";
+    std::cout << std::get<1>(customer("mohamed",24,214)) << " ";
+    std::cout << std::get<2>(customer("mohamed",24,214)) << " ";
+    std::cout << std::get<std::string>(customer("mohamed",24,214)) << " ";
       
     return 0;
 }
