@@ -30,7 +30,18 @@ int main()
     std::cout << std::get<std::string>(customer("mohamed",24,214)) << " ";
     std::cout << std::get<1>(customer("mohamed",24,214)) << " ";
     std::cout << std::get<2>(customer("mohamed",24,214)) << " ";
-    std::cout << std::get<std::string>(customer("mohamed",24,214)) << " ";
-      
+    std::cout << std::get<std::string>(customer("mohamed",24,214)) << " \n";
+    
+    //modify
+    std::tuple<std::string,int,int> te;
+    std::tuple<std::string,int,int> tt;
+    // te = std::make_tuple("mohamed",24,214);
+    // te = customer("mohamed",24,214);
+    tt = std::make_tuple("mohamed",24,214);
+    te = tt;
+    std::cout << std::get<std::string> (te) << std::endl;
+    std::get<std::string>(te) = "hassan" ;
+    std::cout << std::get<std::string> (te) << std::endl;
+
     return 0;
 }
