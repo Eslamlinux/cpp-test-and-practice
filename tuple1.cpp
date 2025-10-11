@@ -13,10 +13,12 @@ std::tuple<int ,int> fun(){
     std::cout<< " plz enter 2 number \n";
     std::cin >> x >> y;
 
-    std::tuple<int,int>result = std::make_tuple(x,y);
+    // std::tuple<int,int>result = std::make_tuple(x,y);
     // std::cin.ignore();
     // std::cin.get(); // to puse the program
-    return result;
+    // return result;
+
+    return std::make_tuple(x,y);
 }
 
 int main()
@@ -76,8 +78,10 @@ int main()
     auto [r,t,u] = ta;
     std::cout<< r << " " << t << " " << u << std::endl;
 
-    auto[l,k] = fun();
-    std::cout<< l << " " << k << std::endl;
+    // auto[l,k] = fun();
+    // std::cout<< l << " " << k << std::endl;
+    auto new_tuple = fun();
+    std::cout<< std::get<0>(new_tuple) << " " <<  std::get<1>(new_tuple) << std::endl;
     std::cin.ignore();
     std::cin.get(); // to puse the program
 
