@@ -43,5 +43,16 @@ int main()
     std::get<std::string>(te) = "hassan" ;
     std::cout << std::get<std::string> (te) << std::endl;
 
+
+
+    std::tuple<int,int,int> ta;
+    ta = std::make_tuple(1,2,3);
+    std::tuple<int,int,int> tb;
+    tb = std::make_tuple(4,5,6);
+
+    ta.swap(tb);
+    std::cout<< std::get<0>(ta) << std::endl;
+    std::cout<< std::get<0>(tb) << std::endl;
+
     return 0;
 }
