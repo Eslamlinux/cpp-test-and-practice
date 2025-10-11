@@ -54,5 +54,10 @@ int main()
     std::cout<< std::get<0>(ta) << std::endl;
     std::cout<< std::get<0>(tb) << std::endl;
 
+    int x , z , y;
+    std::tie(x,z,y) = ta;
+    std::cout<< "after tie\t" <<  x << std::endl;
+    std::cout<< "after tie\t" <<  z << std::endl;
+    std::cout<< "after tie\t" <<  y << std::endl;
     return 0;
 }
