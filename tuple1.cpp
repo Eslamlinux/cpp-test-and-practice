@@ -1,7 +1,11 @@
 #include <tuple>
 #include <iostream>
 
-
+std::tuple<std::string, int, int> customer(std::string name,int age,int id){
+    std::tuple<std::string, int, int> result;
+    result = std::make_tuple(name,age,id);
+    return result;
+}
 
 int main()
 {
@@ -16,5 +20,12 @@ int main()
 
     std::cout << a << " " << b << " " << c << "" << d << "\n";
 
+
+    std::string f = std::get<0>(customer("Eslam",34,213));
+    int i = std::get<1>(customer("Eslam",34,213));
+    int s = std::get<2>(customer("Eslam",34,213));
+
+    std::cout << f << " " << i << " " << s << "\n";
+      
     return 0;
 }
