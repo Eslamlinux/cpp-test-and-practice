@@ -7,6 +7,18 @@ std::tuple<std::string, int, int> customer(std::string name,int age,int id){
     return result;
 }
 
+std::tuple<int ,int> fun(){
+    int x,y;
+
+    std::cout<< " plz enter 2 number \n";
+    std::cin >> x >> y;
+
+    std::tuple<int,int>result = std::make_tuple(x,y);
+    // std::cin.ignore();
+    // std::cin.get(); // to puse the program
+    return result;
+}
+
 int main()
 {
     std::tuple<int,std::string ,char,std::string> t1;
@@ -64,6 +76,10 @@ int main()
     auto [r,t,u] = ta;
     std::cout<< r << " " << t << " " << u << std::endl;
 
-    
+    auto[l,k] = fun();
+    std::cout<< l << " " << k << std::endl;
+    std::cin.ignore();
+    std::cin.get(); // to puse the program
+
     return 0;
 }
