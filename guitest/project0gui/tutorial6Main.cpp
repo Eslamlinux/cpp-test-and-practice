@@ -44,7 +44,6 @@ wxString wxbuildinfo(wxbuildinfoformat format)
     return wxbuild;
 }
 
-
 //(*IdInit(tutorial6Frame)
 const long tutorial6Frame::ID_STATICTEXT1 = wxNewId();
 const long tutorial6Frame::ID_BUTTON1 = wxNewId();
@@ -134,4 +133,66 @@ tutorial6Frame::tutorial6Frame(wxWindow* parent,wxWindowID id)
     Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&tutorial6Frame::OnQuit);
     Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&tutorial6Frame::OnAbout);
     //*)
+}
+
+tutorial6Frame::~tutorial6Frame()
+{
+    //(*Destroy(tutorial6Frame)
+    //*)
+}
+
+void tutorial6Frame::OnQuit(wxCommandEvent& event)
+{
+    Close();
+}
+
+void tutorial6Frame::OnAbout(wxCommandEvent& event)
+{
+    wxString msg = wxbuildinfo(long_f);
+    wxMessageBox(msg, _("Welcome to..."));
+}
+
+void tutorial6Frame::OnButton1Click(wxCommandEvent& event)
+{
+    StaticText1->SetLabel(_("The Label is changed"));
+    Layout();
+}
+
+void tutorial6Frame::OnButton2Click(wxCommandEvent& event)
+{
+    wxString textval = TextCtrl1->GetValue();
+    std::string userMsg = "you entered \n";
+    wxMessageBox(_(userMsg)+textval);
+}
+
+void tutorial6Frame::OnButton3Click(wxCommandEvent& event)
+{
+    int Newval = Gauge1->GetValue() +10;
+    Newval > 100 ? Newval = 0 : Newval;
+    Gauge1->SetValue(Newval);
+}
+
+void tutorial6Frame::OnSlider1CmdScrollThumbTrack(wxScrollEvent& event)
+{
+    wxFont font = StaticText2->GetFont();
+    font.SetPointSize( Slider1->GetValue() );
+    StaticText2->SetFont(font);
+}
+
+void tutorial6Frame::OnSlider1CmdScrollThumbRelease(wxScrollEvent& event)
+{
+    Layout();
+    Panel1->GetSizer()->SetSizeHints(this);
+}
+
+void tutorial6Frame::OnButton4Click(wxCommandEvent& event)
+{
+    wxColor oldone ,newone;
+    oldone = StaticText3->GetForegroundColour();
+    newone = wxGetColourFromUser(this,oldone);
+
+    if(newone.IsOk()){
+            StaticText3->SetForegroundColour(newone);
+            Refresh();
+    }
 }
