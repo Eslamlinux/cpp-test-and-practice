@@ -15,6 +15,8 @@ int main()
         std::cout << pair_element << std::endl;
     }
 
+    std::cout << "------------------" << std::endl;
+
 // if the data type are different must convert to string
     std::pair<std::string ,std::pair<int,std::pair<int,double>>> nestedpair2;
     nestedpair2.first = "Eslam";
