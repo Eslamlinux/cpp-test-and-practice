@@ -2,7 +2,12 @@
 #include <string>
 
 std::string encode(const std::string &str) {
-  return "";
+    std::string result = "";
+    std::string vowels = "aeiou"
+    for(int i =0 ;i < str.size();i++){
+        for(int t = 0 ;t < vowels.size();t++)
+    }
+  return result;
 }
 
 std::string decode(const std::string &str) {
