@@ -3,23 +3,43 @@
 
 std::string encode(const std::string &str) {
     std::string result = "";
-    std::string vowels = "aeiou"
+    std::string vowels = "aeiou"; //hello
     for(int i =0 ;i < str.size();i++){
+        bool flag = false;
         for(int t = 0 ;t < vowels.size();t++){
-            if(str[i] == vowels[t]){
-                result+= to_string(t+1);
+            if(tolower(str[i]) == vowels[t]){
+                result+= std::to_string(t+1);
+                flag = true;
+                break;
             }
-            else{
-                result+= str[i]
+            // else{
+                // }
             }
+        if(!flag){
+            result+= str[i];
         }
     }
   return result;
 }
-
 std::string decode(const std::string &str) {
-  return "";
-}
+    std::string result = "";
+    std::string vowels = "aeiou"; //hello
+    for(int i =0 ;i < str.size();i++){
+        bool flag = false;
+        for(int t = 0 ;t < vowels.size();t++){
+            if(tolower(str[i]) == vowels[t]){
+                result+= std::to_string(t+1);
+                flag = true;
+                break;
+            }
+            // else{
+                // }
+            }
+        if(!flag){
+            result+= str[i];
+        }
+    }
+  return result;}
 
 int main()
 {
@@ -32,7 +52,7 @@ o -> 4
 u -> 5
 */
 
-std::cout << encode(hello) << std::endl;
+std::cout << encode("hEllo") << std::endl;
 //std::cout << decode(h2ll4) << std::endl;
 
     return 0;
