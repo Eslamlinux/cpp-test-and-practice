@@ -25,8 +25,7 @@ output: "e6t-r3s are r4y fun!"
 
 std::string abbreviate(std::string sentence) {
     std::string Result ,Word ,F_Word , L_word;
-    int Count;
-    Count = sentence.size() - 2;
+    int Count = sentence.size();
     if(Count < 4) return sentence;
     for(int i = 0; i < sentence.size(); i++)
     {
@@ -36,7 +35,7 @@ std::string abbreviate(std::string sentence) {
         }
         else
         {
-            if(Word.size() >= 4)
+            if(Word.size() > 3)
             {
                 Count = Word.size() - 2;
                 F_Word = Word[0];
@@ -52,7 +51,7 @@ std::string abbreviate(std::string sentence) {
         }
         if(!Word.empty() && i == sentence.size() - 1)
         {
-            if(Word.size() >= 4)
+            if(Word.size() > 3)
             {
                 Count = Word.size() - 2;
                 F_Word = Word[0];
@@ -76,6 +75,7 @@ std::cout << abbreviate("internationalization") << std::endl; // i18n
 std::cout << abbreviate("accessibility") << std::endl; // a11y
 std::cout << abbreviate("elephant rides are really fun!") << std::endl; // e6t r3s are r4y fun!
 std::cout << abbreviate("elephant-ride") << std::endl; // e6t
+std::cout << abbreviate("sits") << std::endl; // s2s
 
     return 0;
 }
