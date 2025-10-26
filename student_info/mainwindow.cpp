@@ -4,7 +4,7 @@
 
 int main()
 {
-	std::cout << "hello semsem\n" << std::endl;
+std::cout << "hello semsem\n" << std::endl;
 
 
 
