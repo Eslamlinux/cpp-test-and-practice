@@ -45,6 +45,7 @@ std::cout << std::endl;
     for(int i=0; i<2; ++i, ++it){
         std::cout << it->a << " " << it->b << std::endl;
     }
+std::cout << std::endl;
 
 for(int i=0; i<2; i++){
     std::cout << pd[i].a << " " << pd[i].b << std::endl;
