@@ -24,9 +24,10 @@ output: "e6t-r3s are r4y fun!"
 
 
 std::string abbreviate(std::string sentence) {
-    std::string Count,Result ,Word ,F_Word , L_word;
-    Count = std::to_string(sentence.size() - 2);
-    if(stoi(Count ) < 4) return sentence;
+    std::string Result ,Word ,F_Word , L_word;
+    int Count;
+    Count = sentence.size() - 2;
+    if(Count < 4) return sentence;
     for(int i = 0; i < sentence.size(); i++)
     {
         if(isalpha(sentence[i]))
@@ -37,10 +38,10 @@ std::string abbreviate(std::string sentence) {
         {
             if(Word.size() >= 4)
             {
-                Count = std::to_string(Word.size() - 2);
+                Count = Word.size() - 2;
                 F_Word = Word[0];
                 L_word = Word[Word.size() - 1];
-                Result += F_Word + Count + L_word;
+                Result += F_Word + std::to_string(Count) + L_word;
             }
             else
             {
@@ -53,10 +54,10 @@ std::string abbreviate(std::string sentence) {
         {
             if(Word.size() >= 4)
             {
-                Count = std::to_string(Word.size() - 2);
+                Count = Word.size() - 2;
                 F_Word = Word[0];
                 L_word = Word[Word.size() - 1];
-                Result += F_Word + Count + L_word;
+                Result += F_Word + std::to_string(Count) + L_word;
             }
             else
             {
