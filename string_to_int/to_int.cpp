@@ -2,10 +2,16 @@
 
 // Function to convert string to integer
 
-size_t to_int(const std::string &Enter_String_Has_A_Number) {
+size_t to_int(std::string &Enter_String_Has_A_Number) {
     size_t result = 0;
+    std::string OnlyNum;
+    for(auto c : Enter_String_Has_A_Number) {
+        if(isdigit(c)) {
+            OnlyNum += c;
+        }
+    }
     // Handle strings longer than 19 characters to prevent overflow
-    if(Enter_String_Has_A_Number.size() > 19) {
+    if(OnlyNum.size() > 9) {
         return result; // Return 0 for empty string
     }
     // Convert each character to digit and build the integer
@@ -18,10 +24,10 @@ size_t to_int(const std::string &Enter_String_Has_A_Number) {
     return result;
 }
 
-// Example usage
+//Example usage
 // int main() {
-//     std::string numberStr = "9999999999999999999";
-//     size_t number = to_int(numberStr);
+//     std::string numberStr = "a9999y999oiiiiuhhhi99";
+//     int number = to_int(numberStr);
 //     std::cout << "The integer value is: " << number << std::endl;
 //     return 0;
 // }
