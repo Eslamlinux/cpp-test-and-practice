@@ -1,5 +1,21 @@
 #include <iostream>
 #include <ctime>
+#include <termios.h>
+#include <unistd.h>
+
+// دالة لتغيير وضع الطرفية (terminal) عشان نقرا حرف واحد بدون Enter
+struct termios old_tio, new_tio;
+
+void init_termios(int echo) {
+    tcgetattr(STDIN_FILENO, &old_tio); // حفظ إعدادات الطرفية القديمة
+    new_tio = old_tio;
+    new_tio.c_lflag &= ~(ICANON | ECHO); // تعطيل وضع الـ canonical والإظهار
+    tcsetattr(STDIN_FILENO, TCSANOW, &new_tio); // تطبيق الإعدادات الجديدة
+}
+
+void reset_termios(void) {
+    tcsetattr(STDIN_FILENO, TCSANOW, &old_tio); // استعادة الإعدادات القديمة
+}
 
 void to_up()
 {
@@ -16,7 +32,8 @@ void to_up()
 
 int main()
 {
+	init_termios(0);
 	to_up();
-
+	reset_termios();
 	return 0;
 }
