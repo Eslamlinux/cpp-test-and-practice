@@ -1,10 +1,15 @@
 
 #include <iostream>
+#include <utility>
 
+class student
+{
+
+};
 
 int main()
 {
-std::cout << "hello semsem\n" << std::endl;
+
 
 
 
