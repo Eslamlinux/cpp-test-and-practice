@@ -43,9 +43,9 @@
 							</tool>
 						</toolChain>
 					</folderInfo>
-					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.675578544.340937084" name="mainwindow.cpp" rcbsApplicability="disable" resourcePath="mainwindow.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.172773169.1329075773">
+					<fileInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.675578544.340937084" name="mainwindow.cpp" rcbsApplicability="disable" resourcePath="calculate_your_age_years.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cross.cpp.compiler.172773169.1329075773">
 						<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.172773169.1329075773" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.172773169">
-							<option id="gnu.cpp.compiler.option.dialect.std.848429656" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
+							<option id="gnu.cpp.compiler.option.dialect.std.848429656" name="Language standard" superClass="gnu.cpp.compiler.option.dialect.std" value="gnu.cpp.compiler.dialect.default" valueType="enumerated"/>
 							<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1044858523" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
 						</tool>
 						<tool customBuildStep="true" id="org.eclipse.cdt.managedbuilder.ui.rcbs.1491992181" name="Resource Custom Build Step">
