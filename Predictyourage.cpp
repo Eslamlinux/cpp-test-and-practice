@@ -21,12 +21,12 @@ int predictAge(int age1, int age2, int age3, int age4, int age5, int age6, int a
     int result = 0;
     // sum & divide of all ages 
     int Sum_Divide_All = age1*age1 + age2*age2 + age3*age3 + age4*age4 + age5*age5 + age6*age6 + age7*age7 + age8*age8;
-    // square root of sum using sqrt function from cmath library
-    float Sqrt_Result = sqrt(Sum_Divide_All);
+    // square root of sum using sqrt function from cmath library you can use sqrt without std:: because most of compilers include cmath functions in the global namespace
+    float Sqrt_Result = std::sqrt(Sum_Divide_All);
     // divide of all ages by 2
     float Divaide_Sqrt_Result = Sqrt_Result / 2;
     // floor the result using floor function from cmath library to round down to nearest integer
-    result = floor(Divaide_Sqrt_Result);
+    result = std::floor(Divaide_Sqrt_Result);
 
   return result;
 }
