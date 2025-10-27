@@ -18,11 +18,11 @@ void print_yourold(){
 	std::cin >> entry;
 	std::cout << "your old now: " << yourold(entry) << std::endl;
 }
-int main()
-{
-
-	print_yourold();
-
-	return 0;
-}
+//int main()
+//{
+//
+//	print_yourold();
+//
+//	return 0;
+//}
 
