@@ -15,13 +15,13 @@ std::cout<< "You entered more than what clock need... try later\n";
 return std::make_pair(0,0);
 }
 
-if(!std::isdigit(stoi(Entry)))
+if(!std::isdigit(Entry[0] - '0') && std::isdigit(Entry[1] -'0'))
 {
 std::cout<< "the clock need to Number to work... try later\n";
 return std::make_pair(0,0);
 }
 
-if(Entry.length() <= 2)
+else if(Entry.length() <= 2)
 {
 Result.first = Entry[0] - '0';
 Result.second = Entry[1] - '0';
