@@ -17,7 +17,6 @@ while(true)
 	system("clear");
 if(hour.first <= 1 && hour.second >=3)
 					{
-					hour.second++;
 					W_Time = "PM";
 						}
 				if(hour.first < 1 && hour.second < 10 || hour.first <2 && hour.second < 2) 
@@ -34,21 +33,15 @@ if(sec.first >= 5 && sec.second  >= 9 )
 		{
 			min.first = 0;
 			min.second = 0;
-				if(hour.first >= 2 && hour.second >= 4)
-					{
-						hour.first = 0; 
-						hour.second = 0;
-					}
-				
-				if(hour.first == 0 && hour.second <= 9)
-					{
-					hour.second++;
-					}
-				if(hour.second >9 && hour.first < 1)
-					{
-					hour.first++;
-					hour.second = 0;
-					}
+if(hour.first == 0 && hour.second == 0){hour.second++;}
+if(hour.first == 0 && hour.second == 9){hour.first++; hour.second = 0;}
+if(hour.first == 0 && hour.second < 9){hour.second ++;}
+if(hour.first == 1 && hour.second <2){hour.second++;}
+if(hour.first ==1 && hour.second == 2){hour.second++;}
+if(hour.first == 1 && hour.second > 2){hour.second++;}
+if(hour.first == 1 && hour.second == 9 ){hour.first++;hour.second =0;}
+if(hour.first == 2 && hour.second < 4){hour.second++;}
+
 		}
 	if(min.second < 9)
 		{
