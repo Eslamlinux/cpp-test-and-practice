@@ -5,6 +5,32 @@
 #include <unistd.h>
 #include <utility>
 
+
+std::pair<int,int> Start_Prog(std::string Entry)
+{
+std::pair<int,int> Result {0,0};
+if(Entry.length() > 2)
+{
+std::cout<< "You entered more than what clock need... try later\n";
+return std::make_pair(0,0);
+}
+
+if(!std::isdigit(stoi(Entry)))
+{
+std::cout<< "the clock need to Number to work... try later\n";
+return std::make_pair(0,0);
+}
+
+if(Entry.length() <= 2)
+{
+Result.first = Entry[0] - '0';
+Result.second = Entry[1] - '0';
+}
+
+return Result;
+}
+
+
 int main()
 {
 int Hour1 ,Hour2, Minutes1, Minutes2, Temp;
@@ -12,30 +38,19 @@ std::string Hours , Minutes;
 std::cout << "Welcome to clock console" << std::endl;
 std::cout << "Please Enter The Hour To set the clock '00' or '01' " << std::endl;
 std::cin >>Hours;
-if(Hours.length() > 2)
-{
-std::cout<< "You entered more than what clock need... try later\n";
-return 1;
-}
- 
-if(!std::isdigit(std::stoi(Hours))
-{
-std::cout<< "the clock need to Number to work... try later\n";
-return 2;
-}
+std::cin.ignore();
+Hour1 = Start_Prog(Hours).first;
+Hour2 = Start_Prog(Hours).second;
 
-for(int i = 0; i < Hours.length() ;i++)
-{
-
-}
 std::cout << "Now Enter The Minutes To set the clock '00' or '01' " << std::endl;
 std::cin >>Minutes;
+std::cin.ignore();
+Minutes1 = Start_Prog(Minutes).first;
+Minutes2 = Start_Prog(Minutes).second;
 
-
-
-std::pair<int,int> hour ={h1,h2};
-std::pair<int,int> min ={5,9};
-std::pair<int,int> sec ={5,5};
+std::pair<int,int> hour ={Hour1,Hour2};
+std::pair<int,int> min ={Minutes1,Minutes2};
+std::pair<int,int> sec ={0,0};
 
 std::string W_Time;
 
