@@ -6,15 +6,24 @@
 int main()
 {
 
-std::pair<int,int> hour ={0,0};
-std::pair<int,int> min ={0,0};
-std::pair<int,int> sec ={0,};
+std::pair<int,int> hour ={0,3};
+std::pair<int,int> min ={5,9};
+std::pair<int,int> sec ={5,5};
 
 std::string W_Time;
 
 while(true)
 {
 	system("clear");
+if(hour.first <= 1 && hour.second >=3)
+					{
+					hour.second++;
+					W_Time = "PM";
+						}
+				if(hour.first < 1 && hour.second < 10 || hour.first <2 && hour.second < 2) 
+						{
+						W_Time = "AM";
+							}
 
 if(sec.first >= 5 && sec.second  >= 9 )
 	{
@@ -30,15 +39,16 @@ if(sec.first >= 5 && sec.second  >= 9 )
 						hour.first = 0; 
 						hour.second = 0;
 					}
-				if(hour.first <= 1 && hour.second >=3)
+				
+				if(hour.first == 0 && hour.second <= 9)
 					{
-					W_Time = "PM";
-						}
-					else 
-						{
-						W_Time = "AM";
-							}
-
+					hour.second++;
+					}
+				if(hour.second >9 && hour.first < 1)
+					{
+					hour.first++;
+					hour.second = 0;
+					}
 		}
 	if(min.second < 9)
 		{
@@ -67,26 +77,27 @@ if(sec.second < 9 )
 }
 		
 
-	if(min > 59)
-		{
-			hour++;
-			min = 00;
-		}
-	if(hour > 12)
-		{
-			W_Time = "Pm";
-		}
-		else 
-			{
-				W_Time = "Am";
-			}
-	if(hour >= 24)
-			{
-			hour = 00;	
-			}
+//	if(min > 59)
+//		{
+//			hour++;
+//			min = 00;
+//		}
+//	if(hour > 12)
+//		{
+//			W_Time = "Pm";
+//		}
+//		else 
+//			{
+//				W_Time = "Am";
+//			}
+//	if(hour >= 24)
+//			{
+//			hour = 00;	
+//			}
 
 	sleep(1);
-std::cout << "Time: " << hour << " : " << min << " : " << sec.first << sec.second << " " << W_Time << std::endl;
+std::cout << "Time: " << hour.first << hour.second << " : " << min.first << min.second << " : " 
+<< sec.first << sec.second << " " << W_Time << std::endl;
 }
 
 	return 0;
