@@ -35,14 +35,14 @@ void displaytime()
 
 }
 
-int main()
-{
-
-	while(true){
-		displaytime();
-		sleep(1);
-	}
-
-
-	return 0;
-}
+//int main()
+//{
+//
+//	while(true){
+//		displaytime();
+//		sleep(1);
+//	}
+//
+//
+//	return 0;
+//}
