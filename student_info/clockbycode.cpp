@@ -20,10 +20,11 @@ std::string W_Time;
 
 while(true)
 {
-system("clear");
 
-//if(hour.first >= 1 && hour.second >=2){W_Time = "PM";}
-//if(hour.first <= 1 && hour.second <= 9) {W_Time = "AM";}
+if(hour.first >= 1 && hour.second >=2){W_Time = "PM";}
+if(hour.first > 1 && hour.second >=0){W_Time = "PM";}
+if(hour.first == 0 && hour.second <= 9) {W_Time = "AM";}
+if(hour.first == 1 && hour.second < 2) {W_Time = "AM";}
 
 if(sec.first >= 5 && sec.second  >= 9 )
 	{
@@ -34,14 +35,13 @@ if(sec.first >= 5 && sec.second  >= 9 )
 		{
 			min.first = 0;
 			min.second = 0;
-if(hour.first == 0 && hour.second == 0){hour.second++; W_Time = "AM";}
 if(hour.first == 0 && hour.second < 9){hour.second ++; W_Time = "AM";}
-if(hour.first == 1 && hour.second == 9 ){hour.first++;hour.second = 0; W_Time = "PM";}
-if(hour.first == 1 && hour.second >= 2){hour.second++; W_Time = "PM";}
-if(hour.first == 1 && hour.second <2){hour.second++; W_Time = "PM";}
+if(hour.first == 1 && hour.second == 9 ){hour.first++;hour.second = 0; W_Time = "PM";continue;}
+if(hour.first == 1 && hour.second > 1){hour.second++; W_Time = "PM";}
+if(hour.first == 1 && hour.second <2){hour.second++; if(hour.first >=1 && hour.second >= 2)W_Time = "PM"; else W_Time = "AM"; }
 if(hour.first == 0 && hour.second >= 9){hour.first++; hour.second = 0; W_Time = "AM";}
 if(hour.first == 2 && hour.second < 4){hour.second++; W_Time = "PM";}
-if(hour.first == 2 && hour.second == 4){hour.first = 0; hour.second = 0; W_Time = "PM";}
+if(hour.first == 2 && hour.second == 4){hour.first = 0; hour.second = 0; W_Time = "AM";}
 
 		}
 	if(min.second < 9)
@@ -72,6 +72,7 @@ if(sec.second < 9 )
 		
 
 	sleep(1);
+system("clear");
 std::cout << "Time: " << hour.first << hour.second << " : " << min.first << min.second << " : " 
 << sec.first << sec.second << " " << W_Time << std::endl;
 }
