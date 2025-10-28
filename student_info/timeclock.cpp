@@ -16,8 +16,23 @@ void init_termios(int echo) {
 void reset_termios(void) {
     tcsetattr(STDIN_FILENO, TCSANOW, &old_tio); // استعادة الإعدادات القديمة
 }
+//
+//void to_up()
+//{
+//	system("clear");
+//	time_t alltime = time(nullptr);
+//	struct tm* toget = localtime(&alltime);
+//	int sec = toget->tm_sec ;
+//	int min = toget->tm_min;
+//	int hou = toget->tm_hour;
+//	std::cout <<"the time now: " << hou << " : " << min << " : " <<  sec << std::endl;
+//
+//		to_up();
+//		sleep(10);
+//}
 
-void to_up()
+
+void displaytime()
 {
 	system("clear");
 	time_t alltime = time(nullptr);
@@ -26,14 +41,15 @@ void to_up()
 	int min = toget->tm_min;
 	int hou = toget->tm_hour;
 	std::cout <<"the time now: " << hou << " : " << min << " : " <<  sec << std::endl;
-
-		to_up();
 }
 
 int main()
 {
-	init_termios(0);
-	to_up();
+	init_termios(10);
+	while(true){
+		displaytime();
+		sleep(1);
+	}
 	reset_termios();
 	return 0;
 }
