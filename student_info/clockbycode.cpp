@@ -1,15 +1,36 @@
+#include <cctype>
 #include <iostream>
 #include <ostream>
+#include <string>
 #include <unistd.h>
 #include <utility>
 
 int main()
 {
-int h1 ,h2, m1, m2 ,s1 ,s2;
-std::cout << "enter hour 1" << std::endl;
-std::cin >>h1;
-std::cout << "enter hour 2" << std::endl;
-std::cin >>h2;
+int Hour1 ,Hour2, Minutes1, Minutes2, Temp;
+std::string Hours , Minutes; 
+std::cout << "Welcome to clock console" << std::endl;
+std::cout << "Please Enter The Hour To set the clock '00' or '01' " << std::endl;
+std::cin >>Hours;
+if(Hours.length() > 2)
+{
+std::cout<< "You entered more than what clock need... try later\n";
+return 1;
+}
+ 
+if(!std::isdigit(std::stoi(Hours))
+{
+std::cout<< "the clock need to Number to work... try later\n";
+return 2;
+}
+
+for(int i = 0; i < Hours.length() ;i++)
+{
+
+}
+std::cout << "Now Enter The Minutes To set the clock '00' or '01' " << std::endl;
+std::cin >>Minutes;
+
 
 
 std::pair<int,int> hour ={h1,h2};
@@ -71,7 +92,7 @@ if(sec.second < 9 )
 }
 		
 
-	sleep(1);
+sleep(1);
 system("clear");
 std::cout << "Time: " << hour.first << hour.second << " : " << min.first << min.second << " : " 
 << sec.first << sec.second << " " << W_Time << std::endl;
