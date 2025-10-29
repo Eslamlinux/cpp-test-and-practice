@@ -66,7 +66,7 @@ string rot13(string msg)
 
 int main()
 {
-cout << rot13("test") << endl; //grfg
+cout << rot13("a") << endl; //grfg
 cout << rot13("Test") << endl; //Grfg
 cout << rot13("nopqrstuvwxyzabcdefghijkMm") << endl; //NoPq
 
