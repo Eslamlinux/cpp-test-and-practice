@@ -5,7 +5,6 @@
 #include <unistd.h>
 #include <utility>
 
-
 std::pair<int,int> Start_Prog(std::string Entry)
 {
 std::pair<int,int> Result {0,0};
@@ -31,7 +30,7 @@ return Result;
 }
 
 
-int main()
+int main(int argc , char ** argv)
 {
 int Hour1 ,Hour2, Minutes1, Minutes2, Temp;
 std::string Hours , Minutes; 
