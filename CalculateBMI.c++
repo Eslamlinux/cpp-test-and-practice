@@ -35,7 +35,6 @@ std::string bmi(double w, double h)
         case 3: res = "Obese"; break;
         default: res =""; break;
     }
-    std::cout<<Bmi <<std::endl;
   return res;
 }
 int main() 
