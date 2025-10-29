@@ -10,6 +10,7 @@ Create a function that takes a string and returns the string ciphered with Rot13
 */
 string rot13(string msg)
 {
+
   string result;
   for(char c : msg)
   {
@@ -52,6 +53,14 @@ string rot13(string msg)
   }
   
   return result;
+
+
+  // other slution 
+    // for(auto& c : msg) 
+    // if (islower(c)) c = 'a'+(c-'a'+13)%26; 
+    // else if(isupper(c)) x = 'A'+(x-'A'+13)%26;
+    // return msg;
+
 }
 
 
