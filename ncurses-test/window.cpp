@@ -10,10 +10,10 @@ cbreak();
 //raw();
 noecho();
 
-WINDOW* win = newwin(h = 10, w = 20, y = 10 , x = 10);
+WINDOW* win = newwin(h = 15, w = 40, y = 5 , x = 5);
 refresh();
 
-char t = 'g';
+char t = '*';
 //box(win, (int)t, 104);
 //box(win, 0, 0);
 int left, right, top, bottom, tlc, trc, blc, brc;
