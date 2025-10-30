@@ -18,7 +18,7 @@ char t = '*';
 //box(win, 0, 0);
 int left, right, top, bottom, tlc, trc, blc, brc;
 left = right = '$';
-top = 104;
+top = '#';
 bottom = '#'; 
 tlc = trc = blc = brc = (int)t;
 wborder(win,left, right, top, bottom, tlc, trc, blc, brc);
