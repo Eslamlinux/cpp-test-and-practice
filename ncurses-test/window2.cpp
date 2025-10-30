@@ -33,5 +33,7 @@ int main(int argc,char** argv)
 start_ncurses(true,true);
 
 
+getch();
+
 return 0;
 }
