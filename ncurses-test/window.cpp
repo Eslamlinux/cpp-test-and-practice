@@ -6,15 +6,16 @@ int main(int argc,char** argv)
 int h,w,x,y;
 
 initscr();
-//cbreak();
+cbreak();
 //raw();
 noecho();
 
 WINDOW* win = newwin(h = 10, w = 20, y = 10 , x = 10);
 refresh();
 
-
-box(win, 0, 0);
+char t = 'g';
+box(win, (int)t, 104);
+//box(win, 0, 0);
 mvwprintw(win, 1, 1,"hello window '0'");
 
 wrefresh(win);
