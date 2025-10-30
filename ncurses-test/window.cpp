@@ -14,8 +14,12 @@ WINDOW* win = newwin(h = 10, w = 20, y = 10 , x = 10);
 refresh();
 
 char t = 'g';
-box(win, (int)t, 104);
+//box(win, (int)t, 104);
 //box(win, 0, 0);
+int left, right, top, bottom, tlc, trc, blc, brc;
+left = right = 103;
+top = bottom = 104;
+wborder(win,left, right, top, bottom, tlc, trc, blc, brc)
 mvwprintw(win, 1, 1,"hello window '0'");
 
 wrefresh(win);
