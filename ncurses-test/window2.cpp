@@ -4,9 +4,16 @@
 int main(int argc,char** argv)
 {
 
-
 //start_ncurses(true,true);
 initscr();
+keypad(stdscr, TRUE);
+int left = '#', right = '#', top = '$', bottom = '$', tlc = '*', trc = '*', blc = '/', brc = '/';
+WINDOW* win = newwin(15, 40, 5, 5);
+wborder(win, left, right, top, bottom, tlc, trc, blc, brc);
+box(win, 0, 0);
+mvwprintw(win,1,1,"hi");
+wrefresh(win);
+
 
 if(!has_colors()){
 std::cout << "terminal cant suport colors\n" ;
@@ -79,6 +86,7 @@ printw("\n A_ATTRIBUTES");
 attroff(A_ATTRIBUTES);
 
 
+refresh();
 
 
 getch();
