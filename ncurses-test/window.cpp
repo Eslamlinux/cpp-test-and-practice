@@ -19,7 +19,8 @@ char t = 'g';
 int left, right, top, bottom, tlc, trc, blc, brc;
 left = right = 103;
 top = bottom = 104;
-wborder(win,left, right, top, bottom, tlc, trc, blc, brc)
+tlc = trc = blc = brc = (int)t;
+wborder(win,left, right, top, bottom, tlc, trc, blc, brc);
 mvwprintw(win, 1, 1,"hello window '0'");
 
 wrefresh(win);
