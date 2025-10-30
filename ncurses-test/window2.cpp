@@ -8,6 +8,28 @@ int main(int argc,char** argv)
 //start_ncurses(true,true);
 initscr();
 
+if(!has_colors()){
+std::cout << "terminal cant suport colors\n" ;
+getch();
+return -1;
+}
+start_color();
+init_pair(1, COLOR_CYAN, COLOR_WHITE);
+init_pair(2, COLOR_YELLOW, COLOR_MAGENTA);
+
+if(can_change_color()){
+printw("can chang color\n");
+init_color(COLOR_CYAN, 9, 999, 999);
+}
+
+attron(COLOR_PAIR(1));
+printw("color cyan and white\n");
+attroff(COLOR_PAIR(1));
+
+attron(COLOR_PAIR(2));
+printw("color OLOR_YELLOW, COLOR_MAGENTA\n");
+attroff(COLOR_PAIR(2));
+
 attron(A_INVIS);
 printw("password");
 attroff(A_INVIS);
@@ -36,9 +58,9 @@ attron(A_DIM);
 printw("\n A_DIM");
 attroff(A_DIM);
 
-attron(A_CHARTEXT);
-printw("\n A_CHARTEXT");
-attroff(A_CHARTEXT);
+attron(A_VERTICAL);
+printw("\n A_VERTICAL");
+attroff(A_VERTICAL);
 
 attron(A_COLOR);
 printw("\n A_COLOR");
