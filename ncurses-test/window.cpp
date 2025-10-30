@@ -22,7 +22,7 @@ top = '#';
 bottom = '#'; 
 tlc = trc = blc = brc = (int)t;
 wborder(win,left, right, top, bottom, tlc, trc, blc, brc);
-mvwprintw(win, 1, 1,"hello window '0'");
+mvwprintw(win, 1, 1,"hello window");
 
 wrefresh(win);
 
