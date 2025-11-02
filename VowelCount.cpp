@@ -13,17 +13,31 @@ The input string will only consist of lower case letters and/or spaces.
 
 int getCount(const std::string& inputStr)
 {
-std::regex vowelRegex("[aeiou]");
-return std::distance(std::sregex_iterator(inputStr.begin(), inputStr.end(), vowelRegex),
-                     std::sregex_iterator());
+    //solve using regex
+// std::regex vowelRegex("[aeiou]");
+// return std::distance(std::sregex_iterator(inputStr.begin(), inputStr.end(), vowelRegex),
+//                      std::sregex_iterator());
+///////////////////////////////////////
+//solve using count 
+// std::string VowelStr("aeiou");
+// size_t counter = 0;
+//     for (char c : inputStr)
+//     {
+//         if (VowelStr.find(c) != std::string::npos)
+//         {
+//             counter++;
+//         }
+//     }
+// return counter;
+///////////////////////////////////////////
 
-
+    
 }
 
 int main()
 {
 
-std::string testStr = "hello worldaa";
+std::string testStr = "a hello world";
 std::cout << "Number of vowels in \"" << testStr << "\": " << getCount(testStr) << std::endl;
 
     return 0;
