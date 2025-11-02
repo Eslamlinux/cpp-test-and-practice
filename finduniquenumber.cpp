@@ -12,7 +12,19 @@ The tests contain some very huge arrays, so think about performance
 
 float find_uniq(const std::vector<float> &v)
 {
-    return 0./.0;
+    float first = v[0];
+    float second = v[1];
+    float third = v[2]; 
+    if (first != second && first != third)
+        return first;
+    if (second != first && second != third)
+        return second;
+    for (const auto &num : v)
+    {
+        if (num != first)   
+            return num;
+    }
+    return first;
 }
 
 int main()
