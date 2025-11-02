@@ -18,6 +18,7 @@ int getCount(const std::string& inputStr)
 // return std::distance(std::sregex_iterator(inputStr.begin(), inputStr.end(), vowelRegex),
 //                      std::sregex_iterator());
 ///////////////////////////////////////
+
 //solve using string find 
 // std::string VowelStr("aeiou");
 // size_t counter = 0;
@@ -30,13 +31,25 @@ int getCount(const std::string& inputStr)
 //     }
 // return counter;
 ///////////////////////////////////////////
+
 // solve using count_if
-std::string VowelStr("aeiou");
-return count_if(inputStr.begin(),inputStr.end(), [&VowelStr](char c) -> bool
-{
-    return VowelStr.find(c) != std::string::npos;
+// std::string VowelStr("aeiou");
+// return count_if(inputStr.begin(),inputStr.end(), [&VowelStr](char c) -> bool
+// {
+//     return VowelStr.find(c) != std::string::npos;
     
-});
+// });
+/////////////////////////////////////////////////
+
+// solve using count
+std::string VowelStr("aeiou");
+int totalCount = 0;
+for(char c : VowelStr)
+{
+totalCount += count(inputStr.cbegin(),inputStr.cend(), c);
+}
+return totalCount;
+/////////////////////////////////////////////////
 
 }
 int main()
