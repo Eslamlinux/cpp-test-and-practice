@@ -21,18 +21,24 @@ std::string strong_num (int number )
     std::string num_str = std::to_string(number) ;
     std::string Not = "Not Strong !!";
     std::string Stro = "STRONG!!!!";
-    int sum = 0 ;
-    int factorial = 1 ;
+    std::string temp = "";
+    int sum = 1 ;
+    int factorial = 0 ;
     int index = 0 ;
     if(number == 1 && number == 0) return Stro ;
+    for(int i = 0 ; i < num_str[index] - '0' ; i++)
+    {
+        sum *= (i + 1) ;
+    }
     
+    factorial = num_str[index] * sum;
 
     return 1 ; 
 }
 
 int main()
 {
-
+    std::cout << strong_num(145) << std::endl; // Should return "STRONG!!!!"
 
     return 0;
 }
