@@ -36,11 +36,21 @@ class SequenceSum{
 };
 
 std::string SequenceSum::showSequence(){
+    std::string result = "";
+    showSequence();
     if(count > 0)
     {
-        
+        result =  std::to_string(count - 1) + "+" + std::to_string(count);
     }
-    
+    else if(count == 0)
+    {
+        result = "0=0";
+    }
+    else
+    {
+        result = std::to_string(count) + "<0";
+    }
+    return result;
 }
 
 SequenceSum::SequenceSum (int c) {
@@ -51,7 +61,7 @@ int main()
 {
 
     SequenceSum seqsum (6);
-    seqsum.showSequence(); // Equals("0+1+2+3+4+5+6 = 21"));
+    std::cout<< seqsum.showSequence(); // Equals("0+1+2+3+4+5+6 = 21"));
 
 
     return 0;
