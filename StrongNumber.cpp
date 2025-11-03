@@ -15,6 +15,11 @@ Examples
 
 #include <iostream>
 
+int factorial(int n)
+{
+    if (n <= 1) return 1;
+    return n * factorial(n - 1);
+}
 
 std::string strong_num (int number )
 {
@@ -30,7 +35,6 @@ std::string strong_num (int number )
     {
         sum *= (i + 1) ;
     }
-    
     factorial = num_str[index] * sum;
 
     return 1 ; 
