@@ -1,8 +1,13 @@
 #include <iostream>
 #include <ncurses.h>
 #include <string>
+
+void start_ncurses(bool useRaw, bool useNoecho);
+void printMenu(WINDOW* nenu, std::string choices[],int size, int highlight);
+
 int main(int argc,  char** argv)
 {
+// NCURSES START
 initscr();
 noecho();
 cbreak();
@@ -14,6 +19,12 @@ getmaxyx(stdscr,ymax ,xmax);
 
 
 printw("%d %d %d %d %d %d",y,x,ybeg,xbeg,ymax,xmax);
+
+// make sure program waits befor exiting..
+
+getch();
+endwin();
+
 
 return 0;
 }
