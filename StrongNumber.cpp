@@ -37,12 +37,16 @@ std::string strong_num (int number )
     }
     factorial = num_str[index] * sum;
 
-    return 1 ; 
+    return "1" ; 
 }
 
 int main()
 {
-    std::cout << strong_num(145) << std::endl; // Should return "STRONG!!!!"
-
+    //std::cout << strong_num(145) << std::endl; // Should return "STRONG!!!!"
+    std::cout << "factorial: " << factorial(1) << std::endl; // Should return 120
+    std::cout << "factorial: " << factorial(2) << std::endl; // Should return 120
+    std::cout << "factorial: " << factorial(3) << std::endl; // Should return 120
+    std::cout << "factorial: " << factorial(4) << std::endl; // Should return 120
+    std::cout << "factorial: " << factorial(5) << std::endl; // Should return 120
     return 0;
 }
