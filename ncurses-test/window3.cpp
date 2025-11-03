@@ -7,6 +7,7 @@ void printMenu(WINDOW* nenu, std::string choices[],int size, int highlight);
 
 int main(int argc,  char** argv)
 {
+
 // NCURSES START
 initscr();
 noecho();
@@ -26,5 +27,7 @@ getch();
 endwin();
 
 
+
 return 0;
+
 }
