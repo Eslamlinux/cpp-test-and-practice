@@ -15,7 +15,7 @@ int ymax, xmax;
 getmaxyx(stdscr, ymax, xmax);
 
 //creat a window for our input 
-WINDOW* menuwin = newwin(3, xmax-12, ymax-5, 5);
+WINDOW* menuwin = newwin(6, xmax-12, ymax-8, 5);
 box(menuwin, 0, 0);
 refresh();
 wrefresh(menuwin);
@@ -41,9 +41,13 @@ while(1)
 	{
 		case KEY_UP:
 			highlight--;
+			if(highlight == -1)
+				highlight =0;
 			break;
 		case KEY_DOWN:
 			highlight++;
+			if(highlight == 3)
+				highlight = 2;
 			break;
 		defult: 
 			break;
@@ -51,10 +55,17 @@ while(1)
 if(choice == 10)
 	break;
 }
-
-//make sure program waits before exiting...
-//getch();
-//endwin();
+printw("your choice was: %s", choices[highlight].c_str());
+int c = wgetch(menuwin);
+wrefresh(menuwin);
+refresh();
+if(c == KEY_ENTER)
+{
+	return 1;
+}
+make sure program waits before exiting...
+getch();
+endwin();
 
 
 return 0;
