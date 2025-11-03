@@ -26,27 +26,28 @@ std::string strong_num (int number )
     std::string num_str = std::to_string(number) ;
     std::string Not = "Not Strong !!";
     std::string Stro = "STRONG!!!!";
-    std::string temp = "";
-    int sum = 1 ;
-    int factorial = 0 ;
-    int index = 0 ;
+    int temp = 0;
     if(number == 1 && number == 0) return Stro ;
-    for(int i = 0 ; i < num_str[index] - '0' ; i++)
+    for(int i = 0 ; i < num_str.length() ; i++)
     {
-        sum *= (i + 1) ;
+        temp += factorial(num_str[i] - '0') ;
     }
-    factorial = num_str[index] * sum;
-
-    return "1" ; 
+    if(temp == number) return Stro ;
+    return Not ; 
 }
 
 int main()
 {
-    //std::cout << strong_num(145) << std::endl; // Should return "STRONG!!!!"
-    std::cout << "factorial: " << factorial(1) << std::endl; // Should return 120
-    std::cout << "factorial: " << factorial(2) << std::endl; // Should return 120
-    std::cout << "factorial: " << factorial(3) << std::endl; // Should return 120
-    std::cout << "factorial: " << factorial(4) << std::endl; // Should return 120
-    std::cout << "factorial: " << factorial(5) << std::endl; // Should return 120
+    std::cout << strong_num(145) << std::endl; // Should return "STRONG!!!!"
+    std::cout << strong_num(123) << std::endl; // Should return "Not Strong !!"
+    std::cout << strong_num(1) << std::endl;   // Should return "STRONG!!!!"
+    std::cout << strong_num(150) << std::endl; // Should return "Not Strong !!"
+
+    std::cout << std::endl;
+    // std::cout << "factorial: " << factorial(1) << std::endl; // Should return 1
+    // std::cout << "factorial: " << factorial(2) << std::endl; // Should return 2
+    // std::cout << "factorial: " << factorial(3) << std::endl; // Should return 6
+    // std::cout << "factorial: " << factorial(4) << std::endl; // Should return 24
+    // std::cout << "factorial: " << factorial(5) << std::endl; // Should return 120
     return 0;
 }
