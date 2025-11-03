@@ -12,3 +12,13 @@ Examples
 145 is a strong number, because 1! + 4! + 5! = 1 + 24 + 120 = 145, so return "STRONG!!!!".
 150 is not a strong number, because 1! + 5! + 0! = 122 is not equal to 150, so return "Not Strong !!".
 */
+
+#include <iostream>
+
+
+int main()
+{
+
+
+    retusrn 0;
+}
