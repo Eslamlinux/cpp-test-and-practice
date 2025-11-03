@@ -1,0 +1,7 @@
+
+if(c == KEY_UP)
+{
+	mvwprintw(inputwin, 1, 1, "you pressed Up key");
+       wrefresh(inputwin);
+}
+
