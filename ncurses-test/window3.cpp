@@ -14,10 +14,13 @@ noecho();
 cbreak();
 
 int y, x, ybeg, xbeg, ymax, xmax;
+WINDOW* win = newwin(10, 20 , 10, 10);
+
 getyx(stdscr, y, x);
 getbegyx(stdscr,ybeg ,xbeg);
 getmaxyx(stdscr,ymax ,xmax);
 
+mvprintw(ymax/2, xmax/2, "%d %d", ybeg, xbeg);
 
 printw("%d %d %d %d %d %d",y,x,ybeg,xbeg,ymax,xmax);
 
