@@ -16,9 +16,23 @@ Examples
 #include <iostream>
 
 
+std::string strong_num (int number )
+{
+    std::string num_str = std::to_string(number) ;
+    std::string Not = "Not Strong !!";
+    std::string Stro = "STRONG!!!!";
+    int sum = 0 ;
+    int factorial = 1 ;
+    int index = 0 ;
+    if(number == 1 && number == 0) return Stro ;
+    
+
+    return 1 ; 
+}
+
 int main()
 {
 
 
-    retusrn 0;
+    return 0;
 }
