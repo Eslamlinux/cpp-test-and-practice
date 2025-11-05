@@ -26,8 +26,8 @@ diff arr(diff a[])
 int main()
 {
 
-	//int es[]= {1,2,3,4,5,6,7,8};
-	int es[8];
+	int es[]= {1,1,1,1,1,1,1,1};
+
 	arr(es);
 
 return 0;
