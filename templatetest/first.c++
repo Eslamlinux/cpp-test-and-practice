@@ -1,15 +1,16 @@
 #include <iostream>
-#include <iterator>
+//#include <iterator>
 
-template<class T>
-T sum(T f, T s)
+template<class Data_Type>
+Data_Type sum(Data_Type f, Data_Type s)
 {
 return f + s;
 }
 
 int main()
 {
-int fi , sec;
+
+float fi , sec;
 std::cout << "please enter first to sum" << std::endl;
 std::cin >> fi;
 std::cout << "please enter second to sum" << std::endl;
