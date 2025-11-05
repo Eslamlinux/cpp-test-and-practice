@@ -1,0 +1,20 @@
+#include <iostream>
+#include <iterator>
+
+template<class T>
+T sum(T f, T s)
+{
+return f + s;
+}
+
+int main()
+{
+int fi , sec;
+std::cout << "please enter first to sum" << std::endl;
+std::cin >> fi;
+std::cout << "please enter second to sum" << std::endl;
+std::cin >> sec;
+std::cout<<"the result is: " << sum(fi,sec) << std::endl;
+
+return 0;
+}
