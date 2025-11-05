@@ -21,15 +21,15 @@ return f + s;
 //return f + s;
 //}
 
-int main()
-{
-
-long double fi ;int sec;
-std::cout << "please enter first to sum" << std::endl;
-std::cin >> fi;
-std::cout << "please enter second to sum" << std::endl;
-std::cin >> sec;
-std::cout<<"the result is: " << sum(fi,sec) << std::endl;
-
-return 0;
-}
+//int main()
+//{
+//
+//long double fi ;int sec;
+//std::cout << "please enter first to sum" << std::endl;
+//std::cin >> fi;
+//std::cout << "please enter second to sum" << std::endl;
+//std::cin >> sec;
+//std::cout<<"the result is: " << sum(fi,sec) << std::endl;
+//
+//return 0;
+//}
