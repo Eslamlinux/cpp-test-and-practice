@@ -1,16 +1,18 @@
 #include <iostream>
 //#include <concepts>
 
-template<typename mint>
-mint sum(mint a, mint)
+template<typename mint,typename mint2>
+mint sum(mint a, mint2 b)
 {
 	return a + b;
 }
 
 int main()
 {
-int s {5};
-std::cout << sum(5.5,s) << std::endl;
+
+	std::cout << sum(5.5,5.5) << std::endl;
+	std::cout << sum(5.5,5) << std::endl; 
+	std::cout << sum(5,5.5) << std::endl; // return int
 
 return 0;
 }
