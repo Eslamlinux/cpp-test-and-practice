@@ -14,9 +14,17 @@ The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 int solve(const std::string &s)
 {
+	std::vector<int> nums;
+	int temp = 0;
+	std::string vowels = "aeiou";
+	for(int i = 0 ;i < s.length() ;i++)
+	{
+		if(s[i] != vowels.find(vowels.begin(),vowels.end(),vowels.npos))
+	}
     return 0;
 }
 
