@@ -28,14 +28,14 @@ sti >> bbb;
 bbb += aa;
 };
 
-};
-int main()
-{
-hello<double,std::string,char>obj;
-obj.setb("11");
-obj.toin();
-std::cout<< obj.aa + obj.ab << std::endl;
-std::cout<< obj.bbb << std::endl;
-
-return 0;
-}
+//};
+//int main()
+//{
+//hello<double,std::string,char>obj;
+//obj.setb("11");
+//obj.toin();
+//std::cout<< obj.aa + obj.ab << std::endl;
+//std::cout<< obj.bbb << std::endl;
+//
+//return 0;
+//}
