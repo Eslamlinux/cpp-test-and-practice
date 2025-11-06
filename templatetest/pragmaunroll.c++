@@ -24,14 +24,14 @@ diff arr(diff a[])
 }
 
 
-int main()
-{
-
-	int es[]= {1,2,3,4,5,6,7,8,9};
-
-	arr(es);
-
-return 0;
-}
+//int main()
+//{
+//
+//	int es[]= {1,2,3,4,5,6,7,8,9};
+//
+//	arr(es);
+//
+//return 0;
+//}
 
 
