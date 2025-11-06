@@ -1,5 +1,6 @@
 #include <iostream>
-
+#include <cstdlib>
+#include <iterator>
 
 template<class a,class b>
 class hello
@@ -8,8 +9,9 @@ b bb;
 public:
 a aa=10;
 a ab=2.5;
-b setb(std::string toset){bb = toset;}
-a bbb = stoi(bb) + aa;
+char* end;
+b setb(std::string toset){bb = toset;return bb;}
+a bbb = std::strtol(bb.c_str(),&end,10) + aa;
 
 };
 int main()
