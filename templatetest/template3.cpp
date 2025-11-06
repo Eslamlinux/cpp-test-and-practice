@@ -11,7 +11,8 @@ a aa=10;
 a ab=2.5;
 char* end;
 b setb(std::string toset){bb = toset;return bb;}
-a bbb = std::strtol(bb.c_str(),&end,10) + aa;
+//a bbb = std::strtol(bb.c_str(),&end,10) + aa;
+a bbb = std::stoi(bb) + aa;
 
 };
 int main()
