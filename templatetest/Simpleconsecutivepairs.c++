@@ -25,6 +25,7 @@ int pairs(std::vector<int>arr){
 int main()
 {
 
+std:;cout << pairs() << std::endl;
 return 0;
 }
 
