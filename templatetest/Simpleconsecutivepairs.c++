@@ -18,6 +18,10 @@ The pairs are selected as follows [(1,2),(5,8),(-4,-3),(7,6),5]
 */
 #include <iostream>
 
+int pairs(std::vector<int>arr){
+  //..
+}
+
 int main()
 {
 
