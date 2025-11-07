@@ -24,8 +24,8 @@ int pairs(std::vector<int>arr){
 
 int main()
 {
-
-std:;cout << pairs() << std::endl;
+std::vector<int> vec;
+std::cout << pairs() << std::endl;
 return 0;
 }
 
