@@ -28,7 +28,7 @@ sti >> bbb;
 bbb += aa;
 };
 
-//};
+};
 //int main()
 //{
 //hello<double,std::string,char>obj;
