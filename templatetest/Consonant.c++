@@ -22,19 +22,21 @@ int solve(const std::string &s)
 	std::vector<int> nums;
 	int temp = 0;
 	std::string vowels = "aeiou";
-	for(int i = 0 ;i < s.length() ;i++)
+	for(size_t i = 0 ;i < s.length() ;i++)
 	{
 		if(vowels.find(s[i]) != std::string::npos)
 			{
-			if(temp != 0)
 			nums.push_back(temp);
 			temp =0;
 			}
 		else 
 			{
-			temp += s[i] - 96;
+			temp += s[i] - 'a' +1;
 			}
 	}
+	if(temp!= 0)
+	nums.push_back(temp);
+
 	std::sort(begin(nums),end(nums),[](int a, int b){return a > b;});
 	
     return nums[0];
