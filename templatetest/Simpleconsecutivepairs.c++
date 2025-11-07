@@ -17,6 +17,7 @@ The pairs are selected as follows [(1,2),(5,8),(-4,-3),(7,6),5]
 
 */
 #include <iostream>
+#include <vector>
 
 int pairs(std::vector<int>arr){
   //..
@@ -25,7 +26,7 @@ int pairs(std::vector<int>arr){
 int main()
 {
 std::vector<int> vec;
-std::cout << pairs() << std::endl;
+std::cout << pairs(vec) << std::endl;
 return 0;
 }
 
