@@ -17,21 +17,20 @@ The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 
 int solve2(const std::string &s)
 {
 	size_t nums = 0;
-	size_t temp = 0;
+	size_t temp = 0,max;
 	std::string vowels = "aeiou";
 	for(size_t i = 0 ;i < s.length() ;i++)
 	{
 		if(vowels.find(s[i]) != std::string::npos)
 			{
-			if(temp > nums)
-			nums = temp;
+			nums = std::max(temp , nums);
 			temp =0;
 			}
 		else 
 			temp += s[i] - 'a' +1;
 	}
-	if(temp!= 0 && temp > nums)
-	nums = temp;
+	if(temp!= 0 )
+	nums = std::max(temp , nums);
     return nums;
 }
 
