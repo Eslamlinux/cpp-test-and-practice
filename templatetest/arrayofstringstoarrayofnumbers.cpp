@@ -9,7 +9,10 @@ Create the function that takes as a parameter a sequence of numbers represented 
 ie:["1", "2", "3"] to [1, 2, 3]
 
 Note that you can receive floats as well.
- */
+
+*/
+
+
  #include <vector>
  #include <string>
  #include <iostream>
@@ -19,7 +22,6 @@ Note that you can receive floats as well.
 	for(auto c:arr)
 		{
 			result.push_back(stof(c));
-			std::cout << c << std::endl;
 		}
 	return result;
  }
