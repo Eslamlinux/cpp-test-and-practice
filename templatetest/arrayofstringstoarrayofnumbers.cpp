@@ -16,7 +16,11 @@ Note that you can receive floats as well.
 
  std::vector<float> to_float_array(const std::vector<std::string>& arr) {
 	std::vector<float> result;
-
+	for(auto c:arr)
+		{
+			result.push_back(stoi(c));
+			std::cout << c << std::endl;
+		}
 	return result;
  }
 int main ()

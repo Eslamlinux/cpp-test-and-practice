@@ -33,11 +33,11 @@ int solve2(const std::string &s)
 	nums = std::max(temp , nums);
     return nums;
 }
-
-int main()
-{
-	std::cout << solve2("chruschtschov") << std::endl;
-	std::cout << solve2("zodiac") << std::endl;
-
-return 0;
-}
+//
+//int main()
+//{
+//	std::cout << solve2("chruschtschov") << std::endl;
+//	std::cout << solve2("zodiac") << std::endl;
+//
+//return 0;
+//}
