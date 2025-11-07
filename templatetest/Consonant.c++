@@ -11,6 +11,7 @@ The consonant substrings are: "z", "d" and "c" with values "z" = 26, "d" = 4 and
 "strength" -> 57
 The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 = 57 and "ngth" = 14 + 7 + 20 + 8 = 49. The highest is 57.
 */
+#include <cstddef>
 #include <iostream>
 #include <string>
 #include <vector>
@@ -21,26 +22,28 @@ int solve(const std::string &s)
 	std::vector<int> nums;
 	int temp = 0;
 	std::string vowels = "aeiou";
-	for(size_t i = 0 ;i < s.length() ;i++)
+	for(int i = 0 ;i < s.length() ;i++)
 	{
 		if(vowels.find(s[i]) != std::string::npos)
 			{
-				nums.push_back(temp);
-				temp =0;
+			if(temp != 0)
+			nums.push_back(temp);
+			temp =0;
 			}
 		else 
 			{
-			temp += (s[i] - 'a') - 96;
+			temp += s[i] - 96;
 			}
 	}
-	std::sort(begin(nums),end(nums));
+	std::sort(begin(nums),end(nums),[](int a, int b){return a > b;});
 	
     return nums[0];
 }
 
 int main()
 {
-std::cout << solve("charuschtschov") << std::endl;
+	std::cout << solve("chruschtschov") << std::endl;
+	std::cout << solve("zodiac") << std::endl;
 
 return 0;
 }
