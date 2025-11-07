@@ -30,15 +30,11 @@ int solve(const std::string &s)
 			temp =0;
 			}
 		else 
-			{
 			temp += s[i] - 'a' +1;
-			}
 	}
 	if(temp!= 0)
 	nums.push_back(temp);
-
 	std::sort(begin(nums),end(nums),[](int a, int b){return a > b;});
-	
     return nums[0];
 }
 
