@@ -24,7 +24,7 @@ int main()
 	int convneg = -8511;
 	double convdou = 8.511;
 
-	double a {3.31258446989966565898474655656656579856656566}; 
+	double a {3.312584469899}; 
 	double b = 2006.0;
 	double c = 1.34e-10;
 
@@ -68,6 +68,12 @@ int main()
 	std::cout << b << std::endl;
 	std::cout << c << std::endl;
 
+
+	std::cout << "\nprecision \n";
+	std::cout << "defualt: " <<  a << std::endl;
+	std::cout << "precision 10= :" << std::setprecision(10) << a << std::endl;
+	std::cout << "precision 20= :" << std::setprecision(20) << a << std::endl;
+	std::cout << "precision 20= :" << std::setprecision(50) << a << std::endl;
 
 
 
