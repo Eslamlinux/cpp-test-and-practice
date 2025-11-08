@@ -14,15 +14,30 @@ Examples
 
 */
 
+#include <cctype>
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 bool isAnagram(std::string test, std::string original){
-  //your code here
+	for(char& c :test)
+	{
+	c = static_cast<char>( std::tolower(static_cast<unsigned char>(c)));
+	}
+	for(char& c :original)
+	{
+	c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+	}
+	std::sort(test.begin(),test.end());
+	std::sort(original.begin(),original.end());
+	return test == original;
 }
 
 int main()
 {
+	std::cout << isAnagram("toffee","foefet") <<std::endl;
+	std::cout << isAnagram("Buckethead", "DeathCubeK") <<std::endl;
+	std::cout << isAnagram("Twoo", "WooT") <<std::endl;
 
 	return 0;
 }
