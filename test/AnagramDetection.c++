@@ -15,6 +15,11 @@ Examples
 */
 
 #include <iostream>
+#include <string>
+
+bool isAnagram(std::string test, std::string original){
+  //your code here
+}
 
 int main()
 {
