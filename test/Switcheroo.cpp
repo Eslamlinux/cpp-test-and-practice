@@ -13,11 +13,14 @@ Example:
 
 std::string switcheroo(const std::string &s) {
   std::string result; 
-  
-  return "";
+  for(char c :s)
+	{
+		c == 'a'?result += 'b':c == 'b'? result += 'a':result += 'c';
+	}
+  return result;
 }
 
-int main()
-{
-std::cout<<switcheroo("aaabcccbaaa") << std::endl;
-}
+//int main()
+//{
+//std::cout<<switcheroo("aaabcccbaaa") << std::endl;
+//}

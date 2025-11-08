@@ -29,11 +29,11 @@ int pairs(std::vector<int>arr){
 	return result;
 };
 
-int main()
-{
-std::vector<int> vec = {1,2,5,8,-4,-3,7,6,5};//=3
-std::cout << pairs(vec) << std::endl;
-return 0;
-}
+//int main()
+//{
+//std::vector<int> vec = {1,2,5,8,-4,-3,7,6,5};//=3
+//std::cout << pairs(vec) << std::endl;
+//return 0;
+//}
 
 
