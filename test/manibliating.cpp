@@ -44,10 +44,33 @@ int main()
 	std::cout << std::setw(wid) << std::dec << convneg << std::setw(wid) << std::hex << convneg << std::setw(wid) << std::oct << convneg << std::endl;
 	std::cout << std::setw(wid) << std::dec << convdou << std::setw(wid) << std::hex << convdou << std::setw(wid) << std::oct << convdou << std::endl;
 	
-	std::cout << "double defualt \n";
+	std::cout << "\ndouble defualt \n";
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
 	std::cout << c << std::endl;
+
+	std::cout << "double fixed \n";
+	std::cout <<  std::fixed;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+
+
+	std::cout << "double scientific \n";
+	std::cout << std::scientific;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+
+	std::cout << "double back to defualt \n";
+	std::cout.unsetf(std::ios::scientific | std::ios::fixed) ;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+
+
+
+
 	
 
 }
