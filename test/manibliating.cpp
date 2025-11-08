@@ -68,15 +68,22 @@ int main()
 	std::cout << b << std::endl;
 	std::cout << c << std::endl;
 
-
-	std::cout << "\nprecision \n";
-	std::cout << "defualt: " <<  a << std::endl;
-	std::cout << "precision 10= :" << std::setprecision(10) << a << std::endl;
-	std::cout << "precision 20= :" << std::setprecision(20) << a << std::endl;
-	std::cout << "precision 20= :" << std::setprecision(50) << a << std::endl;
-
+//
+//	std::cout << "\nprecision \n";
+//	std::cout << "defualt: " <<  a << std::endl;
+//	std::cout << "precision 10= :" << std::setprecision(10) << a << std::endl;
+//	std::cout << "precision 20= :" << std::setprecision(20) << a << std::endl;
 
 
-	
+
+	std::cout << "\nshowing point or no \n";
+	double x {1.0};
+	double y {0.05};
+	std::cout << x << std::endl << y << std::endl;
+	std::cout<< std::showpoint ;
+	std::cout << x << std::endl << y << std::endl;
+
+
+
 
 }
