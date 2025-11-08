@@ -46,11 +46,11 @@ bool isAnagram(std::string test, std::string original){
 	std::sort(original.begin(),original.end());
 	return test == original;
 }
-int main()
-{
-	std::cout << isAnagram("toffee","foefet") <<std::endl;
-	std::cout << isAnagram("Buckethead", "DeathCubeK") <<std::endl;
-	std::cout << isAnagram("Twoo", "WooT") <<std::endl;
-
-	return 0;
-}
+//int main()
+//{
+//	std::cout << isAnagram("toffee","foefet") <<std::endl;
+//	std::cout << isAnagram("Buckethead", "DeathCubeK") <<std::endl;
+//	std::cout << isAnagram("Twoo", "WooT") <<std::endl;
+//
+//	return 0;
+//}

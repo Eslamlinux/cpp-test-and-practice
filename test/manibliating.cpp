@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ostream>
 
 /*
 std::endl;   <ostream>
@@ -16,5 +17,8 @@ std::showpoint; std::noshopoint; <ios>
 
 int main()
 {
+
+std::cout << "hello semsem" << std::endl; 
+std::cout << "hi " << std::flush << "loma";
 	
 }
