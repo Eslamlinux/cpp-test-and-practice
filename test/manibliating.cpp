@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ostream>
-
+#include <iomanip>
 /*
 std::endl;   <ostream>
 std::flush;  <ostream>
@@ -17,8 +17,10 @@ std::showpoint; std::noshopoint; <ios>
 
 int main()
 {
+	int wid = 14;
+	std::cout  << "hello semsem" << std::setw(wid) << "your id " << std::setw(wid) << "a5521" << std::endl; 
+	std::cout  << "hello semsem\t" <<  "your id\t" <<  "a5521" << std::endl; 
 
-std::cout << "hello semsem" << std::endl; 
 std::cout << "hi " << std::flush << "loma";
 	
 }
