@@ -24,10 +24,7 @@ int pairs(std::vector<int>arr){
 	}
 	for(size_t i = 0;i < pai.size(); i++)
 	{
-		if(pai[i].first + 1 == pai[i].second || pai[i].first - 1 == pai[i].second)
-		{
-			result++;
-		}
+		pai[i].first + 1 == pai[i].second || pai[i].first - 1 == pai[i].second? result++:result;
 	}
 	return result;
 };
