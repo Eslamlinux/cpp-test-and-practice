@@ -19,20 +19,33 @@ Examples
 #include <string>
 #include <algorithm>
 
+//bool isAnagram(std::string test, std::string original){
+//	for(char& c :test)
+//	{
+//	c = static_cast<char>( std::tolower(static_cast<unsigned char>(c)));
+//	}
+//	for(char& c :original)
+//	{
+//	c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+//	}
+//	std::sort(test.begin(),test.end());
+//	std::sort(original.begin(),original.end());
+//	return test == original;
+//}
+
 bool isAnagram(std::string test, std::string original){
 	for(char& c :test)
 	{
-	c = static_cast<char>( std::tolower(static_cast<unsigned char>(c)));
+	c =  std::tolower(c);
 	}
 	for(char& c :original)
 	{
-	c = static_cast<char>(std::tolower(static_cast<unsigned char>(c)));
+	c = std::tolower(c);
 	}
 	std::sort(test.begin(),test.end());
 	std::sort(original.begin(),original.end());
 	return test == original;
 }
-
 int main()
 {
 	std::cout << isAnagram("toffee","foefet") <<std::endl;
