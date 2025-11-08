@@ -12,12 +12,11 @@ The pairs are selected as follows [(1,2),(5,8),(-4,-3),(7,6),5]
 
 */
 #include <iostream>
-#include <algorithm>
 #include <vector>
 
 int pairs(std::vector<int>arr){
  	std::vector<std::pair<int,int>> pai;
-	int arrsize = 0,result = 0,max;
+	int arrsize = 0,result = 0;
 	arr.size() %2 == 0?arrsize = arr.size():arrsize = arr.size()-1;
 	for(size_t i = 0;i < arrsize; i+=2)
 	{
@@ -29,11 +28,7 @@ int pairs(std::vector<int>arr){
 		{
 			result++;
 		}
-		std::cout << "\nPair: ";
-		std::cout << pai[i].first;
-		std::cout << pai[i].second;
 	}
-	std::cout << "\n";
 	return result;
 };
 
