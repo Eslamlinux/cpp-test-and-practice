@@ -23,6 +23,11 @@ int main()
 	int convpos = 8511;
 	int convneg = -8511;
 	double convdou = 8.511;
+
+	double a {3.31258446989966565898474655656656579856656566}; 
+	double b = 2006.0;
+	double c = 1.34e-10;
+
 	std::cout << std::left;
 	std::cout << std::setfill('-');
 	std::cout  << std::setw(wid) << "First Name" << std::setw(wid) << "Last Name" << std::setw(wid) << "Your id" << std::setw(wid) << "Age" <<  std::endl; 
@@ -33,10 +38,16 @@ int main()
 	std::cout << std::noshowpos;
 	std::cout << std::left;
 	std::cout << std::endl;
-std::cout << std::uppercase;
+	std::cout << std::uppercase;
 	std::cout << std::setw(wid) << "in Dec" << std::setw(wid) << "in hex" << std::setw(wid) << "in oct" << std::endl;
 	std::cout << std::setw(wid) << std::dec << convpos << std::setw(wid) << std::hex << convpos << std::setw(wid) << std::oct << convpos << std::endl;
 	std::cout << std::setw(wid) << std::dec << convneg << std::setw(wid) << std::hex << convneg << std::setw(wid) << std::oct << convneg << std::endl;
 	std::cout << std::setw(wid) << std::dec << convdou << std::setw(wid) << std::hex << convdou << std::setw(wid) << std::oct << convdou << std::endl;
+	
+	std::cout << "double defualt \n";
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+	
 
 }
