@@ -25,11 +25,11 @@ Note that you can receive floats as well.
 		}
 	return result;
  }
-int main ()
-{
-std::vector<std::string> arrr = {"1.1", "2.2", "3.3"};
-to_float_array(arrr);
-
-return 0;
- }
+//int main ()
+//{
+//std::vector<std::string> arrr = {"1.1", "2.2", "3.3"};
+//to_float_array(arrr);
+//
+//return 0;
+// }
 

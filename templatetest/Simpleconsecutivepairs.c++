@@ -20,12 +20,15 @@ The pairs are selected as follows [(1,2),(5,8),(-4,-3),(7,6),5]
 #include <vector>
 
 int pairs(std::vector<int>arr){
-  //..
-}
+  std::vector<std::pair<int,int>> pai;
+	int arrsize = 0;
+	arr.size() %2 == 0?arrsize = arr.size():arrsize = arr.size()-1;
+	return arrsize;
+};
 
 int main()
 {
-std::vector<int> vec;
+std::vector<int> vec = {1,2,5,8,-4,-3,7,6,5};//=3
 std::cout << pairs(vec) << std::endl;
 return 0;
 }
