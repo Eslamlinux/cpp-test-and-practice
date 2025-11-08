@@ -79,6 +79,8 @@ int main()
 	std::cout << "\nshowing point or no \n";
 	double x {1.0};
 	double y {0.05};
+	//std::cout<< std::showbase;
+
 	std::cout << x << std::endl << y << std::endl;
 	std::cout<< std::showpoint ;
 	std::cout << x << std::endl << y << std::endl;
