@@ -18,7 +18,11 @@ std::showpoint; std::noshopoint; <ios>
 
 int main()
 {
+	std::cout  << std::flush ;
 	int wid = 15;
+	int convpos = 8511;
+	int convneg = -8511;
+	double convdou = 8.511;
 	std::cout << std::left;
 	std::cout << std::setfill('-');
 	std::cout  << std::setw(wid) << "First Name" << std::setw(wid) << "Last Name" << std::setw(wid) << "Your id" << std::setw(wid) << "Age" <<  std::endl; 
@@ -27,7 +31,11 @@ int main()
 	std::cout  << std::setw(wid) << "Islam" << std::setw(wid) << "Khalid" << std::setw(wid) << "10001" << std::setw(wid) << 34 <<  std::endl; 
 	std::cout  << std::setw(wid) << "Hassan" << std::setw(wid) << "Khalid" << std::setw(wid) << "10003" << std::setw(wid) << 27 << std::endl; 
 	std::cout << std::noshowpos;
-	std::cout << std::internal;
-std::cout << std::setw(wid) << "hi " << std::flush << std::setw(wid) << "loma";
-	
+	std::cout << std::left;
+	std::cout << std::endl;
+	std::cout << std::setw(wid) << "in Dec" << std::setw(wid) << "in hex" << std::setw(wid) << "in oct" << std::endl;
+	std::cout << std::setw(wid) << std::dec << convpos << std::setw(wid) << std::hex << convpos << std::setw(wid) << std::oct << convpos << std::endl;
+	std::cout << std::setw(wid) << std::dec << convneg << std::setw(wid) << std::hex << convneg << std::setw(wid) << std::oct << convneg << std::endl;
+	std::cout << std::setw(wid) << std::dec << convdou << std::setw(wid) << std::hex << convdou << std::setw(wid) << std::oct << convdou << std::endl;
+
 }
