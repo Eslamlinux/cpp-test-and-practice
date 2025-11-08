@@ -33,6 +33,7 @@ int main()
 	std::cout << std::noshowpos;
 	std::cout << std::left;
 	std::cout << std::endl;
+std::cout << std::uppercase;
 	std::cout << std::setw(wid) << "in Dec" << std::setw(wid) << "in hex" << std::setw(wid) << "in oct" << std::endl;
 	std::cout << std::setw(wid) << std::dec << convpos << std::setw(wid) << std::hex << convpos << std::setw(wid) << std::oct << convpos << std::endl;
 	std::cout << std::setw(wid) << std::dec << convneg << std::setw(wid) << std::hex << convneg << std::setw(wid) << std::oct << convneg << std::endl;
