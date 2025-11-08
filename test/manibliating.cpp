@@ -1,3 +1,4 @@
+#include <ios>
 #include <iostream>
 #include <ostream>
 #include <iomanip>
@@ -17,10 +18,16 @@ std::showpoint; std::noshopoint; <ios>
 
 int main()
 {
-	int wid = 14;
-	std::cout  << "hello semsem" << std::setw(wid) << "your id " << std::setw(wid) << "a5521" << std::endl; 
-	std::cout  << "hello semsem\t" <<  "your id\t" <<  "a5521" << std::endl; 
-
-std::cout << "hi " << std::flush << "loma";
+	int wid = 15;
+	std::cout << std::left;
+	std::cout << std::setfill('-');
+	std::cout  << std::setw(wid) << "First Name" << std::setw(wid) << "Last Name" << std::setw(wid) << "Your id" << std::setw(wid) << "Age" <<  std::endl; 
+	std::cout << std::setfill(' ');
+	std::cout << std::showpos;
+	std::cout  << std::setw(wid) << "Islam" << std::setw(wid) << "Khalid" << std::setw(wid) << "10001" << std::setw(wid) << 34 <<  std::endl; 
+	std::cout  << std::setw(wid) << "Hassan" << std::setw(wid) << "Khalid" << std::setw(wid) << "10003" << std::setw(wid) << 27 << std::endl; 
+	std::cout << std::noshowpos;
+	std::cout << std::internal;
+std::cout << std::setw(wid) << "hi " << std::flush << std::setw(wid) << "loma";
 	
 }
