@@ -45,14 +45,12 @@ std::string SequenceSum::showSequence(){
     result += " = " + std::to_string(sum);
     return result;
 }
-
 SequenceSum::SequenceSum (int c) {
   count = c;
 }
 
 int main()
 {
-
     SequenceSum seqsum (-15);
     std::cout<< seqsum.showSequence(); // Equals("0+1+2+3+4+5+6 = 21"));
 
