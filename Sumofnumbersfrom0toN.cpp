@@ -10,9 +10,7 @@ Output:
 Input:
 > -15
 Output:
-
 -15<0
-
 Input:
 
 > 0
