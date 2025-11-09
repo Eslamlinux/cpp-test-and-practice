@@ -48,7 +48,6 @@ std::string SequenceSum::showSequence(){
 SequenceSum::SequenceSum (int c) {
   count = c;
 }
-
 int main()
 {
     SequenceSum seqsum (-15);
