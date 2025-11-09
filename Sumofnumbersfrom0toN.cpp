@@ -32,7 +32,6 @@ class SequenceSum{
   public:
   SequenceSum (int);
   std::string showSequence();
-  
 };
 
 std::string SequenceSum::showSequence(){
