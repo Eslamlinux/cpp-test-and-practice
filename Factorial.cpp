@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+
 long long factorial(int n){
 //   long long int result = 1;
 //   for(int i = n ; i > 0; i--){
