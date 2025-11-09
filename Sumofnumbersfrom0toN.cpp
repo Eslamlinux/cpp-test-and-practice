@@ -12,13 +12,10 @@ Input:
 Output:
 -15<0
 Input:
-
 > 0
 Output:
-
 0=0
 */
-
 class SequenceSum{
   int count;
   public:
