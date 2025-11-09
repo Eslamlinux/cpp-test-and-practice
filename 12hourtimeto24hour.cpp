@@ -1,10 +1,12 @@
 #include <iostream>
-
 #include <string>
 #include <vector>
 #include <algorithm>
 #include <cctype>
 using namespace std;
+
+
+
 
 string to24HourTime(int hour, int minute, const string& period) {
   string resetHtime = "00";
