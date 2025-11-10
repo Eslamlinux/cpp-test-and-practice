@@ -7,9 +7,18 @@ Examples:
 
 */
 #include <iostream>
+#include <string>
+#include <vector>
+
+std::string capitalize(const std::string &s, const std::vector<int> &idxs)
+{
+    return "";
+}
 
 int main()
 {
+    std::cout << capitalize("abcdef", {1, 2, 5}) << std::endl;        // Output: "aBCdeF"
+    std::cout << capitalize("abcdef", {1, 2, 5, 100}) << std::endl; // Output: "aBCdeF"
 
     return 0;
 }
