@@ -11,12 +11,15 @@ All inputs will be integers. Please return an integer. Round down.
 */
 #include <iostream>
 #include <cmath>
+
 int duty_free(int price, int discount, int holiday_cost) {
-  return 0;
+    int savings_per_bottle = price * discount / 100;
+    return savings_per_bottle == 0 ? 0 : holiday_cost / savings_per_bottle;
 }
 
 int main()
 {
+    std::cout << duty_free(12, 50, 1000) << std::endl; // Expected output: 166
 
     return 0;
 }
