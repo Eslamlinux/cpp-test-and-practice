@@ -1,5 +1,5 @@
 /*
-The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
+The purpose of this kata is to work out just how many bottles of duty free mialk you would have to buy such that the savings over the normal high street price would effectively cover the cost of your holiday.
 
 You will be given the high street price (normPrice, in £ (Pounds)), the duty free discount (discount, in percent) and the cost of the holiday (in £).
 
@@ -10,16 +10,16 @@ Another example: if a bottle costs £12 normally and the duty free discount is 5
 All inputs will be integers. Please return an integer. Round down.
 */
 #include <iostream>
-#include <cmath>
 
-int duty_free(int price, int discount, int holiday_cost) {
-    int savings_per_bottle = price * discount / 100;
-    return savings_per_bottle == 0 ? 0 : holiday_cost / savings_per_bottle;
+int duty_free(int price, int discount, int Eid_cost) {
+    double savings_per_bottle = (double)price * (double)discount / 100;
+    return savings_per_bottle == 0 ? 0 :  Eid_cost / savings_per_bottle;
 }
 
 int main()
 {
     std::cout << duty_free(12, 50, 1000) << std::endl; // Expected output: 166
+    std::cout << duty_free(17, 10, 500) << std::endl;  // Expected output: 294
 
     return 0;
 }
