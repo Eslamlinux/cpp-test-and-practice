@@ -12,11 +12,12 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 long sumTwoSmallestNumbers(std::vector<int> numbers)
 {
-	std::sort(numbers.begin(),numbers.end());
+	//std::sort(numbers.begin(),numbers.end());
+	std::stable_sort(numbers.begin(),numbers.end());
     return numbers[0] + numbers[1];
 }
 int main()
 {
-std::cout << sumTwoSmallestNumbers({ 5, 8, 12, 19, 22 }) << std::endl;
+std::cout << sumTwoSmallestNumbers({ 5, 12, 8, 19, 22 }) << std::endl;
 return 0;
 }
