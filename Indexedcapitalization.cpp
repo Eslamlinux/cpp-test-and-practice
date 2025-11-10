@@ -12,7 +12,15 @@ Examples:
 
 std::string capitalize(const std::string &s, const std::vector<int> &idxs)
 {
-    return "";
+    std::string result = s;
+    for (int index : idxs)
+    {
+        if (index >= 0 && index < static_cast<int>(result.size()))
+        {
+            result[index] = toupper(result[index]);
+        }
+    }
+    return result;
 }
 
 int main()
