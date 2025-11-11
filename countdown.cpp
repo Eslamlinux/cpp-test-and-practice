@@ -6,10 +6,10 @@ using namespace std;
 vector<int> countdown(int num) { 
  vector<int> result;
  if(num <= 3 ){return {0};}
- for(int i = num; i > 3 ; i = i -3){
-    int temp = i - 3;
-    if(temp % 2 == 0){
-        result.push_back(temp);
+ for(int i = num; i > 1 ; i = i -3){
+    // int temp = i - 3;
+    if(i % 2 == 0 && i != num){
+        result.push_back(i);
     }
  }
   reverse(result.begin(),result.end());
@@ -18,7 +18,7 @@ vector<int> countdown(int num) {
 
 int main() {
 
-for(int c: countdown(103)){
+for(int c: countdown(10)){
     cout << c << endl;
 }
 
