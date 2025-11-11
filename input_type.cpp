@@ -15,9 +15,10 @@ std::string input_type(std::string value) {
 
 int main()
 {
-    // std::string str = "Hello, World!";
-    // std::string str = "12345";
-    std::string str = "12.345";
-    std::cout << input_type(str) << std::endl;
+
+    std::cout << input_type("Hello, World!") << std::endl;
+    std::cout << input_type("12345") << std::endl;
+    std::cout << input_type("1.345") << std::endl;
+    std::cout << input_type("21.21") << std::endl;
     return 0;
 }
