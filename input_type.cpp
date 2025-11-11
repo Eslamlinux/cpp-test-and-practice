@@ -20,5 +20,6 @@ int main()
     std::cout << input_type("12345") << std::endl;
     std::cout << input_type("1.345") << std::endl;
     std::cout << input_type("21.21") << std::endl;
+    
     return 0;
 }
