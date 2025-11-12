@@ -6,7 +6,7 @@
 bool isworking = true;
 struct user
 {
-	std::string name = "demo";
+	std::string name = "";
 	std::string email = "not set";
 	std::string passwd = "******";
 
@@ -16,12 +16,8 @@ struct user
 void UserAct(user& user)
 {
 	std::string entry;
-	system("clear");
-	std::cout  << " please chose\n";
-	std::cout  << " to login press login\n";
-	std::cout  << " add user account to git press user\n";
-	std::cout  << " to print user data use config\n";
-	std::cout  << " Exit press exit\n";
+	std::cout  << " you in Git simulation now you can test your knowledge by orders\n";
+	std::cout  << " To Exit enter 'exit'\n";
 	std::getline(std::cin, entry);
 	if(entry == "user")
 	{
@@ -36,12 +32,11 @@ void UserAct(user& user)
 	}
 	if(entry == "config user.name")
 	{
-		system("clear");
+	system("clear");
 		std::cout<< "User name is: " << user.name << std::endl;
 	}
 	if(entry == "config user.email")
 	{
-		system("clear");
 		std::cout << "user email is: " << user.email <<std::endl;
 	}
 	if(entry == "exit")
