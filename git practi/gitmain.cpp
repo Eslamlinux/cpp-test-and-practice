@@ -2,8 +2,8 @@
 
 struct user
 {
-	std::string name = "demo\n";
-	std::string email = "not set\n";
+	std::string name = "demo";
+	std::string email = "not set";
 	std::string passwd = "******";
 
 
@@ -15,13 +15,12 @@ void UserAct()
 	std::string entry;
 	system("clear");
 	std::cout  << " please chose\n";
-	std::cout  << " to login press l\n";
-	std::cout  << " add user account to git press u\n";
-	std::cout  << " to print user data use config";
-	std::cout  << " Exit press E\n";
+	std::cout  << " to login press login\n";
+	std::cout  << " add user account to git press user\n";
+	std::cout  << " to print user data use config\n";
+	std::cout  << " Exit press exit\n";
 	std::getline(std::cin, entry);
-	std::cin.ignore();
-	if(entry == "u")
+	if(entry == "user")
 	{
 	system("clear");
 	std::cout << user.name << " please enter your user name\n";
@@ -31,8 +30,6 @@ void UserAct()
 	std::cout << user.name << " please add your password\n";
 	std::cin >> user.passwd;
 	}
-	if(entry == "e")
-	{return;}
 	if(entry == "config user.name")
 	{
 		system("clear");
@@ -43,6 +40,8 @@ void UserAct()
 		system("clear");
 		std::cout << "user email is: " << user.email <<std::endl;
 	}
+	if(entry == "exit")
+	{return;}
 }
 
 int main()
