@@ -14,8 +14,22 @@ Examples:
 
 */
 #include <iostream> 
+#include <vector>
+
+std::vector<int> incrementer(std::vector<int> nums){
+    for(int &c : nums)
+    {
+        c += (&c - &nums[0] + 1);
+        if(c >= 10)
+            c %= 10;
+    }
+  return nums;
+}
 
 int main() {
-        
-     return 0; 
+
+    for(int i : incrementer({4, 6, 9, 1, 3})) {
+        std::cout << i << " ";
     }
+return 0; 
+}
