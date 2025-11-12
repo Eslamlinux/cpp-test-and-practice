@@ -3,6 +3,7 @@
 #include <limits>
 #include <string>
 
+bool isworking = true;
 struct user
 {
 	std::string name = "demo";
@@ -12,9 +13,8 @@ struct user
 
 };
 
-void UserAct()
+void UserAct(user& user)
 {
-	user user;
 	std::string entry;
 	system("clear");
 	std::cout  << " please chose\n";
@@ -32,7 +32,7 @@ void UserAct()
 	std::cin >> user.email;
 	std::cout << user.name << " please add your password\n";
 	std::cin >> user.passwd;
-	std::cin.ignore(std::numeric_limits<std::streamsize>::max());
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
 	}
 	if(entry == "config user.name")
 	{
@@ -45,14 +45,15 @@ void UserAct()
 		std::cout << "user email is: " << user.email <<std::endl;
 	}
 	if(entry == "exit")
-	{return;}
+	{isworking = false;}
 }
 
 int main()
 {
-while (true) 
+user gituser;
+while (isworking) 
 {
-	UserAct();
+	UserAct(gituser);
 }
 return 0;
 }
