@@ -1,4 +1,7 @@
+#include <ios>
 #include <iostream>
+#include <limits>
+#include <string>
 
 struct user
 {
@@ -29,6 +32,7 @@ void UserAct()
 	std::cin >> user.email;
 	std::cout << user.name << " please add your password\n";
 	std::cin >> user.passwd;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max());
 	}
 	if(entry == "config user.name")
 	{
