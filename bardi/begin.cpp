@@ -13,7 +13,7 @@ letter = getch();
 clear();
 
 //std::cout<< "you pushed: " << letter << std::endl;
-printw("you pushed: ",letter);
+printw("you pushed: '%c'",letter);
 refresh();
 getch();
 endwin();
