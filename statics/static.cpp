@@ -3,7 +3,8 @@
 void fun()
 {
 	static int countup = 0;
-	countup++;
+//	countup++;
+	countup +=2;
 	std::cout << countup << std::endl;
 
 }
