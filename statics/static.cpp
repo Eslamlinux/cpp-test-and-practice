@@ -2,9 +2,9 @@
 
 void fun()
 {
-	static int countup = 0;
+	static std::string countup ;
 //	countup++;
-	countup +=2;
+	countup += "eslam ";
 	std::cout << countup << std::endl;
 
 }
