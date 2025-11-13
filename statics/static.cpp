@@ -7,10 +7,25 @@ void fun()
 	std::cout << countup << std::endl;
 
 }
+class cls
+{
+public:
+	cls()
+	{
+	fun();
+	}
+};
 int main(int argr,char argc)
 {
- fun();
- fun();
+fun();
+fun();
+cls();
+cls();
+cls();
+cls ss;
+cls ss2;
+cls ss3;
+
 
     return 0;
 }
