@@ -1,5 +1,4 @@
 /*
-
 Some new cashiers started to work at your restaurant.
 
 They are good at taking orders, but they don't know how to capitalize words, or use a space bar!
@@ -26,26 +25,25 @@ The menu items are fairly simple, there is no overlap in the names of the items:
 6. Onionrings
 7. Milkshake
 8. Coke
+*/
 
- */
 #include <iostream>
 #include <string>
 #include <algorithm>
 
-std::string get_order(const std::string &order) {
-  std::string Main_Menu[8] = {"Burger","Fries","Chicken","Pizza","Sandwich","Onionrings","Milkshake","Coke"};
-  std::string result;
+	std::string get_order(const std::string &order) {
+		std::string Main_Menu[8] = {"Burger","Fries","Chicken","Pizza","Sandwich","Onionrings","Milkshake","Coke"};
+		std::string result;
 //  for()
-  auto it = std::find(order.begin(),order.end(),Main_Menu);
-  if(it != order.end())
-  std::cout << "find it";
+		std::find(order.begin(),order.end(),Main_Menu[0]);
 
-return "";
-}
+		return "";
+	}
 
 int main()
 {
- get_order("milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza");
+	std::string re = "milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza";
+ get_order(re);
 
  return 0;
 }
