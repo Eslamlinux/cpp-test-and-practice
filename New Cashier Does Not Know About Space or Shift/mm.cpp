@@ -33,24 +33,23 @@ The menu items are fairly simple, there is no overlap in the names of the items:
 
 	std::string get_order(const std::string &order) {
 		std::string Main_Menu[8] = {"Burger","Fries","Chicken","Pizza","Sandwich","Onionrings","Milkshake","Coke"};
-		std::string result;
-		std::string temp;
+		std::string result ;
+		std::string temp ;
  		for(int i = 0; i < 8; i++)
 		{
-			temp = tolower(Main_Menu[i]);
-			auto comp = std::find(order.begin(),order.end(),temp);
-			if(comp != order.end())
+			temp = tolower(Main_Menu[i][0]);
+			temp += Main_Menu[i].substr(1);
+			for(int t = 0; t < order.size(); t++)
 			{
-				size_t pos = order.find(temp);
-				while(pos != std::string::npos)
+				if(order.substr(t, Main_Menu[i].size()) == temp)
 				{
-					result += Main_Menu[i] + " ";
-					pos = order.find(temp,pos + temp.length());
+						result += Main_Menu[i]+ " " ;
+					t += Main_Menu[i].size() - 1;
 				}
 			}
+			temp = "";
 		}
-
-		return result.substr(0,result.length() - 1);
+		return result;
 	}
 
 int main()
