@@ -12,7 +12,7 @@ std::string switcher(const std::vector<std::string>& arr) {
 	std::string result ;
 	for(int i = 0; i < arr.size();i++)
 	{
-		result += (std::stoi(arr[i]) -26) + 'a';
+		result += (26 - std::stoi(arr[i])) + 'a';
 	}
   return result;
 }
