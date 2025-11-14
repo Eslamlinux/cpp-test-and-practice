@@ -12,7 +12,9 @@ std::string switcher(const std::vector<std::string>& arr) {
 	std::string result ;
 	for(int i = 0; i < arr.size();i++)
 	{
+		if(arr[i] != "27" && arr[i] != "28"&& arr[i]!= "29")
 		result += (26 - std::stoi(arr[i])) + 'a';
+		arr[i] == "27"? result += "!":arr[i] == "28"? result+= "?":result += " ";
 	}
   return result;
 }
