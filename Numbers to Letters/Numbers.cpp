@@ -9,10 +9,17 @@ All inputs will be valid.
 #include <vector>
 
 std::string switcher(const std::vector<std::string>& arr) {
-  return "";
+	std::string result ;
+	for(int i = 0; i < arr.size();i++)
+	{
+		result += (std::stoi(arr[i]) -26) + 'a';
+	}
+  return result;
 }
 
 int main()
 {
+	std::vector<std::string>num = {"24", "12", "23", "22", "4", "26", "9", "8"};
+	std::cout << switcher(num);
 	return 0;
 }
