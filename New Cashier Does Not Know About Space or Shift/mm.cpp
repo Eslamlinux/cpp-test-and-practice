@@ -49,7 +49,7 @@ The menu items are fairly simple, there is no overlap in the names of the items:
 			}
 			temp = "";
 		}
-		return result;
+		return result.substr(0, result.size() - 1);
 	}
 
 int main()
