@@ -1,28 +1,15 @@
 #include <iostream>
 #include <ncurses.h>
-
-/*
-int main()
-{
-	initscr();
-	noecho();
-	printw("hello in ncurses the first one\n");
-	printw("press any key to out");
-	mvprintw(10,10,"in defreent locution\n");
-	refresh();
-	getch();
-	endwin();
-	return 0;
-}
-*/
-
 #include <ncurses.h>
 
 int main() {
     initscr();
-    curs_set(0);           // إخفاء المؤشر
+    curs_set(0);    
     noecho(); 
   	move(3,0);  
+	int sy,sx;
+	getmaxyx(stdscr,sy,sx);
+	printw( "size y %d size x %d ",sy,sx);
 	addstr("hello world add str use\n");
 	move(4,25);
 	addch('c');
