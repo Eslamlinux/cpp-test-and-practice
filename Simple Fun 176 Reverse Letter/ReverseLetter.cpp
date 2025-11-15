@@ -1,10 +1,33 @@
 /*
- * ReverseLetter.cpp
- *
- *  Created on: Nov 15, 2025
- *      Author: eslam
+ Given a string str, reverse it and omit all non-alphabetic characters.
+
+Example
+For str = "krishan", the output should be "nahsirk".
+
+For str = "ultr53o?n", the output should be "nortlu".
+
+Input/Output
+[input] string str
+A string consists of lowercase latin letters, digits and symbols.
+
+[output] a string
+
  */
+#include <iostream>
 
-
-
-
+std::string reverse_letter(const std::string &str)
+{
+	std::string result;
+	for(char c : str)
+	{
+		if(isalpha(c))
+		{
+			result =  c + result;
+		}
+	}
+    return result;
+}
+int main()
+{
+std::cout << reverse_letter("kri5shan");
+}
