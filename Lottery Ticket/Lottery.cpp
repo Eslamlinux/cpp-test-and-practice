@@ -14,3 +14,26 @@ All inputs will be in the correct format. Strings on tickets are not always the 
 
 
  */
+#include <iostream>
+#include <utility>
+#include <vector>
+std::string bingo(std::vector<std::pair<std::string, int>> ticket, int win)
+{
+	int Win_count =0;
+	for(auto p:ticket)
+	{
+		for(int i = 0; i < p.first.length();i++)
+		{
+			if(p[i] == p.second) Win_count++;
+		}
+	}
+
+  return Win_count >= win ? "Winner!" : "Loser!";
+}
+
+int main()
+{
+	std::vector<std::pair<std::string,int>> tosent = {{"ABC", 65}, {"HGR", 74}, {"BYHT", 74}};
+	std::cout << bingo(tosent,2) << std::endl;
+	return 0;
+}
