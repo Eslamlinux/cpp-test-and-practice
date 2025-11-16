@@ -14,11 +14,21 @@ The minimum sum obtained from summing each two integers product ,  5*2 + 3*4 = 2
 
 int minSum(const std::vector<int> &passed)
 {
-    // your Code Here .... hope you Enjoy !!!
-    return 0;
+	int sum = 0;
+	int mini , max;
+	for(int i = 0 ;i < passed.size() /2;i++ )
+	{
+		for(int t = i ; t < passed.size();t++ )
+		{
+
+		}
+	}
+	return 0;
 }
 
 int main()
 {
+	std::cout << minSum({5,4,2,3}); //5 2   4 3
+
 	return 0;
 }
