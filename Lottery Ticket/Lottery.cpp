@@ -20,11 +20,15 @@ All inputs will be in the correct format. Strings on tickets are not always the 
 std::string bingo(std::vector<std::pair<std::string, int>> ticket, int win)
 {
 	int Win_count =0;
-	for(auto p:ticket)
+	for(const auto& p:ticket)
 	{
-		for(int i = 0; i < p.first.length();i++)
+		for(size_t i = 0; i < p.first.length();i++)
 		{
-			if(p[i] == p.second) Win_count++;
+			if(p.first[i] == p.second)
+				{
+				Win_count++;
+				break;
+				}
 		}
 	}
 
