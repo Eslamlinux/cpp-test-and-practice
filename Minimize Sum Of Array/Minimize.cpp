@@ -11,27 +11,15 @@ The minimum sum obtained from summing each two integers product ,  5*2 + 3*4 = 2
  */
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 int minSum(const std::vector<int> &passed)
 {
 	int result = 0;
 	std::vector<int> pass(passed);
-	int mini =0, max=0;
+	std::sort(pass.begin(),pass.end());
 	for(int i = 0 ;i < pass.size() /2;i++ )
 	{
-		mini = pass[i];
-		max = pass[i];
-		for(int t = i+1 ; t < pass.size();t++ )
-		{
-			if(pass[t] > max) max = pass[t];
-			if(pass[t] < mini) mini = pass[t];
-		}
-		 result += (max * mini);
-		for(int c = 0 ; c < pass.size();c++ )
-		{
-			if(pass[c] == max)  pass.erase(begin(pass)+c);
-			if(pass[c] == mini) pass.erase(begin(pass)+c);
-		}
+		result += pass[i] * pass[pass.size() - i -1];
 	}
 	return result;
 }
