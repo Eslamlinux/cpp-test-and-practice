@@ -11,10 +11,13 @@ Return value as boolean values, true for the string to contains "English", false
 
 #include <iostream>
 #include <string>
+#include <algorithm>
 
 bool sp_eng(const std::string& sentence) {
-    std::string low = std::tolower(sentence);
-    std::cout << low << std::endl;
+    std::string val = "english";
+    auto low = std::find(sentence.begin(),sentence.end(),9);
+    if(low != sentence.end())
+    std::cout << *low << std::endl;
 
 
     return true;
