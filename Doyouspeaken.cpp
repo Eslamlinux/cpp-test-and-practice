@@ -14,8 +14,8 @@ Return value as boolean values, true for the string to contains "English", false
 #include <algorithm>
 
 bool sp_eng(const std::string& sentence) {
-    std::string val = "nglish";
-    size_t low = sentence.find(val);
+    std::string tolow = std::tolower(sentence);
+    size_t low = sentence.find("english");
     if(low == std::string::npos)
     std::cout << "not find it" << std::endl;
     else
