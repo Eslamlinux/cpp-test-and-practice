@@ -16,9 +16,8 @@ Return value as boolean values, true for the string to contains "English", false
 bool sp_eng(const std::string& sentence) {
     std::string tolow = sentence ;
     std::transform(tolow.begin(),tolow.end(),tolow.begin(),[](unsigned char c){return std::tolower(c);});
-    size_t low = sentence.find("english");
-    std::cout << std::boolalpha;
-    return low != std::string::npos? false:low;
+    size_t low = tolow.find("english");
+    return low != std::string::npos;
 }
 
 int main() {
