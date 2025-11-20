@@ -39,23 +39,24 @@ public:
 		std::string sTemp = "";
 		for(size_t i= 0; i < strng.length() - ChunkNum; i++)
 		{
-			if(temp != sz)
+			if(Temp != sz)
 			{
-				To_Sum += std::stoi(strng[i]);
+				To_Sum += strng[i] - '0';
 				sTemp += strng[i];
-				temp++;
+				Temp++;
 			}
 			else
 			{
-				temp = 0;
+				Temp = 0;
 				if(To_Sum % 2 == 0)
 				{
-					Result += std::reverce(sTemp.begin(),sTemp.end());
+					std::reverse(sTemp.begin(),sTemp.end());
+					Result += sTemp;
 				}
 				else
 				{
-					std::string cTemp = sTemp[0];
-					std::erase(sTemp[0]);
+					char cTemp = sTemp[0];
+					sTemp[0] = '\0';
 					Result += sTemp + cTemp;
 				}
 				sTemp = "";
@@ -69,7 +70,7 @@ public:
 int main()
 {
 	RevRot a;
-	
+	std::cout << "123456987654" << std::endl;
 	std::cout << a.revRot("123456987654",6);
 	return 0;
 }
