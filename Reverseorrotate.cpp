@@ -32,20 +32,19 @@ public:
 		return  "";
 		if(strng == "")
 		return "";
-		int ChunkNum = strng.length() / sz;
 		size_t To_Sum = 0;
 		size_t Temp = 0;
 		std::string Result = "";
 		std::string sTemp = "";
-		for(size_t i= 0; i < strng.length() - ChunkNum; i++)
+		for(size_t i= 0; i < strng.length(); i++)
 		{
-			if(Temp != sz)
+			if(Temp < sz)
 			{
 				To_Sum += strng[i] - '0';
 				sTemp += strng[i];
 				Temp++;
 			}
-			else
+			if(Temp == sz)
 			{
 				Temp = 0;
 				if(To_Sum % 2 == 0)
@@ -70,7 +69,7 @@ public:
 int main()
 {
 	RevRot a;
-	std::cout << "123456987654" << std::endl;
-	std::cout << a.revRot("123456987654",6);
+	std::cout << "123456987654555" << std::endl;
+	std::cout << a.revRot("123456987654555",6);
 	return 0;
 }
