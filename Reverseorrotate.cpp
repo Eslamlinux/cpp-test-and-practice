@@ -38,7 +38,7 @@ public:
 		std::string sTemp = "";
 		for(size_t i= 0; i < strng.length(); i++)
 		{
-			if(Temp < sz)
+			if(Temp <= sz)
 			{
 				To_Sum += strng[i] - '0';
 				sTemp += strng[i];
@@ -59,6 +59,7 @@ public:
 					Result += sTemp + cTemp;
 				}
 				sTemp = "";
+				To_Sum = 0;
 			}
 			
 		}
@@ -69,7 +70,8 @@ public:
 int main()
 {
 	RevRot a;
-	std::cout << "123456987654555" << std::endl;
-	std::cout << a.revRot("123456987654555",6);
+	// std::cout << "123456987654555" << std::endl;
+	// std::cout << a.revRot("123456987654555",6);
+	std::cout << a.revRot("733049910872815764",5); //33047 91089 28157  //330479108928157
 	return 0;
 }
