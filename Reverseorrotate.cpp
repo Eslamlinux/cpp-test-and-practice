@@ -29,9 +29,12 @@ public:
     static std::string revRot(const std::string &strng, unsigned int sz)
     {
 		int ChunkNum = strng.length() / sz;
-		std::string result;
-		
-		return result;
+		int To_sum = 0;
+		std::string Result;
+		for(int i= 0; i < strng.length() - ChunkNum; i++)
+		{
+		}
+		return Result;
 	}
 };
 
