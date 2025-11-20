@@ -21,6 +21,7 @@ bool sp_eng(const std::string& sentence) {
 }
 
 int main() {
-    std::cout << sp_eng("1234#$%%eNglish ;k9") << std::endl;
+    std::cout << sp_eng("1234#$%%eNglish ;k9/") << std::endl;
+    std::cout << "1234\"" << std::endl;
     return 0;
 }
