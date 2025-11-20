@@ -55,7 +55,7 @@ public:
 				else
 				{
 					std::string cTemp = sTemp[0];
-					erase(sTemp[0]);
+					std::erase(sTemp[0]);
 					Result += sTemp + cTemp;
 				}
 				sTemp = "";
