@@ -26,11 +26,19 @@ s = "123456" gives "234561".
 class RevRot
 {
 public:
-    static std::string revRot(const std::string &strng, unsigned int sz);
+    static std::string revRot(const std::string &strng, unsigned int sz)
+    {
+		int ChunkNum = strng.length() / sz;
+		std::string result;
+		
+		return result;
+	}
 };
 
 int main()
 {
-	std::cout << "hi" ;
+	RevRot a;
+	
+	std::cout << a.revRot("123456987654",6);
 	return 0;
 }
