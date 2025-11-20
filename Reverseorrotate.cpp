@@ -22,7 +22,7 @@ s = "123456" gives "234561".
 */
 #include <string>
 #include <iostream>
-
+#include <algorithm>
 class RevRot
 {
 public:
@@ -36,11 +36,26 @@ public:
 		size_t To_Sum = 0;
 		size_t Temp = 0;
 		std::string Result = "";
+		std::string sTemp = "";
 		for(size_t i= 0; i < strng.length() - ChunkNum; i++)
 		{
 			if(temp != sz)
 			{
+				To_Sum += std::stoi(strng[i]);
+				sTemp += strng[i];
+				temp++;
 			}
+			else
+			{
+				temp = 0;
+				if(To_Sum % 2 == 0)
+				{
+					Result += std::reverce(sTemp.begin(),sTemp.end());
+					sTemp = "";
+				}
+				
+			}
+			
 		}
 		return Result;
 	}
