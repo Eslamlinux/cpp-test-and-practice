@@ -28,11 +28,19 @@ class RevRot
 public:
     static std::string revRot(const std::string &strng, unsigned int sz)
     {
+		if(strng.length() < sz)
+		return  "";
+		if(strng == "")
+		return "";
 		int ChunkNum = strng.length() / sz;
-		int To_sum = 0;
-		std::string Result;
-		for(int i= 0; i < strng.length() - ChunkNum; i++)
+		size_t To_Sum = 0;
+		size_t Temp = 0;
+		std::string Result = "";
+		for(size_t i= 0; i < strng.length() - ChunkNum; i++)
 		{
+			if(temp != sz)
+			{
+			}
 		}
 		return Result;
 	}
