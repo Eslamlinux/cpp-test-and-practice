@@ -51,9 +51,14 @@ public:
 				if(To_Sum % 2 == 0)
 				{
 					Result += std::reverce(sTemp.begin(),sTemp.end());
-					sTemp = "";
 				}
-				
+				else
+				{
+					std::string cTemp = sTemp[0];
+					erase(sTemp[0]);
+					Result += sTemp + cTemp;
+				}
+				sTemp = "";
 			}
 			
 		}
