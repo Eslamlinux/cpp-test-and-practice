@@ -28,17 +28,15 @@ class RevRot
 public:
     static std::string revRot(const std::string &strng, unsigned int sz)
     {
-		if(strng.length() < sz)
+		if(strng.length() < sz && strng == "")
 		return  "";
-		if(strng == "")
-		return "";
 		size_t To_Sum = 0;
 		size_t Temp = 0;
 		std::string Result = "";
 		std::string sTemp = "";
 		for(size_t i= 0; i < strng.length(); i++)
 		{
-			if(Temp <= sz)
+			if(Temp < sz)
 			{
 				To_Sum += strng[i] - '0';
 				sTemp += strng[i];
@@ -54,8 +52,8 @@ public:
 				}
 				else
 				{
-					char cTemp = sTemp[0];
-					sTemp[0] = '\0';
+					char cTemp = sTemp.substr(0,1)[0];
+					sTemp.erase(0,1);
 					Result += sTemp + cTemp;
 				}
 				sTemp = "";
