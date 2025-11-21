@@ -12,10 +12,18 @@ good luck :)
 
 */
 #include <iostream>
-
+std::string evil(int n)
+{
+    std::string Od = "It's Odious!" , ev = "It's Evil!";
+    return n +'0' %2? Od : ev;
+}
 int main()
 {
-
-
+int a = 3;
+std::cout <<  (a + '0') <<std::endl;
+std::cout << evil(1) <<std::endl;
+std::cout << evil(2) <<std::endl;
+std::cout << evil(3) <<std::endl;
+std::cout << evil(7) << std::endl;
     return 0;
 }
