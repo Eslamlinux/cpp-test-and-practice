@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
+#include <cmath>
 
 std::vector<int> ToBinary(int& n)
 {
@@ -8,7 +9,7 @@ std::vector<int> ToBinary(int& n)
     while(n > 0)
     {
         n /= 2;
-        n %2 = 0?result.push_back(0):result.push_back(1);
+        n % 2 == 0?result.push_back(0):result.push_back(1);
     }
     return result;
 }
