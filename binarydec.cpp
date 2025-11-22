@@ -2,6 +2,7 @@
 #include <chrono>
 #include <vector>
 #include <algorithm>
+#include <cmath>
 std::vector<int> ToBinary(int& n)
 {
     std::vector<int>result;
@@ -17,14 +18,16 @@ std::vector<int> ToBinary(int& n)
 int To_Decimal(std::string str)
 {
     std::vector<int> bits;
-    if(isalpha(str[0])) return 0;
     int sum = 0;
     for(char c :str)
     {
         if(isalpha(c)) break;
-        bits.push_back(c - '0');
+        bits.insert(bits.begin(),c - '0');
     }
-    std::cout << bits[0] << std::endl;
+    for(int i = 0;i < bits.size();i++)
+    {
+        sum += pow(2,i) * bits[i] ;
+    }
     return sum;
 }
 
