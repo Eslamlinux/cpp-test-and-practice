@@ -37,7 +37,7 @@ int To_Decimal(std::string str)
 
 void Get_entry()
 {
-    std::cout << "please chose wht you want to confert from " << std::endl;
+    std::cout << "please chose what do you want to convert from " << std::endl;
     std::cout << "decimal to binary chose [1] " << std::endl;
     std::cout << "binary to decimal chose [2] " << std::endl;
     int chose;
@@ -45,18 +45,19 @@ void Get_entry()
     std::cin >> chose;
     if(chose == 1)
     {
+        system("clear");
     std::cout << "please enter decimal to convert: " ;
     std::cin >> entry;
     for(auto c:To_Binary(entry))
     {
-            std::cout << c << "" ;
+            std::cout << "you convert frome "<< entry << " To " <<  c << " binary\n" ;
     }
     }
     else if(chose == 2)
     {
     std::cout << "please enter binary to convert: " ;
     std::cin >> entry;
-    std::cout << To_Decimal(entry);
+    std::cout << "you convert frome "<< entry << " To " << To_Decimal(entry) << " decimal\n";
     }
 
 }
