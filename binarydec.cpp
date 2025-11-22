@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
+    bool work = true;
+
 std::vector<int> To_Binary(std::string& str)
 {
     std::vector<int>result;
@@ -64,11 +66,15 @@ void Get_entry()
     std::cout << "you convert frome "<< entry << " To " << To_Decimal(entry) << " decimal\n";
     }
     else 
-    return;
+    {
+        system("clear");
+        std::cout << "Godbey :)\n";
+        work = false;
+    }
 }
 int main()
 {
-    while (true)
+    while (work)
     {
         Get_entry();
     }
