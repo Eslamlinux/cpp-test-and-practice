@@ -15,7 +15,13 @@ good luck :)
 std::string evil(int n)
 {
     std::string Od = "It's Odious!" , ev = "It's Evil!";
-    return n +'0' %2? Od : ev;
+    int Count = 0;
+    while(n > 0)
+    {
+        n &= (n -1);
+        Count++;
+    }
+    return Count % 2? Od : ev;
 }
 int main()
 {
