@@ -35,7 +35,7 @@ int To_Decimal(std::string str)
     return sum;
 }
 
-void Get_entry(std::string str)
+void Get_entry()
 {
     std::cout << "please chose wht you want to confert from " << std::endl;
     std::cout << "decimal to binary chose [1] " << std::endl;
@@ -62,14 +62,7 @@ void Get_entry(std::string str)
 }
 int main()
 {
-    std::string ent;
-    std::cin >>ent;
-    for(auto c:ToBinary(ent))
-    {
-            std::cout << c << "" ;
-    }
-//         std::string ent;
-// std::cin >> ent;
-std::cout << To_Decimal(ent);
+    Get_entry();
+ 
     return 0;
 }
