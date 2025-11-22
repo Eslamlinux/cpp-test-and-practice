@@ -14,17 +14,30 @@ std::vector<int> ToBinary(int& n)
     return result;
 }
 
-
+int To_Decimal(std::string str)
+{
+    std::vector<int> bits;
+    if(isalpha(str[0])) return 0;
+    int sum = 0;
+    for(char c :str)
+    {
+        if(isalpha(c)) break;
+        bits.push_back(c - '0');
+    }
+    std::cout << bits[0] << std::endl;
+    return sum;
+}
 
 int main()
 {
-    // std::string ent;
-    int ent;
-    std::cin >>ent;
-    for(auto c:ToBinary(ent))
-    {
-        std::cout << c << "" ;
-    }
-
+    // int ent;
+    // std::cin >>ent;
+    // for(auto c:ToBinary(ent))
+    // {
+        //     std::cout << c << "" ;
+        // }
+        std::string ent;
+std::cin >> ent;
+std::cout << To_Decimal(ent);
     return 0;
 }
