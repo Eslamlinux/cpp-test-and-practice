@@ -1,7 +1,6 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
-#include <cmath>
 
 std::vector<int> ToBinary(int& n)
 {
@@ -20,6 +19,10 @@ int main()
     // std::string ent;
     int ent;
     std::cin >>ent;
+    for(auto c:ToBinary(ent))
+    {
+        std::cout << c << " " ;
+    }
 
     return 0;
 }
