@@ -7,7 +7,7 @@ Note: you will always receive a valid array containing a random assortment of di
 #include<vector>
 
 bool isValidWalk(std::vector<char> walk) {
-    if(walk.size() < 10 && walk.size() > 10) return false;
+    if(walk.size() != 10) return false;
     int e = 0 , w = 0, n = 0 , s = 0;
     int x =0,y=0;
     for(int i = 0 ; i < walk.size(); i++)
