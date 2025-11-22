@@ -13,12 +13,17 @@ bool isValidWalk(std::vector<char> walk) {
     {
         walk[i] == 'e' ? e++ : walk[i] == 'w'? w++ : walk[i] == 'n'? n++ : walk[i] == 's'? s++ :0;
     }
-return walk.size() >= 9 && e == w && n == s;
+return walk.size() == 10 && e == w && n == s;
 }
 
 int main()
 {
 
-std::cout << isValidWalk({'e','w','e','w','n','s','n','s','e','w'});
+std::cout << isValidWalk({'n'}) << std::endl;
+std::cout << isValidWalk({'n','s','n','s','n','s','n','s','n','s'}) << std::endl;
+std::cout << isValidWalk({'n','s'}) << std::endl;
+std::cout << isValidWalk({'n','s','n','s','n','s','n','s','n','s','n','s'}) << std::endl;
+std::cout << isValidWalk({'e','w','e','w','n','s','n','s','e','w'}) << std::endl;
+std::cout << isValidWalk({'n','s','e','w','n','s','e','w','n','s','e','w','n','s','e','w'}) << std::endl;
     return 0;
 }
