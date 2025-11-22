@@ -7,12 +7,18 @@ Note: you will always receive a valid array containing a random assortment of di
 #include<vector>
 
 bool isValidWalk(std::vector<char> walk) {
-  //your code here
+    if(walk.size() < 10) return false;
+    int e = 0 , w = 0, n = 0 , s = 0;
+    for(int i = 0 ; i < walk.size(); i++)
+    {
+        walk[i] == 'e' ? e++ : walk[i] == 'w'? w++ : walk[i] == 'n'? n++ : walk[i] == 's'? s++ :0;
+    }
+return walk.size() >= 9 && e == w && n == s;
 }
 
 int main()
 {
 
-
+std::cout << isValidWalk({'e','w','e','w','n','s','n','s','e','w'});
     return 0;
 }
