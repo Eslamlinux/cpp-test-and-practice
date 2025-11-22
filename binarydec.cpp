@@ -1,17 +1,19 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
-
+#include <algorithm>
 std::vector<int> ToBinary(int& n)
 {
     std::vector<int>result;
+
     while(n > 0)
     {
+        n % 2 == 0?result.insert(result.begin(),0):result.insert(result.begin(),1);
         n /= 2;
-        n % 2 == 0?result.push_back(0):result.push_back(1);
-    }
+    } 
     return result;
 }
+
 
 
 int main()
@@ -21,7 +23,7 @@ int main()
     std::cin >>ent;
     for(auto c:ToBinary(ent))
     {
-        std::cout << c << " " ;
+        std::cout << c << "" ;
     }
 
     return 0;
