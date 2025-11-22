@@ -20,6 +20,15 @@ std::vector<int> To_Binary(std::string& str)
     } 
     return result;
 }
+std::string To_Binary_dir(std::string strtonum)
+{
+    std::string result;
+    for(auto c: To_Binary(strtonum))
+    {
+        result += std::to_string(c);
+    }
+    return result;
+}
 
 int To_Decimal(std::string str)
 {
@@ -72,13 +81,13 @@ void Get_entry()
         work = false;
     }
 }
-int main()
-{
-    while (work)
-    {
-        Get_entry();
-    }
+// int main()
+// {
+//     while (work)
+//     {
+//         Get_entry();
+//     }
     
  
-    return 0;
-}
+//     return 0;
+// }
