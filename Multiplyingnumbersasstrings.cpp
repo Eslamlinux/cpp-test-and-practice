@@ -32,7 +32,7 @@ std::string multiply(std::string num1, std::string num2) {
     
     // متجه لتخزين النتيجة الجزئية. الحجم الأقصى هو مجموع الأطوال.
     std::vector<int> result(n1 + n2, 0);
-    //12193263113702179522374638011112635269
+
     // 2. عملية الضرب الأساسية (الضرب الجزئي)
     // نبدأ من الخانات الأقل أهمية (الآحاد)
     for (int i = n1 - 1; i >= 0; i--) {
@@ -71,7 +71,6 @@ std::string multiply(std::string num1, std::string num2) {
     
     // ضم الأرقام بدءاً من أول رقم غير صفري
     for (int i = start_index; i < result.size(); i++) {
-        std::cout<< "\nnum "<<result[i] <<std::endl;
         final_result += std::to_string(result[i]);
     }
 
