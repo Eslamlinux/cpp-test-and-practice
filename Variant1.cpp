@@ -1,9 +1,22 @@
 #include <iostream>
 #include <variant>
+#include <string>
 
-std::variant<std::string, int,double,float> func(std::string str)
+std::variant<std::string,char, int,double,float> func(std::string str)
 {
-    return str == "s" ?"hello this is string return\n":str == "i"? 123456:str == "f"? 1.45:1.23456;
+    if(str == "st")
+    return  "hello this is string return\n";
+    else if(str == "in")
+    return 123456;
+    else if(str == "fl")
+    return 1.22;
+    else
+    return 1.23456;
+
+
+    // return str == "st" ? "hello this is string return" :
+    //        str == "in" ? 123456 :
+    //        str == "fl" ? 1.4 : 1.23456 ;
 }
 
 int main()
