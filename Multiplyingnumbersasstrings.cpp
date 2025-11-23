@@ -89,15 +89,15 @@ std::string n1 = "1234567890123456789";
     // std::string n1 = "123";
     // std::string n2 = "45"; 
     
-    std::cout << "الرقم الأول: " << n1 << std::endl;
-    std::cout << "الرقم الثاني: " << n2 << std::endl;
+    std::cout << "first number " << n1 << std::endl;
+    std::cout << "second number: " << n2 << std::endl;
     
     std::string product = multiply(n1, n2);
     
-    std::cout << "النتيجة: " << product << std::endl; 
+    std::cout << "result: " << product << std::endl; 
     
     // مثال اختبار حالة الأصفار البادئة
-    std::cout << "\n--- حالة الأصفار البادئة ---" << std::endl;
+    std::cout << "\n---zero status ---" << std::endl;
     std::cout << "00123 * 0045 = " << multiply("00123", "0045") << std::endl; // النتيجة: 5535
 
 }
