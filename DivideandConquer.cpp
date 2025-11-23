@@ -9,12 +9,14 @@ Return as a number.
 #include <variant>
 
 int divCon(const std::vector<std::variant<int, char>>& x) {
-  //your code here
-  return 0;
+    int result = 0;
+    
+  return result;
 }
 
 int main()
 {
+    std::cout<< divCon({ '5', '0', 9, 3, 2, 1, '9', 6, 7 }) << std::endl;
 
     return 0;
 }
