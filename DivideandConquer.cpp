@@ -15,7 +15,7 @@ int divCon(const std::vector<std::variant<int, char>>& x) {
         if(std::holds_alternative<int>(c))
         result += std::get<int>(c);
         if(std::holds_alternative<char>(c))
-        result -= std::get<int>(c);
+        result -= std::get<int>(c)- '0';
     }
   return result;
 }
