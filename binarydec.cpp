@@ -81,13 +81,13 @@ void Get_entry()
         work = false;
     }
 }
-// int main()
-// {
-//     while (work)
-//     {
-//         Get_entry();
-//     }
+int main()
+{
+    while (work)
+    {
+        Get_entry();
+    }
     
  
-//     return 0;
-// }
+    return 0;
+}
