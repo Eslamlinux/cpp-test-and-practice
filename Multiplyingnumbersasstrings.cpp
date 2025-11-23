@@ -15,7 +15,6 @@ std::string multiply(std::string num1, std::string num2) {
     } else {
         num1 = "0";
     }
-
     size_t first_digit2 = num2.find_first_not_of('0');
     if (std::string::npos != first_digit2) {
         num2 = num2.substr(first_digit2);
@@ -27,26 +26,25 @@ std::string multiply(std::string num1, std::string num2) {
     if (num1 == "0" || num2 == "0") {
         return "0";
     }
-
+    
     int n1 = num1.length();
     int n2 = num2.length();
     
     // متجه لتخزين النتيجة الجزئية. الحجم الأقصى هو مجموع الأطوال.
     std::vector<int> result(n1 + n2, 0);
-
+    //12193263113702179522374638011112635269
     // 2. عملية الضرب الأساسية (الضرب الجزئي)
     // نبدأ من الخانات الأقل أهمية (الآحاد)
     for (int i = n1 - 1; i >= 0; i--) {
         int digit1 = num1[i] - '0';
         for (int j = n2 - 1; j >= 0; j--) {
             int digit2 = num2[j] - '0';
-
+            
             // i + j + 1 هو الموضع الصحيح في متجه النتيجة (الخانة الحالية)
             int pos = i + j + 1;
-            
             // الضرب الجزئي + القيمة الموجودة مسبقاً في الخانة
             int product = digit1 * digit2 + result[pos];
-
+            
             // 3. معالجة الترحيل (Carry)
             
             // القيمة التي سيتم ترحيلها للخانة التالية (i + j)
@@ -70,9 +68,10 @@ std::string multiply(std::string num1, std::string num2) {
     while (start_index < result.size() - 1 && result[start_index] == 0) {
         start_index++;
     }
-
+    
     // ضم الأرقام بدءاً من أول رقم غير صفري
     for (int i = start_index; i < result.size(); i++) {
+        std::cout<< "\nnum "<<result[i] <<std::endl;
         final_result += std::to_string(result[i]);
     }
 
