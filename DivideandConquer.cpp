@@ -10,7 +10,13 @@ Return as a number.
 
 int divCon(const std::vector<std::variant<int, char>>& x) {
     int result = 0;
-    
+    for(auto c :x)
+    {
+        if(std::holds_alternative<int>(c))
+        result += std::get<int>(c);
+        if(std::holds_alternative<char>(c))
+        result -= std::get<int>(c);
+    }
   return result;
 }
 
