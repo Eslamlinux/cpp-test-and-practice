@@ -37,15 +37,15 @@ int main()
         std::cout<< "hi \'n\' hi" <<std::endl;
         std::cout<< "\n";
 
-        std::variant<int,std::string,char> a[6];
+        std::variant<int,std::string,double,char> a[6];
         a[0] ={10};
         a[1] = {"hello"};
         a[2] = {'M'};
         a[3] = {"eslam"};
-        // a[4] = {2.1f};
+        a[4] = {2.1};
         a[5] = {"khalid"};
-        size_t vsize = sizeof(a);
-        std::cout << "variant array size: " << vsize << std::endl;
+        // size_t vsize = sizeof(sizeof(a)/sizeof(a[0]));
+        // std::cout << "variant array size: " << vsize << std::endl;
         for(int i = 0; i < 6;i++)
         {
             std::visit([](const auto& val){std::cout <<val <<std::endl;},a[i]);
