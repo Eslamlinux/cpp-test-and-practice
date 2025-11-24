@@ -3,8 +3,8 @@
 #include <netinet/in.h>
 #include <string.h>
 #include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+// #include <stdlib.h>
+// #include <stdio.h>
 
 static void die(char* m)
 {
@@ -38,7 +38,7 @@ if(listen(s,8) < 0)
     die("listen");
 }
 
-const char* msg = "HTTP/1.1 200 ok\rcontent-type: text/plain\r\n\r\r hello, from server\n";
+const char* msg = "HTTP/1.1 200 ok content-type: text/plain\n hello, from server\n";
 
 for(;;)
 {
