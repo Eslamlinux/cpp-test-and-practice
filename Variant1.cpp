@@ -34,5 +34,6 @@ int main()
         std::cout<< std::get<int>(func("in")) <<std::endl;
         std::cout<< std::get<double>(func("fl")) <<std::endl;
         std::cout<< std::get<double>(func("do")) <<std::endl;
+        std::cout<< "hi \'n\' hi" <<std::endl;
     return 0;
 }
