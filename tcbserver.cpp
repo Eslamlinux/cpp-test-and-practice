@@ -23,3 +23,28 @@ struct sockaddr_in a = {0};
 a.sin_falmily = AF_INET;
 a.sin_addr.s_addr = htonl(INADDR_ANY);
 a.sin_port = htons(8080);
+
+if(bind(s,(struct sockaddr*),&a,sizeof(a)) < 0)
+{
+    die("bind");
+}
+
+if(listen(s,8) < 0)
+{
+    die("listen");
+}
+
+const char* msg = "HTTP/1.1 200 ok\rcontent-type: text/plain\r\n\r\r hello, from server\n";
+
+for(;;)
+{
+    int c = accept(s, nullptr, nullptr);
+    if(c < 0) 
+    {
+        continue;
+    }
+    send(c, msg, strlen(msg),0);
+    close(c);
+}
+close(s);
+return 0;
