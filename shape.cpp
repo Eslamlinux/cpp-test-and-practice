@@ -14,10 +14,14 @@ Return false for invalid numbers too (e.g volume or side is less than or equal t
 Note: side will be an integer
 */
 #include <iostream>
-
+#include <cmath>
+bool is_cube(int volume, int side)
+{
+    return  pow(side,3) == volume && side > 0 && volume > 0;
+}
 
 int main()
 {
-
+    std::cout << is_cube(8,2) << std::endl;
     return 0;
 }
