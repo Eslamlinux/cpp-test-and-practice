@@ -8,7 +8,7 @@ union sam
     public:
     int num;
     double a;
-    char c;
+    char c[12];
     void set_pass(int toset)
         {
             passcode = toset;
@@ -17,15 +17,33 @@ union sam
         {
             return passcode;
         }
+        void printc()
+        {
+            for(auto ch :c)
+            {
+                std::cout << ch  ;
+            }
+        }
 };
 
 int main()
 {
     sam fir;
-    fir.set_pass(123);
-    std::cout << fir.getcode() << std::endl;
-    fir.set_pass(523) ;
-    std::cout << sizeof(fir) <<std::endl;
+    fir.c[0] = 'e';
+    fir.c[1] = 's';
+    fir.c[2] = 'l';
+    fir.c[3] = 'a';
+    fir.c[4] = 'm';
+    fir.c[5] = ' ';
+    fir.c[6] = 'k';
+    fir.c[7] = 'h';
+    fir.c[8] = 'a';
+    fir.c[9] = 'l';
+    fir.c[10] = 'i';
+    fir.c[11] = 'd';
+    fir.printc() ;
+    std::cout << "\n";
+    std::cout << "the top data size: " << sizeof(fir) <<std::endl;
 
 
     return 0;
