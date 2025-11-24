@@ -10,11 +10,15 @@ Examples (input -> output):
 #include <vector>
 
 std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
-  return {};
+  return integers;
 }
 
 int main()
 {
+    for(auto c :remove_values({1, 1, 2 ,3 ,1 ,2 ,3 ,4}, {1, 3}))
+    {
+        std:: cout  << c << " " ;
+    }
 
 
     return 0;
