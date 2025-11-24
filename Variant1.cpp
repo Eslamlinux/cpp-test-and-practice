@@ -35,11 +35,22 @@ int main()
         std::cout<< std::get<double>(func("fl")) <<std::endl;
         std::cout<< std::get<double>(func("do")) <<std::endl;
         std::cout<< "hi \'n\' hi" <<std::endl;
-        std::cout<< "\n\n" <<std::endl;
+        std::cout<< "\n";
 
-        std::variant<int,std::string,double> a[6];
+        std::variant<int,std::string,char> a[6];
         a[0] ={10};
         a[1] = {"hello"};
+        a[2] = {'M'};
+        a[3] = {"eslam"};
+        // a[4] = {2.1f};
+        a[5] = {"khalid"};
+        size_t vsize = sizeof(a);
+        std::cout << "variant array size: " << vsize << std::endl;
+        for(int i = 0; i < 6;i++)
+        {
+            std::visit([](const auto& val){std::cout <<val <<std::endl;},a[i]);
+        }
+    
 
     return 0;
 }
