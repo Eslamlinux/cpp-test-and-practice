@@ -7,6 +7,7 @@ union sam
     int passcode;
     public:
     int num;
+    double a;
     char c;
     void set_pass(int toset)
         {
@@ -24,7 +25,7 @@ int main()
     fir.set_pass(123);
     std::cout << fir.getcode() << std::endl;
     fir.set_pass(523) ;
-    std::cout << fir.getcode() <<std::endl;
+    std::cout << sizeof(fir) <<std::endl;
 
 
     return 0;
