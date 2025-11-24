@@ -24,11 +24,11 @@ if(setsockopt(s,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt))<0)
     die("setsocket");
 }
 struct sockaddr_in a = {0};
-a.sin_falmily = AF_INET;
+a.sin_family = AF_INET;
 a.sin_addr.s_addr = htonl(INADDR_ANY);
 a.sin_port = htons(8080);
 
-if(bind(s,(struct sockaddr*),&a,sizeof(a)) < 0)
+if(bind(s, (struct sockaddr*) &a ,sizeof(a)) < 0)
 {
     die("bind");
 }
