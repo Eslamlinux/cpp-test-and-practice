@@ -10,7 +10,8 @@ Examples (input -> output):
 #include <vector>
 
 std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
-  return integers;
+    auto forn = std::__find_if(integers.begin(),integers.end(),values);
+    return integers;
 }
 
 int main()
