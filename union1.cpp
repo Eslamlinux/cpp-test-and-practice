@@ -2,21 +2,17 @@
 
 union sam
 {
-private:
-int passcode {123};
-public:
+int passcode;
 int num;
 std::string str;
-int get_code()
-{
-    return passcode;
-}
 char c;
 };
+
 int main()
 {
-    
-    std::cout << sam::get_code();
+    sam fir;
+    fir.c = 'e';
+    std::cout << fir.c;
 
 
     return 0;
