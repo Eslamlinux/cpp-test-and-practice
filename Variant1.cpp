@@ -35,5 +35,11 @@ int main()
         std::cout<< std::get<double>(func("fl")) <<std::endl;
         std::cout<< std::get<double>(func("do")) <<std::endl;
         std::cout<< "hi \'n\' hi" <<std::endl;
+        std::cout<< "\n\n" <<std::endl;
+
+        std::variant<int,std::string,double> a[6];
+        a[0] ={10};
+        a[1] = {"hello"};
+
     return 0;
 }
