@@ -11,7 +11,7 @@ Examples (input -> output):
 #include <unordered_set>
 #include <algorithm>
 std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
-    std:unordered_set<int> Value_To_Remove(values.begin(),values.end());
+    std::unordered_set<int> Value_To_Remove(values.begin(),values.end());
     return integers;
 }
 
