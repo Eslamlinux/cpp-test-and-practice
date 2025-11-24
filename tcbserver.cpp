@@ -1,6 +1,10 @@
 #include <iostream>
 #include <sys/socket.h>
 #include <netinet/in.h>
+#include <string.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 static void die(char* m)
 {
@@ -13,7 +17,7 @@ int main(void)
     int s = socket(AF_INET,SOCK_STREAM,0);
     if(s < 0) 
     die("socket");
-}
+
 int opt = 1;
 if(setsockopt(s,SOL_SOCKET,SO_REUSEADDR,&opt,sizeof(opt))<0)
 {
@@ -48,3 +52,4 @@ for(;;)
 }
 close(s);
 return 0;
+}
