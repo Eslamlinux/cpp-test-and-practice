@@ -1,18 +1,30 @@
 #include <iostream>
+#include <string>
 
 union sam
 {
-int passcode;
-int num;
-std::string str;
-char c;
+    private:
+    int passcode;
+    public:
+    int num;
+    char c;
+    void set_pass(int toset)
+        {
+            passcode = toset;
+        }
+    int getcode()
+        {
+            return passcode;
+        }
 };
 
 int main()
 {
     sam fir;
-    fir.c = 'e';
-    std::cout << fir.c;
+    fir.set_pass(123);
+    std::cout << fir.getcode() << std::endl;
+    fir.set_pass(523) ;
+    std::cout << fir.getcode() <<std::endl;
 
 
     return 0;
