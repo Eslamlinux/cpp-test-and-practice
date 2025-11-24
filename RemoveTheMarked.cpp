@@ -8,11 +8,10 @@ Examples (input -> output):
 */
 #include <iostream>
 #include <vector>
-
+#include <unordered_set>
+#include <algorithm>
 std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
-    // std::remove_if(std::__find_if(integers.begin(),integers.end(),values[0]));
-    std::__remove_if(integers.begin(),integers.end(),std::__find_if(integers.begin(),integers.end(),values[0]))
-   
+    std:unordered_set<int> Value_To_Remove(values.begin(),values.end());
     return integers;
 }
 
