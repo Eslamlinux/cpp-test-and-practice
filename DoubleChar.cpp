@@ -16,7 +16,13 @@ std::string To_Help_Double_Char(const std::string& str ,size_t i)
 {
     if(i == str.length()) return "";
     std::string Double_Char(2,str[i]);
-    return  Double_Char + To_Help_Double_Char(str,i++);
+    return  Double_Char + To_Help_Double_Char(str,i+1);
+}
+#include <string>
+
+std::string double_char(const std::string& str)
+{
+    return To_Help_Double_Char(str,0);
 }
 int main()
 {
