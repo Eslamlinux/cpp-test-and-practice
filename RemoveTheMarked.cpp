@@ -12,6 +12,9 @@ Examples (input -> output):
 #include <algorithm>
 std::vector<int> remove_values(std::vector<int> integers, std::vector<int> values) {
     std::unordered_set<int> Value_To_Remove(values.begin(),values.end());
+    auto new_end = std::remove_if(integers.begin(),integers.end(),
+    [&Value_To_Remove](int TheValue){return Value_To_Remove.count(TheValue) > 0;});
+    integers.erase(new_end,integers.end());
     return integers;
 }
 
