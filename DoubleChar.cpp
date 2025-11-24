@@ -10,10 +10,15 @@ Good Luck!
 
 */
 #include <iostream>
+#include <string>
 
+std::string double_char(const std::string& str)
+{
+    return "";
+}
 int main()
 {
-
+std::cout << double_char("hello") << std::endl;
 
 
     return 0;
