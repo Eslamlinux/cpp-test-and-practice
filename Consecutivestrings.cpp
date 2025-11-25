@@ -41,8 +41,8 @@ public:
 int main()
 {
     LongestConsec opj;
-    std::string res = opj.longestConse({"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},2);
-
+    std::string res = opj.longestConsec({"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},2);
+    std::cout << res ;
 
     return 0;
 }
