@@ -2,7 +2,7 @@
 #include <string>
 
 float area_of_rhombus(float& q,float& p) { 
-std::string temp = std::to_string( q * p / 2.0);
+std::string temp = std::to_string( q * p / 2.0f);
 if(temp.size() >= 5)
 temp.erase(5);
 return stof(temp);
