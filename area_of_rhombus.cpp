@@ -1,18 +1,22 @@
 #include <iostream>
+#include <string>
 
-// double area_of_rhombus(float& q,float& p) { 
-
-// return q * p / 2.0;
-// }
-
-
-float area(float&a ,float& b)
-{
-return a * b / 2.0;
-}
 float area_of_rhombus(float& q,float& p) { 
-return area(q,p);
+std::string temp = std::to_string( q * p / 2.0);
+if(temp.size() >= 5)
+temp.erase(5);
+return stof(temp);
+// return q * p / 2.0;
 }
+
+
+// float area(float&a ,float& b)
+// {
+// return a * b / 2.0;
+// }
+// float area_of_rhombus(float& q,float& p) { 
+// return area(q,p);
+// }
 
 int main() 
 {
