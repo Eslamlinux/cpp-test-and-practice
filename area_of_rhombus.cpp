@@ -1,7 +1,7 @@
 #include <iostream>
 
 float area_of_rhombus(float q,float p) { 
-return q * p / 2;
+return q * p / 2.0;
 }
 
 int main() 
