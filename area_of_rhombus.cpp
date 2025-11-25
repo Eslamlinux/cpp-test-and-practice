@@ -2,12 +2,18 @@
 
 float area_of_rhombus(float q,float p) { 
 // float result = (q * p) / 2;
-return q * p / 2;;
+// return q * p / 2;
+return (float) q * p / 2;
 }
 
-
-int main()
+int main() 
 {
-std::cout << area_of_rhombus(9.2,8.6) << std::endl;
+    float diagonal1 , diagonal2;
+    if (!(std::cout << "enter float A: " ,std::cin >> diagonal1 ,std::cout << "float B: " ,std::cin>> diagonal2)) {
+        return 1; 
+    }
+    float result_area = area_of_rhombus(diagonal1, diagonal2);
+    std::cout << result_area << std::endl;
+
     return 0;
 }
