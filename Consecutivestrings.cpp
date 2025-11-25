@@ -35,8 +35,12 @@ public:
     static std::string longestConsec(const std::vector<std::string> &strarr, int k)
     {
         size_t size_to = strarr.size() - k;
-
-        return "";
+        std::string result;
+        for(int i = 0; i <= size_to; i++)
+        {
+            
+        }
+        return result;
     }
 };
 
