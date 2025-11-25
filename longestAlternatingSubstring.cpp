@@ -1,24 +1,25 @@
 #include <iostream>
+#include <string>
 
 std::string longestAlternatingSubstring(std::string digits) { 
-    std::string temp ,result;
-    for(int i =0; i < digits.length() -1;i++)
+    std::string temp ,result ="";
+    for(int i =1; i < digits.length();i++)
     {
-        if(i = 0)
+        if(i == 1)
         temp = digits[0]; //12
         // if((digits[i+1] - '0' % 2 == 0) & ( temp[temp.size()-1] -'0' % 2 == 1))
         // {
         //         temp += digits[i+1];
         // }
-        if((digits[i+1] -0 %2) != (temp[temp.size()-1] -'0' % 2))
+        if(digits[i] -'0' %2 != temp[temp.size()-1] -'0' % 2)
         {
-                temp += digits[i+1];
+                temp += digits[i];
         }
         else
         {
             if(temp.size() > result.size())
             result = temp;
-            temp = digits[i+1];
+            temp = digits[i];
         }
     }
     return result;
