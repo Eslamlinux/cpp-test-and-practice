@@ -34,11 +34,13 @@ class LongestConsec
 public:
     static std::string longestConsec(const std::vector<std::string> &strarr, int k)
     {
+        if(strarr.empty() && k > strarr.size() && k < 0) return "";
         size_t size_to = strarr.size() - k;
         std::string result;
         for(int i = 0; i <= size_to; i++)
         {
-            
+            if(strarr[i].size() + strarr[i+1].size() > result.size() )
+            result = strarr[i] +strarr[i+1];
         }
         return result;
     }
@@ -48,7 +50,9 @@ int main()
 {
     LongestConsec opj;
     std::string res = opj.longestConsec({"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},2);
-    std::cout << res ;
+    std::cout << res << std::endl ;
+    res = opj.longestConsec( {"ejjjjmmtthh", "zxxuueeg", "aanlljrrrxx", "dqqqaaabbb", "oocccffuucccjjjkkkjyyyeehh"},2);
+    std::cout << res << std::endl ;
 
     return 0;
 }
