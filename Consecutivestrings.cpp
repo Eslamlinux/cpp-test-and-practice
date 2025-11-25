@@ -34,14 +34,14 @@ class LongestConsec
 public:
     static std::string longestConsec(const std::vector<std::string> &strarr, int k)
     {
-        
+        return "";
     }
 };
 
 int main()
 {
     LongestConsec opj;
-    std::cout << opj.longestConse({"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},2);
+    std::string res = opj.longestConse({"zone", "abigail", "theta", "form", "libe", "zas", "theta", "abigail"},2);
 
 
     return 0;
