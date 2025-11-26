@@ -7,18 +7,17 @@ std::string longestAlternatingSubstring(std::string digits) {
     {
         if(i == 1)
         temp = digits[0]; //12
-        // if((digits[i+1] - '0' % 2 == 0) & ( temp[temp.size()-1] -'0' % 2 == 1))
-        // {
-        //         temp += digits[i+1];
-        // }
-        if(digits[i] -'0' %2 != temp[temp.size()-1] -'0' % 2)
+
+        if((digits[i] -'0') %2 != (temp[temp.size()-1] -'0') %2)
         {
                 temp += digits[i];
         }
         else
         {
             if(temp.size() > result.size())
-            result = temp;
+            {
+                result = temp;
+            }
             temp = digits[i];
         }
     }
@@ -27,6 +26,6 @@ std::string longestAlternatingSubstring(std::string digits) {
 
 int main()
 {
-    std::cout << longestAlternatingSubstring("1215787220351146") << std::endl;
+    std::cout << longestAlternatingSubstring("2105787220351146") << std::endl;
     return 0; 
 }
