@@ -2,7 +2,7 @@
 using namespace std;
 
 int div_remainder(int a,int b) { 
- return a+b > 10? (a+b) % 10 : (a+b)%2;
+ return a % b;
 }
 
 int main()
