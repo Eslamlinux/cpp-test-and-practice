@@ -6,7 +6,7 @@ std::string longestAlternatingSubstring(std::string digits) {
     for(int i =1; i < digits.length();i++)
     {
         if(i == 1)
-        temp = digits[0]; //12
+        temp = digits[0]; 
 
         if((digits[i] -'0') %2 != (temp[temp.size()-1] -'0') %2)
         {
