@@ -5,13 +5,22 @@
 
 long long filter_string(const std::string &value)
 {
+//     long long result =0;
+//     for(auto c : value)
+//     {
+//        if(isdigit(c))
+//        result = (result * 100 /10) + c -'0' ;
+//     }
+//     return result;
+
     std::string temp;
+    long long result =0;
     for(auto c : value)
     {
        if(isdigit(c))
-       temp +=c;
+       temp += c;
     }
-    return stoi(temp);
+    return stoll(temp);
 }
 
 int main()
