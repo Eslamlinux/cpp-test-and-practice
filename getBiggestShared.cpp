@@ -10,7 +10,7 @@ int getBiggestShared(std::vector<int> a,std::vector<int> b) {
     {
         auto myf = firstarr.find(c);
         if(*myf > result )
-        result = c;
+        result = *myf;
     }
     return result;
 }
