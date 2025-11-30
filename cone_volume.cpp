@@ -2,7 +2,7 @@
 #include <cmath>
 
 float cone_volume(float radius,float height) { 
-    return (pow(radius,2)*1/3) * 3.14 * height;
+    return (pow(radius,2)*1/3) * 3.14159 * height;
 }
 
 int main()
