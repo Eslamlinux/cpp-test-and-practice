@@ -7,6 +7,7 @@ int getBiggestShared(std::vector<int> a,std::vector<int> b) {
 
 int main()
 {
-
+    std::cout << getBiggestShared({90, 95},{90, 95}) << std::endl;
+    
     return 0;
 }
