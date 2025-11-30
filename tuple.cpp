@@ -8,6 +8,16 @@ std::tuple<int ,std::string ,double> person()
 
 int main()
 {
+    auto a = person();
+    // std::cout << std::get<std::string>(a) << " " ;
+    // std::cout << std::get<int>(a) << " ";
+    // std::cout << std::get<double>(a) << " \n";
+
+    auto [age, name, hight] = a;
+std::cout << "Name: " << name << "\n";
+std::cout << "Age: " << age << "\n";
+std::cout << "Hight: " << hight << "\n";
+
 
     return 0;
 }
