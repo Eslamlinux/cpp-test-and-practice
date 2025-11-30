@@ -1,4 +1,7 @@
+//Filter the number
 #include <string>
+#include <iostream>
+
 
 long long filter_string(const std::string &value)
 {
@@ -7,6 +10,6 @@ long long filter_string(const std::string &value)
 
 int main()
 {
-
+    std::cout << filter_string("a1b2c3") << std::endl;
     return 0;
 }
