@@ -4,3 +4,9 @@
 int getBiggestShared(std::vector<int> a,std::vector<int> b) { 
 // write your code here ^_^
 }
+
+int main()
+{
+
+    return 0;
+}
