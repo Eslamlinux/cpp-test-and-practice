@@ -5,7 +5,13 @@
 
 long long filter_string(const std::string &value)
 {
-    return stoi(value); // complete this function :)
+    std::string temp;
+    for(auto c : value)
+    {
+       if(isdigit(c))
+       temp +=c;
+    }
+    return stoi(temp);
 }
 
 int main()
