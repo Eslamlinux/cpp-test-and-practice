@@ -16,8 +16,10 @@ int ch;
 while((ch = getch()) != 'q')
 {
 	std::string entry;
-	std::getline(std::cin,entry);
-	printw(entry);
+	//std::getline(std::cin,entry);
+	//addstr(entry);
+	getnstr(entry,15);
+	//printw(entry);
 	refresh();
 }
 

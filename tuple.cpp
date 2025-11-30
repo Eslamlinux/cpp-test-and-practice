@@ -17,6 +17,9 @@ int main()
 std::cout << "Name: " << name << "\n";
 std::cout << "Age: " << age << "\n";
 std::cout << "Hight: " << hight << "\n";
+name = "semsem";
+std::cout << "Name: " << name << "\n";
+
 
 
     return 0;
