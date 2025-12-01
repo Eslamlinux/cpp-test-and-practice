@@ -2,5 +2,5 @@
 using namespace std;
 
 float areaOfParallelogram(float height,float base_value) { 
-// write your code here ^_^
+    return height * base_value;
 }
