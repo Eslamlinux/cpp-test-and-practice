@@ -21,7 +21,7 @@ bool is_primeary(int number)
 
 std::vector<int> getPrimesBetween(int a,int b) { 
     std::vector<int>result;
-    for(int i = a; i < b;  i++)
+    for(int i = a; i <= b;  i++)
     {
         if(is_primeary(i))
         {
@@ -35,7 +35,7 @@ std::vector<int> getPrimesBetween(int a,int b) {
 int main()
 {
 
-    for(auto c: getPrimesBetween(1,10))
+    for(auto c: getPrimesBetween(53,67))
     {
         std::cout << c << " ";
     }
