@@ -2,7 +2,7 @@
 #include <vector>
 #include <cmath>
 
-bool is_primeary(int number)
+bool is_primary(int number)
 {
     if(number ==1)
     {
@@ -23,7 +23,7 @@ std::vector<int> getPrimesBetween(int a,int b) {
     std::vector<int>result;
     for(int i = a; i <= b;  i++)
     {
-        if(is_primeary(i))
+        if(is_primary(i))
         {
             result.push_back(i);
         }
