@@ -16,7 +16,15 @@ bool is_primeary(int number)
 }
 
 std::vector<int> getPrimesBetween(int a,int b) { 
-// write your code here ^_^
+    std::vector<int>result;
+    for(int i = a; i < b;  i++)
+    {
+        if(is_primeary(i))
+        {
+            result.push_back(i);
+        }
+    }
+    return result;
 }
 
 
