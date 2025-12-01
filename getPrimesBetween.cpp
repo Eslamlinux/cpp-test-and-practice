@@ -4,10 +4,14 @@
 
 bool is_primeary(int number)
 {
+    if(number ==1)
+    {
+        return false;
+    }
     int the_end = sqrt(number);
     for(int i = 2; i <= the_end; i++)
     {
-        if(number % i > 0)
+        if(number % i == 0)
         {
             return false;
         }
@@ -35,7 +39,14 @@ int main()
     {
         std::cout << c << " ";
     }
-    is_primeary(36);
+    std::cout<<std::endl;
+
+    for(auto c: getPrimesBetween(20,50))
+    {
+        std::cout << c << " ";
+    }
+    std::cout<<std::endl;
+    //  std::cout<< sqrt(4);
 
     return 0;
 }
