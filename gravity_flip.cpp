@@ -3,7 +3,8 @@
 #include <vector>
 
 std::vector<int> gravity_flip(std::vector<int> columns) { 
-    return sort(columns.begin(),columns.end());
+     std::sort(columns.begin(),columns.end());
+     return columns;
 }
 
 int main()
