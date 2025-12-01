@@ -12,6 +12,6 @@ std::string hashtag_it(std::vector<std::string> my_array) {
 
 int main()
 {
-std::cout << hashtag_it({"stay_home', 'coronavirus', 'Saudi_Arabia"}) <<std::endl;
+std::cout << hashtag_it({"stay_home", "coronavirus", "Saudi_Arabia"}) <<std::endl;
 
 }
