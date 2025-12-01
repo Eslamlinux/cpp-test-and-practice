@@ -1,12 +1,14 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 std::string hashtag_it(std::vector<std::string> my_array) { 
     std::string result;
     for(auto c: my_array)
     {
-        result += "#" + c;
+        result += "#" + c + " ";
     }
+    result.pop_back();
     return result;
 }
 
