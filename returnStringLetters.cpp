@@ -7,6 +7,6 @@ int returnStringLetters(std::string string1,std::string string2) {
 int main()
 {
 
-
+std::cout << returnStringLetters("ahmed", "mohammed") << std::endl;
 
 }
