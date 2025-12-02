@@ -5,7 +5,7 @@ int left_digit(std::string strParam) {
     for(auto c:strParam)
     {
         if(isdigit(c))
-        return std::stoi(c);
+        return c - '0';
     }
     return 0;
 }
