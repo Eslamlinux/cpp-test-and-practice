@@ -3,7 +3,9 @@
 #include <bits/stdc++.h>
 
 int count_char(std::string sentence,std::string ch) { 
-    return sentence.find(ch)+1;
+    // return sentence.find(ch)+1; work only with <bits/stdc++.h>
+    std::size_t found = sentence.find(ch);
+    return found +  1;
 }
 int main()
 {
