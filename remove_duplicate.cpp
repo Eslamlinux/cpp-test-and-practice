@@ -13,15 +13,29 @@ std::vector<int> remove_duplicate(std::vector<int> arr) {
 // std::unordered_set<int> toset(arr.begin(),arr.end());
 // return {toset.begin(),toset.end()};
 
-std::set<int> toset(arr.begin(),arr.end());
+// std::set<int> toset(arr.begin(),arr.end());
+// std::vector<int> result;
+// for(auto a: arr)
+// {
+//     for(auto t:toset)
+//     {
+//         if(a == t && result.size() < toset.size())
+//         {
+//             result.push_back(a);
+//             break;
+//         }
+//     }
+// }
+// return result;
+
 std::vector<int> result;
-for(auto a: arr)
+for(auto& a: arr)
 {
-    for(auto t:toset)
+    for(int i = 0+a ; i < arr.size(); i++)
     {
-        if(a == t && result.size() < toset.size())
+        if(arr[i] == a)
         {
-            result.push_back(a);
+            a.erase();
             break;
         }
     }
