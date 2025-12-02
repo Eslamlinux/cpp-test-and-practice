@@ -3,16 +3,15 @@
 #include <stack>
 #include <algorithm>
 
-using namespace std;
-
 std::string string_builder(std::string expression) 
 {
-    stack<int> countStack;
-    stack<string> resultStack;
-    string currentString = ""; 
+    std::stack<int> countStack;
+    std::stack<std::string> resultStack;
+    std::string currentString = ""; 
     int k = 0;                  
 
-    for (char c : expression) {
+    for (char c : expression) 
+    {
         if (isdigit(c)) 
         {
             k = k * 10 + (c - '0');
@@ -28,12 +27,12 @@ std::string string_builder(std::string expression)
         {
             int repeatCount = countStack.top();
             countStack.pop();
-            string repeatedString = "";
+            std::string repeatedString = "";
             for (int i = 0; i < repeatCount; ++i) 
             {
                 repeatedString += currentString;
             }
-            string prevString = resultStack.top();
+            std::string prevString = resultStack.top();
             resultStack.pop();
             currentString = prevString + repeatedString;
 
@@ -43,23 +42,26 @@ std::string string_builder(std::string expression)
             currentString += c;
         }
     }
-
-    return currentString;
+    if (k > 0) 
+    {
+        std::string finalString = "";
+        for (int i = 0; i < k; ++i) 
+        {
+            finalString += currentString;
+        }
+        return finalString;
+    }
+        return currentString;
 }
-
-
 
 
 // مثال للاستخدام والاختبار
 int main() {
-    cout << "Input 1: 4a" << endl;
-    cout << "Output 1: " << string_builder("4a") << endl; // Output: aaaa
+    std::cout << "Input 1: 4a" << std::endl;
+    std::cout << "Output 1: " << string_builder("4a") << std::endl; // Output: aaaa
 
-    cout << "\nInput 2: 3[a2[c]]" << endl;
-    cout << "Output 2: " << string_builder("3[a2[c]]") << endl; // Output: accaccacc
-
-    cout << "\nInput 3: 2[ab]3[c]" << endl;
-    cout << "Output 3: " << string_builder("2[ab]3[c]") << endl; // Output: ababccc
-    
+    std::cout << "\nInput 2: 3[a2[c]]" << std::endl;
+    std::cout << "Output 2: " << string_builder("3[a2[c]]") << std::endl; // Output: accaccacc
+   
     return 0;
 }
