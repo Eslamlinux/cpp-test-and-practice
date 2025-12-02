@@ -40,7 +40,16 @@ std::vector<int> remove_duplicate(std::vector<int> arr) {
 // }
 // return arr;
 // }
-
+    std::vector<int> result; 
+    std::unordered_set<int>seen;
+    for (int element : arr) {
+        if (seen.find(element) == seen.end()) {
+            seen.insert(element);
+            result.push_back(element);
+        }
+    }
+    return result;
+}
 
 int main()
 {
