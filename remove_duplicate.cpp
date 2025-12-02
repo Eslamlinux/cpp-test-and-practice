@@ -28,19 +28,17 @@ std::vector<int> remove_duplicate(std::vector<int> arr) {
 // }
 // return result;
 
-std::vector<int> result;
-for(auto& a: arr)
+for(int a = 0; a <arr.size() ;a++)
 {
-    for(int i = 0+a ; i < arr.size(); i++)
+    for(int i = 1+a ; i < arr.size(); i++)
     {
-        if(arr[i] == a)
+        if(arr[a] == arr[i])
         {
-            a.erase();
-            break;
+            arr.erase(arr.begin()+i);
         }
     }
 }
-return result;
+return arr;
 }
 int main()
 {
@@ -50,6 +48,16 @@ int main()
     }
     std::cout << std::endl;
         for(auto c : remove_duplicate({100, 101, 102, 100}))
+    {
+        std::cout << c << " ";
+    }
+    std::cout << std::endl;
+        for(auto c : remove_duplicate({12,3}))
+    {
+        std::cout << c << " ";
+    }
+        std::cout << std::endl;
+        for(auto c : remove_duplicate({10, -10, -10, 10}))
     {
         std::cout << c << " ";
     }
