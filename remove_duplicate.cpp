@@ -28,18 +28,20 @@ std::vector<int> remove_duplicate(std::vector<int> arr) {
 // }
 // return result;
 
-for(int a = 0; a <arr.size() ;a++)
-{
-    for(int i = 1+a ; i < arr.size(); i++)
-    {
-        if(arr[a] == arr[i])
-        {
-            arr.erase(arr.begin()+i);
-        }
-    }
-}
-return arr;
-}
+// for(int a = 0; a <arr.size() ;a++)
+// {
+//     for(int i = 1+a ; i < arr.size(); i++)
+//     {
+//         if(arr[a] == arr[i])
+//         {
+//             arr.erase(arr.begin()+i);
+//         }
+//     }
+// }
+// return arr;
+// }
+
+
 int main()
 {
     for(auto c : remove_duplicate({7,8,9,7}))
