@@ -52,7 +52,8 @@ std::string string_builder(std::string expression)
 
 // مثال للاستخدام والاختبار
 int main() {
-    cout  << string_builder("4a") << endl; // Output: aaaa
+    cout << "Input 1: 4a" << endl;
+    cout << "Output 1: " << string_builder("4a") << endl; // Output: aaaa
 
     cout << "\nInput 2: 3[a2[c]]" << endl;
     cout << "Output 2: " << string_builder("3[a2[c]]") << endl; // Output: accaccacc
