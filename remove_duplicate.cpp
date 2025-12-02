@@ -1,0 +1,8 @@
+#include <iostream>
+#include <list>
+#include <vector>
+std::vector<int> remove_duplicate(std::vector<int> arr) { 
+std::list<int> tolist(arr.begin(),arr.end());
+std::vector<int> result(tolist.begin(),tolist.end());
+return result;
+}
