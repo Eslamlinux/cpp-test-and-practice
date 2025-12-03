@@ -23,9 +23,8 @@ int repetitions(string s) {
 
 int main()
 {
-std::cout << repetitions("AMMMDDCCCCMDM") <<std::endl;
-std::cout << repetitions("AAAAAAAAAA") <<std::endl;
-std::cout << repetitions("AAAABBBCCD") <<std::endl;
-std::cout << repetitions("AMMMDDCCCMD") <<std::endl;
-std::cout << repetitions("MZSDDDD") <<std::endl;
+    std::cout << repetitions("AAAAAAAAAA") <<std::endl;
+    std::cout << repetitions("AAAABBBCCD") <<std::endl;
+    std::cout << repetitions("AMMMDDCCCMD") <<std::endl;
+    std::cout << repetitions("MZSDDDD") <<std::endl;
 }
