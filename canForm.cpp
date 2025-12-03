@@ -12,9 +12,8 @@ std::string canForm(std::string source,std::string target) {
     to_lower_case(target);
 std::vector<int> char_counts(26, 0);
     for (char c : source) {
-        if (c >= 'a' && c <= 'z') {
+        if (c >= 'a' && c <= 'z')
             char_counts[c - 'a']++;
-        }
     }
     for (char c : target) {
         if (c >= 'a' && c <= 'z') {
