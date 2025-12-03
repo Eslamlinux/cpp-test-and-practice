@@ -10,6 +10,6 @@ return array1 == array2;
 }
 int main()
 {
-std::cout << match_arrays({'hello', 'there', 'word2'},{'word2', 'there', 'hello'}) << std::endl;
+std::cout << match_arrays({"hello","there", "word2"},{"word2", "there", "hello"}) << std::endl;
 return 0;
 }
