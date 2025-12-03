@@ -1,24 +1,38 @@
+#include <string>
+#include <algorithm> 
 #include <iostream>
-// #include <bits/stdc++.h>
-// #include <algorithm>
 using namespace std;
 
+// int repetitions(string s) { 
+//     size_t result = 0;
+//     for(int i = 0; i < s.size(); i++)
+//     {
+//         size_t temp = 0;
+//         for(int t = i -1; t < s.size(); t++)
+//         {
+//             if(s[i] == s[t])
+//                 temp++;
+//             else
+//                 break;
+//         }
+//         if(temp > result)
+//                 result = temp;
+//     }
+//     return result ;
+// }
+
 int repetitions(string s) { 
-    size_t result = 0;
-    for(int i = 0; i < s.size(); i++)
-    {
-        size_t temp = 0;
-        for(int t = i -1; t < s.size(); t++)
-        {
-            if(s[i] == s[t])
-                temp++;
-            else
-                break;
-        }
-        if(temp > result)
-                result = temp;
+    if (s.empty())
+        return 0;
+    size_t max_reps = 1, current_reps = 1; 
+    for (size_t i = 1; i < s.length(); ++i) {
+        if (s[i] == s[i - 1])
+            current_reps++;
+        else
+            current_reps = 1;
+        max_reps = std::max(max_reps, current_reps);
     }
-    return result ;
+    return max_reps;
 }
 
 int main()
