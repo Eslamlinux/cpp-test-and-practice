@@ -1,6 +1,6 @@
 #include <iostream>
 // #include <bits/stdc++.h>
-#include <algorithm>
+// #include <algorithm>
 using namespace std;
 
 int repetitions(string s) { 
@@ -18,7 +18,7 @@ int repetitions(string s) {
         if(temp > result)
                 result = temp;
     }
-    return  result ;
+    return result ;
 }
 
 int main()
