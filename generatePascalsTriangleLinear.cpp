@@ -3,6 +3,9 @@
 
 std::vector<int>generatePascalsTriangleLinear(int num)
 {
+    if(num <= 0)
+    return {};
+    
 
 }
 int main()
