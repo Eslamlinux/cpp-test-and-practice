@@ -13,3 +13,8 @@ string operation(int num1,int num2) {
     else
     return "None";
 }
+int main()
+{
+    std::cout << operation(5,5) << std::endl;
+
+}
