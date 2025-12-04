@@ -14,7 +14,7 @@ std::vector<int>generatePascalsTriangleLinear(int num)
         current[i-1] = 1;
         for(int t = 1; t < i-1; t++)
         {
-
+            current[t] = previous[t-1] + previous[t];
         }
     }
 
