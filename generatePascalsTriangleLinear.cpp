@@ -9,7 +9,7 @@ std::vector<int>generatePascalsTriangleLinear(int num)
     std::vector<int>previous;
     for(int i = 1;i <= num; i++)
     {
-        std::vector<int>current;
+        std::vector<int>current(i);
         current[0] = 1;
         current[i-1] = 1;
         for(int t = 1; t < i-1; t++)
