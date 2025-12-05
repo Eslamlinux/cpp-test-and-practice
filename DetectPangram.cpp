@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <vector>
 
 class StockList
 {
@@ -9,5 +9,5 @@ public:
 
 int main()
 {
-    
+
 }
