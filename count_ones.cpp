@@ -8,6 +8,6 @@ int count_ones(int num) {
 int main()
 {
 
-    cout << 100;
+    cout << 1;
     return 0;
 }
