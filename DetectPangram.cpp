@@ -9,6 +9,17 @@ Return the result as a string described in the example below, or as a list of pa
 
 If any of the input lists is empty, return an empty string, or an empty array/list (Clojure/Racket/Prolog).
 
+Example
+# the bookseller's stocklist:
+"ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"
+
+# list of categories: 
+"A", "B", "C", "W"
+
+# result:
+"(A : 20) - (B : 114) - (C : 50) - (W : 0)"
+
+
 */
 #include <iostream>
 #include <vector>
