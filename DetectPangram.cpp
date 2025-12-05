@@ -19,7 +19,7 @@ Example
 # result:
 "(A : 20) - (B : 114) - (C : 50) - (W : 0)"
 
-
+https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/cpp
 */
 #include <iostream>
 #include <vector>
