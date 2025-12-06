@@ -59,7 +59,9 @@ public:
 
 int main()
 {
+  std::vector<std::string>lst = {"ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"};
+  std::vector<std::string>cat = {"A", "B"};
   StockList s;
-  std::cout << s.stockSummary({"ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"},{"A", "B"}) << std::endl;
+  std::cout << s.stockSummary(lst,cat) << std::endl;
 
 }
