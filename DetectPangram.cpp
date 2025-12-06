@@ -20,6 +20,8 @@ Example
 "(A : 20) - (B : 114) - (C : 50) - (W : 0)"
 
 https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/cpp
+"ABART 20", "CDXEF 50", "BKWRK 25", "BTSQZ 89", "DRTYM 60"
+
 */
 #include <iostream>
 #include <vector>
@@ -39,7 +41,13 @@ public:
         {
         if(categories[i][0] == lstOfArt[ls][0])
           {
-          [temp](){return std::stoi(categories[i]);}
+          std::string stemp;
+          for(char c : lstOfArt[ls])
+          {
+            if(isdigit(c))
+            stemp += c;
+          }
+          temp += stoi(stemp);
         }
       }
     }
