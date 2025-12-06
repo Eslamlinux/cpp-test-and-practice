@@ -33,9 +33,7 @@ class StockList
 public:
   static std::string stockSummary(std::vector<std::string> &lstOfArt, std::vector<std::string> &categories)
   {
-    if(lstOfArt.empty())
-    return "";
-    if(categories.empty())
+    if(lstOfArt.empty() || categories.empty())
     return "";
      std::string result ;
      for(int i = 0; i < categories.size();i++)
