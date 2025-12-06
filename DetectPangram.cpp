@@ -34,9 +34,9 @@ public:
   static std::string stockSummary(std::vector<std::string> &lstOfArt, std::vector<std::string> &categories)
   {
      std::string result ;
-    int temp = 0;
-    for(int i = 0; i < categories.size();i++)
-      {
+     for(int i = 0; i < categories.size();i++)
+     {
+        int temp = 0;
         result += "(" + categories[i] + " : ";
       for(int ls = 0; ls < lstOfArt.size(); ls++)
         {
@@ -51,12 +51,15 @@ public:
           temp += stoi(stemp);
         }
       }
-      result += std::to_string(temp) + ") - "
+      result += std::to_string(temp) + ") - ";
+      
     }
   }
 };
 
 int main()
 {
+  StockList s;
+  std::cout << s.stockSummary({"ABAR 200", "CDXE 500", "BKWR 250", "BTSQ 890", "DRTY 600"},{"A", "B"}) << std::endl;
 
 }
