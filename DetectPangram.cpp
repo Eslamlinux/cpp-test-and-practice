@@ -27,7 +27,21 @@ https://www.codewars.com/kata/54dc6f5a224c26032800005c/train/cpp
 class StockList
 {
 public:
-  static std::string stockSummary(std::vector<std::string> &lstOfArt, std::vector<std::string> &categories);
+  static std::string stockSummary(std::vector<std::string> &lstOfArt, std::vector<std::string> &categories)
+  {
+     std::string result ;
+    int temp = 0;
+    for(int i = 0; i < categories.size();i++)
+      {
+      for(int ls = 0; ls < lstOfArt.size(); ls++)
+        {
+        if(categories[i][0] == lstOfArt[ls][0])
+          {
+          temp = std::stoi(categories[ls][0]);
+        }
+      }
+    }
+  }
 };
 
 int main()
