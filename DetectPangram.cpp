@@ -39,7 +39,7 @@ public:
         {
         if(categories[i][0] == lstOfArt[ls][0])
           {
-          temp = std::stoi(categories[ls][0]);
+          [temp](){return std::stoi(categories[i]);}
         }
       }
     }
