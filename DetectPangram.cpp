@@ -37,6 +37,7 @@ public:
     int temp = 0;
     for(int i = 0; i < categories.size();i++)
       {
+        result += "(" + categories[i] + " : ";
       for(int ls = 0; ls < lstOfArt.size(); ls++)
         {
         if(categories[i][0] == lstOfArt[ls][0])
@@ -50,6 +51,7 @@ public:
           temp += stoi(stemp);
         }
       }
+      result += std::to_string(temp) + ") - "
     }
   }
 };
