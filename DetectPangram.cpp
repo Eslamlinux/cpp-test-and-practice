@@ -35,6 +35,8 @@ public:
   {
     if(lstOfArt.empty())
     return "";
+    if(categories.empty())
+    return "";
      std::string result ;
      for(int i = 0; i < categories.size();i++)
      {
