@@ -1,11 +1,16 @@
 #include <iostream>
 
 std::string middle_char(std::string word) { 
+    std::string result ="";
     if(word.length() % 2 == 0)
     {
-        return word[(word.length() /2)-1] + word[word.length() /2];
+        result = word[(word.length() /2)-1] + word[word.length() /2];
     }
-    return word[word.length()/2];
+    else
+    {
+        result = word[word.length()/2];
+    }
+    return result;
 }
 
 int main()
