@@ -12,4 +12,6 @@ int main()
     std::wcout << s << std::endl;
     std::wcout << sizeof(e) << std::endl;
 
+
+    std::wcout << s;
 }
