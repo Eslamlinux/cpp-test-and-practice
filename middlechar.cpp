@@ -1,7 +1,6 @@
 #include <iostream>
-using namespace std;
 
-string middle_char(string word) { 
+std::string middle_char(std::string word) { 
     if(word.length() % 2 == 0)
     {
         return word[(word.length() /2)-1] + word[word.length() /2];
@@ -11,5 +10,5 @@ string middle_char(string word) {
 
 int main()
 {
-    std::cout << middle_char
+    std::cout << middle_char("test") << std::endl;
 }
