@@ -31,9 +31,16 @@ namespace Std
         std::cout << a << std::endl;
     }
 }
+
+namespace var
+{
+    int val;
+}
 int main()
 {
     using namespace Tow_Clan;
+    // using namespace One_Clan;
+    using namespace var;
 int d = 7;
 One_Clan::printf(10,5);
 std::cout << One_Clan::func1(d,3) << std::endl;
@@ -41,4 +48,7 @@ std::cout << d << std::endl;
 
 printf(5,5) ;
 Std::cout(555);
+One_Clan::printf(4,4);
+val = 11;
+printf(val,val);
 }
