@@ -24,7 +24,6 @@ std::vector<int> rotate(std::vector<int> nums,int k) {
             result.insert(result.begin(),nums[i]);
             result.erase(result.end()-1);
         }
-        // std::cout << result.size() << std::endl;
     return result;
 }
 
