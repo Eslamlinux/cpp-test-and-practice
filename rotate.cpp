@@ -9,11 +9,15 @@ k = 3
 [5,6,7,1,2,3,4]
 */
 std::vector<int> rotate(std::vector<int> nums,int k) { 
-// write your code here ^_^
+
 }
 
 int main()
 {
 
-    
+    for(auto c :rotate({1, 2, 3, 4, 5, 6, 7},3))
+    {
+        std::cout << c << " " ;
+    }
+
 }
