@@ -9,7 +9,8 @@ k = 3
 [5,6,7,1,2,3,4]
 */
 std::vector<int> rotate(std::vector<int> nums,int k) { 
-
+    std::vector<int>result;
+    
 }
 
 int main()
