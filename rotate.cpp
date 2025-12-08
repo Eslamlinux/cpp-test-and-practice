@@ -11,3 +11,9 @@ k = 3
 std::vector<int> rotate(std::vector<int> nums,int k) { 
 // write your code here ^_^
 }
+
+int main()
+{
+
+    
+}
