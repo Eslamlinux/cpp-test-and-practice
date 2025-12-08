@@ -1,6 +1,6 @@
 #include <iostream>
-using namespace std;
+#include <vector>
 
-vector<int> rotate(vector<int> nums,int k) { 
+std::vector<int> rotate(std::vector<int> nums,int k) { 
 // write your code here ^_^
 }
