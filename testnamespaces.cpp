@@ -36,6 +36,14 @@ namespace var
 {
     int val;
 }
+namespace sting
+{
+    int age;
+    std::string s()
+    {
+        return "Hiiiiii";
+    }
+}
 int main()
 {
     using namespace Tow_Clan;
@@ -51,4 +59,7 @@ Std::cout(555);
 One_Clan::printf(4,4);
 val = 11;
 printf(val,val);
+sting::s = "Nooooooo";
+std::cout << sting::s;
+
 }
