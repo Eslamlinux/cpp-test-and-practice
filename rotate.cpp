@@ -10,7 +10,11 @@ k = 3
 */
 std::vector<int> rotate(std::vector<int> nums,int k) { 
     std::vector<int>result(nums);
-    
+    for(int i = nums.size()-k; i < nums.size(); i++)
+    {
+        result.insert(result[i]);
+    }
+    return result;
 }
 
 int main()
