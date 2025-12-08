@@ -12,11 +12,33 @@ namespace One_Clan
         std::cout << func1(a ,b) <<std::endl;
     }
 }
+namespace Tow_Clan
+{
+    int func1(int& a,int b)
+    {
+        return a * b;
+    }
+    void printf(int a , int b)
+    {
+        std::cout << func1(a ,b) <<std::endl;
+    }
+}
+
+namespace Std
+{
+    void cout(int a)
+    {
+        std::cout << a << std::endl;
+    }
+}
 int main()
 {
+    using namespace Tow_Clan;
 int d = 7;
 One_Clan::printf(10,5);
 std::cout << One_Clan::func1(d,3) << std::endl;
 std::cout << d << std::endl;
 
+printf(5,5) ;
+Std::cout(555);
 }
