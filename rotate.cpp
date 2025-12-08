@@ -12,7 +12,8 @@ std::vector<int> rotate(std::vector<int> nums,int k) {
     std::vector<int>result(nums);
     for(int i = nums.size()-k; i < nums.size(); i++)
     {
-        result.insert(result[i]);
+        result.insert(result.begin(), nums[i]);
+        result.erase(result.end()-1);
     }
     return result;
 }
