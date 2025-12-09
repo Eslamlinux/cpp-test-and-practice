@@ -8,12 +8,14 @@ k = 3
 
 [5,6,7,1,2,3,4]
 */
-void rotate(std::vector<int>& nums, int k) {
-    int n = nums.size();
-    if (n == 0 || k % n == 0) {
-        return; 
+
+void reverse_array(std::vector<int>& arr, int start, int end) {
+    while (start < end) {
+        std::swap(arr[start], arr[end]);
+        start++;
+        end--;
     }
-    
+}
 std::vector<int> rotate(std::vector<int> nums,int k) { 
 //     std::vector<int>result(nums);
 //     if(nums.size() > k)
@@ -32,7 +34,14 @@ std::vector<int> rotate(std::vector<int> nums,int k) {
 //         }
 //     return result;
 
-
+    int n = nums.size();
+    if (n == 0 || k % n == 0) {
+        return; 
+    }
+    int actual_k = k % n;
+    reverse_array(nums, 0, n - actual_k - 1);
+    reverse_array(nums, n - actual_k, n - 1);
+    reverse_array(nums, 0, n - 1);
 }
 
 
