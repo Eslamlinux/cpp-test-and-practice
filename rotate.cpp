@@ -8,24 +8,33 @@ k = 3
 
 [5,6,7,1,2,3,4]
 */
-std::vector<int> rotate(std::vector<int> nums,int k) { 
-    std::vector<int>result(nums);
-    if(nums.size() > k)
-    {
-        for(int i = nums.size()-1; i >= nums.size()-k; i--)
-        {
-            result.insert(result.begin(), nums[i]);
-            result.erase(result.end()-1);
-        }
+void rotate(std::vector<int>& nums, int k) {
+    int n = nums.size();
+    if (n == 0 || k % n == 0) {
+        return; 
     }
-    else
-        for(int i = nums.size() - (k%nums.size()); i < nums.size(); i++ )
-        {
-            result.insert(result.begin(),nums[i]);
-            result.erase(result.end()-1);
-        }
-    return result;
+    
+std::vector<int> rotate(std::vector<int> nums,int k) { 
+//     std::vector<int>result(nums);
+//     if(nums.size() > k)
+//     {
+//         for(int i = nums.size()-1; i >= nums.size()-k; i--)
+//         {
+//             result.insert(result.begin(), nums[i]);
+//             result.erase(result.end()-1);
+//         }
+//     }
+//     else
+//         for(int i = nums.size() - (k%nums.size()); i < nums.size(); i++ )
+//         {
+//             result.insert(result.begin(),nums[i]);
+//             result.erase(result.end()-1);
+//         }
+//     return result;
+
+
 }
+
 
 int main()
 {
