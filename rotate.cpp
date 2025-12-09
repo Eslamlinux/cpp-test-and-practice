@@ -34,14 +34,30 @@ std::vector<int> rotate(std::vector<int> nums,int k) {
 //         }
 //     return result;
 
-    int n = nums.size();
+int n = nums.size();
+    
     if (n == 0 || k % n == 0) {
-        return; 
+        return nums;
     }
+    
     int actual_k = k % n;
-    reverse_array(nums, 0, n - actual_k - 1);
-    reverse_array(nums, n - actual_k, n - 1);
-    reverse_array(nums, 0, n - 1);
+    int split_point = n - actual_k;
+
+    std::vector<int> result;
+
+    result.insert(
+        result.end(),
+        nums.begin() + split_point,
+        nums.end()
+    );
+
+    result.insert(
+        result.end(),
+        nums.begin(),
+        nums.begin() + split_point
+    );
+
+    return result;
 }
 
 
