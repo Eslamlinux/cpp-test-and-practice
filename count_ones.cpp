@@ -2,12 +2,18 @@
 using namespace std;
 
 int count_ones(int num) { 
-// write your code here ^_^
+    int One_Counter = 0;
+    while(num > 0)
+    {
+        num % 2 == 0? 0 : One_Counter++;
+        num /= 2;
+    }
+    return One_Counter;
 }
 
 int main()
 {
 
-    cout << 1;
+    cout <<count_ones(100);
     return 0;
 }
