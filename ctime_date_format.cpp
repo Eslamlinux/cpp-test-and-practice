@@ -77,7 +77,7 @@ int main()
     // std::cout << date_format("2010/10/30") <<std::endl;
     // std::cout << date_format("2013/11/29") <<std::endl;
     
-    date_format("2013/11/29");
+    date_format("2013/01/29");
     
     return 0;
 }
