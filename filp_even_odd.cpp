@@ -15,6 +15,10 @@ std::vector<int> filp_even_odd(std::vector<int> &numbers) {
 
 int main()
 {
-
+    for(auto c: filp_even_odd({73, 221, 52, 21}))
+    {
+        std::cout << c << " ";
+    } 
+        
 
 }
