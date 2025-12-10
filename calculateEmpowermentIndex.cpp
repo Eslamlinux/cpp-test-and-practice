@@ -5,3 +5,9 @@
 float calculateEmpowermentIndex(std::vector<float> achievements,std::vector<float> weights) { 
 
 }
+
+int main()
+{
+
+    return 0;
+}
