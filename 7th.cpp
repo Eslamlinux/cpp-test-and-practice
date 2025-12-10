@@ -10,8 +10,9 @@ if(nums < 0 )
     nums *= -1;
     Is_Minus = true;
 }
-if(nums == 0)
+else if(nums == 0)
 return std::to_string(nums);
+
 while(nums > 0)
 {
     result = std::to_string(nums % 7) + result;
