@@ -34,7 +34,10 @@ int main()
 {
     for(int c:primes_nums({27, 23, 5, 9})) 
     {
-        
+        std::cout << c << " ";
     }
+    std::cout << std::endl;
+        std::cout << sqrt(23);
+
 
 }
