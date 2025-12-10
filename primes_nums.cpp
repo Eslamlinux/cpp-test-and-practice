@@ -32,6 +32,9 @@ std::vector<int> primes_nums(std::vector<int> numbers) {
 
 int main()
 {
+    for(int c:primes_nums({27, 23, 5, 9})) 
+    {
+        
+    }
 
-    
 }
