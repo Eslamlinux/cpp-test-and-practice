@@ -2,7 +2,7 @@
 
 std::string convertToBase7(int num) { 
 std::string result ="";
-bool Is_Minus;
+bool Is_Minus = false;
 long long nums = num;
 
 if(nums < 0 )
