@@ -12,6 +12,6 @@ return result;
 
 int main()
 {
+std::cout << convertToBase7(100) <<std::endl;
 
-    
 }
