@@ -2,19 +2,30 @@
 
 std::string convertToBase7(int num) { 
 std::string result ;
-while(num >0)
+bool Is_Minus;
+long long nums = num;
+
+if(nums < 0 )
 {
-    result = std::to_string(num % 7) + result;
-    num /= 7;
+    nums *= -1;
+    Is_Minus = true;
+}
+if(nums == 0)
+return std::to_string(nums);
+while(nums > 0)
+{
+    result = std::to_string(nums % 7) + result;
+    nums /= 7;
 }
 
-return result;
+return Is_Minus? "-" + result: result;
 }
 
 int main()
 {
 std::cout << convertToBase7(100) <<std::endl;
 std::cout << convertToBase7(-7) <<std::endl;
+std::cout << convertToBase7(-10) <<std::endl;
 std::cout << convertToBase7(0) <<std::endl;
 std::cout << convertToBase7(49) <<std::endl;
 
