@@ -48,10 +48,12 @@ std::string date_format(std::string date) {
         return "Error: Could not parse date components.";
     }
 
+    std::cout << day << " " << month << " " << year << "\n";
     // 3. تحويل القيم إلى سلاسل نصية بدون أصفار قائدة
     std::string y_str = std::to_string(year);
     std::string m_str = std::to_string(month);
     std::string d_str = std::to_string(day);
+    std::cout << d_str << " " << m_str << " " << y_str << "\n";
     
     // 4. التنسيق والدمج (دائماً بدون أصفار قائدة)
     
@@ -70,10 +72,12 @@ std::string date_format(std::string date) {
 
 int main()
 {
-    std::cout << date_format("2020/1/1") <<std::endl;
-    std::cout << date_format("2019/12/28") <<std::endl;
-    std::cout << date_format("2010/10/30") <<std::endl;
-    std::cout << date_format("2013/11/29") <<std::endl;
-
+    // std::cout << date_format("2020/1/1") <<std::endl;
+    // std::cout << date_format("2019/12/28") <<std::endl;
+    // std::cout << date_format("2010/10/30") <<std::endl;
+    // std::cout << date_format("2013/11/29") <<std::endl;
+    
+    date_format("2013/11/29");
+    
     return 0;
 }
