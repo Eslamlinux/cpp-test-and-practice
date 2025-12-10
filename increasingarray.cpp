@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int increasing_array(vector<int> arr) { 
@@ -10,4 +11,9 @@ for(int i= 1; i < arr.size();i++)
     point += (temp - arr[i]);
 }
 return point;
+}
+
+int main()
+{
+    std::cout << increasing_array({})
 }
