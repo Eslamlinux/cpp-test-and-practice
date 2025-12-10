@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int increasing_array(vector<int> arr) { 
+int point = 0;
+for(int i= 1; i < arr.size();i++)
+{
+    int temp = arr[i-1];
+    if(arr[i] < temp)
+    point += (temp - arr[i]);
+}
+return point;
+}
