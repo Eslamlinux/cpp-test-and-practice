@@ -1,7 +1,7 @@
 #include <iostream>
 
 std::string convertToBase7(int num) { 
-std::string result ;
+std::string result ="";
 bool Is_Minus;
 long long nums = num;
 
