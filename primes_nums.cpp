@@ -3,7 +3,7 @@
 #include <cmath>
 
 
-bool is_primary(int number)
+bool Is_Primary(int number)
 {
     if(number ==1)
     {
@@ -21,5 +21,11 @@ bool is_primary(int number)
 }
 
 std::vector<int> primes_nums(std::vector<int> numbers) { 
-
+    std::vector<int>result;
+    for(int c : numbers)
+    {
+        if(Is_Primary(c))
+        result.push_back(c);
+    }
+    return result;
 }
