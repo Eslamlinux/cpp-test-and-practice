@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
-using namespace std;
 
-int increasing_array(vector<int> arr) { 
+int increasing_array(std::vector<int> arr) { 
 int point = 0;
 for(int i= 1; i < arr.size();i++)
 {
@@ -15,5 +14,5 @@ return point;
 
 int main()
 {
-    std::cout << increasing_array({})
+    std::cout << increasing_array({3, 2, 5, 1, 7}) <<std::endl;
 }
