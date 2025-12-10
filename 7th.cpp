@@ -1,7 +1,6 @@
 #include <iostream>
-using namespace std;
 
-string convertToBase7(int num) { 
+std::string convertToBase7(int num) { 
 std::string result;
 while(num >0)
 {
@@ -9,4 +8,10 @@ while(num >0)
     num /= 7;
 }
 return result;
+}
+
+int main()
+{
+
+    
 }
