@@ -7,7 +7,10 @@ for(int i= 1; i < arr.size();i++)
 {
     int temp = arr[i-1];
     if(arr[i] < temp)
-    point += (temp - arr[i]);
+    {
+        point += (temp - arr[i]);
+        arr[i] = temp;
+    }
 }
 return point;
 }
