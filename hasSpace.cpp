@@ -1,10 +1,14 @@
 #include <iostream>
 
-std::string hasSpace(std::string strParam) { 
-// write your code here ^_^
+std::string hasSpace(std::string& strParam) { 
+    for(char c :strParam)
+    {
+        
+    }
 }
 
 int main()
 {
-    std::cout << hasSpace("") <<std::endl;
+    std::string st = "Saudi Arabia";
+    std::cout << hasSpace(st) <<std::endl;
 }
