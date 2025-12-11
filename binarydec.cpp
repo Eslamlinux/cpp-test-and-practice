@@ -63,9 +63,14 @@ int oct_to_dec(std::string octal_number) {
 
 int dec_to_oct(std::string dec)
 {
+    std::string result;
     int decimal = std::stoi(dec);
-    return (decimal /= 8) % 8; 
-
+    while(decimal >0)
+    {
+        result = std::to_string(decimal % 8) + result;
+        decimal /= 8; 
+    }
+    return std::stoi(result);
 }
 void Get_entry()
 {
