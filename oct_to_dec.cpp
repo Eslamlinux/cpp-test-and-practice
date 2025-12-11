@@ -1,8 +1,21 @@
 //oct_to_dec
 #include <iostream>
-
+#include <cmath>
+#include <vector>
 int oct_to_dec(int octal_number) { 
-return (int) octal_number;
+    std::string numtostr = std::to_string(octal_number);
+    std::vector<int> power;
+    int res =0;
+    for(int i = 0; i < numtostr.size(); i++)
+    {
+        power.insert(power.begin(),pow(8,i));
+    }
+    for(int i = 0 ;i < power.size();i++)
+    {
+        res += power[i] * (numtostr[i] - '0');
+
+    }
+    return res;
 }
 
 
