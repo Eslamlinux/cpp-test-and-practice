@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <vector>
+#include <string>
 #include <algorithm>
 #include <cmath>
     bool work = true;
@@ -60,8 +61,10 @@ int oct_to_dec(std::string octal_number) {
     return res;
 }
 
-int dec_to_oct(std::string des)
+int dec_to_oct(std::string dec)
 {
+    int decimal = std::stoi(dec);
+    return (decimal /= 8) % 8; 
 
 }
 void Get_entry()
@@ -70,6 +73,7 @@ void Get_entry()
     std::cout << "decimal to binary chose [1] " << std::endl;
     std::cout << "binary to decimal chose [2] " << std::endl;
     std::cout << "octal to decimal chose [3] " << std::endl;
+    std::cout << "decimal to octal chose [4] " << std::endl;
     std::cout << "Exit chose [5] " << std::endl;
     char chose;
     std::string entry;
@@ -99,6 +103,13 @@ void Get_entry()
     std::cout << "please enter octal to convert: " ;
     std::cin >> entry;
     std::cout << "you convert frome "<< entry << " To " << oct_to_dec(entry) << " decimal\n";
+    }
+            else if(chose == '4')
+    {
+        system("clear");
+    std::cout << "please enter decimal to convert: " ;
+    std::cin >> entry;
+    std::cout << "you convert frome "<< entry << " To " <<dec_to_oct(entry) << " oct\n";
     }
     else 
     {
