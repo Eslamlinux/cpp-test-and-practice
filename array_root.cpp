@@ -6,3 +6,9 @@
 std::vector<float> array_root(std::vector<float> arr) { 
 
 }
+
+int main()
+{
+
+    return 0;
+}
