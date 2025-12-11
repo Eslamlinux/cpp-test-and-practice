@@ -60,6 +60,10 @@ int oct_to_dec(std::string octal_number) {
     return res;
 }
 
+int dec_to_oct(string des)
+{
+    
+}
 void Get_entry()
 {
     std::cout << "please chose what do you want to convert from " << std::endl;
