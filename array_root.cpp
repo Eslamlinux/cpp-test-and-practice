@@ -4,7 +4,9 @@
 #include <vector>
 
 std::vector<float> array_root(std::vector<float> arr) { 
+std::vector<float> result;
 
+return result;
 }
 
 int main()
