@@ -21,6 +21,6 @@ int oct_to_dec(int octal_number) {
 
 int main()
 {
-    std::cout << oct_to_dec(5252) <<std::endl; // 2730
+    std::cout << oct_to_dec(4444) <<std::endl; // 5252 2730  /
     return 0;
 }
