@@ -60,9 +60,9 @@ int oct_to_dec(std::string octal_number) {
     return res;
 }
 
-int dec_to_oct(string des)
+int dec_to_oct(std::string des)
 {
-    
+
 }
 void Get_entry()
 {
