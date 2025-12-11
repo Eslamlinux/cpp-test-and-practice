@@ -45,13 +45,28 @@ int To_Decimal(std::string str)
     }
     return sum;
 }
+int oct_to_dec(std::string octal_number) { 
+    std::vector<int> power;
+    int res =0;
+    for(int i = 0; i < octal_number.size(); i++)
+    {
+        power.insert(power.begin(),pow(8,i));
+    }
+    for(int i = 0 ;i < power.size();i++)
+    {
+        res += power[i] * (octal_number[i] - '0');
+
+    }
+    return res;
+}
 
 void Get_entry()
 {
     std::cout << "please chose what do you want to convert from " << std::endl;
     std::cout << "decimal to binary chose [1] " << std::endl;
     std::cout << "binary to decimal chose [2] " << std::endl;
-    std::cout << "Exit chose [3] " << std::endl;
+    std::cout << "octal to decimal chose [3] " << std::endl;
+    std::cout << "Exit chose [5] " << std::endl;
     char chose;
     std::string entry;
     std::cin >> chose;
@@ -73,6 +88,13 @@ void Get_entry()
     std::cout << "please enter binary to convert: " ;
     std::cin >> entry;
     std::cout << "you convert frome "<< entry << " To " << To_Decimal(entry) << " decimal\n";
+    }
+        else if(chose == '3')
+    {
+        system("clear");
+    std::cout << "please enter octal to convert: " ;
+    std::cin >> entry;
+    std::cout << "you convert frome "<< entry << " To " << oct_to_dec(entry) << " decimal\n";
     }
     else 
     {
