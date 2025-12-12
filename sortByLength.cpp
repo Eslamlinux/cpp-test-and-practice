@@ -34,8 +34,8 @@ int main()
 {
     std::cout << sortByLength("Have a wonderful day") <<std::endl;
     std::cout << sortByLength("I see you") <<std::endl;
-    std::cout << sortByLength("Have a wonderful day") <<std::endl;
-    std::cout << sortByLength("Have a wonderful day") <<std::endl;
+    std::cout << sortByLength("Get in the boat") <<std::endl;
+    std::cout << sortByLength("Do you speak English") <<std::endl;
 
     return 0;
 }
