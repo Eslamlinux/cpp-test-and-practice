@@ -8,7 +8,8 @@ std::vector<std::string> find_prefix(std::vector<std::string> words,std::string 
 	std::tolower(text);
 	for(int i = 0; i < words.size();i++)
 	{
-	std::transform(words[i].begin(),words[i].end(),words[i].begin(),::tolower);
+std::transform(words[i].begin(),words[i].end(),words[i].begin(),::tolower);
+	
 	size_t pos =words[i].find(text);
 	if(pos != std::string::npos)
 	result.push_back(words[i]);
