@@ -9,3 +9,10 @@ for(auto& c:arr)
 }
 return arr;
 }
+int main()
+{
+    for(auto c:add_five({"code","c"}))
+    {
+        std::cout << c << " ";
+    }
+}
