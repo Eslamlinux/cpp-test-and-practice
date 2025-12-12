@@ -1,14 +1,15 @@
 //missingLetter
 
 #include <iostream>
-
+//No Missing Letter
 std::string missingLetter(std::string txt) { 
-// write your code here ^_^
+
+    
 }
 
 int main()
 {
-    std::cout << missingLetter() << std::endl;
+    std::cout << missingLetter("rsuv") << std::endl; // t
 
 
     return 0;
