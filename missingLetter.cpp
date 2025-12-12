@@ -13,7 +13,6 @@ std::string missingLetter(std::string txt) {
         }
     }
     return result;
-    
 }
 
 int main()
