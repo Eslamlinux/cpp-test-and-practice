@@ -6,8 +6,10 @@
 
 bool timePeriod(std::string date1,std::string date2) 
 { 
+const int MAX_YEAR = 2025 ,MAX_MONTH = 12 ,MAX_DAY = 14;
 std::tm tm1{};
 std::tm tm2{};
+std::tm tmMaxLimit{};
 
 const char* format = "%d-%d-%d%*c%d:%d:%d";
 int success1 = std::sscanf(date1.c_str(),format,&tm1.tm_year, &tm1.tm_mon, &tm1.tm_mday, &tm1.tm_hour ,&tm1.tm_min, &tm1.tm_sec);
@@ -35,4 +37,6 @@ int main()
 {
     std::cout << timePeriod("2017-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
     std::cout << timePeriod("2022-01-02T00:00:00","2022-01-12T00:00:00") <<std::endl;
+    std::cout << timePeriod("2023-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
+    std::cout << timePeriod("2079-08-02T00:00:00","2089-08-19T00:00:00") <<std::endl;
 }
