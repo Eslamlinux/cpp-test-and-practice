@@ -27,11 +27,12 @@ if(t1 == (std::time_t) -1 || t2 == (std::time_t) -1)
 return false;
 
 
-return 1;
+return t1 < t2;
 
 }
 
 int main()
 {
+    std::cout << timePeriod("2017-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
     std::cout << timePeriod("2017-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
 }
