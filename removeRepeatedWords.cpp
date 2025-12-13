@@ -2,7 +2,13 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <algorithm>
 
+std::string Word_To_Lower(std::string Tword)
+{
+    std::transform(Tword.begin(),Tword.end(),Tword.begin(), ::tolower);
+    return Tword;
+}
 std::string removeRepeatedWords(std::string sentence) { 
     std::vector<std::string> words;
     std::string temp, result;
@@ -16,24 +22,32 @@ std::string removeRepeatedWords(std::string sentence) {
         {
             for(int t =0; t < words.size();t++)
             {
-                if(temp == words[t])
+                if(Word_To_Lower(temp) == Word_To_Lower(words[t]))
                 {
                     temp = "";
-                    continue;
-                }
-                else
-                {
-                    words.push_back(temp);
-                    temp == "";
+                    break;
                 }
             }
+            if(!temp.empty())
+            words.push_back(temp);
+            temp = "";
         }
     }
-    // if(!temp.empty())
-
-    for(auto c : words)
+    if(!temp.empty())
     {
-        result += c + " ";
+            for(int t =0; t < words.size();t++)
+            {
+                if(Word_To_Lower(temp) == Word_To_Lower(words[t]))
+                {
+                    temp = "";
+                    break;
+                }
+            }
+            words.push_back(temp);
+    }
+    for(std::string c : words)
+    {
+        result += c +' ';
     }
     result.pop_back();
     return result;
@@ -41,4 +55,7 @@ std::string removeRepeatedWords(std::string sentence) {
 int main()
 {
     std::cout<< removeRepeatedWords("Goodbye bye bye world world world") << std::endl;
+    std::cout<< removeRepeatedWords("Sam went went to to to his business") << std::endl;
+    std::cout<< removeRepeatedWords("Reya is is the the best player in eye eye game") << std::endl;
+    std::cout<< removeRepeatedWords("in inthe") << std::endl;
 }
