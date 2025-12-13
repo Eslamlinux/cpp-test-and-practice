@@ -1,24 +1,14 @@
 //time Period
 #include <iostream>
-#include <sstream>
+#include <ctime>
+#include <cstdio>
+#include <string>
+
 bool timePeriod(std::string date1,std::string date2) 
 { 
-int t;
-std::string ts1;
-std::string ts2;
-std::stringstream ss(date1);
-std::stringstream ss2(date2);
-while (ss >> t)
-{
-    ts1 += std::to_string(abs(t));
-}
-while (ss2 >> t)
-{
-    ts2 += std::to_string(abs(t));
-}
+std::tm tm1{};
+std::tm tm2{};
 
-// std::cout << ts1 << " " << ts2 << std::endl;
-return std::stoi(ts1) < std::stoi(ts2);
 }
 
 int main()
