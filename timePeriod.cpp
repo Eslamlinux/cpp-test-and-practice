@@ -13,7 +13,10 @@ const char* format = "%d-%d-%d*%c%d:%d:%d";
 int success1 = std::sscanf(date1.c_str(),format,&tm1.tm_year, &tm1.tm_mon, &tm1.tm_mday, &tm1.tm_hour ,&tm1.tm_min, &tm1.tm_sec);
 int success2 = std::sscanf(date2.c_str(),format,&tm2.tm_year, &tm2.tm_mon, &tm2.tm_mday, &tm2.tm_hour, &tm2.tm_min, &tm2.tm_sec);
 
-return 0;
+if(success1 != 6 || success2 != 6)
+return false;
+
+return 1;
 
 }
 
