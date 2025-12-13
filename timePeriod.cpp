@@ -1,6 +1,7 @@
 //time Period
 #include <iostream>
 
-bool timePeriod(string date1,string date2) { 
-// write your code here ^_^
+bool timePeriod(std::string date1,std::string date2) 
+{ 
+
 }
