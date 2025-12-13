@@ -21,19 +21,25 @@ return false;
 tmMaxLimit.tm_year = MAX_YEAR;
 tmMaxLimit.tm_mon = MAX_MONTH;
 tmMaxLimit.tm_mday = MAX_DAY;
+tmMaxLimit.tm_hour = tmMaxLimit.tm_min = tmMaxLimit.tm_sec = 0;
+
 tm1.tm_year -= 1900;
 tm1.tm_mon -= 1;
 tm2.tm_year -= 1900;
 tm2.tm_mon -= 1;
+tmMaxLimit.tm_year -= 1900;
+tmMaxLimit.tm_mon -= 1;
 
 std::time_t t1 = std::mktime(&tm1);
 std::time_t t2 = std::mktime(&tm2);
-if(t1 == (std::time_t) -1 || t2 == (std::time_t) -1)
+std::time_t t_limits = std::mktime(&tmMaxLimit);
+
+if(t1 == (std::time_t) -1 || t2 == (std::time_t) -1 || t_limits == (std::time_t)-1)
+return false;
+if(t1 > t_limits || t2 > t_limits)
 return false;
 
-
 return t1 < t2;
-
 }
 
 int main()
