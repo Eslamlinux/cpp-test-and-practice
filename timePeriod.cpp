@@ -17,7 +17,7 @@ while (ss2 >> t)
     ts2 += std::to_string(abs(t));
 }
 
-std::cout << ts1 << " " << ts2 << std::endl;
+// std::cout << ts1 << " " << ts2 << std::endl;
 return std::stoi(ts1) < std::stoi(ts2);
 }
 
