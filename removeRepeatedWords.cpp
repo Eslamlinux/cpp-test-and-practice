@@ -43,6 +43,7 @@ std::string removeRepeatedWords(std::string sentence) {
                     break;
                 }
             }
+            if(!temp.empty())
             words.push_back(temp);
     }
     for(std::string c : words)
@@ -54,7 +55,7 @@ std::string removeRepeatedWords(std::string sentence) {
 }
 int main()
 {
-    std::cout<< removeRepeatedWords("Goodbye bye bye world world world") << std::endl;
+    std::cout<< removeRepeatedWords("Goodbye bye Bye world WorlD woRld") << std::endl;
     std::cout<< removeRepeatedWords("Sam went went to to to his business") << std::endl;
     std::cout<< removeRepeatedWords("Reya is is the the best player in eye eye game") << std::endl;
     std::cout<< removeRepeatedWords("in inthe") << std::endl;
