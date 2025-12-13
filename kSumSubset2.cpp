@@ -2,47 +2,29 @@
 
 #include <iostream>
 #include <vector>
-bool kSumSubset(std::vector<int> numArray,int k) { 
-    for(int a=0 ;a < numArray.size();a++)
-    {
-        int sum = 0;
-        for(int b = a+1; b < numArray.size(); b++)
-        {
-            if(numArray[b] > k || sum > k)
-            break;
-            if(a != b)
-            {
-                sum += numArray[b];
-            }
-            if(sum == k)
-            return true;
-            // sum =numArray[a];
-            // if(sum == k)
-            // return true;
 
-        }
-        for(int b = a+1; b < numArray.size(); b++)
-        {
-            if(numArray[b] > k || sum > k)
-            break;
-            if(a != b)
-            {
-                sum += numArray[a] +numArray[b];
-            }
-            if(sum == k)
-            return true;
-            // sum =numArray[a];
-            // if(sum == k)
-            // return true;
-
-        }
-
+bool isSubsetSum(const std::vector<int>& numArray, int target, int currentIndex, int currentSum) {
+    if (currentSum == target) {
+        return true;
     }
-    return false;
+
+    if (currentIndex == numArray.size() || currentSum > target) {
+        return false;
+    }
+
+    if (isSubsetSum(numArray, target, currentIndex + 1, currentSum + numArray[currentIndex])) {
+        return true;
+    }
+
+    return isSubsetSum(numArray, target, currentIndex + 1, currentSum);
 }
+
+bool kSumSubset(const std::vector<int>& numArray, int k) {
+    return isSubsetSum(numArray, k, 0, 0);
+}
+
 int main()
 {
-    // std::cout << kSumSubset({7, 3, 2, 5, 8},14) << std::endl;
     std::cout << kSumSubset({7, 3, 2, 5, 8},14) << std::endl;
     std::cout << kSumSubset({72, 4, 6, 8},11) << std::endl;
     std::cout << kSumSubset({7, 5, 3, 1},4) << std::endl;
