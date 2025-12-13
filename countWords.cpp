@@ -5,11 +5,10 @@
 int countWords(std::string txt) { 
     std::stringstream ss(txt);
     int counter = 0;
-    for(std::string c:ss)
-    {
-
-    }
-    
+    std::string c;
+    while(ss >> c)
+        counter++;
+    return counter;
 }
 int main()
 {
