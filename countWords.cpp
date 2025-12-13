@@ -9,9 +9,10 @@ int countWords(std::string txt) {
     while(ss >> c)
         counter++;
     return counter;
-}
+} 
 int main()
 {
     std::cout << countWords("Plant hope in the hearts of others") <<std::endl;
+    std::cout << countWords("hello ") <<std::endl;
 
 }
