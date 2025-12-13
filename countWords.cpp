@@ -1,13 +1,13 @@
 //count Words
 #include <iostream>
-
+#include <sstream>
 
 int countWords(std::string txt) { 
     std::stringstream ss(txt);
     int counter = 0;
     for(std::string c:ss)
     {
-        
+
     }
     
 }
