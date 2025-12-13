@@ -34,5 +34,5 @@ return t1 < t2;
 int main()
 {
     std::cout << timePeriod("2017-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
-    std::cout << timePeriod("2017-08-02T00:00:00","2017-08-08T00:00:00") <<std::endl;
+    std::cout << timePeriod("2022-01-02T00:00:00","2022-01-12T00:00:00") <<std::endl;
 }
