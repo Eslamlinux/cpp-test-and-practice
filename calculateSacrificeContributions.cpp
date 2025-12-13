@@ -5,7 +5,12 @@
 
 std::vector<float> calculateSacrificeContributions(std::vector<std::string> names,std::vector<float> shares,float totalCost) 
 { 
-
+    std::vector<float> result;
+    for(float c : shares)
+    {
+        result.push_back(c * totalCost);
+    }
+    return result;
 }
 
 int main()
