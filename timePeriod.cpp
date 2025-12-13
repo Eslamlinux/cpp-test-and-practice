@@ -24,6 +24,9 @@ tm2.tm_mon -= 1;
 std::time_t t1 = std::mktime(&tm1);
 std::time_t t2 = std::mktime(&tm2);
 if(t1 == (std::time_t) -1 || t2 == (std::time_t) -1)
+return false;
+
+
 return 1;
 
 }
