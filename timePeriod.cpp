@@ -8,6 +8,8 @@ bool timePeriod(std::string date1,std::string date2)
 { 
 std::tm tm1{};
 std::tm tm2{};
+const char* format = "%d-%d-%d*%c%d:%d:%d";
+int success1 = std::sscanf()
 
 }
 
