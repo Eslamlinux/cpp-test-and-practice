@@ -18,6 +18,9 @@ int success2 = std::sscanf(date2.c_str(),format,&tm2.tm_year, &tm2.tm_mon, &tm2.
 if(success1 != 6 || success2 != 6)
 return false;
 
+tmMaxLimit.tm_year = MAX_YEAR;
+tmMaxLimit.tm_mon = MAX_MONTH;
+tmMaxLimit.tm_mday = MAX_DAY;
 tm1.tm_year -= 1900;
 tm1.tm_mon -= 1;
 tm2.tm_year -= 1900;
