@@ -9,5 +9,10 @@ return arr2;
 }
 int main()
 {
+for(auto c: sub_arrays({2,4,88},{4,2,88}))
+{
+    std::cout << c << " ";
+}        
 
+return 0;
 } 
