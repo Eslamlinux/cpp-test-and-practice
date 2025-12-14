@@ -1,9 +1,11 @@
 #include <iostream>
 #include <vector>
-bool find_element(vector<int> elements_array,int element) 
+#include <algorithm>
+#include <iterator>
+bool find_element(std::vector<int> elements_array,int element) 
 {
-    std::vector<int> tofind = std::find(elements_array.begin(),elements_array.end(),element);
-    if(tofind == element_array.end())
+    std::vector<int>::iterator tofind = std::find(elements_array.begin(),elements_array.end(),element);
+    if(tofind == elements_array.end())
        return false;
    return true; 
 }
