@@ -9,6 +9,9 @@ return elements_array;
 
 int main()
 {
-
+    for(auto c:sort_array({63,12,43,56,12}))
+    {
+        std::cout << c << " ";
+    }
     return 0;
 }
