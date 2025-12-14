@@ -8,7 +8,8 @@ bool isNumber(string s) {
                 if(c == 'e') continue ;
                 if(c == '-') continue ;
        return !isdigit(c)? false : true;
-    }   
+    }  
+//    std::cout << "test"; 
 return true;
 }
 int main() {
