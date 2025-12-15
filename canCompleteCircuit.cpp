@@ -4,16 +4,20 @@
 int ca(std::vector<int> gas,std::vector<int> cost)
 {
    int startindex = 0;
-   int fuelmeter = 0;
+   int current_tank = 0;
+   int totalfuel = 0;
     for(int i = 0; i < gas.size();i++)
     {
-        fuelmeter += gas[i] - cost[i];
-        if(fuelmeter < 0)
+        int net_gain =  gas[i] - cost[i];
+        current_tank += net_gain;
+        totalfuel += net_gain;
+        if(current_tank < 0)
         {
-        startindex = i;
+        startindex = i+1;
+        current_tank = 0;
         }
     }
-return fuelmeter ==  0? startindex : -1;
+return totalfuel >=  0? startindex : -1;
 }
 int main()
 {
