@@ -3,9 +3,15 @@
 
 int canCompleteCircuit(std::vector<int> gas,std::vector<int> cost)
 {
-   int fuelmeter = 0;
-
-return gas[0] != 1? -1 : gas[gas.size() /2];
+   int startindex = 0;
+   int fuelmeter = gas[i];
+    for(int i = 0; i < gas.size();i++)
+    {
+    fuelmeter += gas[i] - cost[i];
+   if(fuelmeter > 0)
+    startindex = i;
+    }
+    return startindex;
 }
 int main()
 {
