@@ -2,7 +2,9 @@
 #include <vector>
 
 int canCompleteCircuit(std::vector<int> gas,std::vector<int> cost)
-{ 
+{
+   int fuelmeter = 0;
+
 return gas[0] != 1? -1 : gas[gas.size() /2];
 }
 int main()
