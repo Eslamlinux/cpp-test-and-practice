@@ -3,9 +3,7 @@
 
 int ca(std::vector<int> gas,std::vector<int> cost)
 {
-   int startindex = 0;
-   int current_tank = 0;
-   int totalfuel = 0;
+   int startindex = 0,current_tank =0 ,totalfuel = 0;
     for(int i = 0; i < gas.size();i++)
     {
         int net_gain =  gas[i] - cost[i];
