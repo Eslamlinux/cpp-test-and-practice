@@ -5,8 +5,8 @@
 
 bool stringContains(std::string firstName,std::string contains)
 {
-size_t inor = std::find(firstName.begin(),firstName.end(),contains);
-return inor != std::npos;
+size_t inor = firstName.find(contains);
+return inor != std::string::npos;
 }
 int main()
 {
