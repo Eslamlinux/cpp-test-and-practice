@@ -12,7 +12,7 @@ return my_array;
 }
 int main()
 {
-for(auto c: sort_array({63,12,43,56,12}, "B"))
+for(auto c: sort_array({63,12,43,56,12}, "A"))
         {
     std::cout << c << " ";
         }
