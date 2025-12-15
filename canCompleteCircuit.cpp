@@ -13,7 +13,7 @@ int ca(std::vector<int> gas,std::vector<int> cost)
         startindex = i;
         }
     }
-    return startindex;
+return fuelmeter ==  0? startindex : -1;
 }
 int main()
 {
