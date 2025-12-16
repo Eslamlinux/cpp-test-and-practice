@@ -1,3 +1,4 @@
+//test using a type alias t
 #include <iostream>
 
 
