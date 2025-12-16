@@ -21,7 +21,6 @@ s c << st <<s endl;
 s c << st2 << s e koma
 oneorder
 int a = 10;
-// using oo = a;
 a = num2;
 s c << a << s e ;
 
