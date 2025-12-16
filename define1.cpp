@@ -10,6 +10,7 @@
 #define e endl 
 #define koma ;
 #define oneorder std::cout << "one orderd \n";
+#define sum(x,y) x + y
 int main()
 {
 std::c << "hello\n";
@@ -24,6 +25,7 @@ int a = 10;
 a = num2;
 s c << a << s e ;
 
+s c << sum(5,10) << s e;
 
 
 }
