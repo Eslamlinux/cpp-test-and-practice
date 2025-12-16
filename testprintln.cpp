@@ -4,7 +4,7 @@
 int main()
 {
     int x = 10;
-    std::println("x = {}",10) << std::endl;
+    std::println("x = {}",10) ;
 
 
     return 0;
