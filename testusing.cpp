@@ -1,5 +1,8 @@
 //test using a type alias t
 #include <iostream>
+#include <vector>
+#include <map>
+#include <utility>
 using num = int;
 using integer = int;
 using str =std::string;
@@ -9,7 +12,10 @@ using ch = char;
 using fl = float ;
 using dou = double;
 
-
+int dal()
+{
+    return 5;
+}
 v cc ()
 {
     std::cout << "from cc\n";
@@ -33,6 +39,14 @@ std::cout << f << std::endl;
 std::cout << d << std::endl;
 std::cout << i << std::endl;
 
+using vec = std::vector<int>;
+vec v1;
+
+v1.push_back(10);
+
+std::cout << v1[0] <<std::endl;
+
+using map_vec_pair = std::map<std::string, std::vector<std::pair<int, double>>>;
 
     return 0;
 }
