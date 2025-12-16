@@ -12,6 +12,11 @@ using ch = char;
 using fl = float ;
 using dou = double;
 
+template<typename N>
+using Tvec= std::vector<N>;
+
+
+
 int dal()
 {
     return 5;
@@ -47,6 +52,16 @@ v1.push_back(10);
 std::cout << v1[0] <<std::endl;
 
 using map_vec_pair = std::map<std::string, std::vector<std::pair<int, double>>>;
+
+map_vec_pair mvp;
+
+Tvec<int> ttt;
+Tvec<std::string>sss;
+
+ttt.push_back(555);
+sss.push_back("hhhh");
+
+
 
     return 0;
 }
