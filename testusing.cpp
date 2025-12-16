@@ -4,11 +4,11 @@ using num = int;
 using str =std::string;
 using v = void;
 using bo = bool;
-using c = char;
+using ch = char;
 using fl = float ;
 using dou = double;
 
-c cc ()
+v cc ()
 {
     std::cout << "from cc\n";
 }
@@ -17,10 +17,18 @@ int main()
 num a = 5;
 num b {10};
 str s = " eslam ";
-
+bo bb = true;
+ch c = 'c';
+fl f = 1.2;
+dou d = 2.20;
 std::cout << a + b <<std::endl;
 std::cout << s << std::endl;
+if(bb)
 cc();
+std::cout << c << std::endl;
+std::cout << f << std::endl;
+std::cout << d << std::endl;
+
 
     return 0;
 }
