@@ -16,10 +16,12 @@ template<typename N>
 using Tvec= std::vector<N>;
 
 
-
-int dal()
+namespace ddaall
 {
-    return 5;
+    int dal()
+    {
+        return 557788;
+    }
 }
 v cc ()
 {
@@ -60,6 +62,15 @@ Tvec<std::string>sss;
 
 ttt.push_back(555);
 sss.push_back("hhhh");
+
+using namespace ddaall;
+std::cout << dal() <<std::endl;
+
+using std::cout;
+using std::endl;
+cout << endl;
+cout << dal();
+cout << endl;
 
 
 
