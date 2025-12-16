@@ -1,12 +1,14 @@
 //test using a type alias t
 #include <iostream>
 using num = int;
+using integer = int;
 using str =std::string;
 using v = void;
 using bo = bool;
 using ch = char;
 using fl = float ;
 using dou = double;
+
 
 v cc ()
 {
@@ -16,6 +18,7 @@ int main()
 {
 num a = 5;
 num b {10};
+integer i {111};
 str s = " eslam ";
 bo bb = true;
 ch c = 'c';
@@ -28,6 +31,7 @@ cc();
 std::cout << c << std::endl;
 std::cout << f << std::endl;
 std::cout << d << std::endl;
+std::cout << i << std::endl;
 
 
     return 0;
