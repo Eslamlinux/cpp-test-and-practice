@@ -9,6 +9,7 @@ std::string oddsVsEvens(int num)
     {
         if((c -'0') % 2 == 0)
         even += c -'0';
+        else
         odd += c -'0';
     }
     return odd > even? "odd" : even > odd? "even" : "equal";
