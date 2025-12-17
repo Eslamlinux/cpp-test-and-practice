@@ -34,3 +34,9 @@ bool isNumber(string s) {
     }   
 return true;
 }
+
+int main()
+{
+
+    return 0;
+}
