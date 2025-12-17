@@ -7,7 +7,7 @@ std::vector<std::string> calculateDonationPercentages(std::vector<std::string> n
     std::vector<std::string> result;
     for(int i = 0; i < names.size(); i++)
     {
-        result.push_back(names[i]+ ": " +  std::to_string((donations[i] * 100.0) / 100.0));
+        result.push_back(names[i]+ ": " +  std::to_string((donations[i] / 100.0) * 100.0) + "%");
     }
     return result;
 }
