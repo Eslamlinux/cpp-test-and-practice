@@ -7,9 +7,10 @@ enum items
 {
     Apple =1,
     phone,
-    pc
+    pc,
+    exit
 };
-void choseItem()
+void choseItem(bool& wo)
 {
     int chosenum;
     std::cout << "chose item \n";
@@ -26,6 +27,8 @@ void choseItem()
         case pc:
         std::cout<< "you chose pc\n";
         break;
+        case exit:
+        wo = false;
         default:
         std::cout<< "wrong chose \n";
         break;
@@ -33,9 +36,12 @@ void choseItem()
 }
 int main()
 {
-    while (true)
+    bool worke = true;
+    while (worke)
     {
-        choseItem();
+        choseItem(worke);
+        if(!worke)
+        break;
     }
     
     return 0;
