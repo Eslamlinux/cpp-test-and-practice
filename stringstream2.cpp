@@ -10,8 +10,12 @@ int main()
      ss << a << " + " <<  b << " = " << result;      
      std::string top;
      ss >> top;
-     std::cout << top;
+     //std::cout << top;
      
+     for(auto c: top)
+     {
+         std::cout << c << " ";
+         }
      
      
      
