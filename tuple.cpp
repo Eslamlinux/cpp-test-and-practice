@@ -35,5 +35,11 @@ cout << std::get<1>(tp1) <<endl;
 cout << std::get<0>(tp1) <<endl;
 cout << std::get<2>(tp1) <<endl;
 
+
+cout << p1 << endl;
+cout << p2 << endl;
+cout << p3 << endl;
+
+
     return 0;
 }
