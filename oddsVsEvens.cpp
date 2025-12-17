@@ -11,7 +11,7 @@ std::string oddsVsEvens(int num)
         even += c - '0';
         odd += c - '0';
     }
-    
+    return odd > even? "odd" : even > odd? "even" : "equal";
 }
 
 int main()
