@@ -8,28 +8,33 @@ enum items
     Apple =1,
     phone,
     pc,
-    exit
+    Exit
 };
 void choseItem(bool& wo)
 {
     int chosenum;
-    std::cout << "chose item \n";
-    std::cout << "apple [1] - phone [2] - pc [3]\n";
+    std::cout << "apple [1] - phone [2] - pc [3] - Exit [4]\n";
+    std::cout << "chose item: ";
     std::cin >> chosenum;
     switch(chosenum)
     {
         case Apple:
+        system("clear");
         std::cout << "you chose apple\n";
         break;
         case phone:
+        system("clear");
         std::cout<< "you chose phone\n";
         break;
         case pc:
+        system("clear");
         std::cout<< "you chose pc\n";
         break;
-        case exit:
+        case Exit:
         wo = false;
+        break;
         default:
+        system("clear");
         std::cout<< "wrong chose \n";
         break;
     }
