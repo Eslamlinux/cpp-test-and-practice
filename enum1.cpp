@@ -44,7 +44,7 @@ void choseItem(bool& wo)
         system("clear");
         std::cout<< "         \t\t *-*-*-*-*-*-*\n";
         std::cout<< "\tyou chose\t *wrong chose*\n";
-        std::cout<< "         \t\t *-*-*-*-*-*-*\n";    
+        std::cout<< "         \t\t *-*-*-*-*-*-*\n"; 
         break;
     }
 }
