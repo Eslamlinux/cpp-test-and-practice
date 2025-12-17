@@ -95,5 +95,14 @@ cout << p1 << endl;
 cout << p2 << endl;
 cout << p3 << endl;
 
+std::string name ;
+int numb;
+float floa;
+
+tie(numb,name,floa) = tp1;
+cout << name << endl;
+cout << std::get<1>(tp1) <<endl;
+
+
     return 0;
 }
