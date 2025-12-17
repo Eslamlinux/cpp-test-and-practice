@@ -102,7 +102,7 @@ float floa;
 tie(numb,std::ignore,floa) = tp1;
 cout << name << endl;
 //print after ignore with other way nothing will be change
-cout << std::get<1>(tp1) <<endl;
+cout << std::get<std::string>(tp1) << endl; 
 
 
     return 0;
