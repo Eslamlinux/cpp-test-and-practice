@@ -29,6 +29,8 @@ tp1 = std::tuple<int,std::string,float>(40,"eslam tuple",0.4);
 tp1 = std::make_tuple(44,"tuple mode again",02.2);
 std::get<0>(tp1) = 22;
 std::get<1>(tp1) = "mode tuple by get";
+tp1 = {55,"mode by packing",5.5};
+auto [p1,p2,p3] = tp1;
 cout << std::get<1>(tp1) <<endl;
 cout << std::get<0>(tp1) <<endl;
 cout << std::get<2>(tp1) <<endl;
