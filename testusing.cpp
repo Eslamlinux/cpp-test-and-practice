@@ -2,7 +2,8 @@
 #include <iostream>
 #include <vector>
 #include <map>
-#include <utility>
+// #include <utility>
+#include <tuple>
 using num = int;
 using integer = int;
 using str =std::string;
@@ -72,7 +73,13 @@ cout << endl;
 cout << dal();
 cout << endl;
 
+#define u using
+u g = int;
+g H = 5;
+cout << H << endl; 
 
+u tap = std::tuple<int ,std::string,float> ;
+tap tp1(10,"tuple",1.5);
 
     return 0;
 }
