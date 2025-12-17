@@ -80,6 +80,7 @@ cout << H << endl;
 
 u tap = std::tuple<int ,std::string,float> ;
 tap tp1(10,"tuple",1.5);
+tp1 = std::tuple<int,std::string,float>(40,"eslam tuple",0.4);
 cout << std::get<1>(tp1) <<endl;
 cout << std::get<0>(tp1) <<endl;
 cout << std::get<2>(tp1) <<endl;
