@@ -44,8 +44,10 @@ std::string name ;
 int numb;
 float floa;
 
-tie(numb,name,floa) = tp1;
+
+tie(numb,std::ignore,floa) = tp1;
 cout << name << endl;
+//print after ignore with other way nothing will be change
 cout << std::get<1>(tp1) <<endl;
 
 
