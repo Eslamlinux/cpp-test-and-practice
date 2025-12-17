@@ -10,6 +10,14 @@ enum items
     pc,
     Exit
 };
+
+enum class items2
+{
+    Apple =1,
+    phone,
+    pc,
+    Exit
+};
 void choseItem(bool& wo)
 {
     int chosenum;
@@ -19,25 +27,25 @@ void choseItem(bool& wo)
     std::cin >> chosenum;
     switch(chosenum)
     {
-        case Apple:
+        case items::Apple:
         system("clear");
         std::cout<< "         \t\t *-*-*-*\n";
         std::cout<< "\tyou chose\t *apple*\n";
         std::cout<< "         \t\t *-*-*-*\n";        
         break;
-        case phone:
+        case items::phone:
         system("clear");
         std::cout<< "         \t\t *-*-*-*\n";
         std::cout<< "\tyou chose\t *phone*\n";
         std::cout<< "         \t\t *-*-*-*\n";
         break;
-        case pc:
+        case items::pc:
         system("clear");
         std::cout<< "         \t\t *-*-*-*\n";
         std::cout<< "\tyou chose\t *  pc *\n";
         std::cout<< "         \t\t *-*-*-*\n";        
         break;
-        case Exit:
+        case items::Exit:
         wo = false;
         break;
         default:
