@@ -1,23 +1,23 @@
 // calculate Donation Percentages
 #include <iostream>
 #include <vector>
-
+#include <cmath>
 std::vector<std::string> calculateDonationPercentages(std::vector<std::string> names,std::vector<float> donations) 
 {
     std::vector<std::string> result;
-    float sumall = 0.0;
-    for(float f :donations)
-    {
-        sumall += f;
+    float totalSum = 0.0f;
+
+    for (float amount : donations) {
+        totalSum += amount;
     }
-    for(int i = 0; i < names.size(); i++)
-    {
-        int temp =(donations[i] / sumall) * 100;
-        result.push_back(names[i]+ ": " +  std::to_string(temp)+ "%");
+
+    for (size_t i = 0; i < names.size(); i++) {
+        int percentage = std::round((donations[i] / totalSum) * 100);
+        result.push_back(names[i] + ": " + std::to_string(percentage) + "%");
     }
+
     return result;
 }
-
 int main()
 {
     // 'فاطمة: 50%, علي: 50%
