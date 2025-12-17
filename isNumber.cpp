@@ -37,6 +37,8 @@ return true;
 
 int main()
 {
+    std::cout << isNumber("53.5e93") <<std::endl;
+    std::cout << isNumber("53.5e93") <<std::endl;
 
     return 0;
 }
