@@ -1,44 +1,46 @@
 #include <iostream>
 #include <string>
-using namespace std;
+#include <cctype>
 
-bool isNumber(string s) { 
-    int cd =0 , ce = 0, cE = 0,c_ = 0, cp = 0;
-    for (char c : s) {
-                if(c == '+' && cp < 1) 
-                {
-                cp++;
-                continue ;
-                }
-                else if(c == '.' && cd < 1)
-                {
-                    cd++;
-                continue;
-                } 
-                else if(c == 'e' && ce < 1)
-                {
-                ce++;
-                continue ;
-                }
-                else if(c == 'E' && cE < 1)
-                {
-                cE++;
-                continue ;
-                }
-                else if(c == '-' & c_ < 1) 
-                {
-                c_++;
-                continue ;
-                }
-       return !isdigit(c)? false : true;
-    }   
-return true;
+
+
+bool isNumber(std::string s) {
+    bool seenDigit = false;
+    bool seenDot = false;
+    bool seenE = false;
+
+    for (int i = 0; i < s.length(); i++) {
+        char c = s[i];
+
+        if (isdigit(c)) {
+            seenDigit = true;
+        } 
+        else if (c == '+' || c == '-') {
+            if (i > 0 && s[i - 1] != 'e' && s[i - 1] != 'E') return false;
+        } 
+        else if (c == '.') {
+            if (seenDot || seenE) return false;
+            seenDot = true;
+        } 
+        else if (c == 'e' || c == 'E') {
+            if (seenE || !seenDigit) return false;
+            seenE = true;
+            seenDigit = false;
+        } 
+        else {
+            return false;
+        }
+    }
+
+    return seenDigit;
 }
+
 
 int main()
 {
     std::cout << isNumber("53.5e93") <<std::endl;
-    std::cout << isNumber("53.5e93") <<std::endl;
+    std::cout << isNumber("53.5e9.3") <<std::endl;
+    std::cout << isNumber("abc") <<std::endl;
 
     return 0;
 }
