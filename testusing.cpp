@@ -80,6 +80,9 @@ cout << H << endl;
 
 u tap = std::tuple<int ,std::string,float> ;
 tap tp1(10,"tuple",1.5);
+cout << std::get<1>(tp1) <<endl;
+cout << std::get<0>(tp1) <<endl;
+cout << std::get<2>(tp1) <<endl;
 
     return 0;
 }
