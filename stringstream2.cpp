@@ -9,17 +9,18 @@ int main()
      std::stringstream ss;
      ss << a << " + " <<  b << " = " << result;      
      std::string top;
-     ss >> top;
      //std::cout << top;
      
-     for(auto c: top)
-     {
-         std::cout << c << " ";
-         }
+    //  while(ss >> top)
+    //  {
+    //      std::cout << top << " \n";
+    //      }
      
+    //  getline(ss,top);
+    //  std::cout << top ;
      
-     
-     
+     top = ss.str();
+     std::cout << top ;
      
      
      return 0;   
