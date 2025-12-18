@@ -10,7 +10,7 @@ int maxIrrigationPeriod(std::vector<int> irrigation,int water)
 
 int main()
 {
-    std::cout << 
+    std::cout << maxIrrigationPeriod({}) << std::endl;
 
     return 0;
 }
