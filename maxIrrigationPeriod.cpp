@@ -2,7 +2,7 @@
 
 #include <iostream>
 #include <vector>
-
+#include <algorithm>
 int maxIrrigationPeriod(std::vector<int> irrigation,int water) 
 { 
     if (irrigation.empty()) return 0;
