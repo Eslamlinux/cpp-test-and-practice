@@ -6,3 +6,9 @@
 int maxIrrigationPeriod(std::vector<int> irrigation,int water) { 
 // write your code here ^_^
 }
+
+int main()
+{
+
+    return 0;
+}
