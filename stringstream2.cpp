@@ -19,9 +19,18 @@ int main()
     //  getline(ss,top);
     //  std::cout << top ;
      
-     top = ss.str();
+    ss.str("");
+    ss.clear();
+    top = ss.str();
      std::cout << top ;
-     
-     
+    std::string nums ;
+
+    std::stringstream strstr;
+    strstr <<  "10,20,30,40";
+
+    
+    while(getline(strstr,nums, ','))
+    std::cout << nums; 
+    
      return 0;   
 }
