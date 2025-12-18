@@ -23,6 +23,7 @@ int main()
 {
     std::cout << maxIrrigationPeriod({1, 1, 1, 1},3) << std::endl;
     std::cout << maxIrrigationPeriod({1, 2, 3, 4, 5},5) << std::endl;
+    std::cout << maxIrrigationPeriod({2,2,2},3) << std::endl;
 
     return 0;
 }
