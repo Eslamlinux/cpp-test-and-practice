@@ -1,8 +1,8 @@
 //max Irrigation Period
 
 #include <iostream>
-using namespace std;
+#include <vector>
 
-int maxIrrigationPeriod(vector<int> irrigation,int water) { 
+int maxIrrigationPeriod(std::vector<int> irrigation,int water) { 
 // write your code here ^_^
 }
