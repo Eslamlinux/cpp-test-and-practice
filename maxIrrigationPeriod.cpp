@@ -10,7 +10,7 @@ int maxIrrigationPeriod(std::vector<int> irrigation,int water)
     int Sum_Irri = 0,result = 0;
     for( int i =0; i < irrigation.size();i++)
     {
-        if(Sum_Irri + irrigation[i] <= water)
+        if(Sum_Irri + irrigation[i] <= water && irrigation[i] > 0 )
         {
             Sum_Irri += irrigation[i];
             result++;
@@ -24,6 +24,8 @@ int main()
     std::cout << maxIrrigationPeriod({1, 1, 1, 1},3) << std::endl;
     std::cout << maxIrrigationPeriod({1, 2, 3, 4, 5},5) << std::endl;
     std::cout << maxIrrigationPeriod({2,2,2},3) << std::endl;
+    std::cout << maxIrrigationPeriod({},5) << std::endl;
+    std::cout << maxIrrigationPeriod({1, 2, 1, 0, 1},4) << std::endl;
 
     return 0;
 }
