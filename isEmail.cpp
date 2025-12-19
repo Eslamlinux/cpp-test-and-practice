@@ -5,7 +5,7 @@ bool isEmail(std::string email)
 {
     if(!isalpha(email[0]) )
     return false;
-    
+
     int repat = 0, repdot = 0;
 
     for(int i = 0 ; i < email.length(); i++)
@@ -13,21 +13,25 @@ bool isEmail(std::string email)
         if(email[i] == '@')
         {
             repat++;
+            if(!isalpha(email[i-1]) &&!isdigit(email[i-1]) && !isalpha(email[i+1]) &&!isdigit(email[i+1]) )
+            {
+                if(email[i] == '-' || email[i] == '_' || email[i] =='.')
+                {
+                    continue;
+                }
+                else
+                return false;
+            }
         }
         if(email[i] == '.')
         {
-            repdot++;
-            if(!isalpha(email[i+1]) || !isalpha(email[i+2])||repat != 1)
-            return false;
-        }
-        if(email.find("@") != std::string::npos)
-        {
-            if(!isalpha(i-1) && !isalpha(i+1) && repat >1 && repdot > 1 )
+            // repdot++;
+            if(!isalpha(email[i+1]) || !isdigit(i+1) && !isalpha(email[i+2])||!isdigit(email[i+2]) )
             return false;
         }
 
     }
-    if(repat != 1 || repdot != 1)
+    if(repat > 1)
     return false;
     return true;
 }
