@@ -13,7 +13,7 @@ bool isEmail(std::string email)
         if(email[i] == '@')
         {
             repat++;
-            if(!isalpha(email[i-1]) &&!isdigit(email[i-1]) && !isalpha(email[i+1]) &&!isdigit(email[i+1]) )
+            if(!isalpha(email[i-1]) ||!isdigit(email[i-1]) && !isalpha(email[i+1]) ||!isdigit(email[i+1]) )
             {
                 if(email[i] == '-' || email[i] == '_' || email[i] =='.')
                 {
