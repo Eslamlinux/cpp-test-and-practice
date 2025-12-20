@@ -14,7 +14,6 @@ std::variant<std::string,char, int,double> func(std::string str)
     return 1.23456;
     else return 1;
 
-
     // return str == "st" ? "hello this is string return" :
     //        str == "in" ? 123456 :
     //        str == "fl" ? 1.4 : 1.23456 ;
