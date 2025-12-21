@@ -13,7 +13,11 @@ std::string Time_Now()
 
 int main()
 {
-    std::cout << Time_Now() << std::endl;
+    while(true)
+    {
+
+        std::cout << Time_Now() << std::endl;
+    }
 
     return 0;
 }
