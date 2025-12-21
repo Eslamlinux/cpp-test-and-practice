@@ -11,6 +11,13 @@ std::string Time_Now()
     return time_H_M_s;
 }
 
+struct BigNumber
+{
+    std::string zero()
+    {
+        
+    }
+};
 int main()
 {
     while(true)
