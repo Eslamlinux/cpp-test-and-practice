@@ -14,33 +14,30 @@ std::string Time_Now()
 
 struct BigNumber
 {
-    std::vector<std::string> zero()
+    static std::vector<std::string> zero()
     {
-        std::vector<std::string> z;
-        z.push_back(" **** ");
-        z.push_back(" *  * ");
-        z.push_back(" *  * ");
-        z.push_back(" *  * ");
-        z.push_back(" **** ");
-        return z;
+        return {"  **  ", " *  * ", " *  * ", " *  * ", "  **  "};
     }
-
+    static std::vector<std::string> One() {
+        return {"   * ", "  ** ", "   * ", "   * ", "  *** "};
+    }
+    // enum N
+    // {
+    //     zero,
+    //     one
+    // };
     std::vector<std::string> printing(int num,int much)
     {
         std::vector<std::string> result;
         if(num == 0)
         {
-            for(int i = 0 ; i < much; i++)
+            for(int t = 0; t < zero().size(); t++)
             {
-                for(int t = 0; t < zero().size(); t++)
-                {
                     for(int r = 0 ; r < much ; r++)
                     {
                         result.push_back(zero()[t]);
                     }
                     result.push_back("\n");
-                }
-
             }
         }
         return result;
@@ -55,7 +52,7 @@ int main()
     //     system("clear");
     // }
     BigNumber z;
-    for(auto c: z.printing(0,2))
+    for(auto c: z.printing(0,3))
     {
         std::cout<< c ;
     }
