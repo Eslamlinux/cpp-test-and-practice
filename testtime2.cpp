@@ -24,6 +24,17 @@ struct BigNumber
         z[4] = "****";
         return z;
     }
+
+    std::vector<std::string> printing(int num,int much)
+    {
+        std::vector<std::string> result;
+        if(num == 0)
+        {
+            
+        }
+        return result;
+    }
+
 };
 int main()
 {
