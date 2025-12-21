@@ -7,7 +7,7 @@ std::string Time_Now()
     auto alltime = ctime(&thesec);
     struct tm *thetime = localtime(&thesec);
     std::string time_H_M_s;
-    time_H_M_s +=  thetime->tm_hour + ":" + thetime->tm_min + ":" + thetime->tm_sec;
+    time_H_M_s +=  std::to_string(thetime->tm_hour) + ":" + std::to_string(thetime->tm_min) + ":" + std::to_string(thetime->tm_sec);
     return time_H_M_s;
 }
 
