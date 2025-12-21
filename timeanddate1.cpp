@@ -24,7 +24,6 @@ int main()
         auto [hour,c1, mine,c2,seco] = inTime();
         std::cout << hour << c1 << mine << c2 << seco << std::endl;
         system("clear");
-        
     }
 
         // std::cout << std::get<0>(inTime())  << std::get<1>(inTime()) 
