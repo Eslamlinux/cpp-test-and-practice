@@ -6,8 +6,9 @@ std::string Time_Now()
     time_t thesec = time(nullptr);
     auto alltime = ctime(&thesec);
     struct tm *thetime = localtime(&thesec);
-
-    return alltime;
+    std::string time_H_M_s;
+    time_H_M_s +=  thetime->tm_hour + ":" + thetime->tm_min + ":" + thetime->tm_sec;
+    return time_H_M_s;
 }
 
 int main()
