@@ -17,11 +17,11 @@ struct BigNumber
     std::vector<std::string> zero()
     {
         std::vector<std::string> z;
-        z[0] = "****";
-        z[1] = "*  *";
-        z[2] = "*  *";
-        z[3] = "*  *";
-        z[4] = "****";
+        z.push_back(" **** ");
+        z.push_back(" *  * ");
+        z.push_back(" *  * ");
+        z.push_back(" *  * ");
+        z.push_back(" **** ");
         return z;
     }
 
@@ -30,7 +30,18 @@ struct BigNumber
         std::vector<std::string> result;
         if(num == 0)
         {
-            
+            for(int i = 0 ; i < much; i++)
+            {
+                for(int t = 0; t < zero().size(); t++)
+                {
+                    for(int r = 0 ; r < much ; r++)
+                    {
+                        result.push_back(zero()[t]);
+                    }
+                    result.push_back("\n");
+                }
+
+            }
         }
         return result;
     }
@@ -44,8 +55,9 @@ int main()
     //     system("clear");
     // }
     BigNumber z;
-        std::cout << z.zero() << " ";
-        std::cout << z.zero() << std::endl;
-
-    return 0;
+    for(auto c: z.printing(0,2))
+    {
+        std::cout<< c ;
+    }
+    // return 0;
 }
