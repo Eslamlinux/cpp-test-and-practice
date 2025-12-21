@@ -1,6 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <string>
+#include <vector>
 std::string Time_Now()
 {
     time_t thesec = time(nullptr);
@@ -13,18 +14,27 @@ std::string Time_Now()
 
 struct BigNumber
 {
-    std::string zero()
+    std::vector<std::string> zero()
     {
-        
+        std::vector<std::string> z;
+        z[0] = "****";
+        z[1] = "*  *";
+        z[2] = "*  *";
+        z[3] = "*  *";
+        z[4] = "****";
+        return z;
     }
 };
 int main()
 {
-    while(true)
-    {
-        std::cout << Time_Now() << std::endl;
-        system("clear");
-    }
+    // while(true)
+    // {
+    //     std::cout << Time_Now() << std::endl;
+    //     system("clear");
+    // }
+    BigNumber z;
+        std::cout << z.zero() << " ";
+        std::cout << z.zero() << std::endl;
 
     return 0;
 }
