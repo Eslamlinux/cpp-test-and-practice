@@ -15,7 +15,6 @@ int main()
 {
     while(true)
     {
-
         std::cout << Time_Now() << std::endl;
     }
 
