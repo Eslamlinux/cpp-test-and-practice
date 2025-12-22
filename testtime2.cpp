@@ -42,21 +42,23 @@ struct BigNumber
     {
         return {"  ** ", " *   ", " *** ", " * * ", "  *  "};
     }
-    static std::vector<std::string> get7() {
-        return {" **** ", "    * ", "   * ", "  * ", " * "};
+    static std::vector<std::string> get7() 
+    {
+        return {" **** ", "    * ", "   *  ", "  *   ", " *    "};
     }
-    static std::vector<std::string> get8() {
-        return {"  ** ", " * * ", "  ** ", " * * ", "  ** "};
+    static std::vector<std::string> get8() 
+    {
+        return {"  **  ", " *  * ", "  **  ", " *  * ", "  **  "};
     }
     static std::vector<std::string> get9() {
-        return {"  ** ", " * * ", "  *** ", "    * ", "  ** "};
+        return {"  **  ", " *  * ", "  *** ", "    * ", "  **  "};
     }
     static std::vector<std::string> getColon() {
-        return {"      ", "  * ", "      ", "  * ", "      "};
+        return {"      ", "  '*' ", "      ", "  '*' ", "      "};
     }
 
     using FuncNum = std::vector<std::string>(*)();
-    static inline FuncNum funcArr[] = {get0 ,get1,get2,get3,get4,get5,get6,get7,get8,get9};
+    static inline FuncNum funcArr[] = {get0 ,get1,get2,get3,get4,get5,get6,get7,get8,get9,getColon};
 
     std::vector<std::string> printing(int num,int much)
     {
@@ -83,7 +85,7 @@ int main()
     //     system("clear");
     // }
     BigNumber z;
-    for(auto c: z.printing(6,3))
+    for(auto c: z.printing(10,3))
     {
         std::cout<< c ;
     }
