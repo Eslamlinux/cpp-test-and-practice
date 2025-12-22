@@ -21,14 +21,14 @@ struct BigNumber
     static std::vector<std::string> One() {
         return {"   * ", "  ** ", "   * ", "   * ", "  *** "};
     }
-    // enum N
-    // {
-    //     zero,
-    //     one
-    // };
+
+    using FuncNum = std::vector<std::string>(*)();
+    static inline FuncNum functions[] = {zero ,One};
+
     std::vector<std::string> printing(int num,int much)
     {
         std::vector<std::string> result;
+        std::vector<std::string> pattern = functions[num]();
         if(num == 0)
         {
             for(int t = 0; t < zero().size(); t++)
