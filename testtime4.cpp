@@ -41,7 +41,7 @@ struct BigNumber {
     }
     static std::vector<std::string> get6() 
     {
-        return {"  ** ", " *   ", " *** ", " * * ", "  *  "};
+        return {"  ** ", " *   ", " *** ", " *  * ", "  ***  "};
     }
     static std::vector<std::string> get7() 
     {
