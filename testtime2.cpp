@@ -88,11 +88,11 @@ struct BigNumber
     }
 int main()
 {
-    while(true)
-    {
-        std::cout << Time_Now() << std::endl;
-        system("clear");
-    }
+    // while(true)
+    // {
+    //     std::cout << Time_Now() << std::endl;
+    //     system("clear");
+    // }
 
     // BigNumber z;
     // for(auto c: z.printing(10,3))
