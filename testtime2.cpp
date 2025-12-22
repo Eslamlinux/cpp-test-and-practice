@@ -20,17 +20,18 @@ struct BigNumber
     }
     static std::vector<std::string> get1() 
     {
-        return {"   * ", "  ** ", "   * ", "   * ", "  *** "};
+        return {"   *  ", "  **  ", "   *  ", "   *  ", "  *** "};
     }
     static std::vector<std::string> get2() 
     {
-        return {" **** ", "     *", "  *** ", " * ", " *****"};
+        return {" **** ", "    * ", " **** ", " *    ", " **** "};
     }
     static std::vector<std::string> get3() 
     {
-        return {" **** ", "     *", "  *** ", "     *", " **** "};
+        return {" **** ", "    * ", " **** ", "    * ", " **** "};
     }
-    static std::vector<std::string> get4() {
+    static std::vector<std::string> get4() 
+    {
         return {" * * ", " * * ", " **** ", "    * ", "    * "};
     }
     static std::vector<std::string> get5() {
@@ -80,7 +81,7 @@ int main()
     //     system("clear");
     // }
     BigNumber z;
-    for(auto c: z.printing(0,3))
+    for(auto c: z.printing(4,3))
     {
         std::cout<< c ;
     }
