@@ -2,7 +2,8 @@
 #include <ctime>
 #include <string>
 #include <vector>
-
+#include <chrono>
+#include <thread>
 std::string Time_Now() {
     time_t thesec = time(nullptr);
     struct tm *thetime = localtime(&thesec);
@@ -88,7 +89,7 @@ int main() {
         clock.Print_Clock();
         
         // تأخير بسيط لكي لا يستهلك البرنامج المعالج بالكامل
-        // يمكن استخدام sleep هنا
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
     return 0;
 }
