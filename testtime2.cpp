@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 #include <sstream>
+
+// تطبيق للساعة بشكل راسي 
 std::string Time_Now()
 {
     time_t thesec = time(nullptr);
@@ -83,22 +85,23 @@ struct BigNumber
     {
         std::stringstream ss ;
         ss << Time_Now();
-        std::vector<std::string>temp;
+        std::vector<char>temp;
         std::string str;
-        while (ss)
+        ss >> str;
+
+        for(int k =0; k < str.length(); k++)
         {
-            ss >> str;
-            temp.push_back(str);
+            temp.push_back(str[k]);
         }
         
         BigNumber toTime;
         int tonum =0;
         for(int i =0 ;i < temp.size(); i++)
         {
-            if(temp[i] == ":" )
+            if(temp[i] == ':' )
             tonum = -1;
-            tonum = stoi(temp[i]);
-            for(auto c : toTime.printing(tonum,1))
+            tonum = temp[i] -'0';
+            for(std::string c : toTime.printing(tonum,1))
             {
                 std::cout << c;
             }
@@ -106,12 +109,12 @@ struct BigNumber
     }
 int main()
 {
-    Print_Time_InBig();
-    // while(true)
-    // {
-    //     std::cout << Time_Now() << std::endl;
-    //     system("clear");
-    // }
+    while(true)
+    {
+        Print_Time_InBig();
+        system("clear");
+        
+    }
 
     // BigNumber z;
     // for(auto c: z.printing(10,3))
