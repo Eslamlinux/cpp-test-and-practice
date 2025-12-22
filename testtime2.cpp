@@ -83,11 +83,30 @@ struct BigNumber
     {
         std::stringstream ss ;
         ss << Time_Now();
-
-
+        std::vector<std::string>temp;
+        std::string str;
+        while (ss)
+        {
+            ss >> str;
+            temp.push_back(str);
+        }
+        
+        BigNumber toTime;
+        int tonum =0;
+        for(int i =0 ;i < temp.size(); i++)
+        {
+            if(temp[i] == ":" )
+            tonum = -1;
+            tonum = stoi(temp[i]);
+            for(auto c : toTime.printing(tonum,1))
+            {
+                std::cout << c;
+            }
+        }
     }
 int main()
 {
+    Print_Time_InBig();
     // while(true)
     // {
     //     std::cout << Time_Now() << std::endl;
