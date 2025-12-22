@@ -2,6 +2,7 @@
 #include <ctime>
 #include <string>
 #include <vector>
+#include <sstream>
 std::string Time_Now()
 {
     time_t thesec = time(nullptr);
@@ -77,17 +78,26 @@ struct BigNumber
     }
 
 };
+
+    void Print_Time_InBig()
+    {
+        std::stringstream ss ;
+        ss << Time_Now();
+
+
+    }
 int main()
 {
-    // while(true)
-    // {
-    //     std::cout << Time_Now() << std::endl;
-    //     system("clear");
-    // }
-    BigNumber z;
-    for(auto c: z.printing(10,3))
+    while(true)
     {
-        std::cout<< c ;
+        std::cout << Time_Now() << std::endl;
+        system("clear");
     }
-    // return 0;
+
+    // BigNumber z;
+    // for(auto c: z.printing(10,3))
+    // {
+    //     std::cout<< c ;
+    // }
+    return 0;
 }

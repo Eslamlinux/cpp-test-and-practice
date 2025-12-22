@@ -11,7 +11,7 @@ struct BigNumber {
         return {"   * ", "  ** ", "   * ", "   * ", "  *** "};
     }
     static std::vector<std::string> getColon() { // للنقطتين في الساعة
-        return {"       ", "   * ", "       ", "   * ", "       "};
+        return {"   ", " * ", "   ", " * ", "   "};
     }
 
     // مصفوفة مؤشرات الدوال لتعويض الـ Switch والـ IF
@@ -48,6 +48,6 @@ int main()
 {
 
     BigNumber z;
-   z.printTime({-1},2);
+   z.printTime({1,-1,0},2);
 
 }
