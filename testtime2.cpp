@@ -23,23 +23,21 @@ struct BigNumber
     }
 
     using FuncNum = std::vector<std::string>(*)();
-    static inline FuncNum functions[] = {zero ,One};
+    static inline FuncNum funcArr[] = {zero ,One};
 
     std::vector<std::string> printing(int num,int much)
     {
         std::vector<std::string> result;
-        std::vector<std::string> pattern = functions[num]();
-        if(num == 0)
-        {
-            for(int t = 0; t < zero().size(); t++)
+        std::vector<std::string> pattern = funcArr[num]();
+            for(int t = 0; t < pattern.size(); t++)
             {
                     for(int r = 0 ; r < much ; r++)
                     {
-                        result.push_back(zero()[t]);
+                        result.push_back(pattern[t]);
                     }
                     result.push_back("\n");
             }
-        }
+
         return result;
     }
 
