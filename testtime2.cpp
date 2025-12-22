@@ -32,13 +32,15 @@ struct BigNumber
     }
     static std::vector<std::string> get4() 
     {
-        return {" * * ", " * * ", " **** ", "    * ", "    * "};
+        return {" *  * ", " *  * ", " **** ", "    * ", "    * "};
     }
-    static std::vector<std::string> get5() {
-        return {" **** ", " * ", " *** ", "    * ", " **** "};
+    static std::vector<std::string> get5() 
+    {
+        return {" **** ", " *    ", " **** ", "    * ", " **** "};
     }
-    static std::vector<std::string> get6() {
-        return {"  ** ", " * ", " *** ", " * * ", "  ** "};
+    static std::vector<std::string> get6() 
+    {
+        return {"  ** ", " *   ", " *** ", " * * ", "  *  "};
     }
     static std::vector<std::string> get7() {
         return {" **** ", "    * ", "   * ", "  * ", " * "};
@@ -81,7 +83,7 @@ int main()
     //     system("clear");
     // }
     BigNumber z;
-    for(auto c: z.printing(4,3))
+    for(auto c: z.printing(6,3))
     {
         std::cout<< c ;
     }
