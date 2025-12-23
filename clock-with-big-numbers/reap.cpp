@@ -6,12 +6,12 @@
 int main()
 {
 
-//  reap(5)
-// {
+ reap(5) //dont use it nested because will be confelct with var
+{
   
-//         std::cout << "Hello Reap \n";
+        std::cout << "Hello Reap \n";
 
-// }
+}
 dow(o,2)
 {
         std::cout << "Hello dow \n";
