@@ -18,4 +18,5 @@ int main()
 {
 
     int res = ptrtosum(5,5);
+    std::cout << res <<std::endl; 
 }
