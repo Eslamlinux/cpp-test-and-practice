@@ -19,4 +19,7 @@ int main()
 
     int res = ptrtosum(5,5);
     std::cout << res <<std::endl; 
+    int res = ptrtodef(20,5);
+    std::cout << res <<std::endl; 
+
 }
