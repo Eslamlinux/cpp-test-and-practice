@@ -11,7 +11,7 @@ int def(int a,int b)
 }
 
 
-int (*ptrtosum)(int,int) = sum ,*s;
+int (*ptrtosum)(int,int) = sum ;
 
 int main()
 {
