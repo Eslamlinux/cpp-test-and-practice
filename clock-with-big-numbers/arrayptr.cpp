@@ -16,11 +16,19 @@ class Array
     {
         static int i =0;
         items[i] = entry;
+        ++length;
         i++;
     }
-    int print(int toprint)
+    int print_at(int toprint)
     {
         return items[toprint];
+    }
+    // لطباعة محتويات الاراي من خلال فو اتش
+    int* begin(){return items;}
+    int* end(){return items +length;}
+    ~Array()
+    {
+        delete []items;
     }
 };
 
@@ -29,9 +37,13 @@ int main()
     Array a1(5);
     a1.push_into(10);
     a1.push_into(20);
-    std::cout << a1.print(0) << std::endl;
-    std::cout << a1.print(1) << std::endl;
-    std::cout << a1.print(0) << std::endl;
+    std::cout << a1.print_at(0) << std::endl;
+    std::cout << a1.print_at(1) << std::endl;
+    std::cout << a1.print_at(0) << std::endl;
+    for(auto c:a1)
+    {
+        std::cout << c << " ";
+    }
     
     return 0;
 }
