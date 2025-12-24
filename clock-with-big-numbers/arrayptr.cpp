@@ -47,11 +47,19 @@ class Array
         items[index] = what_to_insert;
         length++;
     }
-    void Delete(int What_To_Dell,int index)
+    void Delete(int index)
     {
         if(index > size||index < 0)
         return;
-        
+        for(int i = index; i < length; i++)
+        {
+            items[i] = items[i+1];
+        }
+        length--;
+    }
+    int current_length()
+    {
+        return length;
     }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
@@ -108,6 +116,9 @@ int main()
     std::cout << a1.print_at(3) << std::endl;
     std::cout << a1.print_at(4) << std::endl;
 
+    a1.Delete(3);
+    std::cout << "instate after deleted one " << a1.print_at(3) << std::endl;
+    std::cout << a1. << std::endl;
     
     return 0;
 }
