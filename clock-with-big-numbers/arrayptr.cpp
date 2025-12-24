@@ -14,9 +14,14 @@ class Array
     }
     void push_into(int  entry)
     {
-        if(length >= size)
-        return;
+        if(length == size)
+        {
+            enlarge(size+1);
+            items[length+1] = entry;
+        }
+        else
         items[length] = entry;
+
         ++length;
     }
     int print_at(int toprint)
@@ -73,12 +78,7 @@ class Array
     int current_length();
     int current_size();
 
-    void Marge(Array &Other_Array)
-    {
-        int new_size =current_size() + Other_Array.size;
-        std::cout << new_size;
-
-    }
+    void Marge(Array);
 
 
     // لطباعة محتويات الاراي من خلال فور اتش
@@ -158,7 +158,7 @@ int main()
     a1.push_into(70);
     a1.push_into(80);
     a1.push_into(90);
-    // a1.push_into(100); // out of range
+    a1.push_into(100); // out of range
 
     std::cout << "where is index: " << a1.search(90) << std::endl;
     std::cout << a1.print_at(9) << std::endl;
@@ -196,4 +196,12 @@ int main()
         }
         size = newLarge;
         delete []old;
+    }
+
+    void Array::Marge(Array &Other_Array)
+    {
+        int new_size =current_size() + Other_Array.size;
+        int * old =items;
+        items = new int;
+
     }
