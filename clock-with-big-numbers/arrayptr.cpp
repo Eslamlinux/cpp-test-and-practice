@@ -73,12 +73,9 @@ class Array
         length--;
     }
     void enlarge(int);
-
-    
     int current_length();
     int current_size();
-
-    void Marge(Array);
+    void Marge(Array&);
 
 
     // لطباعة محتويات الاراي من خلال فور اتش
@@ -168,8 +165,20 @@ int main()
     
     std::cout << "----------" << std::endl; 
     Array a2(10);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
+    a2.push_into(5);
     a1.Marge(a2) ;
-    std::cout << "\nmerge size: " << a1.current_size() << std::endl;
+    std::cout << "\na1 after merge size: " << a1.current_size() << std::endl;
     std::cout << "length is: " << a2.current_length() << std::endl;
 
     return 0;
@@ -202,6 +211,24 @@ int main()
     {
         int new_size =current_size() + Other_Array.size;
         int * old =items;
-        items = new int;
-
+        items = new int[new_size];
+        int oldlength = current_length();
+        for(int i = 0;i < new_size;i++)
+        {
+            if(i < oldlength)
+            {
+                items[i] = old[i];
+                length++;
+            } 
+            else
+            {
+                if(i < Other_Array.length)
+                {
+                    items[i] = Other_Array.items[i];
+                    length++;
+                }
+            }
+        }
+        size = new_size;
+        delete []old;
     }
