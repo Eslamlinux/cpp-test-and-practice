@@ -14,10 +14,10 @@ class Array
     }
     void push_into(int  entry)
     {
-        static int i =0;
-        items[i] = entry;
+        if(length > size)
+        return;
+        items[length] = entry;
         ++length;
-        i++;
     }
     int print_at(int toprint)
     {
@@ -31,6 +31,15 @@ class Array
         delete []items;
     }
 };
+
+int func1()
+{
+    static int var = 0;
+}
+int func2()
+{
+    static int var = 1;
+}
 
 int main()
 {
@@ -48,8 +57,8 @@ int main()
     std::cout << std::endl; 
     Array a2(1);
     a2.push_into(60);
+    std::cout << a2.print_at(0) << std::endl;
 
-    std::cout << a2.print_at(2) << std::endl;
 
     
     return 0;
