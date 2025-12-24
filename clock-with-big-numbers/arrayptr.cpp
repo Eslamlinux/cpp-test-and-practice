@@ -23,7 +23,20 @@ class Array
     {
         return items[toprint];
     }
-    // لطباعة محتويات الاراي من خلال فو اتش
+    int search(int find)
+    {
+        int index = -1;
+        for(int i = 0; i < length; i++)
+        {
+            if(items[i] == find)
+            {
+                index = i;
+                break;
+            }
+        }
+        return index;
+    }
+    // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
     int* end(){return items +length;}
     ~Array()
