@@ -36,6 +36,10 @@ class Array
         }
         return index;
     }
+    void insetr(int what_to_insert,int index)
+    {
+
+    }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
     int* end(){return items +length;}
