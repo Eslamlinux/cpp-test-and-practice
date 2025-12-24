@@ -14,7 +14,7 @@ class Array
     }
     void push_into(int  entry)
     {
-        if(length > size)
+        if(length >= size)
         return;
         items[length] = entry;
         ++length;
@@ -51,15 +51,31 @@ class Array
     {
         if(index > size||index < 0)
         return;
-        for(int i = index; i < length; i++)
+        for(int i = index; i < length-1; i++)
         {
             items[i] = items[i+1];
         }
+        items[length-1] = 0;
         length--;
+    }
+    void enlarge(int newLarge)
+    {
+        int* old = items;
+        items = new int[newLarge];
+        for(int i = 0;i < length;i++)
+        {
+            items[i] = old[i];
+        }
+        size = newLarge;
+        delete(old);
     }
     int current_length()
     {
         return length;
+    }
+    int current_size()
+    {
+        return size;
     }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
@@ -116,10 +132,33 @@ int main()
     std::cout << a1.print_at(3) << std::endl;
     std::cout << a1.print_at(4) << std::endl;
     std::cout << "length is: " << a1.current_length() << std::endl;
+    std::cout << "size is: " << a1.current_size() << std::endl;
+
 
     a1.Delete(3);
     std::cout << "instate after deleted one " << a1.print_at(3) << std::endl;
+    std::cout << "instate after deleted one " << a1.print_at(5) << std::endl;
     std::cout << "length is: " << a1.current_length() << std::endl;
-    
+    std::cout << "size is: " << a1.current_size() << std::endl;
+
+    std::cout << "----------" << std::endl; 
+    a1.enlarge(10);
+    std::cout << "size is: " << a1.current_size() << std::endl;
+    std::cout << "length is: " << a1.current_length() << std::endl;
+
+    std::cout << a1.print_at(9) << std::endl;
+    a1.push_into(40);
+    a1.push_into(50);
+    a1.push_into(60);
+    a1.push_into(70);
+    a1.push_into(80);
+    a1.push_into(90);
+    // a1.push_into(100); // out of range
+
+    std::cout << "where is index: " << a1.search(90) << std::endl;
+    std::cout << a1.print_at(9) << std::endl;
+    std::cout << "size is: " << a1.current_size() << std::endl;
+    std::cout << "length is: " << a1.current_length() << std::endl;
+
     return 0;
 }
