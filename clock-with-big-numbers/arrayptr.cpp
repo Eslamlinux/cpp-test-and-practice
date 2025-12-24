@@ -72,7 +72,7 @@ int main()
     a2.push_into(60);
     std::cout << a2.print_at(0) << std::endl;
 
-
+    std::cout << a1.search(20) <<std::endl;
     
     return 0;
 }
