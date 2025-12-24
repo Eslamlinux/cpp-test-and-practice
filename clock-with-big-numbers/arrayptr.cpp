@@ -42,7 +42,7 @@ class Array
         return;
         for(int i = length; i > index; i--)
         {
-            items[i] = items[i];
+            items[i] = items[i-1];
         }
         items[index] = what_to_insert;
     }
@@ -86,11 +86,19 @@ int main()
     }
 
     std::cout << std::endl; 
-    Array a2(1);
-    a2.push_into(60);
-    std::cout << a2.print_at(0) << std::endl;
+    // Array a2(1);
+    // a2.push_into(60);
+    // std::cout << a2.print_at(0) << std::endl;
 
     std::cout << a1.search(20) <<std::endl;
+
+    a1.insetr(15,1) ;
+    a1.insetr(25,3) ;
+    std::cout << a1.print_at(0) << std::endl;
+    std::cout << a1.print_at(1) << std::endl;
+    std::cout << a1.print_at(2) << std::endl;
+    std::cout << a1.print_at(3) << std::endl;
+
     
     return 0;
 }
