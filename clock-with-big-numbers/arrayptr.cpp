@@ -71,6 +71,13 @@ class Array
         size = newLarge;
         delete []old;
     }
+
+    void Marge(Array newsize)
+    {
+        size += newsize.size;
+        std::cout << size;
+    }
+
     int current_length()
     {
         return length;
@@ -161,6 +168,12 @@ int main()
     std::cout << a1.print_at(9) << std::endl;
     std::cout << "size is: " << a1.current_size() << std::endl;
     std::cout << "length is: " << a1.current_length() << std::endl;
+
+    
+    std::cout << "----------" << std::endl; 
+    Array a2(10);
+    a1.Marge(a2.current_size()) ;
+    std::cout << "\nmerge size: " << a1.current_size() << std::endl;
 
     return 0;
 }
