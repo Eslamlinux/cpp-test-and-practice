@@ -48,14 +48,22 @@ class Array
 int func1()
 {
     static int var = 0;
+    var++;
+    return var;
 }
 int func2()
 {
     static int var = 1;
+    var++;
+    return var;
 }
 
 int main()
 {
+    // std::cout << "func1 " << func1() << std::endl;
+    // std::cout << "func1 " << func1() << std::endl;
+    // std::cout << "func2 " << func2() << std::endl;
+
     Array a1(5);
     a1.push_into(10);
     a1.push_into(20);
