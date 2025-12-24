@@ -60,6 +60,8 @@ class Array
     }
     void enlarge(int newLarge)
     {
+        if(newLarge <= size )
+        return;
         int* old = items;
         items = new int[newLarge];
         for(int i = 0;i < length;i++)
@@ -67,7 +69,7 @@ class Array
             items[i] = old[i];
         }
         size = newLarge;
-        delete(old);
+        delete []old;
     }
     int current_length()
     {
