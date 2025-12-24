@@ -115,10 +115,11 @@ int main()
     std::cout << a1.print_at(2) << std::endl;
     std::cout << a1.print_at(3) << std::endl;
     std::cout << a1.print_at(4) << std::endl;
+    std::cout << "length is: " << a1.current_length() << std::endl;
 
     a1.Delete(3);
     std::cout << "instate after deleted one " << a1.print_at(3) << std::endl;
-    std::cout << a1. << std::endl;
+    std::cout << "length is: " << a1.current_length() << std::endl;
     
     return 0;
 }
