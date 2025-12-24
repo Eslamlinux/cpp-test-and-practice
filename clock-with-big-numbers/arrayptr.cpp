@@ -44,6 +44,13 @@ int main()
     {
         std::cout << c << " ";
     }
+
+    std::cout << std::endl; 
+    Array a2(1);
+    a2.push_into(60);
+
+    std::cout << a2.print_at(2) << std::endl;
+
     
     return 0;
 }
