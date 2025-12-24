@@ -38,7 +38,13 @@ class Array
     }
     void insetr(int what_to_insert,int index)
     {
-
+        if(index > size||index < 0)
+        return;
+        for(int i = length; i > index; i--)
+        {
+            items[i] = items[i];
+        }
+        items[index] = what_to_insert;
     }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
