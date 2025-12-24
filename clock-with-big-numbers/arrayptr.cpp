@@ -38,13 +38,22 @@ class Array
     }
     void insetr(int what_to_insert,int index)
     {
-        if(index > size||index < 0)
+        if(index < 0)
         return;
+        else if(size == length)
+        enlarge(size+1);
+        else if(index > size)
+        enlarge(index+1);
+
         for(int i = length; i > index; i--)
         {
             items[i] = items[i-1];
         }
         items[index] = what_to_insert;
+
+        if(index >= length)
+            length = index +1;
+        else
         length++;
     }
     void Delete(int index)
@@ -58,40 +67,27 @@ class Array
         items[length-1] = 0;
         length--;
     }
-    void enlarge(int newLarge)
+    void enlarge(int);
+
+    
+    int current_length();
+    int current_size();
+
+    void Marge(Array &Other_Array)
     {
-        if(newLarge <= size )
-        return;
-        int* old = items;
-        items = new int[newLarge];
-        for(int i = 0;i < length;i++)
-        {
-            items[i] = old[i];
-        }
-        size = newLarge;
-        delete []old;
+        int new_size =current_size() + Other_Array.size;
+        std::cout << new_size;
+
     }
 
-    void Marge(Array newsize)
-    {
-        size += newsize.size;
-        std::cout << size;
-    }
 
-    int current_length()
-    {
-        return length;
-    }
-    int current_size()
-    {
-        return size;
-    }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
     int* end(){return items +length;}
+
     ~Array()
     {
-        delete []items;
+        delete[]items;
     }
 };
 
@@ -172,8 +168,32 @@ int main()
     
     std::cout << "----------" << std::endl; 
     Array a2(10);
-    a1.Marge(a2.current_size()) ;
+    a1.Marge(a2) ;
     std::cout << "\nmerge size: " << a1.current_size() << std::endl;
+    std::cout << "length is: " << a2.current_length() << std::endl;
 
     return 0;
 }
+
+    int Array::current_length()
+    {
+        return length;
+    }
+
+    int Array::current_size()
+    {
+        return size;
+    }
+    void Array::enlarge(int newLarge)
+    {
+        if(newLarge <= size )
+        return;
+        int* old = items;
+        items = new int[newLarge];
+        for(int i = 0;i < length;i++)
+        {
+            items[i] = old[i];
+        }
+        size = newLarge;
+        delete []old;
+    }
