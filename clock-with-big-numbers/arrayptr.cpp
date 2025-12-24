@@ -45,6 +45,7 @@ class Array
             items[i] = items[i-1];
         }
         items[index] = what_to_insert;
+        length++;
     }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
@@ -94,10 +95,12 @@ int main()
 
     a1.insetr(15,1) ;
     a1.insetr(25,3) ;
+    a1.insetr(30,4) ;
     std::cout << a1.print_at(0) << std::endl;
     std::cout << a1.print_at(1) << std::endl;
     std::cout << a1.print_at(2) << std::endl;
     std::cout << a1.print_at(3) << std::endl;
+    std::cout << a1.print_at(4) << std::endl;
 
     
     return 0;
