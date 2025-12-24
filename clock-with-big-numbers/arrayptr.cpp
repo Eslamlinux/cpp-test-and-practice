@@ -47,6 +47,12 @@ class Array
         items[index] = what_to_insert;
         length++;
     }
+    void Delete(int What_To_Dell,int index)
+    {
+        if(index > size||index < 0)
+        return;
+        
+    }
     // لطباعة محتويات الاراي من خلال فور اتش
     int* begin(){return items;}
     int* end(){return items +length;}
