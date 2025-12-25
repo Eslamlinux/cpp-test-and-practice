@@ -4,9 +4,15 @@ class whoami
 {
     public:
     int i = 0;
+    int t = 0;
+    whoami(int ia, int it)
+    {
+        i = ia;
+        t = it;
+    }
 };
 
-whoami a(whoami a)
+int a(whoami a)
 {
     return a ;
 }
