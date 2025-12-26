@@ -117,8 +117,12 @@ showing_stuff a;
     void showing_stuff::print_entry()
     {
         system("clear");
-        std::cout << item_name << std::endl;
-        std::cout << item_count << std::endl;
+        for(auto c :data)
+        {
+            std::cout << c.item_name << std::endl;
+            std::cout << c.item_count << std::endl;
+
+        }
     }
     stuff::~stuff(){};
     showing_stuff::~showing_stuff(){};
