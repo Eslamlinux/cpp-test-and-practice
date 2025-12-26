@@ -20,10 +20,9 @@ struct stuff
 };
 struct showing_stuff:stuff
 {
-    void main_manu();
     char entry;
+    void main_manu();
     ~showing_stuff();
-
 };
 
 int main()
@@ -66,20 +65,21 @@ int main()
         std::cout << "to search for an items press [s] \n";
         stuff a;
         std::cin >> showing_stuff::entry;
+        std::cin.ignore();
         switch(showing_stuff::entry)
         {
             case 'i':
             stuff::add_item();
             break;
-            case 'e':
-            stuff::edit_item();
-            break;
-            case 'd':
-            stuff::delete_item();
-            break;
-            case 's':
-            stuff::search_item();
-            break;
+            // case 'e':
+            // stuff::edit_item();
+            // break;
+            // case 'd':
+            // stuff::delete_item();
+            // break;
+            // case 's':
+            // stuff::search_item();
+            // break;
             default:
             std::cout << "wrong entry!!!\n";
             break;
