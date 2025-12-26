@@ -91,6 +91,8 @@ showing_stuff a;
     }
     void showing_stuff::main_manu()
     {
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         std::cout << "\n===== wellcome to Stuff item main menu progrram =====\n";
         std::cout << "to add items press [i] \n";
         std::cout << "to showing all items press [p] \n";
@@ -132,12 +134,18 @@ showing_stuff a;
 
     void showing_stuff::print_all()
     {
+        if(data.empty())
+        {
+            system("clear");
+            std::cout << "sorry nothing to show it\n";
+            return;
+        }
         system("clear");
         for(auto c :data)
         {
-            std::cout << c.item_name << std::endl;
-            std::cout << c.item_count << std::endl;
-
+            std::cout << "===================\n";
+            print_entry_by_id(c.item_id_number);
+            std::cout << "===================\n";
         }
     }
     void stuff::print_entry_by_id(size_t id)
@@ -222,7 +230,7 @@ showing_stuff a;
                 }
                 else
                 {
-                    std::cout << "The name not fond or not right\n";
+                    std::cout << "The name not found or not right\n";
                     break;
                 }
             }
