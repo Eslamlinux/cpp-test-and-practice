@@ -19,14 +19,14 @@ struct stuff
     void edit_item();
     void delete_item();
     void search_item();
-
+    void print_entry_by_id(size_t);
+    
     ~stuff();
 };
 struct showing_stuff:stuff
 {
     char entry;
     void main_manu();
-    void print_entry_by_id();
     void print_all();
     ~showing_stuff();
 };
@@ -140,9 +140,31 @@ showing_stuff a;
 
         }
     }
-    void showing_stuff::print_entry_by_id(size_t id)
-    {
-        
+    void stuff::print_entry_by_id(size_t id)
+    {  
+        for(int i = 0; i < data.size(); i++)
+        {
+            if(data[i].item_id_number == id)
+            {
+                std::cout << "Item Name: " << data[i].item_name << std::endl;
+                std::cout << "Item ID: " << data[i].item_id_number << std::endl;
+                std::cout << "Item description: " << data[i].describe << std::endl;
+                std::cout << "Item Made By: " << data[i].made_by << std::endl;
+                std::cout << "Item BarCode: " << data[i].barcode << std::endl;
+                std::cout << "Manufacturing Date: " << data[i].manufacturing_date << std::endl;
+                std::cout << "Expiration Date: " << data[i].expiration_date << std::endl;
+                std::cout << "Supplier Name: " << data[i].supplier_name << std::endl;
+                std::cout << "Supplier Phone: " << data[i].supplier_phone << std::endl;
+                std::cout << "Item Count: " << data[i].item_count << std::endl;
+            }
+            else
+            {
+                std::cout << "The ID not fond or not right\n";
+                break;
+            }
+
+
+        }
     }
 
     void stuff::search_item()
@@ -168,17 +190,27 @@ showing_stuff a;
             return;
             }
             else
-            for(int i = 0; i < data.size(); i++)
-            {
-                if(data[i].item_id_number == id)
-                {
-
-                }
-
-            }
+            print_entry_by_id(id);
 
         }
-        std::cout << "enter item name to search\n";
+        if(entrynum == '2')
+        {
+            std::vector<stuff> what_is_found;
+            std::string name;
+            std::cout << "enter item name to search\n";
+            for(int i = 0; i < data.size(); i++)
+            {
+                if(data[i].item_name.find(name))
+                {
+                    what_is_found.push_back(data[i]);
+                }
+                else
+                {
+                    std::cout << "The name not fond or not right\n";
+                    break;
+                }
+            }
+        }
     }
     stuff::~stuff(){};
     showing_stuff::~showing_stuff(){};
