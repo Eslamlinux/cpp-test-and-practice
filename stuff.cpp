@@ -182,6 +182,12 @@ showing_stuff a;
         std::cin.ignore(1000,'\n');
         if(entrynum == '1')
         {
+            if(data.empty())
+            {
+                system("clear");
+                std::cout << "sorry nothing to search for\n";
+                return;
+            }
             int id =0;
             std::cout << "enter the id to search\n";
             if(!(std::cin >> id))
@@ -195,19 +201,37 @@ showing_stuff a;
         }
         if(entrynum == '2')
         {
+            if(data.empty())
+            {
+                system("clear");
+                std::cout << "sorry nothing to search for\n";
+                return;
+            }
+
             std::vector<stuff> what_is_found;
             std::string name;
+            size_t count = 0;
             std::cout << "enter item name to search\n";
+            std::getline(std::cin,name);
             for(int i = 0; i < data.size(); i++)
             {
                 if(data[i].item_name.find(name))
                 {
                     what_is_found.push_back(data[i]);
+                    count++;
                 }
                 else
                 {
                     std::cout << "The name not fond or not right\n";
                     break;
+                }
+            }
+            if(count > 0)
+            {
+                std::cout << "found " << count << " result" << "\n";
+                for(auto c:what_is_found)
+                {
+                    print_entry_by_id(c.item_id_number);
                 }
             }
         }
