@@ -14,6 +14,7 @@ struct stuff
     std::string supplier_phone;
     int item_count;
     std::vector<stuff> data;
+    int lastdata_index = data.size();
     void add_item();
     void edit_item();
     void delete_item();
@@ -43,9 +44,10 @@ showing_stuff a;
 
     void stuff::add_item()
     {
+        stuff new_data;
         system("clear");
         std::cout << "enter the item Name\n";
-        std::getline(std::cin,item_name);
+        std::getline(std::cin,new_data.item_name);
         std::cout << "enter the item description\n";
         std::getline(std::cin,stuff::describe);
         std::cout << "enter the item Made By\n";
@@ -61,14 +63,15 @@ showing_stuff a;
         std::cout << "enter the item supplier phone\n";
         std::getline(std::cin,stuff::supplier_phone);
         std::cout << "enter the item count\n";
-        std::cin >> item_count;
-        if(!isdigit(item_count))
+        if(!(std::cin >>new_data.item_count))
         {
             std::cout << "you cant add char in count must be number\n";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             return;
         } 
+        data.push_back(new_data);
+        std::cout << "Item added successfully!\n";
 
     }
     void showing_stuff::main_manu()
