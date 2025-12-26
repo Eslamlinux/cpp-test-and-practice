@@ -50,7 +50,7 @@ showing_stuff a;
         std::cout << "enter the item Name\n";
         std::getline(std::cin,new_data.item_name);
         std::cout << "enter the item id or number\n";
-        std::cin.ignore(1000,'\n');
+        // std::cin.ignore(1000,'\n');
         std::cin.clear();
         while(!(std::cin>>new_data.item_id_number))
         {
@@ -60,19 +60,19 @@ showing_stuff a;
         }    
         std::cin.ignore(1000,'\n');
         std::cout << "enter the item description\n";
-        std::getline(std::cin,stuff::describe);
+        std::getline(std::cin,new_data.describe);
         std::cout << "enter the item Made By\n";
-        std::getline(std::cin,stuff::made_by);
+        std::getline(std::cin,new_data.made_by);
         std::cout << "enter the item barcode\n";
-        std::getline(std::cin,stuff::barcode);
+        std::getline(std::cin,new_data.barcode);
         std::cout << "enter the item manufacturing date\n";
-        std::getline(std::cin,stuff::manufacturing_date);
+        std::getline(std::cin,new_data.manufacturing_date);
         std::cout << "enter the item expiration date\n";
-        std::getline(std::cin,stuff::expiration_date);
+        std::getline(std::cin,new_data.expiration_date);
         std::cout << "enter the item supplier name\n";
-        std::getline(std::cin,stuff::supplier_name);
+        std::getline(std::cin,new_data.supplier_name);
         std::cout << "enter the item supplier phone\n";
-        std::getline(std::cin,stuff::supplier_phone);
+        std::getline(std::cin,new_data.supplier_phone);
         std::cout << "enter the item count\n";
         if(!(std::cin >>new_data.item_count))
         {
@@ -91,8 +91,8 @@ showing_stuff a;
     }
     void showing_stuff::main_manu()
     {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        // std::cin.clear();
+        // std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         std::cout << "\n===== wellcome to Stuff item main menu progrram =====\n";
         std::cout << "to add items press [i] \n";
         std::cout << "to showing all items press [p] \n";
