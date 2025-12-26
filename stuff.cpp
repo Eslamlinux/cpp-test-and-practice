@@ -35,6 +35,7 @@ int main()
         std::cout << "enter the item Name\n";
         std::getline(std::cin,stuff::item_name);
         std::cout << "enter the item description\n";
+        std::getline(std::cin,stuff::describe);
 
 
     }
