@@ -1,6 +1,6 @@
 #include <iostream>
 
-enum country{Egypt =1,Irag,Oman,jordan,qatar};
+enum country{Egypt =1,Iraq,Oman,jordan,qatar};
 
 int main()
 {
@@ -11,10 +11,10 @@ int main()
     mideleast = (country)num;
     if(mideleast = country::Egypt)
     std::cout << "wellcome to Egypt\n";
-    if(mideleast = country::Irag)
+    else if(mideleast = country::Iraq)
     std::cout << "wellcome to Iraq\n";
-    if(mideleast = country::Oman)
+    else if(mideleast = country::Oman)
     std::cout << "wellcome to Oman\n";
-    if(mideleast = country::qatar)
+    else if(mideleast = country::qatar)
     std::cout << "wellcome to Qatar\n";
 }
