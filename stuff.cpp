@@ -229,7 +229,7 @@ showing_stuff a;
             std::getline(std::cin,name);
             for(int i = 0; i < data.size(); i++)
             {
-                if(data[i].item_name.find(name))
+                if(data[i].item_name.find(name) != std::string::npos)
                 {
                     what_is_found.push_back(data[i]);
                     count++;
@@ -237,15 +237,20 @@ showing_stuff a;
                 else
                 {
                     std::cout << "The name not found or not right\n";
+                    
                     break;
                 }
             }
             if(count > 0)
             {
+                system("clear");
+                std::cout << "=========================\n";
                 std::cout << "found " << count << " result" << "\n";
                 for(auto c:what_is_found)
                 {
+                    std::cout << "=========================\n";
                     print_entry_by_id(c.item_id_number);
+                    std::cout << "=========================\n";
                 }
             }
         }
