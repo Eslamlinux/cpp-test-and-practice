@@ -164,12 +164,13 @@ showing_stuff a;
                 std::cout << "Supplier Name: " << data[i].supplier_name << std::endl;
                 std::cout << "Supplier Phone: " << data[i].supplier_phone << std::endl;
                 std::cout << "Item Count: " << data[i].item_count << std::endl;
-            }
-            else
-            {
-                std::cout << "The ID not fond or not right\n";
                 break;
             }
+            // else
+            // {
+            //     std::cout << "The ID not fond or not right\n";
+            //     break;
+            // }
 
 
         }
