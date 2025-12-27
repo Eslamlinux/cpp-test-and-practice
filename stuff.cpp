@@ -96,6 +96,7 @@ showing_stuff a;
         // std::cin.clear();
         // std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
         std::cout << "\n===== wellcome to Stuff item main menu progrram =====\n";
+        std::cout << "\n-----------------------------------------------------\n";
         std::cout << "to add items press [i] \n";
         std::cout << "to showing all items press [p] \n";
         std::cout << "to edit items press [e] \n";
@@ -145,9 +146,9 @@ showing_stuff a;
         system("clear");
         for(auto c :data)
         {
-            std::cout << "===================\n";
+            std::cout << "=====================\n";
             print_entry_by_id(c.item_id_number);
-            std::cout << "===================\n";
+            std::cout << "=====================\n";
         }
     }
     void stuff::print_entry_by_id(size_t id)
@@ -156,16 +157,16 @@ showing_stuff a;
         {
             if(data[i].item_id_number == id)
             {
-                std::cout << "Item Name:           |" << data[i].item_name << std::endl;
-                std::cout << "Item ID: " << data[i].item_id_number << std::endl;
-                std::cout << "Item description: " << data[i].describe << std::endl;
-                std::cout << "Item Made By: " << data[i].made_by << std::endl;
-                std::cout << "Item BarCode: " << data[i].barcode << std::endl;
-                std::cout << "Manufacturing Date: " << data[i].manufacturing_date << std::endl;
-                std::cout << "Expiration Date: " << data[i].expiration_date << std::endl;
-                std::cout << "Supplier Name: " << data[i].supplier_name << std::endl;
-                std::cout << "Supplier Phone: " << data[i].supplier_phone << std::endl;
-                std::cout << "Item Count: " << data[i].item_count << std::endl;
+                std::cout << "Item Name:...........| " << data[i].item_name << std::endl;
+                std::cout << "Item ID:.............| " << data[i].item_id_number << std::endl;
+                std::cout << "Item description:....| " << data[i].describe << std::endl;
+                std::cout << "Item Made By:........| " << data[i].made_by << std::endl;
+                std::cout << "Item BarCode:........| " << data[i].barcode << std::endl;
+                std::cout << "Manufacturing Date:..| " << data[i].manufacturing_date << std::endl;
+                std::cout << "Expiration Date:.....| " << data[i].expiration_date << std::endl;
+                std::cout << "Supplier Name:.......| " << data[i].supplier_name << std::endl;
+                std::cout << "Supplier Phone:......| " << data[i].supplier_phone << std::endl;
+                std::cout << "Item Count:..........| " << data[i].item_count << std::endl;
                 break;
             }
         }
@@ -409,15 +410,15 @@ showing_stuff a;
                         }
                 // data.erase(data.begin()+i); 
                 // data.push_back(new_data);
-                if(!new_data.item_name.empty())
+                if(!data[i].item_name.empty())
                 {
                 system("clear");
                 std::cout << "Item (" << data[i].item_name << ") edited successfully!\n";
                 std::cout << "New Item detials is!\n";
                 system("clear");
-                std::cout << "=========================\n";
+                std::cout << "=====================\n";
                 print_entry_by_id(data[i].item_id_number);
-                std::cout << "=========================\n";
+                std::cout << "=====================\n";
                 } 
 
                 }
