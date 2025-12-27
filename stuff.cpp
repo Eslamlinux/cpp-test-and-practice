@@ -116,9 +116,9 @@ showing_stuff a;
             // case 'e':
             // stuff::edit_item();
             // break;
-            // case 'd':
-            // stuff::delete_item();
-            // break;
+            case 'd':
+            stuff::delete_item();
+            break;
             case 's':
             stuff::search_item();
             break;
@@ -266,9 +266,47 @@ showing_stuff a;
     {
         std::cout << "please enter the item ID you want to delete\n";
         size_t ID = 0;
-        std::cin.ignore(1000,'\n');
-        std::cin >> ID;
-        std::cout << "\n";
+        while(!(std::cin >> ID))
+        {
+            std::cout << "please add ID number\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        }
+        
+            for(int i = 0; i < data.size(); i++)
+            {
+                if(data[i].item_id_number == ID)
+                {
+                    std::cout << "are you sure you want to delete this item \n";
+                    std::cout << "Item Name: " << data[i].item_name << " Item ID: "  << data[i].item_id_number << " forever?\n";
+                    std::cout << "[y] for yes & [n] for ignore\n";
+                    char y_or_n;
+                    std::cin >> y_or_n;
+                    if(y_or_n == 'n' || y_or_n == 'N')
+                    break;
+                    else
+                    {
+                    std::cin.ignore();
+                    std::cin.clear();
+                    std::cout << "are you sure?\n";
+                    std::cout << "[y] for yes & [n] for ignore\n";
+                    std::cin >> y_or_n;
+                    if(y_or_n == 'n' || y_or_n == 'N')
+                    break;
+                    else
+                    {
+                        data.erase(data.begin()+i);
+                        std::cout << "item deleted succesfully\n";
+                    }
+                    }
+                }
+                else
+                {
+                    std::cout << "The name not found or not right\n";
+                    
+                    break;
+                }
+            }
 
     }
 
