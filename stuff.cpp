@@ -113,9 +113,9 @@ showing_stuff a;
             std::cout << "======= stuff item =========\n";
             print_all();
             break;
-            // case 'e':
-            // stuff::edit_item();
-            // break;
+            case 'e':
+            stuff::edit_item();
+            break;
             case 'd':
             stuff::delete_item();
             break;
