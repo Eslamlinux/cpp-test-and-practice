@@ -370,6 +370,10 @@ showing_stuff a;
                 system("clear");
                 std::cout << "Item (" << new_data.item_name << ") edited successfully!\n";
                 std::cout << "New Item detials is!\n";
+                system("clear");
+                std::cout << "=========================\n";
+                print_entry_by_id(new_data.item_id_number);
+                std::cout << "=========================\n";
                 } 
 
                 }
