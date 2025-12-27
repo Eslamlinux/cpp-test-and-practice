@@ -325,9 +325,10 @@ showing_stuff a;
         std::cin >> ID;
         for(int i = 0; i < data.size(); i++)
             {
+                std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
                 if(data[i].item_id_number == ID)
                 {
-                    std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
+                    std::cout << "Edit Item Name: \n";
 
                 }
             }
