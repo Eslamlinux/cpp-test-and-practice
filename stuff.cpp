@@ -330,9 +330,9 @@ showing_stuff a;
                 {
                             stuff new_data;
                             system("clear");
-                            std::cout << "To chang " << data[i].item_name <<" Name Enter the New Item Name\n";
-        std::getline(std::cin,new_data.item_name);
-        std::cout << "enter the item id or number\n";
+                            std::cout << "To chang " << data[i].item_name <<" Name >> Enter the New Item Name\n";
+                            std::getline(std::cin,new_data.item_name);
+                             std::cout << "To chang " << data[i].item_id_number <<" ID >> Enter the New Item ID or Number\n";
         // std::cin.ignore(1000,'\n');
         std::cin.clear();
         while(!(std::cin>>new_data.item_id_number))
