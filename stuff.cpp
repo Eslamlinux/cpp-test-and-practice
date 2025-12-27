@@ -341,8 +341,8 @@ showing_stuff a;
                             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
                         }    
                     std::cin.ignore(1000,'\n');
-        std::cout << "enter the item description\n";
-        std::getline(std::cin,new_data.describe);
+                    std::cout << "To chang " << data[i].describe <<" Enter the New Item Description\n";
+                    std::getline(std::cin,new_data.describe);
         std::cout << "enter the item Made By\n";
         std::getline(std::cin,new_data.made_by);
         std::cout << "enter the item barcode\n";
