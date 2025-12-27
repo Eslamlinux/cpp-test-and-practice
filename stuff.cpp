@@ -1,5 +1,7 @@
 #include <iostream>
+#include <string>
 #include <vector>
+#include <algorithm>
 #include <limits>
 
 struct stuff
@@ -230,7 +232,10 @@ showing_stuff a;
             std::getline(std::cin,name);
             for(int i = 0; i < data.size(); i++)
             {
-                if(data[i].item_name.find(name,0) != std::string::npos)
+                std::string temp = data[i].item_name;   
+                std::transform(temp.begin(),temp.end(),temp.begin(),[](unsigned char c){return std::tolower(c);});
+                std::transform(name.begin(),name.end(),name.begin(),[](unsigned char c){return std::tolower(c);});
+                if(temp.find(name,0) != std::string::npos)
                 {
                     what_is_found.push_back(data[i]);
                     count++;
@@ -256,5 +261,16 @@ showing_stuff a;
             }
         }
     }
+
+    void stuff::delete_item()
+    {
+        std::cout << "please enter the item ID you want to delete\n";
+        size_t ID = 0;
+        std::cin.ignore(1000,'\n');
+        std::cin >> ID;
+        std::cout << "\n";
+
+    }
+
     stuff::~stuff(){};
     showing_stuff::~showing_stuff(){};
