@@ -317,7 +317,10 @@ showing_stuff a;
 
     }
 
-    void stuff::edit_item();
+    void stuff::edit_item()
+    {
+        
+    }
 
     stuff::~stuff(){};
     showing_stuff::~showing_stuff(){};
