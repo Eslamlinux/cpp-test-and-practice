@@ -328,20 +328,19 @@ showing_stuff a;
                 std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
                 if(data[i].item_id_number == ID)
                 {
-                            stuff new_data;
-                            system("clear");
-                            std::cout << "To chang " << data[i].item_name <<" Name >> Enter the New Item Name\n";
-                            std::getline(std::cin,new_data.item_name);
-                             std::cout << "To chang " << data[i].item_id_number <<" ID >> Enter the New Item ID or Number\n";
-        // std::cin.ignore(1000,'\n');
-        std::cin.clear();
-        while(!(std::cin>>new_data.item_id_number))
-        {
-            std::cout << "Invalid input! Please enter a NUMBER\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        }    
-        std::cin.ignore(1000,'\n');
+                    stuff new_data;
+                    system("clear");
+                    std::cout << "To chang " << data[i].item_name <<" Name >> Enter the New Item Name\n";
+                    std::getline(std::cin,new_data.item_name);
+                    std::cout << "To chang " << data[i].item_id_number <<" ID >> Enter the New Item ID or Number\n";
+                    std::cin.clear();
+                    while(!(std::cin>>new_data.item_id_number))
+                        {
+                            std::cout << "Invalid input! Please enter a NUMBER\n";
+                            std::cin.clear();
+                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                        }    
+                    std::cin.ignore(1000,'\n');
         std::cout << "enter the item description\n";
         std::getline(std::cin,new_data.describe);
         std::cout << "enter the item Made By\n";
