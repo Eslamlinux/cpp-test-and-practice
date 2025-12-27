@@ -95,7 +95,7 @@ showing_stuff a;
     {
         // std::cin.clear();
         // std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-        std::cout << "\n===== wellcome to Stuff item main menu progrram =====\n";
+        std::cout << "\n===== welcome to Stuff item main menu program =====\n";
         std::cout << "\n-----------------------------------------------------\n";
         std::cout << "to add items press [i] \n";
         std::cout << "to showing all items press [p] \n";
@@ -146,9 +146,9 @@ showing_stuff a;
         system("clear");
         for(auto c :data)
         {
-            std::cout << "=====================\n";
+            std::cout << "======================-------------------------------\n";
             print_entry_by_id(c.item_id_number);
-            std::cout << "=====================\n";
+            std::cout << "=====================--------------------------------\n";
         }
     }
     void stuff::print_entry_by_id(size_t id)
@@ -248,9 +248,9 @@ showing_stuff a;
                 std::cout << "found " << count << " result" << "\n";
                 for(auto c:what_is_found)
                 {
-                    std::cout << "=========================\n";
+                    std::cout << "=====================--------------------------------\n";
                     print_entry_by_id(c.item_id_number);
-                    std::cout << "=========================\n";
+                    std::cout << "=====================--------------------------------\n";
                 }
             }
         }
@@ -416,11 +416,19 @@ showing_stuff a;
                 std::cout << "Item (" << data[i].item_name << ") edited successfully!\n";
                 std::cout << "New Item detials is!\n";
                 system("clear");
-                std::cout << "=====================\n";
+                std::cout << "=====================--------------------------------\n";
                 print_entry_by_id(data[i].item_id_number);
-                std::cout << "=====================\n";
+                std::cout << "=====================--------------------------------\n";
                 } 
 
+                }
+                else
+                {
+                    if(data.size() == i+1)
+                    {
+                        system("clear");
+                        std::cout << "The ID not found or not right\n";
+                    }
                 }
             }
 
