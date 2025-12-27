@@ -320,9 +320,17 @@ showing_stuff a;
     void stuff::edit_item()
     {
         system("clear");
-        std::cout << "please enter the item ID you want to delete\n";
+        std::cout << "please enter the item ID you want to edit\n";
         size_t ID = 0;
-        std::cout << "The ID not found or not right\n";
+        std::cin >> ID;
+        for(int i = 0; i < data.size(); i++)
+            {
+                if(data[i].item_id_number == ID)
+                {
+                    std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
+
+                }
+            }
 
 
     }
