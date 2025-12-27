@@ -325,14 +325,14 @@ showing_stuff a;
         std::cin >> ID;
         for(int i = 0; i < data.size(); i++)
             {
+                system("clear");
                 std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
                 if(data[i].item_id_number == ID)
                 {
                     stuff new_data;
-                    system("clear");
-                    std::cout << "To chang " << data[i].item_name <<" Name >> Enter the New Item Name\n";
+                    std::cout << "To chang >> " << data[i].item_name <<" << Name >> Enter the New Item Name\n";
                     std::getline(std::cin,new_data.item_name);
-                    std::cout << "To chang >> ID <<" << data[i].item_id_number <<"  Enter the New Item ID or Number\n";
+                    std::cout << "To chang >> " << data[i].item_id_number <<" << ID >> Enter the New Item ID or Number\n";
                     std::cin.clear();
                     while(!(std::cin>>new_data.item_id_number))
                         {
@@ -347,28 +347,30 @@ showing_stuff a;
                     std::getline(std::cin,new_data.made_by);
                     std::cout << "To chang >> Barcode << " << data[i].barcode <<" Enter the New Item Barcode\n";
                     std::getline(std::cin,new_data.barcode);
-        std::cout << "enter the item manufacturing date\n";
-        std::getline(std::cin,new_data.manufacturing_date);
-        std::cout << "enter the item expiration date\n";
-        std::getline(std::cin,new_data.expiration_date);
-        std::cout << "enter the item supplier name\n";
-        std::getline(std::cin,new_data.supplier_name);
-        std::cout << "enter the item supplier phone\n";
-        std::getline(std::cin,new_data.supplier_phone);
-        std::cout << "enter the item count\n";
-        if(!(std::cin >>new_data.item_count))
-        {
-            std::cout << "you cant add char in count must be number\n";
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
-            return;
-        } 
-        data.push_back(new_data);
-        if(!new_data.item_name.empty())
-        {
-            system("clear");
-            std::cout << "Item (" << new_data.item_name << ") added successfully!\n";
-        } //end
+                    std::cout << "To chang Manufacturing Date >> " << data[i].manufacturing_date <<" << Enter the New Item Manufacturing Date\n";
+                    std::getline(std::cin,new_data.manufacturing_date);
+                    std::cout << "To chang expiration Date >> " << data[i].expiration_date <<" << Enter the New Item expiration date\n";
+                    std::getline(std::cin,new_data.expiration_date);
+                    std::cout << "To chang Supplier Name >> " << data[i].supplier_name <<" << Enter the New Item Supplier Name\n";
+                    std::getline(std::cin,new_data.supplier_name);
+                    std::cout << "To chang Supplier Phone >> " << data[i].supplier_phone <<" << Enter the New Item Supplier Phone\n";
+                    std::getline(std::cin,new_data.supplier_phone);
+                    std::cout << "To chang Item Count >> " << data[i].item_count <<" << Enter the New Item Count\n";
+                    if(!(std::cin >>new_data.item_count))
+                        {
+                            std::cout << "you cant add char in count must be number\n";
+                            std::cin.clear();
+                            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+                            return;
+                        }
+                data.erase(data.begin()+i); 
+                data.push_back(new_data);
+                if(!new_data.item_name.empty())
+                {
+                system("clear");
+                std::cout << "Item (" << new_data.item_name << ") edited successfully!\n";
+                std::cout << "New Item detials is!\n";
+                } 
 
                 }
             }
