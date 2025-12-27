@@ -178,13 +178,13 @@ showing_stuff a;
     void stuff::search_item()
     {
         char entrynum;
-        system("clean");
+        system("clear");
         std::cout << "search by id press [1] ""that will show the courrect item"" \n";
         std::cout << "search by name press [2] ""that will show all item have the same name"" \n";
         std::cin >> entrynum;
         if(!isdigit(entrynum) || entrynum-'0' > 2 || entrynum-'0' <1)
         {
-            system("clean");
+            system("clear");
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
             std::cout << "you cant add character or more than 1 or 2\n";
             return;
@@ -199,7 +199,7 @@ showing_stuff a;
                 return;
             }
             int id =0;
-            system("clean");
+            system("clear");
             std::cout << "enter the id to search\n";
             if(!(std::cin >> id))
             {
@@ -207,7 +207,7 @@ showing_stuff a;
             return;
             }
             else
-            system("clean");
+            system("clear");
             std::cout << "=========================\n";
             print_entry_by_id(id);
             std::cout << "=========================\n";
@@ -221,7 +221,7 @@ showing_stuff a;
                 std::cout << "sorry nothing to search for\n";
                 return;
             }
-            system("clean");
+            system("clear");
             std::vector<stuff> what_is_found;
             std::string name;
             size_t count = 0;
