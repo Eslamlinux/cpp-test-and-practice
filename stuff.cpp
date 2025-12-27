@@ -319,7 +319,7 @@ showing_stuff a;
 
     void stuff::edit_item()
     {
-                system("clear");
+        system("clear");
         std::cout << "please enter the item ID you want to delete\n";
         size_t ID = 0;
         std::cout << "The ID not found or not right\n";
