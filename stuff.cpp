@@ -328,7 +328,48 @@ showing_stuff a;
                 std::cout << "if you dont want to edit this section just press Ebter to skip it\n";
                 if(data[i].item_id_number == ID)
                 {
-                    std::cout << "Edit Item Name: \n";
+                            stuff new_data;
+                            system("clear");
+                            std::cout << "To chang " << data[i].item_name <<" Name Enter the New Item Name\n";
+        std::getline(std::cin,new_data.item_name);
+        std::cout << "enter the item id or number\n";
+        // std::cin.ignore(1000,'\n');
+        std::cin.clear();
+        while(!(std::cin>>new_data.item_id_number))
+        {
+            std::cout << "Invalid input! Please enter a NUMBER\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+        }    
+        std::cin.ignore(1000,'\n');
+        std::cout << "enter the item description\n";
+        std::getline(std::cin,new_data.describe);
+        std::cout << "enter the item Made By\n";
+        std::getline(std::cin,new_data.made_by);
+        std::cout << "enter the item barcode\n";
+        std::getline(std::cin,new_data.barcode);
+        std::cout << "enter the item manufacturing date\n";
+        std::getline(std::cin,new_data.manufacturing_date);
+        std::cout << "enter the item expiration date\n";
+        std::getline(std::cin,new_data.expiration_date);
+        std::cout << "enter the item supplier name\n";
+        std::getline(std::cin,new_data.supplier_name);
+        std::cout << "enter the item supplier phone\n";
+        std::getline(std::cin,new_data.supplier_phone);
+        std::cout << "enter the item count\n";
+        if(!(std::cin >>new_data.item_count))
+        {
+            std::cout << "you cant add char in count must be number\n";
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
+            return;
+        } 
+        data.push_back(new_data);
+        if(!new_data.item_name.empty())
+        {
+            system("clear");
+            std::cout << "Item (" << new_data.item_name << ") added successfully!\n";
+        } //end
 
                 }
             }
