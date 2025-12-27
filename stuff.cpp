@@ -264,10 +264,12 @@ showing_stuff a;
 
     void stuff::delete_item()
     {
+        system("clear");
         std::cout << "please enter the item ID you want to delete\n";
         size_t ID = 0;
         while(!(std::cin >> ID))
         {
+            system("clear");
             std::cout << "please add ID number\n";
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(),'\n');
@@ -277,32 +279,44 @@ showing_stuff a;
             {
                 if(data[i].item_id_number == ID)
                 {
+                    system("clear");
                     std::cout << "are you sure you want to delete this item \n";
                     std::cout << "Item Name: " << data[i].item_name << " Item ID: "  << data[i].item_id_number << " forever?\n";
                     std::cout << "[y] for yes & [n] for ignore\n";
                     char y_or_n;
                     std::cin >> y_or_n;
                     if(y_or_n == 'n' || y_or_n == 'N')
-                    break;
+                    {
+                        system("clear");
+                        break;
+                    }
                     else
                     {
                     std::cin.ignore();
                     std::cin.clear();
+                    system("clear");
                     std::cout << "are you sure?\n";
                     std::cout << "[y] for yes & [n] for ignore\n";
                     std::cin >> y_or_n;
                     if(y_or_n == 'n' || y_or_n == 'N')
-                    break;
+                    {
+                        system("clear");
+                        break;
+                    }
                     else
                     {
+                        system("clear");
                         data.erase(data.begin()+i);
-                        std::cout << "item deleted succesfully\n";
+                        std::cout << "Item deleted successfully!\n";
                     }
                     }
                 }
                 else
                 {
-                    std::cout << "The name not found or not right\n";
+                    if(i != data.size()-1)
+                    continue;
+                    system("clear");
+                    std::cout << "The ID not found or not right\n";
                     
                     break;
                 }
