@@ -343,7 +343,7 @@ showing_stuff a;
                     std::cin.ignore(1000,'\n');
                     std::cout << "To chang >> Description << " << data[i].describe <<" Enter the New Item Description\n";
                     std::getline(std::cin,new_data.describe);
-                    std::cout << "enter the item Made By\n";
+                    std::cout << "To chang >> Made By << " << data[i].made_by <<" Enter the New Item Made By\n";
         std::getline(std::cin,new_data.made_by);
         std::cout << "enter the item barcode\n";
         std::getline(std::cin,new_data.barcode);
