@@ -168,13 +168,6 @@ showing_stuff a;
                 std::cout << "Item Count: " << data[i].item_count << std::endl;
                 break;
             }
-            // else
-            // {
-            //     std::cout << "The ID not fond or not right\n";
-            //     break;
-            // }
-
-
         }
     }
 
