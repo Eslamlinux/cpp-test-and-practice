@@ -230,7 +230,7 @@ showing_stuff a;
             std::getline(std::cin,name);
             for(int i = 0; i < data.size(); i++)
             {
-                if(data[i].item_name.find(name) != std::string::npos)
+                if(data[i].item_name.find(name,0) != std::string::npos)
                 {
                     what_is_found.push_back(data[i]);
                     count++;
