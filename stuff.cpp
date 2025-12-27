@@ -156,7 +156,7 @@ showing_stuff a;
         {
             if(data[i].item_id_number == id)
             {
-                std::cout << "Item Name: " << data[i].item_name << std::endl;
+                std::cout << "Item Name:           |" << data[i].item_name << std::endl;
                 std::cout << "Item ID: " << data[i].item_id_number << std::endl;
                 std::cout << "Item description: " << data[i].describe << std::endl;
                 std::cout << "Item Made By: " << data[i].made_by << std::endl;
