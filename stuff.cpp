@@ -386,14 +386,19 @@ showing_stuff a;
                         temp ="";
                     }
                     std::cout << "To chang Supplier Name >> " << data[i].supplier_name <<" << Enter the New Item Supplier Name\n";
-                    std::getline(std::cin,new_data.supplier_name);
+                    std::getline(std::cin,temp);
                     if(!temp.empty())
                     {
                         data[i].supplier_name = temp;
                         temp ="";
                     }
                     std::cout << "To chang Supplier Phone >> " << data[i].supplier_phone <<" << Enter the New Item Supplier Phone\n";
-                    std::getline(std::cin,new_data.supplier_phone);
+                    std::getline(std::cin,temp);
+                    if(!temp.empty())
+                    {
+                        data[i].supplier_phone = temp;
+                        temp ="";
+                    }
                     std::cout << "To chang Item Count >> " << data[i].item_count <<" << Enter the New Item Count\n";
                     if(!(std::cin >>new_data.item_count))
                         {
