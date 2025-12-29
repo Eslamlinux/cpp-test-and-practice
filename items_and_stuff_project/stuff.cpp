@@ -21,7 +21,7 @@ struct stuff
     void edit_item();
     void delete_item();
     void search_item();
-    void print_entry_by_id(size_t);
+    bool print_entry_by_id(size_t);
     
     ~stuff();
 };
@@ -151,12 +151,14 @@ showing_stuff a;
             std::cout << "=====================--------------------------------\n";
         }
     }
-    void stuff::print_entry_by_id(size_t id)
+    bool stuff::print_entry_by_id(size_t id)
     {  
+        bool if_found = false;
         for(int i = 0; i < data.size(); i++)
         {
             if(data[i].item_id_number == id)
             {
+                if_found = true;
                 std::cout << "Item Name:...........| " << data[i].item_name << std::endl;
                 std::cout << "Item ID:.............| " << data[i].item_id_number << std::endl;
                 std::cout << "Item description:....| " << data[i].describe << std::endl;
@@ -170,6 +172,7 @@ showing_stuff a;
                 break;
             }
         }
+        return if_found;
     }
 
     void stuff::search_item()
@@ -204,10 +207,19 @@ showing_stuff a;
             return;
             }
             else
-            system("clear");
-            std::cout << "=========================\n";
-            print_entry_by_id(id);
-            std::cout << "=========================\n";
+            if(print_entry_by_id(id) == false)
+            {
+                system("clear");
+                std::cout << "sorry what you search for is not found\n";
+            }
+            else
+            {
+                system("clear");
+                std::cout << "=========================\n";
+                print_entry_by_id(id);
+                std::cout << "=========================\n";
+            }
+
 
         }
         if(entrynum == '2')
