@@ -5,23 +5,23 @@ namespace raindrops {
 std::string convert(int num)
     {
         std::string result ="";
-        if(num % 3 == 0 )
+        if (num % 3 == 0) 
             result += "Pling";
-        else if(num % 5 == 0)
+        if (num % 5 == 0) 
             result += "Plang";
-        else if(num % 7 == 0)
+        if (num % 7 == 0) 
             result += "Plong";
-        else
-            result = std::to_string(num);
-
-        retrun result;
+        return result.empty()?std::to_string(num):result;
     }
-}  // namespace raindrops
+}
+
+
 
 
 int main()
 {
-
+std::cout << raindrops::convert(28) << std::endl;
+std::cout << raindrops::convert(30) << std::endl;
 
     return 0;
 }
