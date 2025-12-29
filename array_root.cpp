@@ -14,7 +14,7 @@ return result;
 
 int main()
 {
-    for(auto c: array_root({4, 81, 49}))
+    for(auto c: array_root({3, 5, 7 , }))
     {
         std:: cout << c << " ";
     }
