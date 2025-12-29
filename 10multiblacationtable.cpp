@@ -2,10 +2,15 @@
 
 void printhead()
 {
-    
+    for(int i = 1; i <= 10;i++)
+    {
+        std::cout  << "\t"<< i;
+    }
+        std::cout << "\n____________________________________________________________________________________\n";
 }
 void printtble()
 {
+    printhead();
     for(int i = 1; i <= 10;i++)
     {
         std::cout << i << "\t|  ";
