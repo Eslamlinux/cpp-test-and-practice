@@ -6,8 +6,8 @@ int main()
     char c = 'b';
     void* ptr ;
     ptr = &a;
-int d= 0;
+int* d;
 
 
-    printf("ptr: %d ",&d);
+    printf("ptr: %d ",d);
 }
