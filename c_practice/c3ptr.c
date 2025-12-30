@@ -2,7 +2,7 @@
 
 void coutt(int num)
 {
-    printf("\n%d ",num);
+    printf("\nthe %d sqrt is: %d ",num,num*num);
 }
 void pstr(char* str)
 {
@@ -18,21 +18,26 @@ int main()
 // int* d;
 // printf("ptr: %d ",d);
 
-void (* ptr)(int) = &coutt;
-coutt(10);
-ptr(5);
+// void (* ptr)(int) = &coutt;
+// coutt(10);
+// ptr(5);
 
-char name[] ="eslam";
+// char name[] ="eslam";
 
-printf("\nname: %s\n",name);
+// printf("\nname: %s\n",name);
 
-int pnum;
-char st[] = "enter a number\n";
+// int pnum;
+// char st[] = "enter a number\n";
 
-pstr("enter a number\n");
+// pstr(st);
 
-scanf("%d",&pnum);
+// scanf("%d",&pnum);
 
-ptr(pnum);
+// ptr(pnum);
+
+unsigned unum = 999999999;
+
+printf("\nunsigned num is: %u", unum);
+printf("\nSize of unsigned: %d", sizeof(unum));
 
 }
