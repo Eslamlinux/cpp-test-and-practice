@@ -15,6 +15,9 @@ int main()
 // int* d;
 // printf("ptr: %d ",d);
 
-void (* ptr)(int) = cout;
+void (* ptr)(int) = &cout;
+cout(10);
+ptr(5);
+
 
 }
