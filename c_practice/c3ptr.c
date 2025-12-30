@@ -1,10 +1,13 @@
 #include <stdio.h>
 
-void cout(int num)
+void coutt(int num)
 {
     printf("\n%d ",num);
 }
-
+void pstr(char* str)
+{
+    printf("%s",str);
+}
 int main()
 {
 //     int a = 10;
@@ -15,9 +18,21 @@ int main()
 // int* d;
 // printf("ptr: %d ",d);
 
-void (* ptr)(int) = &cout;
-cout(10);
+void (* ptr)(int) = &coutt;
+coutt(10);
 ptr(5);
 
+char name[] ="eslam";
+
+printf("\nname: %s\n",name);
+
+int pnum;
+char st[] = "enter a number\n";
+
+pstr("enter a number\n");
+
+scanf("%d",&pnum);
+
+ptr(pnum);
 
 }
