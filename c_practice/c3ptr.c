@@ -8,5 +8,6 @@ int main()
     ptr = &a;
 
 
+    
     printf("ptr: %d ",&c);
 }
