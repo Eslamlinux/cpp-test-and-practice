@@ -5,7 +5,7 @@ int main()
     int a = 10;
     char c = 'b';
     void* ptr ;
-    
+    ptr = &a;
 
 
     printf("ptr: %d ",&c);
