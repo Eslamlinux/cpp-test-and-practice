@@ -7,8 +7,10 @@ void println(int num)
 int main()
 {
 
-    void(*ptr)(int) =println;
+    void(*ptr)(int) =&println;
     
+    ptr(10);
+    println(15);
     
     return 0;
 }
