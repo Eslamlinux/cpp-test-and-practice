@@ -22,15 +22,27 @@ body
 #endif
 
 ////////// examp most use for ///////
-
+أ. التوافق مع أنظمة التشغيل (Cross-Platform)
 #ifdef _WIN32
     // كود خاص بنظام ويندوز فقط
 #elif __linux__
     // كود خاص بنظام لينكس فقط
 #endif
 
+ب. حراس التضمين (Header Guards)
+#ifndef MY_LIBRARY_H
+#define MY_LIBRARY_H
 
+// محتويات الملف هنا
 
+#endif
+
+ج. وضع التصحيح (Debug Mode)
+#define DEBUG_MODE 1
+
+#if DEBUG_MODE
+    printf("Debug: The value of x is %d", x);
+#endif
 
 
 */
@@ -69,12 +81,23 @@ void main()
 
     typedef int integer;
 
-    integer index = 100;
-    printf("integer = %d\n",index);
+    #define index = 100;
     
-    #ifdef(index < 100)
-    {
+    #ifdef index 
+    printf("index define\n");
+    #endif
 
-    }
+    #ifndef ERORR
+    #define ERORR 1
+    #endif
+
+
+    #if ERORR
+    printf("erorr 1\n");
+    printf("erorr vall = %d \n",ERORR);
+    #endif
+
+
+
 
 }
