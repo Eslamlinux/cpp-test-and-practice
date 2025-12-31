@@ -8,11 +8,13 @@ void main()
     array =(int *)malloc(2*sizeof(int));
     array[0] = 10;
     array[1]=5;
-    printf("%d %d\n",array[0],array[1]);
+    printf("print array[0]: %d | array[1]: %d\n",array[0],array[1]);
 
     int* arrayc;
     arrayc = (int*)calloc(2,sizeof(int));
     printf("try to print empty arrary = %d\n",arrayc[0]);
+    arrayc[1] = 99;
+    printf("print arraryc[1] = %d\n",arrayc[1]);
 }
 
 
