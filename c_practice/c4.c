@@ -12,7 +12,7 @@ void main()
     strcat(str,str2);
     printf("%s\n",str);
     printf("%s\n",str2);
-    printf("string 1 & 2 length after concat: %d\n",strlen(str));
+    printf("string 1 & 2 length after concat: %zu\n",strlen(str));
 
 
 }
