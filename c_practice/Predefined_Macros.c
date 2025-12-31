@@ -18,9 +18,10 @@ void main()
     pf("int = %d\n",b);
 
     char sdate[] =__DATE__ ;
-    pf("__file__ %s\n",__FILE__);
-    pf("__DATE__ %s\n",__DATE__);
+    pf("__file__ = %s\n",__FILE__);
+    pf("__DATE__ = %s\n",__DATE__);
     pf("date = %s\n",sdate);
+    pf("__TIME__ = %s\n",__TIME__);
 
 
 }
