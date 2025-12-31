@@ -1,8 +1,26 @@
 #include <stdio.h>
-#define int integer
+typedef int integer;
+#define typedef struct 
+#define pf printf
+
+struct {
+integer test;
+}st;
 
 void main()
 {
+    st.test =5;
+
+    integer a = 9;
+    pf("struct vall %d int vall %d\n",st.test ,a);
+
+    integer b = 3;
+    pf("int = %d\n",b);
+
+    char sdate[] =__DATE__ ;
+    pf("__file__ %s\n",__FILE__);
+    pf("__DATE__ %s\n",__DATE__);
+    pf("date = %s\n",sdate);
 
 
 }
