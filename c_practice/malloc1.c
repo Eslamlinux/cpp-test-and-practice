@@ -10,8 +10,12 @@ void main()
     array[1]=5;
     printf("print array[0]: %d | array[1]: %d\n",array[0],array[1]);
 
+    array = (char *)malloc(6*sizeof(char));
+    array = "eslam";
+    printf("print array string: %s\n",array);
+
     int* arrayc;
-    arrayc = (int*)calloc(2,sizeof(int));
+    arrayc = (int*)calloc(2*sizeof(int));
     printf("try to print empty arrary = %d\n",arrayc[0]);
     arrayc[1] = 99;
     printf("print arraryc[1] = %d\n",arrayc[1]);
