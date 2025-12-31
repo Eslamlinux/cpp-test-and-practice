@@ -28,7 +28,6 @@ void main()
     pf("date = %s\n",sdate);
     pf("__TIME__ = %s\n",__TIME__);
     pf("line number: %d\n", __LINE__);
-    pf("structs: %d\n", __struct_FILE_defined);
 
 
 }
