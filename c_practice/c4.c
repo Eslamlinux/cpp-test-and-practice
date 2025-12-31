@@ -14,5 +14,13 @@ void main()
     printf("%s\n",str2);
     printf("string 1 & 2 length after concat: %zu\n",strlen(str));
 
+    
+    char str3[] ="55";
+    strcpy(str2,str3);
+    printf("string 1 & 2 length after copy str3 to str2: %zu\n",strlen(str2));
+    printf("%s\n",str2);
+
+
+
 
 }
