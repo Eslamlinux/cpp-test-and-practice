@@ -47,6 +47,8 @@ body
 
 */
 
+    int add(int,int);
+
 void main()
 {
     int a = 10;
@@ -97,7 +99,13 @@ void main()
     printf("erorr vall = %d \n",ERORR);
     #endif
 
+    printf("add %d + %d = %d\n",10,20,add(10,20));
 
 
 
+}
+
+int add(int f,int t)
+{
+    return f + t;
 }
