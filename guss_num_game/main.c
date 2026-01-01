@@ -93,6 +93,7 @@ int main(void)
 				 );
 			}
 		}
+        DrawText(TextFormat("SCORE: %d",Score),20,20,24,RED);
 		EndDrawing();
 	}
     UnloadTexture(background);
