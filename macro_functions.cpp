@@ -22,6 +22,13 @@ int main()
 
     #define squre(x)((x)*(x))
 
-    std::cout<< squre(5);
+    std::cout<< squre(5)<< std::endl;
 
+    #define max_num(x,m)((x) > (m) ? (x):(m))
+
+    std::cout<<  max_num(10,20)<< std::endl;
+
+    #define sum(x,m)((x)+(m))
+
+     std::cout<<  sum(5,5) << std::endl;
 }
