@@ -9,11 +9,17 @@
 #define Tile_Size 42
 #define Tile_Types 5
 
+#define screen_width 800
+#define screen_height 650
 const char tile_chars[Tile_Types] = {'#','@','$','%','&'};
 
 char board[Board_Size][Board_Size];
 
 Vector2 grid_origin;
+
+Texture2D background;
+
+int Score = 200;
 
 char random_tile()
 {
@@ -40,13 +46,12 @@ void init_board()
 
 int main(void)
 {
-	const int screen_width = 800;
-	const int screen_height = 450;
 
 	InitWindow(screen_width, screen_height,"guss number game");
 	SetTargetFPS(60);
 	srand(time(NULL));
-
+    
+    background = LoadTexture("assets/bg.png");
 	init_board();
 
 
@@ -54,7 +59,18 @@ int main(void)
 	{
 		BeginDrawing();
 		ClearBackground(BLUE);
-
+        
+        DrawTexturePro(background,
+                (Rectangle){
+                0, 0, background.width, background.height
+                },
+                (Rectangle){
+                0, 0, GetScreenWidth(),GetScreenHeight()
+                },
+                (Vector2) {0, 0},
+                0.0f,
+                WHITE
+                );
 
 		for(int y =0; y < Board_Size; y++)
 		{
@@ -79,6 +95,7 @@ int main(void)
 		}
 		EndDrawing();
 	}
+    UnloadTexture(background);
 	CloseWindow();
 
 	return 0;
