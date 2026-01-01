@@ -13,6 +13,10 @@ int main()
         #else
         std::cout << "Status: Healthy\n";
         #endif
+
+    std::cout << "=== youre distro info ===\n";
+    std::cout << system("lsb_release -a");
+    std::cout <<std::endl;
     std::cout << "=== youre sys info ===\n";
     std::cout << system("uname -a");
     std::cout <<std::endl;
