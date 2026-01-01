@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <time.h>
 #include "raylib.h"
-
+#define Score_Font_Size 32
 #define Board_Size 8
 #define Tile_Size 42
 #define Tile_Types 5
@@ -20,6 +20,9 @@ Vector2 grid_origin;
 Texture2D background;
 
 int Score = 200;
+
+Font Score_Font;
+
 
 char random_tile()
 {
@@ -52,7 +55,9 @@ int main(void)
 	srand(time(NULL));
     
     background = LoadTexture("assets/bg.png");
-	init_board();
+Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
+
+    init_board();
 
 
 	while(!WindowShouldClose())
@@ -93,12 +98,18 @@ int main(void)
 				 );
 			}
 		}
-        DrawText(TextFormat("SCORE: %d",Score),20,20,24,RED);
+        DrawTextEx(
+                Score_Font,
+                TextFormat("SCORE: %d",Score),
+                (Vector2) {40,20},
+               Score_Font_Size,1.0f ,RED
+               );
+       // DrawText(TextFormat("SCORE: %d",Score),20,20,24,RED);
 		EndDrawing();
 	}
     UnloadTexture(background);
 	CloseWindow();
-
+    UnloadFont(Score_Font);
 	return 0;
 
 
