@@ -20,6 +20,8 @@ int main()
     std::cout << vall_count << std::endl;
 
 
+    #define squre(x)((x)*(x))
 
+    std::cout<< squre(5);
 
 }
