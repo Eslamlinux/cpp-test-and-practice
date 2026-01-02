@@ -19,6 +19,20 @@ float fall_offset[Board_Size][Board_Size] = {0};
 
 int Score = 200;
 float fall_speed = 8.0f;
+
+typedef enum{
+    STATE_IDLE,
+    STATE_ANIMATING
+}Tile_State;
+void swap_tile(int x1,int y1, int x2, int y2)
+{
+    char temp = board[y1][x1];
+    board[y1][x1] = board[y2][x2];
+    board[y2][x2] = temp;
+}
+bool are_tiles_adjacent(Vector2 a,Vector2 b){
+    return (abs((int)a.x - (int)b.x) + abs((int)a.y - (int)b.y)) == 1;
+}
 bool find_matches()
 {
     bool found =false;
@@ -60,6 +74,10 @@ bool find_matches()
      return found;
  }
 
+char random_tile()
+{
+	return tile_chars[rand() % Tile_Types];
+}
 void resolve_matches()
 {
     for(int x =0;x < Board_Size ; x++)
@@ -76,8 +94,8 @@ void resolve_matches()
         }
 
         while(write_y >= 0){
-            board[write_y][x] = random_time();
-                fall_offset[write_y][x] = (write_y + 1) * Tile_Size;
+            board[write_y][x] = random_tile();
+            fall_offset[write_y][x] = (write_y + 1) * Tile_Size;
             write_y--;
         }
     }
@@ -90,10 +108,6 @@ Texture2D background;
 Font Score_Font;
 
 Vector2 selected_tile = {-1,-1};
-char random_tile()
-{
-	return tile_chars[rand() % Tile_Types];
-}
 
 void init_board()
 {
@@ -136,7 +150,22 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
             int y = (mouse.y - grid_origin.y) / Tile_Size;
             if(x >= 0 && x < Board_Size && y >= 0 && y < Board_Size)
             {
-                selected_tile = (Vector2){x,y};
+               Vector2 current_tile = (Vector2){x,y};
+               if(selected_tile.x < 0){
+                   selected_tile = current_tile;
+               }
+               else{
+                   if(are_tiles_adjacent(selected_tile,current_tile)){
+                       swap_tile(selected_tile.x,selected_tile.y, current_tile.x, current_tile.y);
+                               if(find_matches()){
+                               resolve_matches();
+                               }
+                               else{
+                               swap_tile(selected_tile.x, selected_tile.y, current_tile.x, current_tile.y);
+                               }
+                       }
+                        selected_tile = (Vector2){-1,-1};
+                     }
             }
         }
         if(find_matches())
@@ -216,7 +245,5 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
 	CloseWindow();
     UnloadFont(Score_Font);
 	return 0;
-
-
 }
 
