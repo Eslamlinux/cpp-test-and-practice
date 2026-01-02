@@ -9,8 +9,11 @@
 #define Tile_Size 42
 #define Tile_Types 5
 
-#define screen_width 800
-#define screen_height 650
+//#define screen_width 800
+//#define screen_height 650
+const int screen_width = 800;
+const int screen_height = 650;
+
 const char tile_chars[Tile_Types] = {'#','@','$','%','&'};
 
 char board[Board_Size][Board_Size];
@@ -19,11 +22,17 @@ float fall_offset[Board_Size][Board_Size] = {0};
 
 int Score = 200;
 float fall_speed = 8.0f;
+float match_delay_timer = 0.0f;
+const float MATCH_DELAY_DURATION = 0.2f;
 
 typedef enum{
     STATE_IDLE,
-    STATE_ANIMATING
+    STATE_ANIMATING,
+    STATE_MATCH_DELAY
 }Tile_State;
+
+Tile_State tile_state;
+
 void swap_tile(int x1,int y1, int x2, int y2)
 {
     char temp = board[y1][x1];
@@ -99,6 +108,7 @@ void resolve_matches()
             write_y--;
         }
     }
+    tile_state = STATE_ANIMATING;    
 }
 
 Vector2 grid_origin;
@@ -125,6 +135,12 @@ void init_board()
 		(GetScreenWidth() - grid_width) /2 ,
 		(GetScreenHeight() - grid_height) /2 ,
 	};
+    if(find_matches()){
+        resolve_matches();
+    }
+    else{
+        tile_state =STATE_IDLE;
+    }
 }
 
 int main(void)
@@ -144,7 +160,7 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
 	{
         mouse = GetMousePosition();
 
-        if(IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
+        if(tile_state == STATE_IDLE && IsMouseButtonPressed(MOUSE_LEFT_BUTTON))
         {
             int x = (mouse.x - grid_origin.x) / Tile_Size;
             int y = (mouse.y - grid_origin.y) / Tile_Size;
@@ -168,11 +184,15 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
                      }
             }
         }
-        if(find_matches())
+       /* if(find_matches())
         {
             resolve_matches();
         }
+        */
 
+        if(tile_state == STATE_ANIMATING){
+            bool still_animating =false;
+     
         for(int y = 0; y < Board_Size; y++)
         {
              for(int x = 0; x < Board_Size; x++)
@@ -182,9 +202,29 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
                      if(fall_offset[y][x]< 0){
                          fall_offset[y][x] = 0;
                      }
+                     else{
+                        still_animating = true;
+                     }
                  }
              }
         }
+        if(!still_animating){
+            tile_state = STATE_MATCH_DELAY;
+            match_delay_timer = MATCH_DELAY_DURATION;
+        }
+        }
+        if(tile_state == STATE_MATCH_DELAY){
+            match_delay_timer -= GetFrameTime();
+            if(match_delay_timer <= 0.0f){
+                if(find_matches()){
+                        resolve_matches();
+                        }
+                        else{
+                        tile_state = STATE_IDLE;
+                        }
+                        }
+                        }
+
 		BeginDrawing();
 		ClearBackground(BLUE);
         
@@ -198,6 +238,13 @@ Score_Font = LoadFontEx("assets/BoldPixelsFont.ttf",Score_Font_Size, NULL,0);
                 (Vector2) {0, 0},
                 0.0f,
                 WHITE
+                );
+        DrawRectangle(
+                grid_origin.x,
+                grid_origin.y,
+                Board_Size* Tile_Size,
+                Board_Size* Tile_Size,
+                Fade(DARKGRAY, 1.0f)
                 );
 
 		for(int y =0; y < Board_Size; y++)
