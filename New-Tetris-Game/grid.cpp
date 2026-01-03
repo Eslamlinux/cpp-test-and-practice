@@ -63,7 +63,7 @@
             for(int colum = 0 ; colum < num_cols; colum++)
             {
                 int cellValue = grid[row][colum];
-                DrawRectangle(colum * cell_size ,row * cell_size, cell_size,cell_size, colors[cellValue]);
+                DrawRectangle(colum * cell_size +1 ,row * cell_size+1, cell_size -1 ,cell_size -1 , colors[cellValue]);
             }
         }
 
