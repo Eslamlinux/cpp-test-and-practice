@@ -7,7 +7,7 @@
 int main()
 {
     InitWindow(G_Width_X,G_Hight_Y,Main_Title); // النافذذة الرئسية
-    Color background = {255,0,0,255};
+    Color background = {5, 240, 0, 44}; // {255,0,0,255} يمكن استخدام اسم اللون او الار جي بي الخاص باللون  
     SetTargetFPS(60); // سرعة اللعبة
     while(!WindowShouldClose())
     {
