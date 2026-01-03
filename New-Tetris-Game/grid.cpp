@@ -29,3 +29,5 @@
             std::cout << std::endl;
         }
     }
+
+    Grid::~Grid(){}
