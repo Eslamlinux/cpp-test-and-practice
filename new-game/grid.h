@@ -11,4 +11,4 @@ class Grid
     int grid[20][10];
     void initialize();
     void print();
-}
+};
