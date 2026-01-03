@@ -6,7 +6,7 @@
 class Block
 {
     int cellSize;
-    int rotate;
+    int rotationState;
     public:
     Block();
     int id;
