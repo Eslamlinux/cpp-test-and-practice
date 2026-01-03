@@ -7,11 +7,12 @@
 int main()
 {
     InitWindow(G_Width_X,G_Hight_Y,Main_Title); // النافذذة الرئسية
+    Color background = {255,0,0,255};
     SetTargetFPS(60); // سرعة اللعبة
     while(!WindowShouldClose())
     {
         BeginDrawing(); //لبداية رسم النافذة
-
+        ClearBackground(background); // لتنظيف واضافة خلفية جديدة
 
         EndDrawing(); // لانهاء الرسم وتدمير مكونات الرسم
 
