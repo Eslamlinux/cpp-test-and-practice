@@ -6,7 +6,6 @@ class Grid
     int num_rows;
     int num_cols;
     int cell_size;
-    std::vector<Color>GetCellColor();
     std::vector<Color>colors;
     public:
     Grid();

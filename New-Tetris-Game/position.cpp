@@ -3,7 +3,8 @@
 Position::Position(int row,int column)
 {
     this->row = row;
-    this->column;
+    this->column = column;
 
-    Position::~Position();
 }
+
+Position::~Position(){};

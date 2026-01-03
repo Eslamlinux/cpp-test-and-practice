@@ -12,4 +12,4 @@ class Block
     int id;
     std::map<int ,std::vector<Position>> cells;
 
-}
+};
