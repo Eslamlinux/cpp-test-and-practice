@@ -56,4 +56,18 @@
         return {Red,Green,Yello,White,Black,Blue,Cyan,Magenta,Gold,Gray,Orang,Purple};
     }
 
+    void Grid::Draw()
+    {
+        for(int row = 0;row < num_rows; row++)
+        {
+            for(int colum = 0 ; colum < num_cols; colum++)
+            {
+                int cellValue = grid[row][colum];
+                DrawRectangle(colum * cell_size ,row * cell_size, cell_size,cell_size, colors[cellValue]);
+            }
+        }
+
+    }
+
     Grid::~Grid(){}
+
