@@ -5,6 +5,9 @@
     {
         num_rows = 10;
         num_cols = 20;
+        cell_size = 30;
+        initialize();
+        colors = GetCellColor();
     }
 
     void Grid::initialize()

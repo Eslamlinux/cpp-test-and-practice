@@ -7,12 +7,12 @@ class Grid
     int num_cols;
     int cell_size;
     std::vector<Color>GetCellColor();
-    std::vector<Color>Colors;
+    std::vector<Color>colors;
     public:
     Grid();
     int grid[20][10];
     void initialize();
     void print();
-
+    void Drow();
     ~Grid();
 };
