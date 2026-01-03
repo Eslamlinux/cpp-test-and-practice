@@ -8,7 +8,7 @@ int main()
 {
     InitWindow(G_Width_X,G_Hight_Y,Main_Title); // النافذذة الرئسية
     SetTargetFPS(60); // سرعة اللعبة
-    while(!WindowShouldClose)
+    while(!WindowShouldClose())
     {
         BeginDrawing(); //لبداية رسم النافذة
 

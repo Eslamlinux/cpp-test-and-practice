@@ -1,0 +1,4 @@
+##To build use
+$ c++ main.cpp -o game -lraylib -lGL -lm -ldl -lpthread -lrt -lX11
+##Or
+g++ main.cpp -o game $(pkg-config --libs --cflags raylib)
