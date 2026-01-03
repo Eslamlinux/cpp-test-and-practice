@@ -10,11 +10,14 @@ int main()
     SetTargetFPS(60); // سرعة اللعبة
     while(!WindowShouldClose)
     {
+        BeginDrawing(); //لبداية رسم النافذة
 
+
+        EndDrawing(); // لانهاء الرسم وتدمير مكونات الرسم
 
 
     }
 
-
+    CloseWindow(); //لاغلاق وتدمير النافذة
     return 0;
 }
