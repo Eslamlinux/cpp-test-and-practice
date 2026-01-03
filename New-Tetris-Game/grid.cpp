@@ -23,9 +23,9 @@
 
     void Grid::print()
     {
-        for(int row = 0 ; row < num_rows;row++)
+        for(int colum = 0 ; colum < num_cols; colum++)
         {
-            for(int colum = 0 ; colum < num_cols;colum++)
+            for(int row = 0 ; row < num_rows;row++)
             {
                 std::cout << grid[row][colum] << " ";
             }
@@ -41,12 +41,12 @@
         تدرج الون
         التركيز}
         */
-        Color Red = {255,0,0,255};
-        Color Green = {0, 255,0,0};
-        Color Yello = {255, 251, 255,0};
-        Color White = {255, 255,0, 255};
+       Color Blue = {0, 0, 255};
+       Color Green = {0, 255,0,0};
+       Color Yello = {255, 251, 255,0};
+       Color White = {255, 255,0, 255};
+       Color Red = {255,0,0,255};
         Color Black = {0, 0, 0, 255};
-        Color Blue = {0, 0, 255};
         Color Cyan = {0,255,255,255};
         Color Magenta = {255,0,255,255};
         Color Gold = {215,215,0,255};
@@ -58,12 +58,12 @@
 
     void Grid::Draw()
     {
-        for(int row = 0;row < num_rows; row++)
+        for(int colum = 0;colum < num_cols; colum++)
         {
-            for(int colum = 0 ; colum < num_cols; colum++)
+            for(int row = 0 ; row < num_rows; row++)
             {
                 int cellValue = grid[row][colum];
-                DrawRectangle(colum * cell_size +1 ,row * cell_size+1, cell_size -1 ,cell_size -1 , colors[cellValue]);
+                DrawRectangle(row * cell_size +1 ,colum * cell_size+1, cell_size -1 ,cell_size -1 , colors[cellValue]);
             }
         }
 
