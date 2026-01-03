@@ -9,7 +9,7 @@ extern const Color White ;
 extern const Color Red ;
 extern const Color Black;
 extern const Color Cyan;
-// extern const Color Green ;
+extern const Color Green ;
 extern const Color Magenta;
 extern const Color Gold;
 extern const Color Gray ;
