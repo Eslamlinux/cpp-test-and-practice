@@ -6,7 +6,7 @@ int random_num(int Max_Num)
 {
     int num;
     num = rand() % Max_Num+1;
-    return Max_Num;
+    return num;
 }
 int main()
 {
