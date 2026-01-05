@@ -1,11 +1,10 @@
 #include <raylib.h>
 //#include <iostream>
-//#include <string>
+//#include <stdio.h>
 
 
 const int scrwidth = 650;
 const int scrhight = 350;
-//const std::string scrname =  "First window";
 const char scrname[] =  "First window";
 
 int main()
