@@ -17,6 +17,7 @@ int main()
     {
     BeginDrawing();
     ClearBackground(BLUE);
+    DrawText("Hello , this is the first gui with raylib\n made by Eslam Linux",140,150,25,WHITE);
 
     EndDrawing();
 
