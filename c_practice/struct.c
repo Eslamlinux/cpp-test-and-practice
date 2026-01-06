@@ -3,10 +3,10 @@
 
     struct persons
 {
-    char Name[];
-    char Last_Name[];
+    char Name[10];
+    char Last_Name[10];
     int age;
-}
+};
 
 int main()
 {
