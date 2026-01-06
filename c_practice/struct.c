@@ -10,6 +10,10 @@
 
 int main()
 {
+    persons eslam;
+    strncpy(eslam.Name,"Eslam",6);
+    strncpy(eslam.Last_Name,"Khalid",7);
+    
 
 
     return 0;
