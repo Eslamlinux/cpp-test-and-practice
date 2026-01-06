@@ -12,8 +12,8 @@ struct persons
 int main()
 {
     struct persons eslam;
-    strncpy(eslam.Name,"Eslam",6);
-    strncpy(eslam.Last_Name,"Khalid",7);
+    strncpy(eslam.Name,"moham",6);
+    strncpy(eslam.Last_Name,"salahh",7);
     eslam.age = 34;
 
 
