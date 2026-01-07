@@ -7,7 +7,9 @@ void sum(int a,int b,int *result)
 int main()
 {
     int sumresult;
+    
     sum(5,6,&sumresult);
+
 
     printf("%d",sumresult);
 }
