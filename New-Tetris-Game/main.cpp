@@ -1,5 +1,7 @@
 #include <raylib.h>
 #include "grid.h"
+#include "block.h"
+#include "blocks.cpp"
 
 #define G_Hight_Y 600
 #define G_Width_X 300
@@ -12,11 +14,10 @@ int main()
     SetTargetFPS(60); // سرعة اللعبة
 Grid grid;
 
-grid.grid[0][0] = 1;
-grid.grid[3][5] = 4;
-grid.grid[17][8] = 7;
+
 grid.print();
 
+TBlock block = TBlock();
 while(!WindowShouldClose())
     {
         BeginDrawing(); //لبداية رسم النافذة
