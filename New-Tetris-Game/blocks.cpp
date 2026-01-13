@@ -17,7 +17,7 @@ class LBlock : public Block
 class JBlock : public Block 
 {
     public:
-    LBlock()
+    JBlock()
     {
         id = 1;
         cells[0] = {Position(0,0),Position(1,0),Position(1,1),Position(1,2)};
@@ -30,7 +30,20 @@ class JBlock : public Block
 class IBlock : public Block 
 {
     public:
-    LBlock()
+    IBlock()
+    {
+        id = 1;
+        cells[0] = {Position(1,0),Position(1,1),Position(1,2),Position(1,3)};
+        cells[1] = {Position(0,2),Position(1,2),Position(2,2),Position(3,2)};
+        cells[2] = {Position(2,0),Position(2,1),Position(2,2),Position(2,3)};
+        cells[3] = {Position(0,1),Position(1,1),Position(2,1),Position(3,1)};
+    }
+};
+
+class OBlock : public Block 
+{
+    public:
+    OBlock()
     {
         id = 1;
         cells[0] = {Position(1,0),Position(1,1),Position(1,2),Position(1,3)};
