@@ -23,6 +23,7 @@ while(!WindowShouldClose())
         BeginDrawing(); //لبداية رسم النافذة
         ClearBackground(background); // لتنظيف واضافة خلفية جديدة
         grid.Draw();
+        block.Draw();
         EndDrawing(); // لانهاء الرسم وتدمير مكونات الرسم
 
 

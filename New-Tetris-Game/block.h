@@ -10,6 +10,7 @@ class Block
     int cellSize;
     int rotationState;
     std::vector<Color>colors;
+    int rowOffset, ColumnOffset;
     public:
     Block();
     int id;
