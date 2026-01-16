@@ -28,6 +28,7 @@ int main()
         {
             ballx +=1;
         }
+        DrawText("HELLO",200,200,56,RED);
         DrawCircle(ballx,bally,20,WHITE);
 
         
