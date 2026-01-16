@@ -10,7 +10,7 @@ Block::Block()
 }
 void Block::Draw()
 {
-    std::vector<Position> tiles = cells[rotationState];
+    std::vector<Position> tiles = GetCellPos();
     for(Position item : tiles)
     {
         DrawRectangle(item.column * cellSize + 1, item.row * cellSize + 1, cellSize - 1, cellSize -1,colors[id]);
