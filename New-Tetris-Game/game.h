@@ -6,6 +6,7 @@ class Game
 {
     std::vector<Block>blocks;
     Block CurrentBlock, NextBlock;
+    bool IsBlockOut();
 
     public:
     Game();
