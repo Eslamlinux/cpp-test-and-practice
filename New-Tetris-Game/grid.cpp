@@ -49,5 +49,15 @@
 
     }
 
+    bool Grid::IsCellOut(int row,int column)
+    {
+        if(row >=0 && row < num_rows && column >= 0 && column < num_cols)
+        {
+            return false;
+        }
+        return true;
+
+    }
+
     Grid::~Grid(){}
 

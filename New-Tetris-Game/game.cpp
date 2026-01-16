@@ -57,16 +57,40 @@ void Game::HandeleInput()
 void Game::MoveBLeft()
 {
     CurrentBlock.Move(0,-1);
+    if(IsBlockOut())
+    {
+        CurrentBlock.Move(0,1);
+    }
 }
 
 
 void Game::MoveBRight()
 {
-    CurrentBlock.Move(0,-1);
+    CurrentBlock.Move(0,1);
+    if(IsBlockOut())
+    {
+        CurrentBlock.Move(0,-1);
+    }
 }
 
 
 void Game::MoveBDown()
 {
-    CurrentBlock.Move(0,-1);
+    CurrentBlock.Move(1,0);
+    if(IsBlockOut())
+    {
+        CurrentBlock.Move(-1,0);
+    }
+}
+bool Game::IsBlockOut()
+{
+    std::vector<Position>tiles = CurrentBlock.GetCellPos();
+    for(Position item :tiles)
+    {
+        if(grid.IsCellOut(item.row,item.column))
+        {
+            return true;
+        }
+    }
+    return false;
 }

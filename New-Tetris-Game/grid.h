@@ -13,5 +13,6 @@ class Grid
     void initialize();
     void print();
     void Draw();
+    bool IsCellOut(int row, int column);
     ~Grid();
 };
