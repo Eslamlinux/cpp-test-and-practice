@@ -10,7 +10,7 @@ Block Game::GetRandBlock()
 {
     if(blocks.empty())
     {
-        blocks = GetRandBlock();
+        blocks = GetAllBlocks();
     }
     int RandIndex = rand() % blocks.size();
     Block block = blocks[RandIndex];
