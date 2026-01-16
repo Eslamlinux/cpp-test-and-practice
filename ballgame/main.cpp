@@ -30,6 +30,7 @@ int main()
         }
         DrawText("HELLO",200,200,56,RED);
         DrawCircle(ballx,bally,20,WHITE);
+        DrawCircle(ballx-5,bally-5,20,WHITE);
 
         
 
