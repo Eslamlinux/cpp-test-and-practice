@@ -10,14 +10,15 @@ int main()
     InitWindow(G_Width_X,G_Hight_Y,Main_Title); // النافذذة الرئسية
     Color background = {128,128,128,255}; // {255,0,0,255} يمكن استخدام اسم اللون او الار جي بي الخاص باللون  
     SetTargetFPS(60); // سرعة اللعبة
-
+    Game game = Game();
 
 // block.Move(4,3);
 while(!WindowShouldClose())
     {
+        game.HandeleInput();
         BeginDrawing(); //لبداية رسم النافذة
         ClearBackground(background); // لتنظيف واضافة خلفية جديدة
-        Game.Draw();
+        game.Draw();
 
         EndDrawing(); // لانهاء الرسم وتدمير مكونات الرسم
 
