@@ -10,14 +10,16 @@
 int main()
 {
     InitWindow(G_Width_X,G_Hight_Y,Main_Title); // النافذذة الرئسية
-    Color background = {5, 240, 0, 44}; // {255,0,0,255} يمكن استخدام اسم اللون او الار جي بي الخاص باللون  
+    Color background = {128,128,128,255}; // {255,0,0,255} يمكن استخدام اسم اللون او الار جي بي الخاص باللون  
     SetTargetFPS(60); // سرعة اللعبة
 Grid grid;
 
 
 grid.print();
 
-TBlock block = TBlock();
+IBlock block = IBlock();
+
+// block.Move(4,3);
 while(!WindowShouldClose())
     {
         BeginDrawing(); //لبداية رسم النافذة
