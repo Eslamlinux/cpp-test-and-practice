@@ -24,7 +24,7 @@ int main(void)
 
         // Clear the background to a light grey color
         // This function ensures the screen is refreshed with a clean slate each frame
-        ClearBackground(RAYWHITE);
+        ClearBackground(BLUE);
 
         // --- Drawing Rectangles ---
 
@@ -32,7 +32,7 @@ int main(void)
         DrawRectangle(50, 50, 100, 80, RED);
 
         // Draw a blue rectangle outline at (60, 60) with width 80, height 60, and 2 pixel thickness
-        DrawRectangleLines(60, 60, 80, 60, 2, BLUE);
+        DrawRectangleLines(60, 60, 80,30,RED);
 
         // Draw a filled green rectangle using a Rectangle struct
         Rectangle rectExample = { 200, 50, 120, 90 };
@@ -59,7 +59,7 @@ int main(void)
         DrawLine(50, 300, 200, 350, WHITE);
 
         // Draw a thicker cyan line from (250, 300) to (400, 350) with 4 pixel thickness
-        DrawLineEx((Vector2){250, 300}, (Vector2){400, 350}, 4, CYAN);
+        DrawLineEx((Vector2){250, 300}, (Vector2){400, 350}, 4, RED);
 
         // Draw a line strip (a simple triangle)
         Vector2 trianglePoints[3] = {
