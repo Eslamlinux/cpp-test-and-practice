@@ -7,6 +7,7 @@ int main()
     int ballx  = 400;
     int bally  = 400;
 
+    Font newfont = LoadFont("BoldPixelsFont.ttf");
     while(!WindowShouldClose())
     {
         BeginDrawing();
@@ -38,7 +39,7 @@ int main()
 
     }
 
-    
+    UnloadFont(newfont);
     CloseWindow();
 
 }
