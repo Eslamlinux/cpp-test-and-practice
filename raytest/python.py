@@ -28,3 +28,7 @@ print(msg3 + msg4)
 name, age, id  = "eslam", 33, 105
 
 print(name ," age: ", age, id )
+
+var1 = input("Enter name: ")
+
+print("hello " ,var1)
