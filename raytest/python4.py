@@ -8,4 +8,7 @@ def ask_to_sum():
     print(sum(int(e1),int(e2)))
 
 
+
 ask_to_sum()
+
+print(sum(5,5)+sum(5,5))
