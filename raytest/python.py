@@ -29,6 +29,21 @@ name, age, id  = "eslam", 33, 105
 
 print(name ," age: ", age, id )
 
-var1 = input("Enter name: ")
+# var1 = input("Enter name: ")
 
-print("hello " ,var1)
+# print("hello " ,var1)
+int = 5
+string = "string"
+char = 'c'
+float = 2.55
+print(int,string,char,float)
+
+
+
+dd = '10'
+
+emptyvar = None
+
+print(None)
+
+print(type(int))
