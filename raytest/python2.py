@@ -35,3 +35,11 @@ tuples = ("hello", "world", 10)
 
 print(type(tuples))
 print(tuples)
+
+dicc = {'name':"eslam","address": "29 Nile st","phone": "01282667"}
+
+print(type(dicc))
+print(dicc)
+print(dicc["name"],dicc["address"],dicc["phone"])
+
+print(dicc.values())
