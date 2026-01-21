@@ -27,5 +27,11 @@ lis.append("world")
 print(lis)
 lis.insert(0,"first")
 print(lis)
+lis.remove("hello")
+print(lis)
 
 
+tuples = ("hello", "world", 10)
+
+print(type(tuples))
+print(tuples)
