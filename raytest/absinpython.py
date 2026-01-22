@@ -1,6 +1,6 @@
 import math
 import random
-
+import datetime
 a = -845
 
 print(abs(a))
@@ -27,3 +27,22 @@ print(6%3)
 
 print(random.randint(1,10))
 
+date = datetime.date(2026,1,20)
+now = datetime.datetime.today()
+
+print(date.year)
+print(date.day)
+print(date.today())
+
+time = datetime.time(now.hour,now.minute,now.second)
+
+print(time)
+print(time.hour)
+
+
+print(now.time())
+
+
+print(date.strftime('%A %B %Y'))
+
+print(time.strftime('%I %M %S'))
