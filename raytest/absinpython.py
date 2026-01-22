@@ -1,4 +1,4 @@
-
+import math
 
 
 a = -845
@@ -13,7 +13,14 @@ print(round(c))
 print(round(d,2))
 print(round(d,3))
 print(pow(5,2))
-numbers = (10,22,50,60)
+print(math.sqrt(25))
+
+numbers = [10,22,50,60]
 
 print(max(numbers))
 print(min(numbers))
+print(type(numbers))
+print(sum(numbers))
+
+print(math.remainder(6,3))
+print(6%3)
