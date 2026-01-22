@@ -3,17 +3,17 @@ dictionary = {1111111111:"Amal",2222222222:"Mohammed"}
 
 def sear():
     entry = input("please enter num to search:")
-    if entry.count() > 10 or entry.count() <10:
+    if len(entry) > 10 or len(entry) <10:
         print("This is invalid number")
-    for c in dictionary:
-        if entry == c:
-            print(c.value())
-        else:
-            print("Sorry, the number is not found")
+        return
+
+    for c in dictionary.keys():
+        if c == int(entry):
+            print(dictionary[int(entry)])
+            return
+        
+    print("Sorry, the number is not found")
 
 
-# sear()
+sear()
 
-
-ent = '123456'
-print(ent.)
