@@ -1,5 +1,5 @@
 import math
-
+import random
 
 a = -845
 
@@ -24,3 +24,6 @@ print(sum(numbers))
 
 print(math.remainder(6,3))
 print(6%3)
+
+print(random.randint(1,10))
+
