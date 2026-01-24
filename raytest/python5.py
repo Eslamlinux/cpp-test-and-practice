@@ -25,3 +25,9 @@ print(txt*2)
 text = 'Python'
 print(text[0:5:3])
 print(text[-3])
+
+grade = 'Fail'
+if "Fail" not in grade:
+    print('Congratulations, you have passed the exam!')
+else:
+    print('Sorry, you have failed the exam.')
