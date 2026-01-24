@@ -21,3 +21,7 @@ print('hello' not in txt)
 print('llo' not in txt)
 
 print(txt*2)
+
+text = 'Python'
+print(text[0:5:3])
+print(text[-3])
