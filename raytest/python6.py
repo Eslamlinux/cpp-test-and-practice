@@ -18,3 +18,6 @@ fname,lname,mname = "eslam" \
 " loma","etman " \
 "amer", "khalid"
 print(fname,mname,lname)
+print(id(fname))
+
+
