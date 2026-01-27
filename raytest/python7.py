@@ -18,3 +18,5 @@ tosplit2 = txt.split("a")
 print(tosplit2)
 print(tosplit2[0])
 print(tosplit2[1])
+
+print()
