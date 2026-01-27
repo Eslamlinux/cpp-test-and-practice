@@ -2,3 +2,15 @@
 
 i ,x ,y = 1,2,3
 print('first %d second %d therd %d'% (i,x,y))
+
+txt = "a b c"
+
+tosplit = txt.split()
+
+print(tosplit)
+
+print(type(tosplit))
+
+print(tosplit[0])
+print(tosplit[1])
+print(tosplit[2])
