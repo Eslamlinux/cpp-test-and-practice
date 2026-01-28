@@ -20,6 +20,7 @@ print(tosplit2)
 # print(tosplit2[1])
 
 
-tostring = " ".join(tosplit)
+tostring = "*".join(tosplit)
 
 print(tostring)
+print(type(tostring))
