@@ -12,3 +12,7 @@ print(boolstr)
 newst = "     hello "
 
 print(newst.strip())
+
+torep = "\nhi\nhello"
+torep.replace("\n","-")
+print(torep)
