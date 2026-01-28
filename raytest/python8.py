@@ -8,3 +8,7 @@ print(type(boolstr))
 boolstr = str.isdigit()
 
 print(boolstr)
+
+newst = "     hello "
+
+print(newst.strip())
