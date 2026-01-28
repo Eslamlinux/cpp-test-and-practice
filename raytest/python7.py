@@ -16,7 +16,10 @@ print(tosplit[1])
 print(tosplit[2])
 tosplit2 = txt.split("a")
 print(tosplit2)
-print(tosplit2[0])
-print(tosplit2[1])
+# print(tosplit2[0])
+# print(tosplit2[1])
 
-print()
+
+tostring = " ".join(tosplit)
+
+print(tostring)
