@@ -10,3 +10,12 @@ print(m)
 
 multi = [nm*2 for nm in lst]
 print(multi)
+
+
+multiwithif = [nm*2 for nm in lst if nm > 10]
+print(multiwithif)
+
+
+def fil(num):
+    return num > 20
+print(list(filter(fil,lst)))
