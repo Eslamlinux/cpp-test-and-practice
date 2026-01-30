@@ -19,3 +19,9 @@ print(multiwithif)
 def fil(num):
     return num > 20
 print(list(filter(fil,lst)))
+
+ls = [5,2,3,4]
+def sq(n):
+    return n**2
+
+print(list(map(sq,ls)))
