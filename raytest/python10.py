@@ -7,3 +7,6 @@ for num in lst:
 
 print(m)
 
+
+multi = [nm*2 for nm in lst]
+print(multi)
