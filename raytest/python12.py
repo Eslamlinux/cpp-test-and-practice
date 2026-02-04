@@ -6,3 +6,6 @@ def info(**kwarg):
     print("age is: ",kwarg["age"])
 
 info(name="eslam",age=33)
+
+d={"name":"hassan","age":22}
+info(**d)
