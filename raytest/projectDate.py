@@ -5,4 +5,7 @@ data ={"eslam":33}
 print(data)
 print(type(data))
 
-data+= input("enter name and date of birth")
+entry1 = input("enter name and date of birth: ")
+entry2 = input("enter date of birth: ")
+data.update(entry1,entry2)
+print(data)
