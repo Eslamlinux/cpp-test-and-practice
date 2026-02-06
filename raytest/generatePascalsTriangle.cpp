@@ -38,7 +38,10 @@ std::vector<int> generatePascalsTriangle(int numRows)
 
 int main()
 {
-
+    for(int c :generatePascalsTriangle(5))
+    {
+        std::cout << c << " ";
+    }
 
     return 0;
 }
