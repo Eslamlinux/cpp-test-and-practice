@@ -16,3 +16,5 @@ class test:
     def talk(self):
         print("my name ",self.name)
 
+opj = test(name="eslam",id=1112)
+print(opj.name)
