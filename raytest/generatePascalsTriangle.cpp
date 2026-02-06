@@ -34,3 +34,11 @@ std::vector<int> generatePascalsTriangle(int numRows)
     }
     return result;
 }
+
+
+int main()
+{
+
+
+    return 0;
+}
