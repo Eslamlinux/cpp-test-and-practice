@@ -27,5 +27,9 @@ class pp:
         self.whgit = w
         self.hight = h
         print("name ",n,"whgit ",w,"hight ",h)
+    def tosum(a,b):
+        print(a+b)
 
 p = pp("eslam",55,173)
+
+pp.tosum(10,10)
