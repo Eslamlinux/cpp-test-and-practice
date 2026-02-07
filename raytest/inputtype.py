@@ -14,7 +14,9 @@ class test:
         self.name = name
         self.id = id
     def talk(self):
-        print("my name ",self.name)
+        print("my name ",self.name,"my id ",self.id)
+        print(self)
 
 opj = test(name="eslam",id=1112)
 print(opj.name)
+opj.talk()
