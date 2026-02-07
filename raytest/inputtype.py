@@ -20,3 +20,12 @@ class test:
 opj = test(name="eslam",id=1112)
 print(opj.name)
 opj.talk()
+
+class pp:
+    def __init__(self,n,w,h):
+        self.name = n
+        self.whgit = w
+        self.hight = h
+        print("name ",n,"whgit ",w,"hight ",h)
+
+p = pp("eslam",55,173)
