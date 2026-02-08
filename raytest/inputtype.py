@@ -33,3 +33,5 @@ class pp:
 p = pp("eslam",55,173)
 
 pp.tosum(10,10)
+
+print(dir(p))
