@@ -14,6 +14,13 @@ class test:
     def __init__(self,name,id):
         self.name = name
         self.id = id
+        self._prot = "protected"
+        self.__priv = "praivate"
+    def _pro():
+        print("protected")
+    def __priva():
+        print("private")
+
     def talk(self):
         print("my name ",self.name,"my id ",self.id)
         print(self)
