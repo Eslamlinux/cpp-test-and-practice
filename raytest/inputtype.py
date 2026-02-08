@@ -16,11 +16,13 @@ class test:
         self.id = id
         self._prot = "protected"
         self.__priv = "praivate"
-    def _pro():
+    def _pro(self):
         print("protected")
-    def __priva():
+    def __priva(self):
         print("private")
 
+    def getpriva(self):
+        self.__priva()
     def talk(self):
         print("my name ",self.name,"my id ",self.id)
         print(self)
@@ -60,4 +62,6 @@ op2 = test("eslam 2 ",223)
 
 print(op1.static_data)
 print(op2.static_data)
-# print(op1._pro())
+print(op1._pro())
+
+op1.getpriva()
