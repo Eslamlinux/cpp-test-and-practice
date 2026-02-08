@@ -60,3 +60,4 @@ op2 = test("eslam 2 ",223)
 
 print(op1.static_data)
 print(op2.static_data)
+# print(op1._pro())
