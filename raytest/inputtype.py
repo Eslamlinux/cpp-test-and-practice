@@ -38,3 +38,10 @@ p.new_attribuate_from_out = 100
 
 print(dir(p))
 print(p.new_attribuate_from_out)
+
+del(p.new_attribuate_from_out)
+print(dir(p))
+
+print(p)
+del(p)
+print(p)
