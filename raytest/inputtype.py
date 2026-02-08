@@ -34,4 +34,7 @@ p = pp("eslam",55,173)
 
 pp.tosum(10,10)
 
+p.new_attribuate_from_out = 100
+
 print(dir(p))
+print(p.new_attribuate_from_out)
