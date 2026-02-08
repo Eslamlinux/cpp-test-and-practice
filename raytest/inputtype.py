@@ -10,6 +10,7 @@
 #     return value
 
 class test:
+    static_data = "eslam programm"
     def __init__(self,name,id):
         self.name = name
         self.id = id
@@ -44,4 +45,11 @@ print(dir(p))
 
 print(p)
 del(p)
-print(p)
+# print(p)
+
+
+op1 = test("eslam",123)
+op2 = test("eslam 2 ",223)
+
+print(op1.static_data)
+print(op2.static_data)
