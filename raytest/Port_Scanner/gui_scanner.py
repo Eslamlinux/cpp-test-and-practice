@@ -23,7 +23,7 @@ def run_scanner():
     thread.start()
 
 def run_about():
-    messagebox.showinfo("About the Programmer", "Hello My Name Is Eslam Linux\nthis is free software for scan ports is opened or closed")
+    messagebox.showinfo("About the Programmer", "Hello My Name Is Eslam Linux\nthis is free software Pentest Port Scanner v1.0 for scan ports is opened or closed")
     return
     # تشغيل الفحص في Thread منفصل لكي لا تتجمد الواجهة
     # thread = threading.Thread(target=execute_cpp_logic, args=(target_ip, target_port))
