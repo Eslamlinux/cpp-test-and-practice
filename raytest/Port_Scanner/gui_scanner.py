@@ -68,7 +68,7 @@ lbl_result.pack(pady=15)
 
 # زر التشغيل
 btn_scan = tk.Button(root, text="Start Scan", command=run_scanner, 
-                      bg="#2c3e50", fg="white", font=("Arial", 12), width=15,bd=float)
+                      bg="#2c3e50", fg="white", font=("Arial", 12), width=15)
 btn_scan.pack()
 
 btn_about = tk.Button(root, text="About the Programmer", command=run_about, 
