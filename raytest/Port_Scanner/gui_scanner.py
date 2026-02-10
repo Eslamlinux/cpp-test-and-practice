@@ -48,7 +48,7 @@ def execute_cpp_logic(ip, port):
 # --- إعدادات النافذة ---
 root = tk.Tk()
 root.title("Pentest Port Scanner v1.0")
-root.geometry("400x250")
+root.geometry("400x280")
 
 # تسميات وحقول الإدخال
 tk.Label(root, text="Pentest Port Scanner v1.0",font=("Arial", 16)).pack(pady=5)
