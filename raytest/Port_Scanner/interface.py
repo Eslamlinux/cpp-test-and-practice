@@ -13,7 +13,7 @@ def check_port(ip, port):
 entrip = input("enter the ip: ")
 target_ip = entrip
 entrport = input("enter the port: ")
-target_port = entrport      # منفذ DNS
+target_port = entrport      
 
 print(f"Checking {target_ip}:{target_port} ...")
 status = check_port(target_ip, target_port)
