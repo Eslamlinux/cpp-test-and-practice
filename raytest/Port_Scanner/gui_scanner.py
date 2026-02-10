@@ -51,7 +51,7 @@ root.title("Pentest Port Scanner v1.0")
 root.geometry("400x250")
 
 # تسميات وحقول الإدخال
-tk.Label(root, text="Pentest Port Scanner v1.0", font=("Arial", 16)).pack(pady=5)
+tk.Label(root, text="Pentest Port Scanner v1.0",font=("Arial", 16)).pack(pady=5)
 tk.Label(root, text="Target IP:", font=("Arial", 12)).pack(pady=5)
 entry_ip = tk.Entry(root, font=("Arial", 12), justify='center')
 entry_ip.insert(0, "127.0.0.1") # قيمة افتراضية
