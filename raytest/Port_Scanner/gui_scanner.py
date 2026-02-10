@@ -15,9 +15,6 @@ def run_scanner():
     btn_scan.config(state=tk.DISABLED, text="Scan Runing")
     lbl_result.config(text="please wait", fg="blue")
 
-    # btn_about.config(state=tk.DISABLED, text="Scan Runing")
-    # lbl_result.config(text="please wait", fg="blue")
-
     # تشغيل الفحص في Thread منفصل لكي لا تتجمد الواجهة
     thread = threading.Thread(target=execute_cpp_logic, args=(target_ip, target_port))
     thread.start()

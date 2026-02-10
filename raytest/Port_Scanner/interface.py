@@ -11,7 +11,7 @@ def check_port(ip, port):
 # تجربة الأداة
 
 entrip = input("enter the ip: ")
-target_ip = entrip # جوجل كمثال
+target_ip = entrip
 entrport = input("enter the port: ")
 target_port = entrport      # منفذ DNS
 
