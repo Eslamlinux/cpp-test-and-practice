@@ -26,7 +26,7 @@ first.Tech_Detels("20m/m","unknown")
 
 first.Print_All_Data()
 first.get_Tech_Detels()
-print(dir(first))
+# print(dir(first))
 
 # first_t.Print_All_Data()
 # first_t.get_Tech_Detels()
