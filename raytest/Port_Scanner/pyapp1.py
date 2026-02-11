@@ -13,21 +13,24 @@ class car(vehicle):
         self.Engin = Engin 
     def get_Tech_Detels(self):
         print("speed =",self.Car_Speed,"\nEngin:",self.Engin)
-# class truck(vehicle,car):
-#     def Tech_Detels(Tyre_size):
-#         return Tyre_size
+class truck(car):
+    def Tech_Detels(self,Tyre_size):
+        return Tyre_size
 
 
 first = car("BMW","Blue",8812)
 first.Tech_Detels("20m/m","unknown")
 
-# first_t = truck("NSR","green",231)
-# first_t.Tech_Detels("17-14")
+first_t = truck("NSR","green",231)
+first_t.Tech_Detels("17-14")
+first_t.Tech_Detels("25m/m","Nsr Engin")
+
+
 
 first.Print_All_Data()
 first.get_Tech_Detels()
 # print(dir(first))
-
-# first_t.Print_All_Data()
-# first_t.get_Tech_Detels()
+print("---------------------")
+first_t.Print_All_Data()
+first_t.get_Tech_Detels()
 # print(first_t.Tech_Detels(17))
