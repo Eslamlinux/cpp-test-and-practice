@@ -10,7 +10,7 @@ def check_port(ip, port):
 
 # تجربة الأداة
 
-entrip = input("enter the ip: ")
+entrip = input("enter the ip like this '8.8.8.8': ")
 target_ip = entrip
 entrport = input("enter the port: ")
 target_port = entrport      
