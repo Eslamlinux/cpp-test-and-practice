@@ -34,3 +34,4 @@ print("---------------------")
 first_t.Print_All_Data()
 first_t.get_Tech_Detels()
 # print(first_t.Tech_Detels(17))
+

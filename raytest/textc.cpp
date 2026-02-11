@@ -13,5 +13,8 @@ while(i >0)
 i--;
 }
 
+int x =5;
 
+x = x++ + ++x;
+std::cout<< "\n" << x;
 }
