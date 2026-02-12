@@ -29,9 +29,8 @@ first_t.Tech_Detels("25m/m","Nsr Engin")
 
 first.Print_All_Data()
 first.get_Tech_Detels()
-# print(dir(first))
+print(dir(first))
 print("---------------------")
 first_t.Print_All_Data()
 first_t.get_Tech_Detels()
-# print(first_t.Tech_Detels(17))
 
