@@ -23,7 +23,7 @@ first.Tech_Detels("20m/m","unknown")
 
 first_t = truck("NSR","green",231)
 first_t.Tech_Detels("17-14")
-first_t.Tech_Detels("25m/m","Nsr Engin")
+# first_t.Tech_Detels("25m/m","Nsr Engin")
 
 
 
@@ -32,7 +32,7 @@ first.get_Tech_Detels()
 print(dir(first))
 print("---------------------")
 first_t.Print_All_Data()
-first_t.get_Tech_Detels()
+# first_t.get_Tech_Detels()
 
 class after:
     def start():
