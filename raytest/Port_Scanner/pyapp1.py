@@ -34,3 +34,7 @@ print("---------------------")
 first_t.Print_All_Data()
 first_t.get_Tech_Detels()
 
+class after:
+    def start():
+        pass
+
