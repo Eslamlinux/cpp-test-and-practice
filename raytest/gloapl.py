@@ -6,3 +6,6 @@ def func():
 func()
 
 print(name)
+
+def ff(na):
+    print(na)
