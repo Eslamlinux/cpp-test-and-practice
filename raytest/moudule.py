@@ -6,3 +6,5 @@ print(gl.name)
 
 from gloapl import ff
 ff("eslam")
+
+print(gl.day)

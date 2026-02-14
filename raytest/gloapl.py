@@ -9,3 +9,5 @@ print(name)
 
 def ff(na):
     print(na)
+
+day = "saturday"
