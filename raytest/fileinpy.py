@@ -17,3 +17,5 @@ def system(order):
 system("clear")
 
 system("Clear")
+
+system("clean")
