@@ -11,7 +11,7 @@ file1 = open("myfileinby.txt","r")
 print(file1.read(24))
 
 def system(order):
-    if order == "clear" or order == "Clear":
+    if order == "clear" or order == "Clear" or order == "CLEAR" or order == "clean" or order == "Clean" or order == "CLEAN":
         print("clear")
 
 system("clear")
