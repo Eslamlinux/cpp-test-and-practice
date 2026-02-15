@@ -21,3 +21,5 @@ system("Clear")
 system("clean")
 
 system("Clean")
+
+system("CLEAN")
