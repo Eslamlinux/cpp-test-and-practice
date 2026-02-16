@@ -1,3 +1,4 @@
+import random
 
 # file1 = open("myfileinby.txt","w")
 
@@ -36,3 +37,6 @@ print(str(num) + " " +name)
 
 print(round(3.5))
 print(round(3.4))
+
+maxnum = 10
+print(random(maxnum))
