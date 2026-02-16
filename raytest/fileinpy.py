@@ -24,8 +24,10 @@ system("Clean")
 
 system("CLEAN")
 
-name = "eslam"
+name = "eslam linux"
 
 print("hello \"" + name + "\" to our place")
 print("hello" ,name, "to our place")
 print(name.index("a"))
+print(name.replace("eslam","mohamed"))
+print(name)
