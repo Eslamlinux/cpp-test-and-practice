@@ -1,4 +1,6 @@
 try:
     print(1/0)
-except:
-    print("error")
+except ZeroDivisionError:
+    print("zero division error")
+except IndexError:
+    print("index error")
