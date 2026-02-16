@@ -31,3 +31,5 @@ print("hello" ,name, "to our place")
 print(name.index("a"))
 print(name.replace("eslam","mohamed"))
 print(name)
+num = 123
+print(str(num) + " " +name)
