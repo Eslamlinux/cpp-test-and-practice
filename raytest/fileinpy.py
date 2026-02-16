@@ -24,3 +24,7 @@ system("Clean")
 
 system("CLEAN")
 
+name = "eslam"
+
+print("hello " + name + " to our place")
+print("hello" ,name, "to our place")
