@@ -14,3 +14,11 @@ except:
     print("not an num")
 else:
     print(num / 2)
+
+
+age = 20
+
+if age > 18:
+    raise Exception("age is good")
+
+print("start game")
