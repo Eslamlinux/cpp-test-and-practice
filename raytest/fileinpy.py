@@ -33,3 +33,6 @@ print(name.replace("eslam","mohamed"))
 print(name)
 num = 123
 print(str(num) + " " +name)
+
+print(round(3.5))
+print(round(3.4))
