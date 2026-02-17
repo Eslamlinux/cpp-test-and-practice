@@ -10,3 +10,5 @@ async def func():
     print("end")
 
 asyncio.run(func())
+
+print(type(2 == 2))
