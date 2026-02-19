@@ -12,4 +12,5 @@ async def func():
 asyncio.run(func())
 
 print(type(2 == 2))
-print("keywords")
+# print(help("keywords"))
+help("keywords")
