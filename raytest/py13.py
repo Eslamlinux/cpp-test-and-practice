@@ -10,3 +10,6 @@ print("hello \
 print("back slash \\/\\/")
 print("double quote \":)\"")
 print("single quote \':)\'")
+print("new line \nnew")
+
+print("123456\rabc")
