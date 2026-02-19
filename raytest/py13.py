@@ -15,3 +15,5 @@ print("new line \nnew")
 print("123456\rabc")
 
 print("hello\tpython")
+
+print("\x45\x73\x6c\x61\x6D")
