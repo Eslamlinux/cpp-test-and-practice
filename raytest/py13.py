@@ -13,3 +13,5 @@ print("single quote \':)\'")
 print("new line \nnew")
 
 print("123456\rabc")
+
+print("hello\tpython")
