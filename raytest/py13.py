@@ -8,3 +8,5 @@ world")
 print("hello \
        world")
 print("back slash \\/\\/")
+print("double quote \":)\"")
+print("single quote \':)\'")
