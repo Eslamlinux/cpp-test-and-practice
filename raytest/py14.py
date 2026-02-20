@@ -5,7 +5,9 @@ print(st2)
 
 st3 = """hello
 eslam
-semsem "eslam" 'semsem'
+semsem "eslam" '\\semsem\\'
+linux 
+hi \
 linux
 """
 print(st3)
