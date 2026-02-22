@@ -6,8 +6,7 @@ print(str.rsplit("-",1))
 
 
 str2 = "eslam"
-# print(str2.len())
-# # print(str2.center(str2.len,"*"))
+print(str2.center(len(str2)+6,"*"))
 
 print(str2.startswith("e"))
 print(str2.endswith("m"))
