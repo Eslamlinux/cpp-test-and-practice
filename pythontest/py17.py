@@ -60,4 +60,4 @@ import sys
 
 print("python version: ",sys.version)
 
-print("hello",end =" "); print("eslam")
+print("hello",end =" "); print("eslam") ,print("linux")
