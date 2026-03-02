@@ -53,6 +53,10 @@ print(f"my name is: {name} my age is: {age}")
 na = input("please enter name: ")
 print(f"hello {na}\n")
 
+"""
+for the next import
+"""
 import sys
 
 print("python version: ",sys.version)
+
