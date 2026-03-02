@@ -50,8 +50,8 @@ print("num = {0:.2f} num1 {1:.3f}".format(num,num1))
 print("my name is: {name} my age is: {age}")
 print(f"my name is: {name} my age is: {age}")
 
-na = input("please enter name: ")
-print(f"hello {na}\n")
+# na = input("please enter name: ")
+# print(f"hello {na}\n")
 
 """
 for the next import
@@ -60,4 +60,4 @@ import sys
 
 print("python version: ",sys.version)
 
-print("hello"); print("eslam")
+print("hello",end =" "); print("eslam")
