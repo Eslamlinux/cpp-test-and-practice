@@ -71,3 +71,5 @@ a,b,c = list
 print(b)
 print(type(b))
 print(type(list))
+
+print(a+b+c)
