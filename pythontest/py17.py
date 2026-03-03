@@ -61,3 +61,13 @@ import sys
 print("python version: ",sys.version)
 
 print("hello",end =" "); print("eslam") ,print("linux")
+print("I am",10)
+
+Key = 1020
+print("keywords",Key)
+
+list = ["hi","hey","hello"]
+a,b,c = list
+print(b)
+print(type(b))
+print(type(list))
