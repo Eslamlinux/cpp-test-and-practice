@@ -73,3 +73,8 @@ print(type(b))
 print(type(list))
 
 print(a+b+c)
+
+mycomplexnumber = 5+5j
+
+print(mycomplexnumber)
+print(type(mycomplexnumber))
