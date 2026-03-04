@@ -74,7 +74,10 @@ print(type(list))
 
 print(a+b+c)
 
-mycomplexnumber = 5+5j
+mycomplexnumber = 5+6j
 
 print(mycomplexnumber)
 print(type(mycomplexnumber))
+
+print("real part is : {}".format(mycomplexnumber.real))
+print("imaginary part is : {}".format(mycomplexnumber.imag))
