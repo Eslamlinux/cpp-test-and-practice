@@ -93,3 +93,8 @@ def sem():
 print(x)
 sem()
 print(x)
+
+def tryin(a = None):
+    print(a)
+
+tryin()
