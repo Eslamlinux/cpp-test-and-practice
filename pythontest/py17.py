@@ -101,3 +101,10 @@ tryin()
 
 ran = range(10)
 print(ran)
+
+dic = {"name":"eslam","age":10}
+set1 = {"hi","hey",10,"a","b"}
+frozenset1=({"esl","hass"})
+print(set1)
+print(frozenset1)
+
