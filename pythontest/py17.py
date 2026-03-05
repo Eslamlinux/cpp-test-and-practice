@@ -98,3 +98,6 @@ def tryin(a = None):
     print(a)
 
 tryin()
+
+ran = range(10)
+print(ran)
