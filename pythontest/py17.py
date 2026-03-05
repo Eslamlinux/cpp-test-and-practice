@@ -81,3 +81,15 @@ print(type(mycomplexnumber))
 
 print("real part is : {}".format(mycomplexnumber.real))
 print("imaginary part is : {}".format(mycomplexnumber.imag))
+
+print(type(complex(10)))
+
+x = None
+
+
+def sem():
+    global x
+    x = "hello"
+print(x)
+sem()
+print(x)
