@@ -108,3 +108,13 @@ frozenset1=({"esl","hass"})
 print(set1)
 print(frozenset1)
 
+# Create variables
+
+x = 5
+y = 3.14
+z = "hello"
+
+# Print the data type of each variable
+
+print(type(x),type(y),type(z))
+
