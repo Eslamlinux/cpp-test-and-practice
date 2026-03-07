@@ -9,4 +9,6 @@ import random
     
 # s = str(1)
 s = int(1)
+s = float(1)
 print(type(s))
+print(s)
