@@ -33,3 +33,9 @@ else:
 print(a[-6:-3])
 
 print(a.strip())
+
+print(a.replace("L" , "l"))
+
+
+print(a.split(","))
+print(type(a.split(",")))
