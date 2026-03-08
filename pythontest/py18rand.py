@@ -20,3 +20,5 @@ ut labore et dolore magna aliqua."""
 print(a)
 print("do" in a)
 print("do" not in a)
+if "sit" in a:
+    print("find it")
