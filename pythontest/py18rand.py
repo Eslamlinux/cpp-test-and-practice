@@ -13,10 +13,10 @@ s = float(1)
 print(type(s))
 print(s)
 
-a = """Lorem ipsum, dolor sit amet,
+a = """   Lorem ipsum, dolor sit amet,
 consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
-ut labore et dolore magna aliqua."""
+ut labore et dolore magna aliqua. """
 print(a)
 print("do" in a)
 print("do" not in a)
@@ -30,4 +30,6 @@ if "cool" in a:
 else:
     print("not find it")
 
-    print(a[-6:-3])
+print(a[-6:-3])
+
+print(a.strip())
