@@ -22,3 +22,10 @@ print("do" in a)
 print("do" not in a)
 if "sit" in a:
     print("find it")
+else:
+    print("not find it")
+
+if "cool" in a:
+    print("find it")
+else:
+    print("not find it")
