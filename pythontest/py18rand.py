@@ -18,3 +18,5 @@ consectetur adipiscing elit,
 sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua."""
 print(a)
+print("do" in a)
+print("do" not in a)
