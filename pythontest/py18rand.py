@@ -29,3 +29,5 @@ if "cool" in a:
     print("find it")
 else:
     print("not find it")
+
+    print(a[-6:-3])
