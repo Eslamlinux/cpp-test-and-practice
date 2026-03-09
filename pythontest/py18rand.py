@@ -41,3 +41,10 @@ print(a.split(","))
 print(type(a.split(",")))
 
 print(type(a.replace("e","E")))
+
+age = 10
+
+name = "lucka"
+
+print("my name is: {} my age is: {}".format(name,age))
+print(f"my name is: {name} my age is: {age}")
