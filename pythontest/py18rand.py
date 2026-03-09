@@ -48,3 +48,7 @@ name = "lucka"
 
 print("my name is: {} my age is: {}".format(name,age))
 print(f"my name is: {name} my age is: {age}")
+
+print(f"age is: {age:.2f}")
+
+print(f"the pric will be {2+3} dolers")
