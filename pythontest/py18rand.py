@@ -39,3 +39,5 @@ print(a.replace("L" , "l"))
 
 print(a.split(","))
 print(type(a.split(",")))
+
+print(type(a.replace("e","E")))
