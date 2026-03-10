@@ -58,3 +58,4 @@ print(f"{5}")
 
 hello = "hello world"
 print(hello)
+print(type(hello))
