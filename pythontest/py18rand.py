@@ -54,3 +54,6 @@ print(f"age is: {age:.2f}")
 print(f"the pric will be {2+3} dolers")
 
 print(f"{5}")
+
+
+hello = "hello world"
