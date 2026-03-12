@@ -1,3 +1,4 @@
 str = "hElLo"
-print(str.capitalize())
-print(type(str.capitalize()))
+print(str.capitalize()) # لجعل اول حرف كبير
+
+
