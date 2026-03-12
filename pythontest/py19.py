@@ -39,3 +39,8 @@ print(bool("abc"))
 print(bool(0))
 
 print(2**2) #حساب الاسس
+
+print(2//2)
+
+print(8/7)
+print(8//7)
