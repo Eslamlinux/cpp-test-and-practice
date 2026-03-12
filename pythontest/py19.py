@@ -47,3 +47,6 @@ print(8//7)
 print(15 % 4)
 print(5&3)
 print(3&5)
+
+print(x:=3)
+print(type(x))
