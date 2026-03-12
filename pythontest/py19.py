@@ -38,4 +38,4 @@ print(10 > 9 )
 print(bool("abc"))
 print(bool(0))
 
-print(2**2)
+print(2**2) #حساب الاسس
