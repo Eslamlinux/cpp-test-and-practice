@@ -12,6 +12,10 @@ print(str.encode("utf-8"))
 print(str.endswith("o"))
 print(str.endswith("L"))
 
-print(str.expandtabs(2).center(15))
-print(str.expandtabs(2))
-print(str.expandtabs(8))
+str1 = "H\te\tl\tl\to"
+print(str1)
+print(str1.expandtabs(2).center(15))
+print(str1.expandtabs(2))
+print(str1.expandtabs(4))
+print(str1.expandtabs(8))
+print(str1.expandtabs(10))
