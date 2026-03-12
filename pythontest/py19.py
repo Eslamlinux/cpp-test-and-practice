@@ -20,3 +20,20 @@ print(str1.expandtabs(2))
 print(str1.expandtabs(4))
 print(str1.expandtabs(8))
 print(str1.expandtabs(10))
+
+
+# Create the variable
+txt = "Hello, World!"
+# Print characters from index 2 to 5
+print(txt[2:5])
+# Print in upper case
+print(txt.upper())
+# Create the name variable
+name = "Python"
+# Print using an f-string
+print(f"I love {name}")
+
+print(10 > 9 )
+
+print(bool("abc"))
+print(bool(0))
