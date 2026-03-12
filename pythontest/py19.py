@@ -12,4 +12,6 @@ print(str.encode("utf-8"))
 print(str.endswith("o"))
 print(str.endswith("L"))
 
-print(str.expandtabs(8).center(15))
+print(str.expandtabs(2).center(15))
+print(str.expandtabs(2))
+print(str.expandtabs(8))
