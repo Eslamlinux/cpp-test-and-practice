@@ -15,6 +15,7 @@ print(str.endswith("L"))
 str1 = "H\te\tl\tl\to"
 print(str1)
 print(str1.expandtabs(2).center(15))
+print(str1.expandtabs(1))
 print(str1.expandtabs(2))
 print(str1.expandtabs(4))
 print(str1.expandtabs(8))
