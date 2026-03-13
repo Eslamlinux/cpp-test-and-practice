@@ -58,3 +58,4 @@ x = x << 3
 print(x)
 
 print(4//2)
+print(4/2)
