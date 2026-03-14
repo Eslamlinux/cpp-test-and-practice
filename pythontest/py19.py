@@ -65,3 +65,6 @@ b = 5
 print(a is b)
 print(a is x)
 print("W" in txt )
+
+print(6 & 3)
+
