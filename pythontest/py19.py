@@ -67,4 +67,5 @@ print(a is x)
 print("W" in txt )
 
 print(6 & 3)
+print(6 | 3)
 
